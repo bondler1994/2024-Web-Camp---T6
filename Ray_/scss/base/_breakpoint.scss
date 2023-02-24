@@ -1,0 +1,7 @@
+$ipad:768px;
+
+@mixin breakpoint($min-width) {
+  @media (min-width:$min-width){
+    @content
+  }
+}
