@@ -5,16 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>busienss planet</title>
+
+    <!--bootstrap-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <!-- swiper -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <!--font awesome-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -252,19 +260,19 @@
               <h2 class="introduce_title">Why choose us?</h2>
               <div class="introduce_content">
                 <div class="introduce_item">
-                  <img src="" alt="" />
+                  <i class="fa-solid fa-circle-chevron-up"></i>
                   <p>Etiam rutrum venenatis dui, non</p>
                 </div>
                 <div class="introduce_item">
-                  <img src="" alt="" />
+                  <i class="fa-solid fa-circle-chevron-up"></i>
                   <p>Aliquam ac diam in lorem vulputate auctor.</p>
                 </div>
                 <div class="introduce_item">
-                  <img src="" alt="" />
+                  <i class="fa-solid fa-circle-chevron-up"></i>
                   <p>Vestibulum vitae urna quis eros convallis</p>
                 </div>
                 <div class="introduce_item">
-                  <img src="" alt="" />
+                  <i class="fa-solid fa-circle-chevron-up"></i>
                   <p>Sed magna magna, congue</p>
                 </div>
               </div>
@@ -297,7 +305,14 @@
       </div>
       <div class="swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="./images/g1.jpg" alt=""></div>
+          <div class="swiper-slide">
+            <div class="swiper-slide_click">
+              <img src="/images/icon1.png" class="icon">
+            </div>
+            <div class=".swiper-slide_img">
+              <img src="./images/g1.jpg" alt="">
+            </div>
+          </div>
           <div class="swiper-slide"><img src="./images/g2.jpg" alt=""></div>
           <div class="swiper-slide"><img src="./images/g3.jpg" alt=""></div>
           <div class="swiper-slide"><img src="./images/g4.jpg" alt=""></div>
@@ -368,8 +383,8 @@
                 ></textarea>
                 <label for="floatingInput">Massage</label>
               </div>  
-              <button class="send" value="Clear Form">Clear Form</button>
-              <button class="send" value="Send!">Send!</button>
+              <button type="submit" class="btn btn-primary">Clear Form</button>
+              <button type="submit" class="btn btn-primary">Send!</button>
             </form>
           </div>
         </div>
