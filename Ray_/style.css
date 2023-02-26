@@ -1,11 +1,75 @@
-.imformation_flickr {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 10px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
-.imformation_flickr .img_container {
-  background-color: aqua;
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(#000 0% 2%, transparent 2% 95%, #000 95% 100%), url("/Ray_/images/bg.jpg");
+}
+
+header {
+  background-color: #fff;
+  padding: 0.7rem 1rem;
+  margin-top: 10px;
+}
+@media (min-width: 1200px) {
+  header {
+    max-width: 1200px;
+    margin: 10px auto 0;
+    padding: 1.5rem 2.5rem;
+  }
+}
+header .navbar-expand-lg {
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .navbar_container .loge_socialmedia_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+.navbar_container .logo_navbarbutton_container {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+main {
+  background-color: #fff;
+  padding: 0.7rem 1rem;
+}
+@media (min-width: 1200px) {
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+footer {
+  background-color: #fff;
+  padding: 0.7rem 1rem;
+}
+@media (min-width: 1200px) {
+  footer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .swiper-slide {
@@ -13,6 +77,7 @@
   font-size: 18px;
   display: block;
   position: relative;
+  width: 100%;
 }
 .swiper-slide_click {
   position: absolute;

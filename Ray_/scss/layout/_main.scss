@@ -1,0 +1,11 @@
+@use "../base/breakpoint" as *;
+@use "../base/color" as *;
+
+main {
+  background-color: $white;
+  padding: 0.7rem 1rem;
+  @include breakpoint($pc-web) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

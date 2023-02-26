@@ -1,3 +1,26 @@
+@forward "./breakpoint";
+@forward "./color";
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 img {
   width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(#000 0% 2%, transparent 2% 95%, #000 95% 100%),
+    url("/Ray_/images/bg.jpg");
 }

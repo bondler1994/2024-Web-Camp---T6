@@ -1,6 +1,4 @@
-@use '../scss/layout/footer';
-
-@use '../scss/Components/_imformation_flickr';
-
-@use '../scss/Vendors/bootstrap';
-@use '../scss/Vendors/swiper';
+@use "./base/base";
+@use "./Components/components";
+@use "./layout/layout";
+@use "./Vendors/vendors";

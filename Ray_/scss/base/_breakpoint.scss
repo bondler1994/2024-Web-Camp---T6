@@ -1,7 +1,8 @@
-$ipad:768px;
+$ipad: 768px;
+$pc-web: 1200px;
 
 @mixin breakpoint($min-width) {
-  @media (min-width:$min-width){
-    @content
+  @media (min-width: $min-width) {
+    @content;
   }
 }

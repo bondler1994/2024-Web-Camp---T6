@@ -1,0 +1,33 @@
+@use "../base/base" as *;
+
+header {
+  background-color: $white;
+  padding: 0.7rem 1rem;
+  margin-top: 10px;
+  @include breakpoint($pc-web) {
+    max-width: 1200px;
+    margin: 10px auto 0;
+    padding: 1.5rem 2.5rem;
+  }
+
+  .navbar-expand-lg {
+    flex-direction: column;
+  }
+}
+
+.navbar_container {
+  .loge_socialmedia_container {
+    @media (min-width: 992px) {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+
+  .logo_navbarbutton_container {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+}
