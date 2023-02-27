@@ -1,10 +1,9 @@
-@use "../base/breakpoint" as *;
-@use "../base/color" as *;
+@use "../base/base" as *;
 
 main {
-  background-color: $white;
+  background-image: url("/Ray_/images/subbg.gif");
   padding: 0.7rem 1rem;
-  @include breakpoint($pc-web) {
+  @include breakpoint($PC) {
     max-width: 1200px;
     margin: 0 auto;
   }

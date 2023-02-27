@@ -17,41 +17,148 @@ a {
 }
 
 body {
-  background: linear-gradient(#000 0% 2%, transparent 2% 95%, #000 95% 100%), url("/Ray_/images/bg.jpg");
+  min-width: 375px;
+  background: linear-gradient(#000 0% 0.5%, transparent 0.5% 95%, #000 95% 100%), url("/Ray_/images/bg.jpg");
 }
 
 header {
-  background-color: #fff;
-  padding: 0.7rem 1rem;
   margin-top: 10px;
 }
 @media (min-width: 1200px) {
   header {
     max-width: 1200px;
     margin: 10px auto 0;
-    padding: 1.5rem 2.5rem;
   }
 }
-header .navbar-expand-lg {
+header .navbar-expand-md {
   flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+}
+header .navbar-expand-md .nav_link_container {
+  background-color: #fff;
 }
 
-@media (min-width: 992px) {
+.navbar_container .loge_socialmedia_container {
+  flex: 1;
+  background-image: url("/Ray_/images/subbg.gif");
+  padding: 1.5rem 1rem;
+}
+@media (min-width: 768px) {
   .navbar_container .loge_socialmedia_container {
-    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar_container .loge_socialmedia_container {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding: 2.5rem 3rem;
   }
 }
 .navbar_container .logo_navbarbutton_container {
   display: flex;
   justify-content: space-between;
-  flex: 1;
+  margin-bottom: 20px;
+}
+.navbar_container .logo_navbarbutton_container a {
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0;
+  padding: 0;
+}
+
+.social_media_container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.social_media_container address {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.social_media_container address .phone {
+  color: #000;
+}
+.social_media_container address .phone:hover {
+  text-decoration: underline;
+}
+.social_media_container .social_media_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.social_media_container .social_media_links a {
+  padding: 0.7rem;
+}
+.social_media_container .social_media_links .facebook {
+  background: 0px 0px/150px url("/Ray_/images/social.png");
+}
+.social_media_container .social_media_links .facebook:hover {
+  background: 0px 23px/150px url("/Ray_/images/social.png");
+}
+.social_media_container .social_media_links .twitter {
+  background: 118px 0px/150px url("/Ray_/images/social.png");
+}
+.social_media_container .social_media_links .twitter:hover {
+  background: 118px 23px/150px url("/Ray_/images/social.png");
+}
+.social_media_container .social_media_links .fliker {
+  background: 87px 0px/150px url("/Ray_/images/social.png");
+}
+.social_media_container .social_media_links .fliker:hover {
+  background: 87px 23px/150px url("/Ray_/images/social.png");
+}
+.social_media_container .social_media_links .dribbble {
+  background: 56px 0px/150px url("/Ray_/images/social.png");
+}
+.social_media_container .social_media_links .dribbble:hover {
+  background: 56px 23px/150px url("/Ray_/images/social.png");
+}
+.social_media_container .social_media_links .RSS {
+  background: 23px 0px/150px url("/Ray_/images/social.png");
+}
+.social_media_container .social_media_links .RSS:hover {
+  background: 23px 23px/150px url("/Ray_/images/social.png");
+}
+
+.nav_link_container {
+  justify-content: space-between;
+  border: 1px solid #D9D9D9;
+}
+.nav_link_container .navbar-nav .dropdown-menu {
+  border-radius: 0;
+}
+.nav_link_container .navbar-nav .nav-link {
+  padding: 0.3rem 1rem;
+}
+@media (min-width: 1200px) {
+  .nav_link_container .navbar-nav .nav-link {
+    padding: 1rem;
+  }
+}
+.nav_link_container form {
+  width: auto;
+  position: relative;
+  padding: 0.6rem 0.8rem 0.3rem 1rem;
+}
+.nav_link_container form .form-control {
+  margin: 0;
+  border-radius: 0;
+  background-color: #E6E6E6;
+}
+.nav_link_container form .search_container {
+  display: inline-block;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  width: 1.3rem;
 }
 
 main {
-  background-color: #fff;
+  background-image: url("/Ray_/images/subbg.gif");
   padding: 0.7rem 1rem;
 }
 @media (min-width: 1200px) {
@@ -62,11 +169,12 @@ main {
 }
 
 footer {
-  background-color: #fff;
+  background-image: url("/Ray_/images/subbg.gif");
   padding: 0.7rem 1rem;
 }
 @media (min-width: 1200px) {
   footer {
+    padding: 2rem 2.5rem;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -93,7 +201,7 @@ footer {
   transform: translate(20px);
 }
 
-@media (max-width: 760px) {
+@media (min-width: 768px) {
   .swiper-button-next {
     right: 20px;
     transform: rotate(90deg);

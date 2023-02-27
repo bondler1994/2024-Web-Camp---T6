@@ -1,3 +1,5 @@
+@use "../base/breakpoint" as * ;
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -22,7 +24,7 @@
   }
 }
 
-@media (max-width: 760px) {
+@include breakpoint($tablet) {
   .swiper-button-next {
     right: 20px;
     transform: rotate(90deg);

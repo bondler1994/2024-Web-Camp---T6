@@ -1,22 +1,26 @@
 @use "../base/breakpoint" as *;
 
-@mixin grid_ipad{
+%grid_phone_S{
   display: grid;
+  grid-template-rows: repeat(4, 1fr);
   gap: 0;
 }
 
-@mixin grid_ipad {
-  @include breakpoint($ipad) {
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    gap: 15px;
-  }
+%grid_phone{
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  gap: 15px;
 }
 
-@mixin grid_pcweb {
-  @include breakpoint($pc-web) {
-    display: grid;
-    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
-    gap: 30px;
-  }
+%grid_tablet_PC_col3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
+
+%grid_tablet_PC_col4{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
