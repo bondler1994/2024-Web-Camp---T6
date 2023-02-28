@@ -1,0 +1,90 @@
+@use "../base/color" as *;
+%card_text {
+  color: $gray-600;
+  font-weight: 500;
+}
+
+.carousel_container {
+  .carousel_img {
+    height: 40vh;
+    object-fit: cover;
+  }
+
+  button{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 119px;
+  }
+
+  .carousel-control-prev {
+    background: no-repeat url("/Ray_/images/slider_prev.gif");
+  }
+
+  .carousel-control-next{
+    background: no-repeat url("/Ray_/images/slider_next.gif");
+  }
+}
+
+.card_articles_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  top: -30px;
+  padding: 0.1rem 1rem;
+
+  .card {
+    background-color: $gray;
+    --bs-card-border-radius: none;
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    &-title {
+      @extend %card_text;
+      text-transform: uppercase;
+    }
+
+    &_img_container {
+      width: 20%;
+    }
+
+    &-text {
+      @extend %card_text;
+      text-align: center;
+    }
+
+    &_link {
+      display: block;
+      padding: 0.3rem 1rem;
+      background-color: $gray-200;
+      @extend %card_text;
+
+      &:hover {
+        background-color: $primary_green;
+        color: $white;
+      }
+    }
+  }
+}
+
+.card:hover {
+  background-color: rgba(#ffffff, 0.05);
+
+  .card-body {
+    border: 1px solid $black;
+    background-color: rgba(50, 50, 50, 0.8);
+  }
+
+  .card-title,
+  .card-text {
+    color: $white;
+  }
+}

@@ -1,42 +1,48 @@
-@use "../base/breakpoint" as * ;
+@use "../base/breakpoint" as *;
+@use "../base/color" as *;
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  display: block;
-  position: relative;
-  width: 100%;
+.swiper_container {
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: block;
+    position: relative;
+    width: 100%;
 
-  &_click{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    opacity: 0;
-  }
-}
-
-.swiper-slide:hover{
-  .swiper-slide_click{
-    opacity: 1;
-    transform: translate(20px);
-  }
-}
-
-@include breakpoint($tablet) {
-  .swiper-button-next {
-    right: 20px;
-    transform: rotate(90deg);
+    &_click {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      opacity: 0;
+    }
   }
 
+  .swiper-slide:hover {
+    .swiper-slide_click {
+      opacity: 1;
+      transform: translate(20px);
+    }
+  }
+
+  .title_button_container {
+    display: flex;
+    justify-content: space-between;
+    .button_container {
+      display: flex;
+      gap: 20px;
+    }
+  }
+  .swiper-button-next,
   .swiper-button-prev {
-    left: 20px;
-    transform: rotate(90deg);
+    position: initial;
+    color: $gray-200;
+    @include breakpoint($tablet) {
+      transform: rotate(90deg);
+    }
   }
-}
 
-.swiper {
   .slider_click {
     position: relative;
 

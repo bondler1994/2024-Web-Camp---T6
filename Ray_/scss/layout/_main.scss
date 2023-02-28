@@ -1,10 +1,48 @@
 @use "../base/base" as *;
+@use "../Components/extend" as *;
 
 main {
   background-image: url("/Ray_/images/subbg.gif");
-  padding: 0.7rem 1rem;
   @include breakpoint($PC) {
     max-width: 1200px;
+    padding: 1.5rem 3rem 2.5rem;
     margin: 0 auto;
+  }
+}
+
+.introduce {
+  @extend %gap_layout_phone;
+  padding: 1rem 1rem 3rem;
+
+  &_welcome {
+    @extend %gap_layout_phone;
+
+    .text_container {
+      .text,
+      .more {
+        color: $gray-400;
+      }
+    }
+
+    .text_container:hover {
+      .text,
+      .more {
+        @extend %text_hover_effect;
+      }
+    }
+  }
+
+  &_choose {
+    @extend %gap_layout_phone;
+
+    .introduce_content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &_news {
+    @extend %gap_layout_phone;
   }
 }

@@ -1,0 +1,40 @@
+@use "../base/color" as *;
+@use "../Components/extend" as *;
+
+.introduce {
+  &_news {
+    .introduce_post {
+      @extend %gap_layout_phone;
+      flex-direction: row;
+    }
+
+    img {
+      width: 100px;
+    }
+
+    .text_container {
+      @extend %gap_layout_phone;
+
+      .date {
+        width: fit-content;
+        padding: 0.3rem 0.5rem;
+        background-color: $primary_green;
+        font-weight: 500;
+        color: $white;
+      }
+
+      .text,
+      .more {
+        color: $gray-400;
+        font-size: 0.8rem;
+      }
+    }
+
+    .text_container:hover {
+      .text,
+      .more {
+        @extend %text_hover_effect;
+      }
+    }
+  }
+}
