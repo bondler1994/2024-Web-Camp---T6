@@ -12,7 +12,8 @@ main {
 
 .introduce {
   @extend %gap_layout_phone;
-  padding: 1rem 1rem 3rem;
+  gap: 2rem;
+  padding: 0 1rem 1rem;
 
   &_welcome {
     @extend %gap_layout_phone;
@@ -27,7 +28,7 @@ main {
     .text_container:hover {
       .text,
       .more {
-        @extend %text_hover_effect;
+        @extend %text_1;
       }
     }
   }
@@ -36,13 +37,18 @@ main {
     @extend %gap_layout_phone;
 
     .introduce_content {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
+      @extend %gap_layout_phone;
+      gap: 2rem;
     }
   }
 
   &_news {
     @extend %gap_layout_phone;
   }
+}
+
+.swiper_container {
+  @extend %gap_layout_phone;
+  gap: 0;
+  padding: 1rem;
 }

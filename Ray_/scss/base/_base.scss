@@ -13,6 +13,7 @@ h5,
 h6,
 p {
   margin: 0;
+  line-height: initial;
 }
 
 img {
@@ -25,6 +26,6 @@ a {
 
 body {
   min-width: 375px;
-  background: linear-gradient(#000 0% .5%, transparent .5% 95%, #000 95% 100%),
+  background: linear-gradient(#000 0% .5%, transparent .5% 90%, #000 90% 100%),
     url("/Ray_/images/bg.jpg");
 }

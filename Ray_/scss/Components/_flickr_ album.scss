@@ -1,11 +1,11 @@
-.imformation_flickr{
+.flickr_album_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1%;
+}
 
-  display: grid;
-  grid-template-columns:repeat(4,1fr);
-  grid-template-rows:repeat(4,1fr);
-  gap:10px;
-
-  .img_container{
-    background-color: aqua;
-  }
+.flicker_img{
+  flex:1 1 24%;
 }

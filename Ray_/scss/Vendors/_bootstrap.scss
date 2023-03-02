@@ -1,8 +1,7 @@
 @use "../base/color" as *;
-%card_text {
-  color: $gray-600;
-  font-weight: 500;
-}
+@use "../Components/extend" as *;
+
+
 
 .carousel_container {
   .carousel_img {
@@ -10,9 +9,9 @@
     object-fit: cover;
   }
 
-  button{
+  button {
     position: absolute;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
     width: 40px;
     height: 119px;
@@ -22,28 +21,24 @@
     background: no-repeat url("/Ray_/images/slider_prev.gif");
   }
 
-  .carousel-control-next{
+  .carousel-control-next {
     background: no-repeat url("/Ray_/images/slider_next.gif");
   }
 }
 
 .card_articles_container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  @extend %gap_layout_phone;
   position: relative;
   top: -30px;
   padding: 0.1rem 1rem;
 
   .card {
     background-color: $gray;
-    --bs-card-border-radius: none;
+    border-radius: 0;
 
     &-body {
-      display: flex;
-      flex-direction: column;
+      @extend %gap_layout_phone;
       align-items: center;
-      gap: 1rem;
       padding: 2rem;
     }
 
@@ -86,5 +81,43 @@
   .card-title,
   .card-text {
     color: $white;
+  }
+}
+
+.information_item {
+  .form_container {
+    @extend %gap_layout_phone;
+  }
+
+  input,
+  textarea {
+    padding: .2rem;
+    background-color: $gray;
+    border-radius: 2px;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: $gray-100;
+    box-shadow: none;
+  }
+  
+  .button_container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+    .btn {
+      text-transform: uppercase;
+      border: none;
+      border-radius: 0;
+      padding: .3rem 1rem;
+      background-color: $black;
+      color:$white;
+
+      &:hover{
+        background-color:$primary_green;
+      }
+    }
   }
 }

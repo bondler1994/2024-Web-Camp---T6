@@ -33,7 +33,7 @@
     .text_container:hover {
       .text,
       .more {
-        @extend %text_hover_effect;
+        @extend %text_1;
       }
     }
   }

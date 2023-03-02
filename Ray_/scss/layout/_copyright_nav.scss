@@ -1,0 +1,25 @@
+@use "../base/color" as *;
+@use "../base/breakpoint" as *;
+@use "../Components/extend" as *;
+
+.copyright_nav_container {
+  @extend %gap_layout_phone;
+  padding: 1rem;
+
+  .nav {
+    flex-direction: column;
+    .nav-link {
+      @extend %text_2;
+      &:hover {
+        color: $primary_green;
+      }
+    }
+  }
+
+  .copyright {
+    @extend %text_2;
+    .privacy {
+      color: $primary_green;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 @use "../base/base" as *;
+@use "../Components/extend" as *;
 
 footer {
   background-image: url("/Ray_/images/subbg.gif");
@@ -7,5 +8,37 @@ footer {
     padding: 2rem 2.5rem;
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  .information {
+    @extend %gap_layout_phone;
+    gap: 2rem;
+  }
+}
+
+.information {
+  &_item {
+    @extend %gap_layout_phone;
+  }
+
+  &_testimonials_people {
+    @extend %gap_layout_phone;
+    flex-direction: row;
+  }
+
+  &_people_name,
+  &_people_link {
+    display: block;
+    line-height: 1.4;
+  }
+
+  &_people_link{
+    font-style: italic;
+    color:$primary_green;
+
+    &:hover{
+      text-decoration: underline;
+      color:$primary_green;
+    }
   }
 }
