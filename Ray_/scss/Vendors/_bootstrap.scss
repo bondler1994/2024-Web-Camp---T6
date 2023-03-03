@@ -1,12 +1,74 @@
-@use "../base/color" as *;
+@use "../utils/breakpoint" as *;
+@use "../utils/color" as *;
 @use "../Components/extend" as *;
 
+.nav_link_container {
+  position: relative;
+  top: 20px;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid $gray-100;
 
+  @include breakpoint($tablet) {
+    border: 0;
+  }
+
+  .navbar-nav {
+    flex: 1 1 30%;
+    background-color: #fff;
+  }
+
+  .dropdown-menu {
+    border-radius: 0;
+    padding: 1rem;
+
+    .dropdown-item:hover {
+      background-color: $primary_green;
+    }
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+    @include breakpoint($tablet) {
+      padding: 1rem;
+    }
+    &:hover {
+      background-color: $primary_green;
+    }
+  }
+
+  .search_container {
+    flex: 1;
+    width: auto;
+    position: relative;
+    padding: 0.6rem 0.8rem 1rem 1rem;
+    background-color: #fff;
+    @include breakpoint($tablet) {
+      padding: 0.6rem 0.8rem 0.3rem 1rem;
+    }
+    .form-control {
+      margin: 0;
+      border-radius: 0;
+      background-color: $gray;
+    }
+
+    .search_button {
+      display: inline-block;
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      width: 1.3rem;
+    }
+  }
+}
 
 .carousel_container {
   .carousel_img {
     height: 40vh;
     object-fit: cover;
+    @include breakpoint($tablet) {
+      height: initial;
+    }
   }
 
   button {
@@ -19,22 +81,29 @@
 
   .carousel-control-prev {
     background: no-repeat url("/Ray_/images/slider_prev.gif");
+    &:hover {
+      background: no-repeat 0 -120px / auto url("/Ray_/images/slider_prev.gif");
+    }
   }
 
   .carousel-control-next {
     background: no-repeat url("/Ray_/images/slider_next.gif");
+    &:hover {
+      background: no-repeat 0 -120px / auto url("/Ray_/images/slider_next.gif");
+    }
   }
 }
 
 .card_articles_container {
-  @extend %gap_layout_phone;
-  position: relative;
-  top: -30px;
-  padding: 0.1rem 1rem;
-
   .card {
     background-color: $gray;
     border-radius: 0;
+    @include breakpoint($tablet) {
+      flex: 1 1 47%;
+    }
+    @include breakpoint($PC) {
+      flex: 1;
+    }
 
     &-body {
       @extend %gap_layout_phone;
@@ -91,7 +160,7 @@
 
   input,
   textarea {
-    padding: .2rem;
+    padding: 0.2rem;
     background-color: $gray;
     border-radius: 2px;
   }
@@ -101,22 +170,34 @@
     border-color: $gray-100;
     box-shadow: none;
   }
-  
+
   .button_container {
     display: flex;
     justify-content: center;
     gap: 20px;
-    
+
     .btn {
       text-transform: uppercase;
       border: none;
       border-radius: 0;
-      padding: .3rem 1rem;
+      padding: 0.3rem 1rem;
       background-color: $black;
-      color:$white;
+      color: $white;
 
-      &:hover{
-        background-color:$primary_green;
+      &:hover {
+        background-color: $primary_green;
+      }
+    }
+  }
+}
+
+.copyright_nav_container {
+  .nav {
+    flex-direction: column;
+    .nav-link {
+      @extend %text_2;
+      &:hover {
+        color: $primary_green;
       }
     }
   }

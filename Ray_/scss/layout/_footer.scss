@@ -1,4 +1,5 @@
-@use "../base/base" as *;
+@use "../utils/breakpoint" as *;
+@use "../utils/color" as *;
 @use "../Components/extend" as *;
 
 footer {
@@ -13,12 +14,22 @@ footer {
   .information {
     @extend %gap_layout_phone;
     gap: 2rem;
+    @include breakpoint($tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 }
 
 .information {
   &_item {
     @extend %gap_layout_phone;
+    @include breakpoint($tablet) {
+      flex: 1 1 47%;
+    }
+    @include breakpoint($PC) {
+      flex: 1;
+    }
   }
 
   &_testimonials_people {
@@ -32,13 +43,13 @@ footer {
     line-height: 1.4;
   }
 
-  &_people_link{
+  &_people_link {
     font-style: italic;
-    color:$primary_green;
+    color: $primary_green;
 
-    &:hover{
+    &:hover {
       text-decoration: underline;
-      color:$primary_green;
+      color: $primary_green;
     }
   }
 }

@@ -1,22 +1,48 @@
-@use "../base/base" as *;
+@use "../utils/breakpoint" as *;
+@use "../utils/color" as *;
 @use "../Components/extend" as *;
 
 main {
   background-image: url("/Ray_/images/subbg.gif");
   @include breakpoint($PC) {
     max-width: 1200px;
-    padding: 1.5rem 3rem 2.5rem;
+    padding: 1.5rem 0 2.5rem;
     margin: 0 auto;
+  }
+}
+
+.card_articles_container {
+  @extend %gap_layout_phone;
+  position: relative;
+  top: -30px;
+  padding: 0 1rem;
+  @include breakpoint($tablet) {
+    gap: 1.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @include breakpoint($PC) {
+    padding: 0 2.5rem;
   }
 }
 
 .introduce {
   @extend %gap_layout_phone;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 0 1rem 1rem;
+  @include breakpoint($tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @include breakpoint($PC) {
+    padding: 0 2.5rem;
+  }
 
   &_welcome {
     @extend %gap_layout_phone;
+    @include breakpoint($tablet) {
+      flex: 1;
+    }
 
     .text_container {
       .text,
@@ -35,20 +61,27 @@ main {
 
   &_choose {
     @extend %gap_layout_phone;
+    @include breakpoint($tablet) {
+      flex: 1;
+    }
 
     .introduce_content {
       @extend %gap_layout_phone;
-      gap: 2rem;
+      gap: 1.5rem;
     }
   }
 
   &_news {
     @extend %gap_layout_phone;
+    @include breakpoint($tablet) {
+      flex: 1;
+    }
   }
 }
 
 .swiper_container {
-  @extend %gap_layout_phone;
-  gap: 0;
   padding: 1rem;
+  @include breakpoint($PC) {
+    padding: 0 2.5rem;
+  }
 }

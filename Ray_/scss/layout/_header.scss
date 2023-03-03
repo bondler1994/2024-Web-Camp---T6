@@ -1,7 +1,8 @@
-@use "../base/base" as *;
+@use "../utils/breakpoint" as *;
+@use "../utils/color" as *;
 
 header {
-  margin:10px auto 20px;
+  margin: 10px auto 20px;
   @include breakpoint($PC) {
     max-width: 1200px;
     margin: 10px auto 0;
@@ -20,7 +21,7 @@ header {
   flex: 1;
   background-image: url("/Ray_/images/subbg.gif");
   padding: 1.5rem 1rem;
-  @include breakpoint($PC) {
+  @include breakpoint($tablet) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -50,7 +51,11 @@ header {
 
 .social_media_container {
   display: flex;
+  gap: 0.5rem;
   flex-direction: column-reverse;
+  @include breakpoint($tablet) {
+    flex-direction: column;
+  }
 
   .social_media_links {
     display: flex;
@@ -58,37 +63,83 @@ header {
     justify-content: center;
     gap: 1.2rem;
 
+    @include breakpoint($PC) {
+      gap: 0.5rem;
+    }
     a {
       padding: 0.7rem;
+      @include breakpoint($PC) {
+        padding: 1rem;
+      }
     }
     .facebook {
-      background: 0px 0px/150px url("/Ray_/images/social.png");
+      background: 0 0/150px url("/Ray_/images/social.png");
+      @include breakpoint($PC) {
+        background-size: 210px;
+      }
       &:hover {
         background: 0px 23px/150px url("/Ray_/images/social.png");
+        @include breakpoint($PC) {
+          background-position: 0 31px;
+          background-size: 210px;
+        }
       }
     }
     .twitter {
       background: 118px 0px/150px url("/Ray_/images/social.png");
+      @include breakpoint($PC) {
+        background-position: -44px 0;
+        background-size: 210px;
+      }
       &:hover {
         background: 118px 23px/150px url("/Ray_/images/social.png");
+        @include breakpoint($PC) {
+          background-position: -44px 31px;
+          background-size: 210px;
+        }
       }
     }
     .fliker {
-      background: 87px 0px/150px url("/Ray_/images/social.png");
+      background: 87px 0/150px url("/Ray_/images/social.png");
+      @include breakpoint($PC) {
+        background-position: -87px 0;
+        background-size: 210px;
+      }      
       &:hover {
         background: 87px 23px/150px url("/Ray_/images/social.png");
+        @include breakpoint($PC) {
+          background-position: -87px 31px;
+          background-size: 210px;
+        }
       }
+
     }
     .dribbble {
       background: 56px 0px/150px url("/Ray_/images/social.png");
+      @include breakpoint($PC) {
+        background-position: 56px 0;
+        background-size: 210px;
+      }
       &:hover {
         background: 56px 23px/150px url("/Ray_/images/social.png");
+        @include breakpoint($PC) {
+          background-position: 56px 31px;
+          background-size: 210px;
+        }
       }
     }
     .RSS {
       background: 23px 0px/150px url("/Ray_/images/social.png");
+      @include breakpoint($PC) {
+        background-position: 23px 0;
+        background-size: 210px;
+      }
       &:hover {
         background: 23px 23px/150px url("/Ray_/images/social.png");
+        @include breakpoint($PC) {
+          background-position: 23px 31px;
+          background-size: 210px;
+        }
       }
     }
   }
@@ -96,72 +147,13 @@ header {
   address {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
   .phone {
     color: $black;
 
     &:hover {
       text-decoration: underline;
-    }
-  }
-}
-
-.nav_link_container {
-  position: relative;
-  top: 20px;
-  justify-content: space-between;
-  gap: 1rem;
-  border: 1px solid $gray-100;
-
-  @include breakpoint($tablet) {
-    border: 0;
-  }
-
-  .navbar-nav {
-    flex: 1 1 30%;
-    background-color: #fff;
-  }
-
-  .dropdown-menu {
-    border-radius: 0;
-    padding: 1rem;
-
-    .dropdown-item:hover{
-      background-color: $primary_green;
-    }
-  }
-
-  .nav-link {
-    padding: 0.5rem 1rem;
-    @include breakpoint($PC) {
-      padding: 1rem;
-    }
-    &:hover{
-      background-color: $primary_green;
-    }
-  }
-
-  .search_container {
-    flex: 1;
-    width: auto;
-    position: relative;
-    padding: 0.6rem 0.8rem 1rem 1rem;
-    background-color: #fff;
-    // padding: 0.6rem 0.8rem 0.3rem 1rem;
-
-    .form-control {
-      margin: 0;
-      border-radius: 0;
-      background-color: $gray;
-    }
-
-    .search_button {
-      display: inline-block;
-      position: absolute;
-      top: 1rem;
-      right: 1.5rem;
-      width: 1.3rem;
     }
   }
 }

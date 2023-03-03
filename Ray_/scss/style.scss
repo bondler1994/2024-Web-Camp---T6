@@ -1,4 +1,19 @@
-@use "./base/base";
-@use "./Components/components";
-@use "./layout/layout";
-@use "./Vendors/vendors";
+@use "./base/reset";
+
+@use "./Components/choose_list";
+@use "./Components/dialog";
+@use "./Components/extend";
+@use "./Components/album";
+@use "./Components/introduce_news";
+
+@use "./utils/background";
+@use "./utils/breakpoint";
+@use "./utils/color";
+
+@use "./layout/copyright_nav";
+@use "./layout/footer";
+@use "./layout/header";
+@use "./layout/main";
+
+@use "./Vendors/bootstrap";
+@use "./Vendors/swiper";

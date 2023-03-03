@@ -1,7 +1,5 @@
-$phone_S: 375px;
-$phone: 576px;
+$phone: 576px; //需要提早改變樣式
 $tablet: 768px;
-$tablet_PC: 992px;
 $PC: 1200px;
 
 @mixin breakpoint($min-width) {
