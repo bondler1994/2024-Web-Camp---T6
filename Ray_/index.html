@@ -33,8 +33,8 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-md navbar_container">
-        <div class="loge_socialmedia_container">
-          <div class="logo_navbarbutton_container">
+        <div class="logo_socialmedia">
+          <div class="logo_navbarbutton">
             <h1>
               <a class="navbar-brand" href="#">
                 <img src="./images/logo.png" alt="" />
@@ -52,7 +52,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
           </div>
-          <div class="social_media_container">
+          <div class="social_media">
             <div class="social_media_links">
               <a
                 href="https://www.facebook.com/"
@@ -80,7 +80,7 @@
                 target="_blank"
               ></a>
             </div>
-            <address>
+            <address class="contact_method">
               <span>Call Us Now:</span>
               <a href="tel:+1777784-25-43" class="phone">+1 (777) 784-25-43</a>
             </address>
@@ -265,44 +265,48 @@
         </div>
       </div>
       <div class="introduce">
-        <div class="introduce_welcome">
+        <div class="introduce_item">
           <h2 class="introduce_title">Welcome</h2>
-          <div class="img_container">
-            <img src="./images/welcome.jpg" alt="" />
-          </div>
-          <div class="text_container">
-            <p class="text">
-              Curabitur velit nisl, porttitor viverra molesite quis, Iacinia
-              eget purus. Suspendisse ipsum massa, rutrum in hendrerit
-              malesuada, fermentum id erat...<a href="##" class="more">more</a>
-            </p>
+          <div class="welcome">
+            <div class="img_container">
+              <img src="./images/welcome.jpg" alt="" />
+            </div>
+            <div class="text_container">
+              <p class="text">
+                Curabitur velit nisl, porttitor viverra molesite quis, Iacinia
+                eget purus. Suspendisse ipsum massa, rutrum in hendrerit
+                malesuada, fermentum id erat...<a href="##" class="more"
+                  >more</a
+                >
+              </p>
+            </div>
           </div>
         </div>
-        <div class="introduce_choose">
+        <div class="introduce_item">
           <h2 class="introduce_title">Why choose us?</h2>
-          <div class="introduce_content">
-            <div class="introduce_item">
+          <div class="choose_list">
+            <div class="list">
               <div class="icon_container"><div class="icon"></div></div>
               <p class="text">Etiam rutrum venenatis dui, non</p>
             </div>
-            <div class="introduce_item">
+            <div class="list">
               <div class="icon_container"><div class="icon"></div></div>
               <p class="text">Aliquam ac diam in lorem vulputate auctor.</p>
             </div>
-            <div class="introduce_item">
+            <div class="list">
               <div class="icon_container"><div class="icon"></div></div>
               <p class="text">Vestibulum vitae urna quis eros convallis</p>
             </div>
-            <div class="introduce_item">
+            <div class="list">
               <div class="icon_container"><div class="icon"></div></div>
               <p class="text">Sed magna magna, congue</p>
             </div>
           </div>
         </div>
-        <div class="introduce_news">
+        <div class="introduce_item">
           <h2 class="introduce_title">News & Events</h2>
-          <div class="introduce_content">
-            <div class="introduce_post">
+          <div class="news">
+            <div class="news_post">
               <div class="img_container">
                 <img src="./images/news1.jpg" alt="" />
               </div>
@@ -314,9 +318,7 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div class="introduce_content">
-            <div class="introduce_post">
+            <div class="news_post">
               <div class="img_container">
                 <img src="./images/news2.jpg" alt="" />
               </div>
@@ -336,7 +338,7 @@
       <div class="swiper_container">
         <div class="swiper">
           <div class="title_button_container">
-            <h2>Features Work</h2>
+            <h2 class="swiper_title">Features Work</h2>
             <div class="button_container">
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
@@ -519,28 +521,28 @@
       <div class="information">
         <div class="information_item">
           <h4 class="information_title">Latest Tweets</h4>
-          <div class="information_tweet">
+          <div class="tweet">
             <p>loading tweets...</p>
           </div>
         </div>
         <div class="information_item">
           <h4 class="information_title">Testimonials</h4>
-          <div class="information_testimonials">
-            <div class="information_dialog_container">
-              <p class="information_dialog">
+          <div class="testimonials">
+            <div class="testimonials_dialog">
+              <p class="testimonials_dialog_content">
                 "Sed dapibus molesite interdum. Fusce nec est ante, sit amet
                 lacinia lorem. Maecenas nec eros ut mauris pulvinar suscipit.
                 Aliquam erat"
               </p>
             </div>
-            <div class="information_testimonials_people">
-              <div class="people_img_container">
+            <div class="testimonials_people">
+              <div class="testimonials_people_img_container">
                 <img class="people_img" src="./images/men.jpg" alt="" />
               </div>
-              <div class="information_testimonials_people_identity">
+              <div class="testimonials_people_identity">
                 <span class="information_people_name">Stephen Bingham</span>
                 <a
-                  class="information_people_link"
+                  class="testimonials_people_link"
                   href="http://www.demolink.org/"
                   >demolink.org</a
                 >
@@ -550,26 +552,28 @@
         </div>
         <div class="information_item">
           <h4 class="information_title">Get in touch!</h4>
-          <form class="form_container">
-            <input
-              type="text"
-              class="form-control"
-              id="floatingInput"
-              placeholder="Name"
-            />
-            <input
-              type="email"
-              class="form-control"
-              id="floatingInput"
-              placeholder="Email"
-            />
-            <textarea
-              class="form-control"
-              id="exampleFormControlTextarea1"
-              rows="3"
-              placeholder="Massage"
-              value="Massage"
-            ></textarea>
+          <form class="touch">
+            <div class="touch_write">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Name"
+              />
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Email"
+              />
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="5"
+                placeholder="Massage"
+                value="Massage"
+              ></textarea>
+            </div>
             <div class="button_container">
               <button type="submit" class="btn btn-primary">clear from</button>
               <button type="submit" class="btn btn-primary">send!</button>
@@ -578,24 +582,48 @@
         </div>
         <div class="information_item">
           <h4 class="information_title">Flickr</h4>
-          <div class="flickr_album_container">
-            <a class="flicker_img_container" href="##"><img src="./images/f1.jpg" alt="" /></a>
-            <a class="flicker_img_container" href="##"><img src="./images/f2.jpg" alt="" /></a>
-            <a class="flicker_img_container" href="##"><img src="./images/f3.jpg" alt="" /></a>
-            <a class="flicker_img_container" href="##"><img src="./images/f4.jpg" alt="" /></a>
-            <a class="flicker_img_container" href="##"><img src="./images/f5.jpg" alt="" /></a>
-            <a class="flicker_img_container" href="##"><img src="./images/f6.jpg" alt="" /></a>
-            <a class="flicker_img_container" href="##"><img src="./images/f7.jpg" alt="" /></a>
-            <a class="flicker_img_container" href="##"><img src="./images/f8.jpg" alt="" /></a>
-            <a class="flicker_img_container" href="##"><img src="./images/f9.jpg" alt="" /></a>
-            <a class="flicker_img_container" href="##"><img src="./images/f10.jpg" alt="" /></a>
-            <a class="flicker_img_container" href="##"><img src="./images/f11.jpg" alt="" /></a>
-            <a class="flicker_img_container" href="##"><img src="./images/f12.jpg" alt="" /></a>
+          <div class="flickr">
+            <a class="flickr_img_container" href="##"
+              ><img src="./images/f1.jpg" alt=""
+            /></a>
+            <a class="flickr_img_container" href="##"
+              ><img src="./images/f2.jpg" alt=""
+            /></a>
+            <a class="flickr_img_container" href="##"
+              ><img src="./images/f3.jpg" alt=""
+            /></a>
+            <a class="flickr_img_container" href="##"
+              ><img src="./images/f4.jpg" alt=""
+            /></a>
+            <a class="flickr_img_container" href="##"
+              ><img src="./images/f5.jpg" alt=""
+            /></a>
+            <a class="flickr_img_container" href="##"
+              ><img src="./images/f6.jpg" alt=""
+            /></a>
+            <a class="flickr_img_container" href="##"
+              ><img src="./images/f7.jpg" alt=""
+            /></a>
+            <a class="flickr_img_container" href="##"
+              ><img src="./images/f8.jpg" alt=""
+            /></a>
+            <a class="flickr_img_container" href="##"
+              ><img src="./images/f9.jpg" alt=""
+            /></a>
+            <a class="flickr_img_container" href="##"
+              ><img src="./images/f10.jpg" alt=""
+            /></a>
+            <a class="flickr_img_container" href="##"
+              ><img src="./images/f11.jpg" alt=""
+            /></a>
+            <a class="flickr_img_container" href="##"
+              ><img src="./images/f12.jpg" alt=""
+            /></a>
           </div>
         </div>
       </div>
     </footer>
-    <div class="copyright_nav_container">
+    <div class="copyright_nav">
       <ul class="nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>

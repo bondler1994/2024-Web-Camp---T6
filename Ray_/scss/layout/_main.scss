@@ -1,87 +1,42 @@
 @use "../utils/breakpoint" as *;
 @use "../utils/color" as *;
-@use "../Components/extend" as *;
+@use "../utils/extend" as *;
+@use "../utils/gutter" as *;
 
 main {
   background-image: url("/Ray_/images/subbg.gif");
-  @include breakpoint($PC) {
-    max-width: 1200px;
-    padding: 1.5rem 0 2.5rem;
-    margin: 0 auto;
-  }
-}
-
-.card_articles_container {
-  @extend %gap_layout_phone;
-  position: relative;
-  top: -30px;
-  padding: 0 1rem;
   @include breakpoint($tablet) {
-    gap: 1.5rem;
-    flex-direction: row;
-    flex-wrap: wrap;
+    padding: 1.2rem 0 2.5rem;
   }
   @include breakpoint($PC) {
-    padding: 0 2.5rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-shadow: 0 1px 3px 0 $gray-400;
   }
 }
 
 .introduce {
-  @extend %gap_layout_phone;
-  gap: 1.5rem;
+  @extend %phone_block_gutter;
   padding: 0 1rem 1rem;
+  position: relative;
   @include breakpoint($tablet) {
     flex-direction: row;
     flex-wrap: wrap;
+    gap: $gutter_l;
   }
   @include breakpoint($PC) {
-    padding: 0 2.5rem;
+    padding: 2rem 2.6rem 6rem;
   }
 
-  &_welcome {
-    @extend %gap_layout_phone;
+  &_item {
+    @extend %phone_article_gutter;
     @include breakpoint($tablet) {
       flex: 1;
-    }
-
-    .text_container {
-      .text,
-      .more {
-        color: $gray-400;
-      }
-    }
-
-    .text_container:hover {
-      .text,
-      .more {
-        @extend %text_1;
-      }
+      gap: $gutter_l;
     }
   }
 
-  &_choose {
-    @extend %gap_layout_phone;
-    @include breakpoint($tablet) {
-      flex: 1;
-    }
-
-    .introduce_content {
-      @extend %gap_layout_phone;
-      gap: 1.5rem;
-    }
-  }
-
-  &_news {
-    @extend %gap_layout_phone;
-    @include breakpoint($tablet) {
-      flex: 1;
-    }
-  }
-}
-
-.swiper_container {
-  padding: 1rem;
-  @include breakpoint($PC) {
-    padding: 0 2.5rem;
+  &_title {
+    text-transform: uppercase;
   }
 }

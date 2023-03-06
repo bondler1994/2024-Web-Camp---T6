@@ -1,13 +1,13 @@
 @use "../utils/breakpoint" as *;
 @use "../utils/color" as *;
-@use "../Components/extend" as *;
+@use "../utils/extend" as *;
+@use "../utils/gutter" as *;
 
 .nav_link_container {
   position: relative;
   top: 20px;
   justify-content: space-between;
-  gap: 1rem;
-  border: 1px solid $gray-100;
+  gap: 0.7rem;
 
   @include breakpoint($tablet) {
     border: 0;
@@ -16,23 +16,36 @@
   .navbar-nav {
     flex: 1 1 30%;
     background-color: #fff;
+    @include breakpoint($tablet) {
+      box-shadow: 3px -1px 3px 0 $gray-400;
+      flex: 1 1 45%;
+    }
   }
+
+  .nav-item {
+    @include breakpoint($tablet) {
+      border-right: 0.1rem solid $gray-100;
+    }
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    @include breakpoint($tablet) {
+      padding: 1rem 1.5rem;
+    }
+    &:hover {
+      background-color: $primary_green;
+      color: $white;
+    }
+  }
+
 
   .dropdown-menu {
     border-radius: 0;
     padding: 1rem;
 
     .dropdown-item:hover {
-      background-color: $primary_green;
-    }
-  }
-
-  .nav-link {
-    padding: 0.5rem 1rem;
-    @include breakpoint($tablet) {
-      padding: 1rem;
-    }
-    &:hover {
       background-color: $primary_green;
     }
   }
@@ -44,8 +57,11 @@
     padding: 0.6rem 0.8rem 1rem 1rem;
     background-color: #fff;
     @include breakpoint($tablet) {
+      height: 56px; //強制跟旁邊的nav一樣高
       padding: 0.6rem 0.8rem 0.3rem 1rem;
+      box-shadow: -3px -1px 3px 0 $gray-400;
     }
+
     .form-control {
       margin: 0;
       border-radius: 0;
@@ -61,6 +77,8 @@
     }
   }
 }
+
+// carousel
 
 .carousel_container {
   .carousel_img {
@@ -95,20 +113,35 @@
 }
 
 .card_articles_container {
+  @extend %phone_block_gutter;
+  position: relative;
+  top: -30px;
+  padding: 0 1rem;
+  @include breakpoint($tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $gutter_l;
+    padding: 0 2.6rem;
+  }
+
   .card {
     background-color: $gray;
     border-radius: 0;
     @include breakpoint($tablet) {
-      flex: 1 1 47%;
+      flex: 1 1 calc(50% - (2rem / 2));
     }
     @include breakpoint($PC) {
       flex: 1;
     }
 
     &-body {
-      @extend %gap_layout_phone;
+      @extend %phone_article_gutter;
       align-items: center;
       padding: 2rem;
+      @include breakpoint($tablet) {
+        padding: 2.6rem 2.6rem 2rem;
+        gap: $gutter_l;
+      }
     }
 
     &-title {
@@ -118,11 +151,17 @@
 
     &_img_container {
       width: 20%;
+      @include breakpoint($tablet) {
+        width: 30%;
+      }
     }
 
     &-text {
       @extend %card_text;
       text-align: center;
+      @include breakpoint($tablet) {
+        line-height: 1.2;
+      }
     }
 
     &_link {
@@ -153,16 +192,24 @@
   }
 }
 
-.information_item {
-  .form_container {
-    @extend %gap_layout_phone;
+.touch {
+  @extend %phone_article_gutter;
+  @include breakpoint($PC) {
+    gap: $gutter_l;
+  }
+
+  &_write {
+    @extend %phone_article_gutter;
+    gap: 0.3rem;
   }
 
   input,
   textarea {
     padding: 0.2rem;
-    background-color: $gray;
     border-radius: 2px;
+    background-color: $gray;
+    font-size: 0.9rem;
+    font-weight: 500;
   }
 
   input:focus,
@@ -174,16 +221,18 @@
   .button_container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 1.2rem;
+    @include breakpoint($PC) {
+      justify-content: initial;
+    }
 
     .btn {
-      text-transform: uppercase;
+      padding: 0.3rem 1rem;
       border: none;
       border-radius: 0;
-      padding: 0.3rem 1rem;
       background-color: $black;
+      text-transform: uppercase;
       color: $white;
-
       &:hover {
         background-color: $primary_green;
       }
@@ -191,14 +240,37 @@
   }
 }
 
-.copyright_nav_container {
+.copyright_nav {
   .nav {
     flex-direction: column;
-    .nav-link {
-      @extend %text_2;
-      &:hover {
-        color: $primary_green;
+    @include breakpoint($tablet) {
+      flex-direction: row;
+      order: 1;
+      height: fit-content;
+    }
+  }
+
+  .nav-item {
+    @include breakpoint($tablet) {
+      padding: 0 1rem;
+      height: fit-content;
+    }
+    & + .nav-item {
+      @include breakpoint($tablet) {
+        border-left: 0.2rem solid $gray-400;
       }
+    }
+  }
+
+  .nav-link {
+    @extend %text_style;
+    text-transform: uppercase;
+    @include breakpoint($tablet) {
+      padding: 0;
+      line-height: 1;
+    }
+    &:hover {
+      color: $primary_green;
     }
   }
 }

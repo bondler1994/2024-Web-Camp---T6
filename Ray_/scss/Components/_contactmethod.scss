@@ -1,0 +1,14 @@
+@use "../utils/color" as *;
+
+.contact_method {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.phone {
+  color: $black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

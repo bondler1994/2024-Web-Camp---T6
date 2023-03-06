@@ -1,0 +1,40 @@
+@use "../utils/breakpoint" as *;
+@use "../utils/color" as *;
+@use "../utils/extend" as *;
+@use "../utils/gutter" as *;
+
+.welcome {
+  @extend %phone_article_gutter;
+  @include breakpoint($tablet) {
+    flex: 1;
+    gap: $gutter_l;
+  }
+
+  .text_container {
+    .text,
+    .more {
+      color: $gray-400;
+      @include breakpoint($tablet) {
+        font-size: 1rem;
+        line-height: 1.2;
+      }
+    }
+    .text {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+    }
+    .more {
+      text-transform: capitalize;
+      color: $black;
+    }
+  }
+
+  .text_container:hover {
+    .text,
+    .more {
+      @extend %text_hover;
+    }
+  }
+}

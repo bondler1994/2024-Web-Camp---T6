@@ -3,9 +3,11 @@
 
 header {
   margin: 10px auto 20px;
-  @include breakpoint($PC) {
-    max-width: 1200px;
+  @include breakpoint($tablet) {
     margin: 10px auto 0;
+  }
+  @include breakpoint($PC) {
+    max-width: 1440px;
   }
 
   .navbar-expand-md {
@@ -17,143 +19,24 @@ header {
   }
 }
 
-.loge_socialmedia_container {
+.logo_socialmedia {
   flex: 1;
   background-image: url("/Ray_/images/subbg.gif");
   padding: 1.5rem 1rem;
+  box-shadow: 0 0 5px 0 $gray-800;
   @include breakpoint($tablet) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2.5rem 3rem;
+    padding: 2rem 2.7rem;
   }
 }
 
-.logo_navbarbutton_container {
+.logo_navbarbutton {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-
-  h1 {
-    margin-right: 10px; //在網頁尺寸變大前跟nav的icon做出間隔
-    @include breakpoint($phone) {
-      margin-right: 0;
-    }
-  }
-
-  a {
-    display: inline-block;
-    vertical-align: bottom;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-.social_media_container {
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column-reverse;
   @include breakpoint($tablet) {
-    flex-direction: column;
-  }
-
-  .social_media_links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1.2rem;
-
-    @include breakpoint($PC) {
-      gap: 0.5rem;
-    }
-    a {
-      padding: 0.7rem;
-      @include breakpoint($PC) {
-        padding: 1rem;
-      }
-    }
-    .facebook {
-      background: 0 0/150px url("/Ray_/images/social.png");
-      @include breakpoint($PC) {
-        background-size: 210px;
-      }
-      &:hover {
-        background: 0px 23px/150px url("/Ray_/images/social.png");
-        @include breakpoint($PC) {
-          background-position: 0 31px;
-          background-size: 210px;
-        }
-      }
-    }
-    .twitter {
-      background: 118px 0px/150px url("/Ray_/images/social.png");
-      @include breakpoint($PC) {
-        background-position: -44px 0;
-        background-size: 210px;
-      }
-      &:hover {
-        background: 118px 23px/150px url("/Ray_/images/social.png");
-        @include breakpoint($PC) {
-          background-position: -44px 31px;
-          background-size: 210px;
-        }
-      }
-    }
-    .fliker {
-      background: 87px 0/150px url("/Ray_/images/social.png");
-      @include breakpoint($PC) {
-        background-position: -87px 0;
-        background-size: 210px;
-      }      
-      &:hover {
-        background: 87px 23px/150px url("/Ray_/images/social.png");
-        @include breakpoint($PC) {
-          background-position: -87px 31px;
-          background-size: 210px;
-        }
-      }
-
-    }
-    .dribbble {
-      background: 56px 0px/150px url("/Ray_/images/social.png");
-      @include breakpoint($PC) {
-        background-position: 56px 0;
-        background-size: 210px;
-      }
-      &:hover {
-        background: 56px 23px/150px url("/Ray_/images/social.png");
-        @include breakpoint($PC) {
-          background-position: 56px 31px;
-          background-size: 210px;
-        }
-      }
-    }
-    .RSS {
-      background: 23px 0px/150px url("/Ray_/images/social.png");
-      @include breakpoint($PC) {
-        background-position: 23px 0;
-        background-size: 210px;
-      }
-      &:hover {
-        background: 23px 23px/150px url("/Ray_/images/social.png");
-        @include breakpoint($PC) {
-          background-position: 23px 31px;
-          background-size: 210px;
-        }
-      }
-    }
-  }
-
-  address {
-    display: flex;
-    justify-content: center;
     margin-bottom: 0;
-  }
-  .phone {
-    color: $black;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }

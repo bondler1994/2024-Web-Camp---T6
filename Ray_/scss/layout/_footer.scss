@@ -1,55 +1,38 @@
 @use "../utils/breakpoint" as *;
 @use "../utils/color" as *;
-@use "../Components/extend" as *;
+@use "../utils/extend" as *;
+@use "../utils/gutter" as *;
 
 footer {
   background-image: url("/Ray_/images/subbg.gif");
   padding: 0.7rem 1rem;
   @include breakpoint($PC) {
-    padding: 2rem 2.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 2.6rem;
+    max-width: 1440px;
+    margin: 4.5rem auto 0;
+    box-shadow: 0 -1px 3px 0 $gray-400;
   }
 
   .information {
-    @extend %gap_layout_phone;
-    gap: 2rem;
+    @extend %phone_block_gutter;
     @include breakpoint($tablet) {
       flex-direction: row;
       flex-wrap: wrap;
+      gap: $gutter_l;
     }
-  }
-}
 
-.information {
-  &_item {
-    @extend %gap_layout_phone;
-    @include breakpoint($tablet) {
-      flex: 1 1 47%;
+    &_item {
+      @extend %phone_article_gutter;
+      @include breakpoint($tablet) {
+        flex: 1 1 calc(50% - (2rem / 2));
+        gap: $gutter_l;
+      }
+      @include breakpoint($PC) {
+        flex: 1;
+      }
     }
-    @include breakpoint($PC) {
-      flex: 1;
-    }
-  }
-
-  &_testimonials_people {
-    @extend %gap_layout_phone;
-    flex-direction: row;
-  }
-
-  &_people_name,
-  &_people_link {
-    display: block;
-    line-height: 1.4;
-  }
-
-  &_people_link {
-    font-style: italic;
-    color: $primary_green;
-
-    &:hover {
-      text-decoration: underline;
-      color: $primary_green;
+    &_title{
+      text-transform: uppercase;
     }
   }
 }

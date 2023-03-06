@@ -1,0 +1,72 @@
+@use "../utils/color" as *;
+@use "../utils/breakpoint" as *;
+@use "../utils/extend" as *;
+@use "../utils/gutter" as *;
+
+.news {
+  @extend %phone_block_gutter;
+  @include breakpoint($tablet) {
+    gap: $gutter_l;
+  }
+}
+.news_post {
+  @extend %phone_block_gutter;
+  flex-direction: row;
+  @include breakpoint($tablet) {
+    gap: $gutter_l;
+  }
+
+  img {
+    width: 8rem;
+    @include breakpoint($tablet) {
+      width: 10rem;
+    }
+  }
+
+  .text_container {
+    @extend %phone_article_gutter;
+    @include breakpoint($tablet) {
+      gap: $gutter_l;
+    }
+  }
+  .date {
+    width: fit-content;
+    padding: 0.3rem 0.5rem;
+    background-color: $primary_green;
+    font-weight: 500;
+    color: $white;
+    @include breakpoint($tablet) {
+      padding: 0.1rem;
+      font-size: 0.5rem;
+    }
+    @include breakpoint($PC) {
+      padding: 0.3rem 0.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  .text {
+    color: $gray-400;
+    font-size: 0.8rem;
+    @include breakpoint($tablet) {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient:vertical;
+      -webkit-line-clamp: 4;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+  }
+
+  .more {
+    text-transform: capitalize;
+    color: $black;
+  }
+}
+
+.text_container:hover {
+  .text,
+  .more {
+    @extend %text_hover;
+  }
+}

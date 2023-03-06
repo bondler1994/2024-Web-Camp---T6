@@ -1,14 +1,12 @@
 @use "./base/reset";
 
-@use "./Components/choose_list";
-@use "./Components/dialog";
-@use "./Components/extend";
-@use "./Components/album";
-@use "./Components/introduce_news";
+@use "./Components/all";
 
 @use "./utils/background";
 @use "./utils/breakpoint";
 @use "./utils/color";
+@use "./utils/extend";
+@use "./utils/gutter";
 
 @use "./layout/copyright_nav";
 @use "./layout/footer";

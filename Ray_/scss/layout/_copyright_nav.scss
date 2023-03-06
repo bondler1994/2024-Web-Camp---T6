@@ -1,13 +1,22 @@
 @use "../utils/color" as *;
 @use "../utils/breakpoint" as *;
-@use "../Components/extend" as *;
+@use "../utils/extend" as *;
 
-.copyright_nav_container {
-  @extend %gap_layout_phone;
-  padding: 1rem;
-
+.copyright_nav {
+  @extend %phone_article_gutter;
+  padding: 1rem 0;
+  @include breakpoint($tablet) {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+  @include breakpoint($PC) {
+    max-width: 1440px;
+    flex-direction: row;
+    gap:0;
+  }
   .copyright {
-    @extend %text_2;
+    @extend %text_style;
     .privacy {
       color: $primary_green;
     }
