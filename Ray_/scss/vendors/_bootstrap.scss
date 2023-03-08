@@ -26,20 +26,19 @@
     @include breakpoint($tablet) {
       border-right: 0.1rem solid $gray-100;
     }
-  }
-
-  .nav-link {
-    padding: 0.5rem 1rem;
-    text-transform: uppercase;
-    @include breakpoint($tablet) {
-      padding: 1rem 1.5rem;
+    .nav-link {
+      padding: 0.5rem 1rem;
+      text-transform: uppercase;
+      @include breakpoint($tablet) {
+        padding: 1rem 1.5rem;
+        font-size: .9rem;
+      }
+      &:hover {
+        background-color: $primary_green;
+        color: $white;
+      }
     }
-    &:hover {
-      background-color: $primary_green;
-      color: $white;
-    }
   }
-
 
   .dropdown-menu {
     border-radius: 0;
@@ -142,12 +141,20 @@
         padding: 2.6rem 2.6rem 2rem;
         gap: $gutter_l;
       }
+      @include breakpoint($PC) {
+        padding: 2.6rem 0 2rem;
+      }
+      @include breakpoint(1440px) {
+        padding: 2.6rem 2.6rem 2rem;
+      }
     }
 
     &-title {
       @extend %card_text;
       text-transform: uppercase;
+      text-align: center;
     }
+
 
     &_img_container {
       width: 20%;

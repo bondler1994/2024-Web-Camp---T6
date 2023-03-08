@@ -18,7 +18,7 @@
 
   img {
     width: 8rem;
-    @include breakpoint($tablet) {
+    @include breakpoint($PC) {
       width: 10rem;
     }
   }

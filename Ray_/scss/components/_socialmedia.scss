@@ -13,6 +13,9 @@
     flex-direction: row;
     justify-content: center;
     gap: 1.2rem;
+    @include breakpoint($tablet) {
+      justify-content: right;
+    }
 
     @include breakpoint($PC) {
       gap: 0.5rem;

@@ -1,17 +1,4 @@
-@use "./base/reset";
-
-@use "./Components/all";
-
-@use "./utils/background";
-@use "./utils/breakpoint";
-@use "./utils/color";
-@use "./utils/extend";
-@use "./utils/gutter";
-
-@use "./layout/copyright_nav";
-@use "./layout/footer";
-@use "./layout/header";
-@use "./layout/main";
-
-@use "./Vendors/bootstrap";
-@use "./Vendors/swiper";
+@use "base";
+@use "components";
+@use "layout";
+@use "vendors";
