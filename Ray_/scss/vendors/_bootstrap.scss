@@ -4,13 +4,12 @@
 @use "../utils/gutter" as *;
 
 .nav_link_container {
-  position: relative;
-  top: 20px;
-  justify-content: space-between;
-  gap: 0.7rem;
-
   @include breakpoint($tablet) {
+    position: relative;
+    top: 20px;
     border: 0;
+    justify-content: space-between;
+    gap: 0.7rem;
   }
 
   .navbar-nav {

@@ -6,11 +6,12 @@
 footer {
   background-image: url("/Ray_/images/subbg.gif");
   padding: 0.7rem 1rem;
+  margin:20px auto 0;
+  box-shadow: 0 -1px 3px 0 $gray-400;
   @include breakpoint($PC) {
     padding: 2.6rem;
     max-width: 1440px;
     margin: 4.5rem auto 0;
-    box-shadow: 0 -1px 3px 0 $gray-400;
   }
 
   .information {

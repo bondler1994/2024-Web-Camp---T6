@@ -440,13 +440,14 @@ body {
 footer {
   background-image: url("/Ray_/images/subbg.gif");
   padding: 0.7rem 1rem;
+  margin: 20px auto 0;
+  box-shadow: 0 -1px 3px 0 #838383;
 }
 @media (min-width: 1200px) {
   footer {
     padding: 2.6rem;
     max-width: 1440px;
     margin: 4.5rem auto 0;
-    box-shadow: 0 -1px 3px 0 #838383;
   }
 }
 @media (min-width: 768px) {
@@ -522,6 +523,7 @@ header .navbar-expand-md {
 
 main {
   background-image: url("/Ray_/images/subbg.gif");
+  box-shadow: 0 1px 3px 0 #838383;
 }
 @media (min-width: 768px) {
   main {
@@ -532,7 +534,6 @@ main {
   main {
     max-width: 1440px;
     margin: 0 auto;
-    box-shadow: 0 1px 3px 0 #838383;
   }
 }
 
@@ -562,15 +563,13 @@ main {
   text-transform: uppercase;
 }
 
-.nav_link_container {
-  position: relative;
-  top: 20px;
-  justify-content: space-between;
-  gap: 0.7rem;
-}
 @media (min-width: 768px) {
   .nav_link_container {
+    position: relative;
+    top: 20px;
     border: 0;
+    justify-content: space-between;
+    gap: 0.7rem;
   }
 }
 .nav_link_container .navbar-nav {
