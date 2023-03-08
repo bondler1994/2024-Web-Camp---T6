@@ -60,7 +60,7 @@
 
     &:hover {
       .icon {
-        transform: rotate(90deg);
+        transform: translateX(5%);
         background-color: $primary_green;
         transition: 0.5s transform;
       }

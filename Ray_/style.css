@@ -106,7 +106,7 @@ a {
   }
 }
 .choose_list .list:hover .icon {
-  transform: rotate(90deg);
+  transform: translateX(5%);
   background-color: #80B600;
   transition: 0.5s transform;
 }
@@ -167,7 +167,7 @@ h1 a {
   }
 }
 .news_post img {
-  width: 8rem;
+  width: 7rem;
 }
 @media (min-width: 1200px) {
   .news_post img {
@@ -350,12 +350,14 @@ h1 a {
   clip-path: polygon(0 0, 100% 0, 100% 77%, 10% 77%, 0 90%);
   padding: 1.3rem 2rem 3.5rem;
   background-color: #E6E6E6;
+  border-radius: 2px;
 }
 .testimonials_dialog {
   clip-path: polygon(0 0, 100% 0, 100% 77%, 10% 77%, 0 90%);
   padding: 0.1rem 0.1rem 0.2rem;
   background-color: #D9D9D9;
   font-size: 0.9rem;
+  border-radius: 2px;
 }
 .testimonials_people {
   display: flex;
