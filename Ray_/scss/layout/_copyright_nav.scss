@@ -1,9 +1,10 @@
 @use "../utils/color" as *;
 @use "../utils/breakpoint" as *;
-@use "../utils/extend" as *;
+@use "../utils/layout" as *;
+@use "../utils/font" as *;
 
 .copyright_nav {
-  @extend %phone_article_gutter;
+  @include display_flex(column,$gap_s);
   padding: 1rem 0;
   @include breakpoint($tablet) {
     justify-content: space-between;
@@ -18,7 +19,7 @@
   .copyright {
     @extend %text_style;
     .privacy {
-      color: $primary_green;
+      color: $primary_color;
     }
   }
 }

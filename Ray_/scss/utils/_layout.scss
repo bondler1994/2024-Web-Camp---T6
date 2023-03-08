@@ -1,0 +1,9 @@
+$gap_s:1rem;
+$gap_m:1.5rem;
+$gap_l:2rem;
+
+@mixin display_flex($direction,$gap) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}

@@ -1,10 +1,9 @@
 @use "../utils/breakpoint" as *;
 @use "../utils/color" as *;
-@use "../utils/extend" as *;
-@use "../utils/gutter" as *;
+@use "../utils/layout" as *;
 
 .testimonials {
-  @extend %phone_article_gutter;
+  @include display_flex(column,$gap_m);
   @include breakpoint($PC){
     gap: 0;
   }
@@ -26,7 +25,7 @@
 
   &_people {
     display: flex;
-    gap: $gutter_s;
+    gap: $gap_s;
   }
 
   &_people_name,
@@ -40,11 +39,11 @@
 
   &_people_link {
     font-style: italic;
-    color: $primary_green;
+    color: $primary_color;
 
     &:hover {
       text-decoration: underline;
-      color: $primary_green;
+      color: $primary_color;
     }
   }
 }

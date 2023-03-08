@@ -1,0 +1,24 @@
+@use "../utils/color" as *;
+
+$font_s:1rem;
+$font_m:1.5rem;
+$font_l:2rem;
+
+h1,h2,h3,h4,h5,h6{
+  text-transform: uppercase;
+}
+
+%text_hover{
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+%text_style{
+  color: $gray-600;
+  text-align: center;
+}
+
+%card_text {
+  color: $gray-600;
+  font-weight: 500;
+}

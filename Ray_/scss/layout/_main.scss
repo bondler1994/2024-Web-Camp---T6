@@ -1,7 +1,8 @@
 @use "../utils/breakpoint" as *;
 @use "../utils/color" as *;
-@use "../utils/extend" as *;
-@use "../utils/gutter" as *;
+@use "../utils/font" as *;
+@use "../utils/layout" as *;
+
 
 main {
   background-image: url("/Ray_/images/subbg.gif");
@@ -16,27 +17,30 @@ main {
 }
 
 .introduce {
-  @extend %phone_block_gutter;
+  @include display_flex(column,$gap_m);
   padding: 0 1rem 1rem;
   position: relative;
   @include breakpoint($tablet) {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: $gutter_l;
+    gap: $gap_l;
   }
   @include breakpoint($PC) {
     padding: 2rem 2.6rem 6rem;
   }
 
   &_item {
-    @extend %phone_article_gutter;
+    @include display_flex(column, $gap_s);
     @include breakpoint($tablet) {
       flex: 1;
-      gap: $gutter_l;
+      gap: $gap_l;
     }
   }
 
   &_title {
-    text-transform: uppercase;
+    font-size: $font_m;
+    @include breakpoint($PC) {
+      font-size: $font_l;
+    }
   }
 }

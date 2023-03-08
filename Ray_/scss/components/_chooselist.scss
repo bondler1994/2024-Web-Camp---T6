@@ -1,19 +1,16 @@
 @use "../utils/breakpoint" as *;
 @use "../utils/color" as *;
-@use "../utils/extend" as *;
-@use "../utils/gutter" as *;
+@use "../utils/layout" as *;
 
 .choose_list {
-  @extend %phone_article_gutter;
+  @include display_flex(column, $gap_s);
 
   .list {
-    display: flex;
-    flex-direction: row;
+    @include display_flex(row, $gap_s);
     align-items: center;
-    gap: $gutter_s;
     @include breakpoint($tablet) {
       padding-bottom: 1rem;
-      border-bottom: .1rem solid $gray-100;
+      border-bottom: 0.1rem solid $gray-100;
     }
 
     .icon {
@@ -50,7 +47,6 @@
     .text {
       color: $gray-400;
       @include breakpoint($tablet) {
-        font-size: 1.2rem;
         line-height: 1.2;
       }
       @include breakpoint($PC) {
@@ -61,13 +57,21 @@
     &:hover {
       .icon {
         transform: translateX(5%);
-        background-color: $primary_green;
+        background-color: $primary_color;
         transition: 0.5s transform;
       }
 
       .text {
-        color: $primary_green;
+        color: $primary_color;
         font-weight: 500;
+      }
+    }
+  }
+
+  .multi_line {
+    .text {
+      @include breakpoint($PC) {
+        padding-top: 1rem;
       }
     }
   }

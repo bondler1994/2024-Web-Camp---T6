@@ -1,13 +1,14 @@
 @use "../utils/breakpoint" as *;
 @use "../utils/color" as *;
-@use "../utils/extend" as *;
-@use "../utils/gutter" as *;
+@use "../utils/layout" as *;
+@use "../utils/font" as *;
+
 
 .welcome {
-  @extend %phone_article_gutter;
+  @include display_flex(column,$gap_s);
   @include breakpoint($tablet) {
     flex: 1;
-    gap: $gutter_l;
+    gap: $gap_l;
   }
 
   .text_container {

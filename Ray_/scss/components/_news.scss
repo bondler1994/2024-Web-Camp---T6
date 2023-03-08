@@ -1,19 +1,20 @@
 @use "../utils/color" as *;
 @use "../utils/breakpoint" as *;
-@use "../utils/extend" as *;
-@use "../utils/gutter" as *;
+@use "../utils/layout" as *;
+@use "../utils/font" as *;
+
 
 .news {
-  @extend %phone_block_gutter;
+  @include display_flex(column,$gap_m);
   @include breakpoint($tablet) {
-    gap: $gutter_l;
+    gap: $gap_l;
   }
 }
 .news_post {
-  @extend %phone_block_gutter;
+  @include display_flex(column,$gap_m);
   flex-direction: row;
   @include breakpoint($tablet) {
-    gap: $gutter_l;
+    gap: $gap_l;
   }
 
   img {
@@ -24,15 +25,15 @@
   }
 
   .text_container {
-    @extend %phone_article_gutter;
+    @include display_flex(column,$gap_s);
     @include breakpoint($tablet) {
-      gap: $gutter_l;
+      gap: $gap_l;
     }
   }
   .date {
     width: fit-content;
     padding: 0.3rem 0.5rem;
-    background-color: $primary_green;
+    background-color: $primary_color;
     font-weight: 500;
     color: $white;
     @include breakpoint($tablet) {

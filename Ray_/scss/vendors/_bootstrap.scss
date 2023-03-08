@@ -1,7 +1,7 @@
 @use "../utils/breakpoint" as *;
 @use "../utils/color" as *;
-@use "../utils/extend" as *;
-@use "../utils/gutter" as *;
+@use "../utils/layout" as *;
+@use "../utils/font" as *;
 
 .nav_link_container {
   @include breakpoint($tablet) {
@@ -33,7 +33,7 @@
         font-size: .9rem;
       }
       &:hover {
-        background-color: $primary_green;
+        background-color: $primary_color;
         color: $white;
       }
     }
@@ -44,7 +44,7 @@
     padding: 1rem;
 
     .dropdown-item:hover {
-      background-color: $primary_green;
+      background-color: $primary_color;
     }
   }
 
@@ -82,7 +82,10 @@
   .carousel_img {
     height: 40vh;
     object-fit: cover;
+    object-position: 80% 0;
+
     @include breakpoint($tablet) {
+      object-position: 0;
       height: initial;
     }
   }
@@ -111,14 +114,14 @@
 }
 
 .card_articles_container {
-  @extend %phone_block_gutter;
+  @include display_flex(column, $gap_m);
   position: relative;
   top: -30px;
   padding: 0 1rem;
   @include breakpoint($tablet) {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: $gutter_l;
+    gap: $gap_l;
     padding: 0 2.6rem;
   }
 
@@ -133,12 +136,12 @@
     }
 
     &-body {
-      @extend %phone_article_gutter;
+      @include display_flex(column, $gap_s);
       align-items: center;
       padding: 2rem;
       @include breakpoint($tablet) {
         padding: 2.6rem 2.6rem 2rem;
-        gap: $gutter_l;
+        gap: $gap_l;
       }
       @include breakpoint($PC) {
         padding: 2.6rem 0 2rem;
@@ -150,7 +153,6 @@
 
     &-title {
       @extend %card_text;
-      text-transform: uppercase;
       text-align: center;
     }
 
@@ -177,7 +179,7 @@
       @extend %card_text;
 
       &:hover {
-        background-color: $primary_green;
+        background-color: $primary_color;
         color: $white;
       }
     }
@@ -199,13 +201,14 @@
 }
 
 .touch {
-  @extend %phone_article_gutter;
+  @include display_flex(column, $gap_s);
   @include breakpoint($PC) {
-    gap: $gutter_l;
+    gap: $gap_l;
   }
 
   &_write {
-    @extend %phone_article_gutter;
+    display: flex;
+    flex-direction:column;
     gap: 0.3rem;
   }
 
@@ -240,7 +243,7 @@
       text-transform: uppercase;
       color: $white;
       &:hover {
-        background-color: $primary_green;
+        background-color: $primary_color;
       }
     }
   }
@@ -276,7 +279,7 @@
       line-height: 1;
     }
     &:hover {
-      color: $primary_green;
+      color: $primary_color;
     }
   }
 }

@@ -1,0 +1,9 @@
+@use "../utils/breakpoint" as *;
+@use "../utils/font" as *;
+
+.tweet .text {
+  font-size: 0.8rem;
+  @include breakpoint($tablet) {
+    font-size: $font_s;
+  }
+}
