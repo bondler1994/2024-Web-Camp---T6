@@ -4,19 +4,19 @@
 @use "../utils/layout" as *;
 
 footer {
-  background-image: url("/Ray_/images/subbg.gif");
-  padding: 1rem;
   margin:20px auto 0;
   box-shadow: 0 -1px 3px 0 $gray-400;
   @include breakpoint($PC) {
-    padding: 2.6rem;
     max-width: 1440px;
     margin: 4.5rem auto 0;
   }
 
   .information {
     @include display_flex(column, $gap_m);
+    background-image: url("/Ray_/images/subbg.gif");
+    padding: 1rem;
     @include breakpoint($tablet) {
+      padding: 2.6rem;
       flex-direction: row;
       flex-wrap: wrap;
       gap: $gap_l;
@@ -56,6 +56,13 @@ footer {
   }
   .copyright {
     @extend %text_style;
+    @include breakpoint($tablet) {
+      order: 2;
+    }
+    @include breakpoint($PC) {
+      order: 1;
+    }
+
     .privacy {
       color: $primary_color;
     }

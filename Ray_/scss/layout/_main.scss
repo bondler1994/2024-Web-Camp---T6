@@ -9,6 +9,7 @@ main {
   box-shadow: 0 1px 3px 0 $gray-400;
   @include breakpoint($tablet) {
     padding: 1.2rem 0 2.5rem;
+    margin-top: -20px;
   }
   @include breakpoint($PC) {
     max-width: 1440px;
