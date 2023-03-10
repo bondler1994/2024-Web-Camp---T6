@@ -1,7 +1,7 @@
+@use "../base/color" as *;
+@use "../base//font" as *;
 @use "../utils/breakpoint" as *;
-@use "../utils/color" as *;
 @use "../utils/layout" as *;
-@use "../utils/font" as *;
 
 .swiper_container {
   padding: 1rem;

@@ -1,11 +1,10 @@
+@use "../base/color" as *;
+@use "../base/font" as *;
 @use "../utils/breakpoint" as *;
-@use "../utils/color" as *;
 @use "../utils/layout" as *;
-@use "../utils/font" as *;
-
 
 .welcome {
-  @include display_flex(column,$gap_s);
+  @include display_flex(column, $gap_s);
   @include breakpoint($tablet) {
     flex: 1;
     gap: $gap_l;
@@ -14,6 +13,7 @@
   .text_container {
     .text,
     .more {
+      cursor: pointer;
       color: $gray-400;
       @include breakpoint($tablet) {
         font-size: 1rem;
@@ -30,12 +30,12 @@
       text-transform: capitalize;
       color: $black;
     }
-  }
 
-  .text_container:hover {
-    .text,
-    .more {
-      @extend %text_hover;
+    &:hover {
+      .text,
+      .more {
+        @extend %text_hover;
+      }
     }
   }
 }
