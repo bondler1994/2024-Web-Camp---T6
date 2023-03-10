@@ -152,6 +152,7 @@
               type="search"
               placeholder="Search the Site"
               aria-label="Search"
+              name="Search"
             />
             <a class="search_button" href="##"
               ><img src="./images/search.png" alt="" class="search_img"
@@ -266,69 +267,88 @@
       </div>
       <div class="introduce">
         <div class="introduce_item">
-          <h2 class="introduce_title">Welcome</h2>
           <div class="welcome">
-            <div class="img_container">
+            <h2 class="welcome_title">Welcome</h2>
+            <div class="welcome_img_container">
               <img src="./images/welcome.jpg" alt="" />
             </div>
-            <div class="text_container">
-              <a class="text" href="##"><p>
-                Curabitur velit nisl, porttitor viverra molesite quis, Iacinia
-                eget purus. Suspendisse ipsum massa, rutrum in hendrerit
-                malesuada, fermentum id erat...<span class="more"
-                  >more</
-                ></p>
+            <div class="welcome_text_container">
+              <a class="welcome_text" href="##"
+                ><p>
+                  Curabitur velit nisl, porttitor viverra molesite quis, Iacinia
+                  eget purus. Suspendisse ipsum massa, rutrum in hendrerit
+                  malesuada, fermentum id erat...<span class="more">more</span>
+                </p>
               </a>
             </div>
           </div>
         </div>
         <div class="introduce_item">
-          <h2 class="introduce_title">Why choose us?</h2>
-          <div class="choose_list">
-            <div class="list">
-              <div class="icon_container"><div class="icon"></div></div>
-              <p class="text">Etiam rutrum venenatis dui, non</p>
+          <div class="choose_us">
+            <h2 class="choose_us_title">Why choose us?</h2>
+            <div class="choose_us_list">
+              <div class="choose_us_list_icon_container">
+                <div class="icon"></div>
+              </div>
+              <p class="choose_us_list_text">Etiam rutrum venenatis dui, non</p>
             </div>
-            <div class="list multi_line">
-              <div class="icon_container"><div class="icon"></div></div>
+            <div
+              class="choose_us_list_icon_container choose_us_list_multi_line"
+            >
+              <div class="choose_us_list_icon_container">
+                <div class="icon"></div>
+              </div>
               <p class="text">Aliquam ac diam in lorem vulputate auctor.</p>
             </div>
-            <div class="list multi_line">
-              <div class="icon_container"><div class="icon"></div></div>
+            <div
+              class="choose_us_list_icon_container choose_us_list_multi_line"
+            >
+              <div class="choose_us_list_icon_container">
+                <div class="icon"></div>
+              </div>
               <p class="text">Vestibulum vitae urna quis eros convallis</p>
             </div>
-            <div class="list">
-              <div class="icon_container"><div class="icon"></div></div>
+            <div class="choose_us_list_icon_container">
+              <div class="choose_us_list_icon_container">
+                <div class="icon"></div>
+              </div>
               <p class="text">Sed magna magna, congue</p>
             </div>
           </div>
         </div>
         <div class="introduce_item">
-          <h2 class="introduce_title">News & Events</h2>
           <div class="news">
+            <h2 class="news_title">News & Events</h2>
             <div class="news_post">
-              <div class="img_container">
+              <div class="news_img_container">
                 <img src="./images/news1.jpg" alt="" />
               </div>
               <div class="text_container">
-                <time class="date">12.12.12</time>
-                <a class="text" href="##"><p>
-                  Aliquam ac diam in lorem vulputate auctor. Aliquam rhoncus
-                  nunc et justo imperdiet blandit<span class="more">...more</span>
-                </p></a>
+                <time class="news_date">12.12.12</time>
+                <a class="news_text" href="##"
+                  ><p>
+                    Aliquam ac diam in lorem vulputate auctor. Aliquam rhoncus
+                    nunc et justo imperdiet blandit<span class="more"
+                      >...more</span
+                    >
+                  </p></a
+                >
               </div>
             </div>
             <div class="news_post">
-              <div class="img_container">
+              <div class="news_img_container">
                 <img src="./images/news2.jpg" alt="" />
               </div>
-              <div class="text_container">
-                <time class="date">12.12.12</time>
-                <a class="text" href="##"><p>
-                  Sed auctor laoreet augue, is pulvinar lacus mattis non. In hac
-                  habitassw platea dictumst. Proin et lorem...<span class="more"
-                    >more</span
-                  ></p>
+              <div class="news_text_container">
+                <time class="news_date">12.12.12</time>
+                <a class="news_text" href="##"
+                  ><p>
+                    Sed auctor laoreet augue, is pulvinar lacus mattis non. In
+                    hac habitassw platea dictumst. Proin et lorem...<span
+                      class="more"
+                      >more</span
+                    >
+                  </p>
                 </a>
               </div>
             </div>
@@ -488,14 +508,15 @@
     <footer>
       <div class="information">
         <div class="information_item">
-          <h4 class="information_title">Latest Tweets</h4>
           <div class="tweet">
-            <p>loading tweets...</p>
+            <h4 class="tweet_title">Latest Tweets</h4>
+            <div class="tweet_text_container"></div>
+            <p class="tweet_text">loading tweets...</p>
           </div>
         </div>
         <div class="information_item">
-          <h4 class="information_title">Testimonials</h4>
           <div class="testimonials">
+            <h4 class="testimonials_title">Testimonials</h4>
             <div class="testimonials_dialog">
               <p class="testimonials_dialog_content">
                 "Sed dapibus molesite interdum. Fusce nec est ante, sit amet
@@ -505,10 +526,10 @@
             </div>
             <div class="testimonials_people">
               <div class="testimonials_people_img_container">
-                <img class="people_img" src="./images/men.jpg" alt="" />
+                <img class="testimonials_people_img" src="./images/men.jpg" alt="發言人" />
               </div>
               <div class="testimonials_people_identity">
-                <span class="information_people_name">Stephen Bingham</span>
+                <span class="testimonials_people_name">Stephen Bingham</span>
                 <a
                   class="testimonials_people_link"
                   href="http://www.demolink.org/"
@@ -519,27 +540,29 @@
           </div>
         </div>
         <div class="information_item">
-          <h4 class="information_title">Get in touch!</h4>
           <form class="touch">
+            <h4 class="touch_title">Get in touch!</h4>
             <div class="touch_write">
               <input
                 type="text"
                 class="form-control"
                 id="floatingInput"
                 placeholder="Name"
+                name="Name"
               />
               <input
                 type="email"
                 class="form-control"
                 id="floatingInput"
                 placeholder="Email"
+                name="Email"
               />
               <textarea
                 class="form-control"
                 id="exampleFormControlTextarea1"
                 rows="5"
                 placeholder="Massage"
-                value="Massage"
+                name="Massage"
               ></textarea>
             </div>
             <div class="button_container">
@@ -549,8 +572,8 @@
           </form>
         </div>
         <div class="information_item">
-          <h4 class="information_title">Flickr</h4>
           <div class="flickr">
+            <h4 class="flickr_title">Flickr</h4>
             <a class="flickr_img_container" href="##"
               ><img src="./images/f1.jpg" alt=""
             /></a>
@@ -590,33 +613,33 @@
           </div>
         </div>
       </div>
+      <div class="copyright_nav">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="##">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="##">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="##">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="##">Protfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="##">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="##">Contacts</a>
+          </li>
+        </ul>
+        <p class="copyright">
+          BUSINESS PLANET &copy; 2020 |
+          <a href="##" class="privacy">Privacy Policy</a>
+        </p>
+      </div>
     </footer>
-    <div class="copyright_nav">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Protfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contacts</a>
-        </li>
-      </ul>
-      <p class="copyright">
-        BUSINESS PLANET &copy; 2020 |
-        <a href="##" class="privacy">Privacy Policy</a>
-      </p>
-    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
