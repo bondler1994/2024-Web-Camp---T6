@@ -1,0 +1,166 @@
+.bg_white {
+  background-color: $white;
+  @include desktop() {
+    background-color: transparent;
+  }
+}
+.search_wrap {
+  width: 230px;
+  background-color: $white;
+
+  @include desktop() {
+    padding: 0.5rem;
+    box-shadow: 0px -1px 5px;
+    width: 25%;
+  }
+  form {
+    background-color: $deco_light;
+    border: 1px $primary solid;
+    height: 100%;
+  }
+  input {
+    background-color: $deco_light;
+    border: none;
+    &:focus {
+      @include focus_hightlight();
+    }
+  }
+  button {
+    background: url(../images/search.png) no-repeat center;
+    &:focus {
+      @include focus_hightlight();
+    }
+  }
+}
+.product {
+  @extend %section_container;
+  .row > div {
+    @include desktop() {
+      position: relative;
+      z-index: 1;
+      margin-top: -2rem;
+    }
+  }
+}
+.about {
+  @extend %section_container;
+  > hr {
+    display: none;
+    @include pad() {
+      display: block;
+    }
+  }
+}
+.about_items {
+  > * + * {
+    margin-top: $margin_base * 2;
+  }
+  .img_wrap {
+    @include ratio_container(65%);
+    img {
+      @extend %img_fullfilled;
+    }
+  }
+}
+.more_link {
+  &:hover {
+    color: $highlight;
+  }
+}
+.strip_wrap {
+  .strip {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    // flex-wrap: wrap;
+    border-bottom: 1px $primary solid;
+    a {
+      font-size: 40px;
+      color: $primary;
+      line-height: 80px;
+      &:hover {
+        color: $highlight;
+      }
+    }
+    p {
+      display: inline-block;
+    }
+  }
+  hr {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.feature {
+  h3 + div {
+    margin-top: $margin_base * 2;
+  }
+  @extend %section_container;
+  .swiper-slide {
+    .shadow_wrap {
+      // height: 0;
+      padding-top: 84.72222%;
+      padding-left: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 300px;
+      transition: top 1s;
+    }
+    ._shadow {
+      width: 150%;
+      height: 150%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(
+        rgb(0, 0, 0, 0.6) 20%,
+        transparent 20% 30%,
+        rgb(0, 0, 0, 0.6) 30% 80%,
+        $highlight 80% 81%,
+        transparent 81%
+      );
+      transform: rotate(-30deg) translate(0%, -25%);
+      :first-child {
+        width: 10%;
+        height: 12%;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        background-image: url(../images/icon1.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+      :nth-child(2) {
+        width: 10%;
+        height: 12%;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        background-image: url(../images/icon2.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+    &:hover {
+      .shadow_wrap {
+        top: 0;
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .swiper_indicator {
+    position: absolute;
+    top: 3rem;
+    right: 1.5rem;
+    font-size: 0;
+  }
+}

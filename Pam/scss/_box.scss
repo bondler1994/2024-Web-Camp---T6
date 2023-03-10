@@ -1,0 +1,41 @@
+.box {
+  background-color: $primary;
+  padding: $padding_base * 2;
+  text-align: center;
+  height: 100%;
+  > * + * {
+    margin-top: $margin_base * 2;
+  }
+  &:hover {
+    background-color: rgb(100, 100, 100, 0.9);
+    .box_title,
+    p {
+      color: $white;
+    }
+  }
+  .box_title {
+    font-family: $font-noto;
+    font-size: $font_middle;
+  }
+  .box_img {
+    @include sizing(60px);
+    @include centering_horizontal();
+    img {
+      @include sizing(100%);
+    }
+  }
+  a {
+    background-color: $deco;
+    border: none;
+    padding: 0 $padding_base;
+    color: $dark;
+    display: block;
+    @include centering_horizontal();
+    width: fit-content;
+  }
+  p {
+    @include pad() {
+      height: 170px;
+    }
+  }
+}
