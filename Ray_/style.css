@@ -241,115 +241,115 @@ h1 a {
     flex-direction: column;
   }
 }
-.social_media .social_media_links {
+.social_media_links {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 1.2rem;
 }
 @media (min-width: 768px) {
-  .social_media .social_media_links {
+  .social_media_links {
     justify-content: right;
   }
 }
 @media (min-width: 1200px) {
-  .social_media .social_media_links {
+  .social_media_links {
     gap: 0.5rem;
   }
 }
-.social_media .social_media_links a {
+.social_media_links a {
   padding: 0.7rem;
 }
 @media (min-width: 1200px) {
-  .social_media .social_media_links a {
+  .social_media_links a {
     padding: 1rem;
   }
 }
-.social_media .social_media_links .facebook {
+.social_media_links .facebook {
   background: 0 0/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
-  .social_media .social_media_links .facebook {
+  .social_media_links .facebook {
     background-size: 210px;
   }
 }
-.social_media .social_media_links .facebook:hover {
+.social_media_links .facebook:hover {
   background: 0px 23px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
-  .social_media .social_media_links .facebook:hover {
+  .social_media_links .facebook:hover {
     background-position: 0 31px;
     background-size: 210px;
   }
 }
-.social_media .social_media_links .twitter {
+.social_media_links .twitter {
   background: 118px 0px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
-  .social_media .social_media_links .twitter {
+  .social_media_links .twitter {
     background-position: -44px 0;
     background-size: 210px;
   }
 }
-.social_media .social_media_links .twitter:hover {
+.social_media_links .twitter:hover {
   background: 118px 23px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
-  .social_media .social_media_links .twitter:hover {
+  .social_media_links .twitter:hover {
     background-position: -44px 31px;
     background-size: 210px;
   }
 }
-.social_media .social_media_links .fliker {
+.social_media_links .fliker {
   background: 87px 0/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
-  .social_media .social_media_links .fliker {
+  .social_media_links .fliker {
     background-position: -87px 0;
     background-size: 210px;
   }
 }
-.social_media .social_media_links .fliker:hover {
+.social_media_links .fliker:hover {
   background: 87px 23px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
-  .social_media .social_media_links .fliker:hover {
+  .social_media_links .fliker:hover {
     background-position: -87px 31px;
     background-size: 210px;
   }
 }
-.social_media .social_media_links .dribbble {
+.social_media_links .dribbble {
   background: 56px 0px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
-  .social_media .social_media_links .dribbble {
+  .social_media_links .dribbble {
     background-position: 32px 0;
     background-size: 210px;
   }
 }
-.social_media .social_media_links .dribbble:hover {
+.social_media_links .dribbble:hover {
   background: 56px 23px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
-  .social_media .social_media_links .dribbble:hover {
+  .social_media_links .dribbble:hover {
     background-position: 32px 31px;
     background-size: 210px;
   }
 }
-.social_media .social_media_links .RSS {
+.social_media_links .RSS {
   background: 23px 0px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
-  .social_media .social_media_links .RSS {
+  .social_media_links .RSS {
     background-position: 78px 0;
     background-size: 210px;
   }
 }
-.social_media .social_media_links .RSS:hover {
+.social_media_links .RSS:hover {
   background: 23px 23px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
-  .social_media .social_media_links .RSS:hover {
+  .social_media_links .RSS:hover {
     background-position: 78px 31px;
     background-size: 210px;
   }
@@ -509,10 +509,14 @@ main {
 
 header {
   margin: 10px auto 20px;
+  background-image: url("/Ray_/images/subbg.gif");
+  box-shadow: 0 0 5px 0 #262626;
 }
 @media (min-width: 768px) {
   header {
     margin: 10px auto 0;
+    background-image: none;
+    box-shadow: none;
   }
 }
 @media (min-width: 1200px) {
@@ -520,39 +524,19 @@ header {
     max-width: 1440px;
   }
 }
-header .navbar-expand-md {
-  align-items: stretch;
-  padding: 0;
-}
-@media (min-width: 768px) {
-  header .navbar-expand-md {
-    flex-direction: column;
-  }
-}
 
-.logo_socialmedia {
+.logo_social_media {
   flex: 1;
-  background-image: url("/Ray_/images/subbg.gif");
   padding: 1.5rem 1rem;
-  box-shadow: 0 0 5px 0 #262626;
 }
 @media (min-width: 768px) {
-  .logo_socialmedia {
+  .logo_social_media {
+    background-image: url("/Ray_/images/subbg.gif");
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 2.5rem 2.7rem;
-  }
-}
-
-.logo_navbarbutton {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-@media (min-width: 768px) {
-  .logo_navbarbutton {
-    margin-bottom: 0;
+    box-shadow: 0 0 5px 0 #262626;
   }
 }
 
@@ -630,23 +614,86 @@ footer .information_title {
   color: #80B600;
 }
 
+.navbar_container {
+  padding: 1rem;
+}
 @media (min-width: 768px) {
-  .nav_link_container {
-    position: relative;
-    top: 20px;
-    border: 0;
-    justify-content: space-between;
+  .navbar_container {
+    padding: 0;
     gap: 0.7rem;
   }
 }
+.navbar_container .icon_search {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex: 1 1 0;
+}
+@media (min-width: 768px) {
+  .navbar_container .icon_search {
+    justify-content: initial;
+    order: 2;
+    gap: 0;
+  }
+}
+.navbar_container .icon_search .navbar-toggler {
+  border: none;
+}
+.navbar_container .icon_search .navbar-toggler:focus {
+  border: none;
+  box-shadow: none;
+}
+.navbar_container .search {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: auto;
+  background-color: #fff;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .navbar_container .search {
+    height: 56px;
+    padding: 0.6rem 0.8rem 0.3rem 1rem;
+    box-shadow: -3px -1px 3px 0 #838383;
+  }
+}
+.navbar_container .search_input {
+  margin: 0;
+  border-radius: 0;
+  background-color: #E6E6E6;
+}
+.navbar_container .search_button {
+  border: none;
+  background: no-repeat 0/30px url("/Ray_/images/search.png");
+  width: 30px;
+  height: 30px;
+}
+
+@media (min-width: 768px) {
+  .nav_link_container {
+    justify-content: space-between;
+    flex-grow: 0;
+    order: 1;
+    border: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .nav_link_container {
+    flex: 1 1 0;
+  }
+}
 .nav_link_container .navbar-nav {
-  flex: 1 1 30%;
   background-color: #fff;
 }
 @media (min-width: 768px) {
   .nav_link_container .navbar-nav {
     box-shadow: 3px -1px 3px 0 #838383;
-    flex: 1 1 45%;
+  }
+}
+@media (min-width: 1200px) {
+  .nav_link_container .navbar-nav {
+    flex: 1 1 0;
   }
 }
 @media (min-width: 768px) {
@@ -660,8 +707,13 @@ footer .information_title {
 }
 @media (min-width: 768px) {
   .nav_link_container .nav-item .nav-link {
-    padding: 1rem 1.5rem;
+    padding: 1rem 0.5rem;
     font-size: 0.9rem;
+  }
+}
+@media (min-width: 1200px) {
+  .nav_link_container .nav-item .nav-link {
+    padding: 1rem 1.5rem;
   }
 }
 .nav_link_container .nav-item .nav-link:hover {
@@ -674,32 +726,6 @@ footer .information_title {
 }
 .nav_link_container .dropdown-menu .dropdown-item:hover {
   background-color: #80B600;
-}
-.nav_link_container .search_container {
-  flex: 1;
-  width: auto;
-  position: relative;
-  padding: 0.6rem 0.8rem 1rem 1rem;
-  background-color: #fff;
-}
-@media (min-width: 768px) {
-  .nav_link_container .search_container {
-    height: 56px;
-    padding: 0.6rem 0.8rem 0.3rem 1rem;
-    box-shadow: -3px -1px 3px 0 #838383;
-  }
-}
-.nav_link_container .search_container .form-control {
-  margin: 0;
-  border-radius: 0;
-  background-color: #E6E6E6;
-}
-.nav_link_container .search_container .search_button {
-  display: inline-block;
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  width: 1.3rem;
 }
 
 .carousel_container .carousel_img {

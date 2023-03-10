@@ -3,22 +3,78 @@
 @use "../utils/breakpoint" as *;
 @use "../utils/layout" as *;
 
-.nav_link_container {
+.navbar_container {
+  padding: 1rem;
   @include breakpoint($tablet) {
-    position: relative;
-    top: 20px;
-    border: 0;
-    justify-content: space-between;
+    padding: 0;
     gap: 0.7rem;
   }
 
+  .icon_search {
+    display: flex;
+    justify-content: space-between;
+    gap:$gap_m;
+    flex: 1 1 0;
+    @include breakpoint($tablet) {
+      justify-content: initial;
+      order: 2;
+      gap:0;
+    }
+
+    .navbar-toggler {
+      border: none;
+      &:focus {
+        border: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .search {
+    @include display_flex(row, $gap_s);
+    width: auto;
+    background-color: #fff;
+    flex: 1;
+    @include breakpoint($tablet) {
+      height: 56px; //強制跟旁邊的nav一樣高
+      padding: 0.6rem 0.8rem 0.3rem 1rem;
+      box-shadow: -3px -1px 3px 0 $gray-400;
+    }
+
+    &_input {
+      margin: 0;
+      border-radius: 0;
+      background-color: $gray;
+    }
+
+    &_button {
+      border: none;
+      background: no-repeat 0/30px url("/Ray_/images/search.png");
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.nav_link_container {
+  @include breakpoint($tablet) {
+    justify-content: space-between;
+    flex-grow:0;
+    order: 1;
+    border: 0;
+  }
+  @include breakpoint($PC){
+    flex:1 1 0;
+  } 
+
   .navbar-nav {
-    flex: 1 1 30%;
     background-color: #fff;
     @include breakpoint($tablet) {
       box-shadow: 3px -1px 3px 0 $gray-400;
-      flex: 1 1 45%;
     }
+    @include breakpoint($PC){
+      flex:1 1 0;
+    } 
   }
 
   .nav-item {
@@ -29,8 +85,11 @@
       padding: 0.5rem 1rem;
       text-transform: uppercase;
       @include breakpoint($tablet) {
+        padding: 1rem .5rem;
+        font-size: 0.9rem;
+      }
+      @include breakpoint($PC) {
         padding: 1rem 1.5rem;
-        font-size: .9rem;
       }
       &:hover {
         background-color: $primary_color;
@@ -45,33 +104,6 @@
 
     .dropdown-item:hover {
       background-color: $primary_color;
-    }
-  }
-
-  .search_container {
-    flex: 1;
-    width: auto;
-    position: relative;
-    padding: 0.6rem 0.8rem 1rem 1rem;
-    background-color: #fff;
-    @include breakpoint($tablet) {
-      height: 56px; //強制跟旁邊的nav一樣高
-      padding: 0.6rem 0.8rem 0.3rem 1rem;
-      box-shadow: -3px -1px 3px 0 $gray-400;
-    }
-
-    .form-control {
-      margin: 0;
-      border-radius: 0;
-      background-color: $gray;
-    }
-
-    .search_button {
-      display: inline-block;
-      position: absolute;
-      top: 1rem;
-      right: 1.5rem;
-      width: 1.3rem;
     }
   }
 }
@@ -156,7 +188,6 @@
       text-align: center;
     }
 
-
     &_img_container {
       width: 20%;
       @include breakpoint($tablet) {
@@ -208,7 +239,7 @@
 
   &_write {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     gap: 0.3rem;
   }
 

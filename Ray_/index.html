@@ -23,68 +23,73 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <!--font awesome-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
+      <div class="logo_social_media">
+        <h1 class="logo"">
+          <a class="navbar-brand" href="#">
+            <img src="./images/logo.png" alt="" />
+          </a>
+        </h1>
+        <div class="social_media">
+          <div class="social_media_links">
+            <a
+              href="https://www.facebook.com/"
+              class="facebook"
+              target="_blank"
+            ></a
+            ><a
+              href="https://twitter.com/?lang=en"
+              class="twitter"
+              target="_blank"
+            ></a
+            ><a
+              href="https://www.flickr.com/"
+              class="fliker"
+              target="_blank"
+            ></a
+            ><a
+              href="https://dribbble.com/"
+              class="dribbble"
+              target="_blank"
+            ></a
+            ><a
+              href="https://business_planet/rss.html"
+              class="RSS"
+              target="_blank"
+            ></a>
+          </div>
+          <address class="contact_method">
+            <span>Call Us Now:</span>
+            <a href="tel:+1777784-25-43" class="phone">+1 (777) 784-25-43</a>
+          </address>
+        </div>
+      </div>
       <nav class="navbar navbar-expand-md navbar_container">
-        <div class="logo_socialmedia">
-          <div class="logo_navbarbutton">
-            <h1>
-              <a class="navbar-brand" href="#">
-                <img src="./images/logo.png" alt="" />
-              </a>
-            </h1>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-          <div class="social_media">
-            <div class="social_media_links">
-              <a
-                href="https://www.facebook.com/"
-                class="facebook"
-                target="_blank"
-              ></a
-              ><a
-                href="https://twitter.com/?lang=en"
-                class="twitter"
-                target="_blank"
-              ></a
-              ><a
-                href="https://www.flickr.com/"
-                class="fliker"
-                target="_blank"
-              ></a
-              ><a
-                href="https://dribbble.com/"
-                class="dribbble"
-                target="_blank"
-              ></a
-              ><a
-                href="https://business_planet/rss.html"
-                class="RSS"
-                target="_blank"
-              ></a>
-            </div>
-            <address class="contact_method">
-              <span>Call Us Now:</span>
-              <a href="tel:+1777784-25-43" class="phone">+1 (777) 784-25-43</a>
-            </address>
-          </div>
+        <div class="icon_search">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form class="search" role="search">
+            <input
+              class="form-control search_input"
+              type="search"
+              placeholder="Search the Site"
+              aria-label="Search"
+              name="search"
+            />
+            <button type="submit" class="search_button"></button>
+          </form>
         </div>
         <div
           class="collapse navbar-collapse nav_link_container"
@@ -146,18 +151,6 @@
               <a class="nav-link">Contacts</a>
             </li>
           </ul>
-          <form class="search_container" role="search">
-            <input
-              class="form-control"
-              type="search"
-              placeholder="Search the Site"
-              aria-label="Search"
-              name="Search"
-            />
-            <a class="search_button" href="##"
-              ><img src="./images/search.png" alt="" class="search_img"
-            /></a>
-          </form>
         </div>
       </nav>
     </header>
@@ -212,7 +205,7 @@
       <div class="card_articles_container">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Growth Strategies</h5>
+            <h4 class="card-title">Growth Strategies</h4>
             <div class="card_img_container">
               <img src="./images/p1.png" alt="" class="card_img" />
             </div>
@@ -226,7 +219,7 @@
         </div>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Perfect Support</h5>
+            <h4 class="card-title">Perfect Support</h4>
             <div class="card_img_container">
               <img src="./images/p2.png" alt="" class="card_img" />
             </div>
@@ -240,7 +233,7 @@
         </div>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Partners Programs</h5>
+            <h4 class="card-title">Partners Programs</h4>
             <div class="card_img_container">
               <img src="./images/p3.png" alt="" class="card_img" />
             </div>
@@ -253,7 +246,7 @@
         </div>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Premium Service</h5>
+            <h4 class="card-title">Premium Service</h4>
             <div class="card_img_container">
               <img src="./images/p4.png" alt="" class="card_img" />
             </div>
@@ -509,14 +502,14 @@
       <div class="information">
         <div class="information_item">
           <div class="tweet">
-            <h4 class="tweet_title">Latest Tweets</h4>
+            <h3 class="tweet_title">Latest Tweets</h3>
             <div class="tweet_text_container"></div>
             <p class="tweet_text">loading tweets...</p>
           </div>
         </div>
         <div class="information_item">
           <div class="testimonials">
-            <h4 class="testimonials_title">Testimonials</h4>
+            <h3 class="testimonials_title">Testimonials</h3>
             <div class="testimonials_dialog">
               <p class="testimonials_dialog_content">
                 "Sed dapibus molesite interdum. Fusce nec est ante, sit amet
@@ -526,7 +519,11 @@
             </div>
             <div class="testimonials_people">
               <div class="testimonials_people_img_container">
-                <img class="testimonials_people_img" src="./images/men.jpg" alt="發言人" />
+                <img
+                  class="testimonials_people_img"
+                  src="./images/men.jpg"
+                  alt="發言人"
+                />
               </div>
               <div class="testimonials_people_identity">
                 <span class="testimonials_people_name">Stephen Bingham</span>
@@ -541,7 +538,7 @@
         </div>
         <div class="information_item">
           <form class="touch">
-            <h4 class="touch_title">Get in touch!</h4>
+            <h3 class="touch_title">Get in touch!</h3>
             <div class="touch_write">
               <input
                 type="text"
@@ -573,7 +570,7 @@
         </div>
         <div class="information_item">
           <div class="flickr">
-            <h4 class="flickr_title">Flickr</h4>
+            <h3 class="flickr_title">Flickr</h3>
             <a class="flickr_img_container" href="##"
               ><img src="./images/f1.jpg" alt=""
             /></a>

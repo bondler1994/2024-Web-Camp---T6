@@ -3,40 +3,36 @@
 
 header {
   margin: 10px auto 20px;
+  background-image: url("/Ray_/images/subbg.gif");
+  box-shadow: 0 0 5px 0 $gray-800;
   @include breakpoint($tablet) {
     margin: 10px auto 0;
+    background-image:none;
+    box-shadow: none;
   }
   @include breakpoint($PC) {
     max-width: 1440px;
   }
-
-  .navbar-expand-md {
-    align-items: stretch;
-    padding: 0;
-    @include breakpoint($tablet) {
-      flex-direction: column;
-    }
-  }
 }
 
-.logo_socialmedia {
+.logo_social_media {
   flex: 1;
-  background-image: url("/Ray_/images/subbg.gif");
   padding: 1.5rem 1rem;
-  box-shadow: 0 0 5px 0 $gray-800;
   @include breakpoint($tablet) {
+    background-image: url("/Ray_/images/subbg.gif");
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 2.5rem 2.7rem;
+    box-shadow: 0 0 5px 0 $gray-800;
   }
 }
 
-.logo_navbarbutton {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  @include breakpoint($tablet) {
-    margin-bottom: 0;
-  }
-}
+// .logo_navbarbutton {
+//   display: flex;
+//   justify-content: space-between;
+//   margin-bottom: 20px;
+//   @include breakpoint($tablet) {
+//     margin-bottom: 0;
+//   }
+// }
