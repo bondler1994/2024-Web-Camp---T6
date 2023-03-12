@@ -32,12 +32,6 @@ footer {
         flex: 1;
       }
     }
-    &_title{
-      font-size: $font_s;
-      @include breakpoint($PC) {
-        font-size: $font_m;
-      }
-    }
   }
 }
 

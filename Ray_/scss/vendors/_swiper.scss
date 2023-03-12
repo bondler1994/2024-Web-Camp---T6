@@ -28,13 +28,6 @@
     }
   }
 
-  .swiper_title {
-    font-size: $font_m;
-    @include breakpoint($PC) {
-      font-size: $font_l;
-    }
-  }
-
   .title_button_container {
     display: flex;
     justify-content: space-between;

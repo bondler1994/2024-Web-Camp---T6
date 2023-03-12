@@ -1,19 +1,46 @@
 @use "../base/color" as *;
+@use "../utils/breakpoint" as *;
 
-$font_s:1rem;
-$font_m:1.5rem;
-$font_l:2rem;
+$font_ss: 1rem;
+$font_s: 1.2rem;
+$font_m: 1.5rem;
+$font_l: 2rem;
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-transform: uppercase;
 }
 
-%text_hover{
+h2 {
+  font-size: $font_m;
+  @include breakpoint($tablet) {
+    font-size: $font_l;
+  }
+}
+
+h3 {
+  font-size: $font_s;
+}
+
+h4 {
+  @include breakpoint($PC) {
+    font-size: $font_ss;
+  }
+  @include breakpoint(1440px) {
+    font-size: $font_s;
+  }
+}
+
+%text_hover {
   font-weight: 500;
   text-decoration: underline;
 }
 
-%text_style{
+%text_style {
   color: $gray-600;
   text-align: center;
 }

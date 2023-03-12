@@ -13,12 +13,12 @@
   .icon_search {
     display: flex;
     justify-content: space-between;
-    gap:$gap_m;
+    gap: $gap_m;
     flex: 1 1 0;
     @include breakpoint($tablet) {
       justify-content: initial;
       order: 2;
-      gap:0;
+      gap: 0;
     }
 
     .navbar-toggler {
@@ -34,7 +34,7 @@
     @include display_flex(row, $gap_s);
     width: auto;
     background-color: #fff;
-    flex: 1;
+    flex: 1 1 0;
     @include breakpoint($tablet) {
       height: 56px; //強制跟旁邊的nav一樣高
       padding: 0.6rem 0.8rem 0.3rem 1rem;
@@ -59,22 +59,22 @@
 .nav_link_container {
   @include breakpoint($tablet) {
     justify-content: space-between;
-    flex-grow:0;
+    flex-grow: 0;
     order: 1;
     border: 0;
   }
-  @include breakpoint($PC){
-    flex:1 1 0;
-  } 
+  @include breakpoint($PC) {
+    flex: 1 1 0;
+  }
 
   .navbar-nav {
     background-color: #fff;
     @include breakpoint($tablet) {
       box-shadow: 3px -1px 3px 0 $gray-400;
     }
-    @include breakpoint($PC){
-      flex:1 1 0;
-    } 
+    @include breakpoint($PC) {
+      flex: 1 1 0;
+    }
   }
 
   .nav-item {
@@ -85,7 +85,7 @@
       padding: 0.5rem 1rem;
       text-transform: uppercase;
       @include breakpoint($tablet) {
-        padding: 1rem .5rem;
+        padding: 1rem 0.5rem;
         font-size: 0.9rem;
       }
       @include breakpoint($PC) {
@@ -149,7 +149,7 @@
   @include display_flex(column, $gap_m);
   position: relative;
   top: -30px;
-  padding: 0 1rem;
+  padding:0 1rem 1.5rem;
   @include breakpoint($tablet) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -168,24 +168,22 @@
     }
 
     &-body {
-      @include display_flex(column, $gap_s);
-      align-items: center;
+      @include display_flex(column, $gap-m);
       padding: 2rem;
       @include breakpoint($tablet) {
-        padding: 2.6rem 2.6rem 2rem;
-        gap: $gap_l;
-      }
-      @include breakpoint($PC) {
-        padding: 2.6rem 0 2rem;
-      }
-      @include breakpoint(1440px) {
         padding: 2.6rem 2.6rem 2rem;
       }
     }
 
     &-title {
       @extend %card_text;
+      margin-bottom: 0;
       text-align: center;
+    }
+
+    &_content {
+      @include display_flex(column, $gap-m);
+      align-items: center;
     }
 
     &_img_container {
@@ -200,11 +198,11 @@
       text-align: center;
       @include breakpoint($tablet) {
         line-height: 1.2;
+        font-size: .9rem;
       }
     }
 
     &_link {
-      display: block;
       padding: 0.3rem 1rem;
       background-color: $gray-200;
       @extend %card_text;

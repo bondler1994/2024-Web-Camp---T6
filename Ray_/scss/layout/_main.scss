@@ -13,7 +13,7 @@ main {
   }
   @include breakpoint($PC) {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: -20px auto 0;
   }
 }
 
@@ -35,13 +35,6 @@ main {
     @include breakpoint($tablet) {
       flex: 1;
       gap: $gap_l;
-    }
-  }
-
-  &_title {
-    font-size: $font_m;
-    @include breakpoint($PC) {
-      font-size: $font_l;
     }
   }
 }
