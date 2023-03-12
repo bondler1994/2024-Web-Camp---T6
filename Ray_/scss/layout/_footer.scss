@@ -23,13 +23,13 @@ footer {
     }
 
     &_item {
-      @include display_flex(column, $gap_s);
+      @include display_flex(column, 0);
       @include breakpoint($tablet) {
         flex: 1 1 calc(50% - (2rem / 2));
-        gap: $gap_l;
       }
       @include breakpoint($PC) {
         flex: 1;
+        gap:0;
       }
     }
   }

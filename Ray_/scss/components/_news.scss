@@ -3,65 +3,85 @@
 @use "../utils/breakpoint" as *;
 @use "../utils/layout" as *;
 
-
 .news {
-  @include display_flex(column,$gap_m);
+  @include display_flex(column, $gap_m);
   @include breakpoint($tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: $gap_l;
-  }
-}
-.news_post {
-  @include display_flex(column,$gap_m);
-  flex-direction: row;
-  @include breakpoint($tablet) {
-    gap: $gap_l;
-  }
 
-  img {
-    width: 7rem;
     @include breakpoint($PC) {
-      width: 10rem;
+      flex-direction: column;
     }
   }
 
-  .text_container {
-    @include display_flex(column,$gap_s);
+  h2 {
+    flex-basis: 100%;
+    @include breakpoint($PC) {
+      flex-basis: initial;
+    }
+  }
+
+  &_post {
+    @include display_flex(row, $gap_m);
     @include breakpoint($tablet) {
       gap: $gap_l;
-    }
-  }
-  .date {
-    width: fit-content;
-    padding: 0.3rem 0.5rem;
-    background-color: $primary_color;
-    font-weight: 500;
-    color: $white;
-    @include breakpoint($tablet) {
-      padding: 0.1rem;
-      font-size: 0.5rem;
+      flex: 1 1 45%;
     }
     @include breakpoint($PC) {
+      flex: initial;
+    }
+
+    img {
+      width: 7rem;
+      @include breakpoint($PC) {
+        width: 10rem;
+      }
+    }
+
+    .text_container {
+      @include display_flex(column, $gap_s);
+      @include breakpoint($tablet) {
+        gap: $gap_l;
+      }
+    }
+    .date {
+      width: fit-content;
       padding: 0.3rem 0.5rem;
-      font-size: 1rem;
+      background-color: $primary_color;
+      font-weight: 500;
+      color: $white;
+      @include breakpoint($tablet) {
+        padding: 0.1rem;
+        font-size: 0.5rem;
+      }
+      @include breakpoint($PC) {
+        padding: 0.3rem 0.5rem;
+        font-size: 1rem;
+      }
     }
-  }
 
-  .text {
-    color: $gray-400;
-    font-size: 0.8rem;
-    @include breakpoint($tablet) {
-      display: -webkit-box;
-      overflow: hidden;
-      -webkit-box-orient:vertical;
-      -webkit-line-clamp: 4;
-      font-size: 1rem;
-      line-height: 1.2;
+    .text_link {
+      display: block;
     }
-  }
 
-  .more {
-    text-transform: capitalize;
-    color: $black;
+    .text {
+      color: $gray-400;
+      font-size: 0.8rem;
+      @include breakpoint($tablet) {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        font-size: 1rem;
+        line-height: 1.2;
+      }
+    }
+
+    .more {
+      text-transform: capitalize;
+      color: $black;
+    }
   }
 }
 

@@ -1,9 +1,18 @@
-.flickr {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
+@use "../utils/breakpoint" as *;
+@use "../utils/layout" as *;
 
-  .flickr_img_container {
-    flex: 1 1 calc(25% - ((0.3rem * 4) / 3));
+.flickr {
+  @include display_flex(column, $gap_s);
+  @include breakpoint($tablet) {
+    gap: $gap_l;
+  }
+  .img_group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+
+    .img_container {
+      flex: 1 1 calc(25% - ((0.3rem * 4) / 3));
+    }
   }
 }

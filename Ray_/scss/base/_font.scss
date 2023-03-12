@@ -17,17 +17,20 @@ h6 {
 
 h2 {
   font-size: $font_m;
-  @include breakpoint($tablet) {
+  @include breakpoint($PC) {
     font-size: $font_l;
   }
 }
 
 h3 {
   font-size: $font_s;
+  @include breakpoint(1440px) {
+    font-size: $font_m;
+  }
 }
 
 h4 {
-  @include breakpoint($PC) {
+  @include breakpoint($tablet) {
     font-size: $font_ss;
   }
   @include breakpoint(1440px) {

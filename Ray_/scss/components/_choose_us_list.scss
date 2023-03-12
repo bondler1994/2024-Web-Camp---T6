@@ -2,11 +2,13 @@
 @use "../base/color" as *;
 @use "../utils/layout" as *;
 
-.choose_list {
-  @include display_flex(column, $gap_s);
+.choose_us {
+  @include display_flex(column, $gap_m);
+  @include breakpoint($tablet) {
+  }
 
-  .list {
-    @include display_flex(row, $gap_s);
+  &_list {
+    @include display_flex(row, $gap_m);
     align-items: center;
     @include breakpoint($tablet) {
       padding-bottom: 1rem;

@@ -3,19 +3,16 @@
 @use "../utils/layout" as *;
 
 .testimonials {
-  @include display_flex(column,$gap_m);
-  @include breakpoint($PC){
-    gap: 0;
+  @include display_flex(column, $gap_s);
+  @include breakpoint($tablet) {
+    gap: $gap_l;
   }
 
-  &_dialog_content {
-    clip-path: polygon(0 0, 100% 0, 100% 77%, 10% 77%, 0 90%);
-    padding: 1.3rem 2rem 3.5rem;
-    background-color: $gray;
-    border-radius: 2px;
+  &_content{
+    @include display_flex(column, $gap_s);
   }
 
-  &_dialog {
+  .dialog_container {
     clip-path: polygon(0 0, 100% 0, 100% 77%, 10% 77%, 0 90%);
     padding: 0.1rem 0.1rem 0.2rem;
     background-color: $gray-100;
@@ -23,13 +20,20 @@
     border-radius: 2px;
   }
 
-  &_people {
+  .dialog {
+    clip-path: polygon(0 0, 100% 0, 100% 77%, 10% 77%, 0 90%);
+    padding: 1.3rem 2rem 3.5rem;
+    background-color: $gray;
+    border-radius: 2px;
+  }
+
+  .people {
     display: flex;
     gap: $gap_s;
   }
 
-  &_people_name,
-  &_people_link {
+  .people_name,
+  .people_link {
     display: block;
     line-height: 1.4;
     @include breakpoint($PC){
@@ -37,7 +41,7 @@
     }
   }
 
-  &_people_link {
+  .people_link {
     font-style: italic;
     color: $primary_color;
 

@@ -3,10 +3,10 @@
 @use "../utils/breakpoint" as *;
 @use "../utils/layout" as *;
 
-
 main {
   background-image: url("/Ray_/images/subbg.gif");
   box-shadow: 0 1px 3px 0 $gray-400;
+  padding-bottom: 1.5rem;
   @include breakpoint($tablet) {
     padding: 1.2rem 0 2.5rem;
     margin-top: -20px;
@@ -14,14 +14,16 @@ main {
   @include breakpoint($PC) {
     max-width: 1440px;
     margin: -20px auto 0;
+    padding: 1.2rem 0 6rem;
   }
 }
 
 .introduce {
-  @include display_flex(column,$gap_m);
-  padding: 0 1rem 1rem;
+  @include display_flex(column, $gap_m);
+  padding: 1.5rem 1rem;
   position: relative;
   @include breakpoint($tablet) {
+    padding:0 2.6rem 1.5rem;
     flex-direction: row;
     flex-wrap: wrap;
     gap: $gap_l;
@@ -32,9 +34,18 @@ main {
 
   &_item {
     @include display_flex(column, $gap_s);
+    @include breakpoint($PC) {
+      flex:1;
+      gap:0;
+    }
+  }
+
+  .tablet_half {
     @include breakpoint($tablet) {
-      flex: 1;
-      gap: $gap_l;
+      flex: 1 1 40%;
+    }
+    @include breakpoint($PC) {
+      flex:1;
     }
   }
 }

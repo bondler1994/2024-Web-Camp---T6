@@ -6,7 +6,6 @@
 .welcome {
   @include display_flex(column, $gap_s);
   @include breakpoint($tablet) {
-    flex: 1;
     gap: $gap_l;
   }
 
