@@ -3,10 +3,9 @@
 body {
   min-width: 375px;
   background: linear-gradient(#000 0% .5%, transparent .5% 90%, #000 90% 100%),
-    url("/Ray_/images/bg.jpg");
-
+    url("./images/bg.jpg");
     @include breakpoint($PC){
       background: linear-gradient(#000 0% 4%, transparent 4% 91%, #000 91% 100%),
-      url("/Ray_/images/bg.jpg");
+      url("./images/bg.jpg");
     }
 }

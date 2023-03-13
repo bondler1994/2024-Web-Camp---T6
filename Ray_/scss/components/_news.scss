@@ -26,7 +26,7 @@
     @include display_flex(row, $gap_m);
     @include breakpoint($tablet) {
       gap: $gap_l;
-      flex: 1 1 45%;
+      flex: 1 1 calc(50% - 1rem);
     }
     @include breakpoint($PC) {
       flex: initial;

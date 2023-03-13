@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     gap: $gap_m;
-    flex-grow: 1;
+    flex-grow: 1;//手機板的時候搜尋要延伸
     @include breakpoint($tablet) {
       justify-content: initial;
       order: 2;
@@ -70,6 +70,7 @@
     @include breakpoint($tablet) {
       border-right: 0.1rem solid $gray-100;
     }
+
     .nav-link {
       padding: 0.5rem 1rem;
       text-transform: uppercase;
@@ -163,10 +164,9 @@
       padding: 2rem;
       align-items: center;
       @include breakpoint($tablet) {
-        padding: 2.6rem 2.6rem 2rem;
         gap: $gap_l;
       }
-      @include breakpoint($PC) {
+      @include breakpoint(1440px) {
         padding: 2.6rem 3rem 2rem;
       }
     }
@@ -222,7 +222,7 @@
 
 .touch {
   @include display_flex(column, $gap_s);
-  @include breakpoint($PC) {
+  @include breakpoint($tablet) {
     gap: $gap_l;
   }
 
@@ -273,7 +273,6 @@
     @include breakpoint($tablet) {
       flex-direction: row;
       order: 1;
-      height: fit-content;
     }
     @include breakpoint($PC) {
       order: 2;
@@ -283,7 +282,6 @@
   .nav-item {
     @include breakpoint($tablet) {
       padding: 0 1rem;
-      height: fit-content;
     }
     + .nav-item {
       @include breakpoint($tablet) {

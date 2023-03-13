@@ -6,6 +6,7 @@ h5,
 h6,
 p {
   margin: 0;
+  line-height: initial;
 }
 
 img {
@@ -71,22 +72,21 @@ h3 {
   font-weight: 500;
 }
 
-.choose_us_title {
-  margin-bottom: 2rem;
+.choose_us {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 .choose_us_list {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
   align-items: center;
-  padding: 1rem 0;
 }
 @media (min-width: 768px) {
   .choose_us_list {
+    padding-bottom: 1rem;
     border-bottom: 0.1rem solid #D9D9D9;
-  }
-  .choose_us_list:first-of-type {
-    padding-top: 0;
   }
 }
 .choose_us_list .icon {
@@ -180,7 +180,7 @@ h3 {
   gap: 0.3rem;
 }
 .flickr .img_group .img_container {
-  flex: 1 1 calc(25% - 0.225rem);
+  flex: 1 1 calc(25% - 0.4rem);
 }
 
 h1 a {
@@ -223,7 +223,7 @@ h1 a {
 @media (min-width: 768px) {
   .news_post {
     gap: 2rem;
-    flex: 1 1 calc(50% - 1rem);
+    flex: 1 1 45%;
   }
 }
 @media (min-width: 1200px) {
@@ -325,7 +325,7 @@ h1 a {
   }
 }
 .social_media_links .facebook {
-  background: 0 0/150px url("./images/social.png");
+  background: 0 0/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
   .social_media_links .facebook {
@@ -333,7 +333,7 @@ h1 a {
   }
 }
 .social_media_links .facebook:hover {
-  background: 0px 23px/150px url("./images/social.png");
+  background: 0px 23px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
   .social_media_links .facebook:hover {
@@ -342,7 +342,7 @@ h1 a {
   }
 }
 .social_media_links .twitter {
-  background: 118px 0px/150px url("./images/social.png");
+  background: 118px 0px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
   .social_media_links .twitter {
@@ -351,7 +351,7 @@ h1 a {
   }
 }
 .social_media_links .twitter:hover {
-  background: 118px 23px/150px url("./images/social.png");
+  background: 118px 23px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
   .social_media_links .twitter:hover {
@@ -360,7 +360,7 @@ h1 a {
   }
 }
 .social_media_links .fliker {
-  background: 87px 0/150px url("./images/social.png");
+  background: 87px 0/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
   .social_media_links .fliker {
@@ -369,7 +369,7 @@ h1 a {
   }
 }
 .social_media_links .fliker:hover {
-  background: 87px 23px/150px url("./images/social.png");
+  background: 87px 23px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
   .social_media_links .fliker:hover {
@@ -378,7 +378,7 @@ h1 a {
   }
 }
 .social_media_links .dribbble {
-  background: 56px 0px/150px url("./images/social.png");
+  background: 56px 0px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
   .social_media_links .dribbble {
@@ -387,7 +387,7 @@ h1 a {
   }
 }
 .social_media_links .dribbble:hover {
-  background: 56px 23px/150px url("./images/social.png");
+  background: 56px 23px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
   .social_media_links .dribbble:hover {
@@ -396,7 +396,7 @@ h1 a {
   }
 }
 .social_media_links .RSS {
-  background: 23px 0px/150px url("./images/social.png");
+  background: 23px 0px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
   .social_media_links .RSS {
@@ -405,7 +405,7 @@ h1 a {
   }
 }
 .social_media_links .RSS:hover {
-  background: 23px 23px/150px url("./images/social.png");
+  background: 23px 23px/150px url("/Ray_/images/social.png");
 }
 @media (min-width: 1200px) {
   .social_media_links .RSS:hover {
@@ -429,14 +429,14 @@ h1 a {
   flex-direction: column;
   gap: 1rem;
 }
-.testimonials .dialog {
+.testimonials .dialog_container {
   clip-path: polygon(0 0, 100% 0, 100% 77%, 10% 77%, 0 90%);
   border-radius: 2px;
   padding: 0.1rem 0.1rem 0.2rem;
   background-color: #D9D9D9;
   font-size: 0.9rem;
 }
-.testimonials .dialog_text {
+.testimonials .dialog {
   clip-path: polygon(0 0, 100% 0, 100% 77%, 10% 77%, 0 90%);
   border-radius: 2px;
   padding: 1.3rem 2rem 3.5rem;
@@ -542,10 +542,9 @@ body {
 }
 
 main {
-  background-image: url("./images/subbg.gif");
+  background-image: url("/Ray_/images/subbg.gif");
   box-shadow: 0 1px 3px 0 #838383;
   padding-bottom: 1.5rem;
-  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   main {
@@ -556,7 +555,7 @@ main {
 @media (min-width: 1200px) {
   main {
     max-width: 1440px;
-    margin: -20px auto 4.5rem;
+    margin: -20px auto 0;
     padding: 1.2rem 0 6rem;
   }
 }
@@ -581,6 +580,11 @@ main {
     padding: 2rem 2.6rem 6rem;
   }
 }
+.introduce_item {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
 @media (min-width: 1200px) {
   .introduce_item {
     flex: 1 1 0;
@@ -588,12 +592,12 @@ main {
 }
 @media (min-width: 768px) {
   .introduce .tablet_half {
-    flex: 1 1 calc(50% - 1rem);
+    flex: 1 1 40%;
   }
 }
 @media (min-width: 1200px) {
   .introduce .tablet_half {
-    flex: 1 1 0;
+    flex: 1;
   }
 }
 
@@ -632,19 +636,20 @@ header {
 }
 
 footer {
-  margin: 0 auto;
+  margin: 20px auto 0;
   box-shadow: 0 -1px 3px 0 #838383;
 }
 @media (min-width: 1200px) {
   footer {
     max-width: 1440px;
+    margin: 4.5rem auto 0;
   }
 }
 footer .information {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  background-image: url("./images/subbg.gif");
+  background-image: url("/Ray_/images/subbg.gif");
   padding: 1rem;
 }
 @media (min-width: 768px) {
@@ -654,6 +659,11 @@ footer .information {
     flex-wrap: wrap;
     gap: 2rem;
   }
+}
+footer .information_item {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 @media (min-width: 768px) {
   footer .information_item {
@@ -860,10 +870,11 @@ footer .information {
 }
 @media (min-width: 768px) {
   .card_articles_container .card-body {
+    padding: 2.6rem 2.6rem 2rem;
     gap: 2rem;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .card_articles_container .card-body {
     padding: 2.6rem 3rem 2rem;
   }
@@ -915,7 +926,7 @@ footer .information {
   flex-direction: column;
   gap: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .touch {
     gap: 2rem;
   }
@@ -967,6 +978,7 @@ footer .information {
   .copyright_nav .nav {
     flex-direction: row;
     order: 1;
+    height: fit-content;
   }
 }
 @media (min-width: 1200px) {
@@ -977,6 +989,7 @@ footer .information {
 @media (min-width: 768px) {
   .copyright_nav .nav-item {
     padding: 0 1rem;
+    height: fit-content;
   }
 }
 @media (min-width: 768px) {

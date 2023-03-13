@@ -3,16 +3,19 @@
 @use "../utils/layout" as *;
 
 .choose_us {
-  @include display_flex(column, $gap_m);
-  @include breakpoint($tablet) {
+  &_title{
+    margin-bottom: 2rem;
   }
 
   &_list {
     @include display_flex(row, $gap_m);
     align-items: center;
+    padding: 1rem 0;
     @include breakpoint($tablet) {
-      padding-bottom: 1rem;
       border-bottom: 0.1rem solid $gray-100;
+    &:first-of-type{
+      padding-top: 0;
+    }
     }
 
     .icon {

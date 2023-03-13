@@ -4,16 +4,15 @@
 @use "../utils/layout" as *;
 
 footer {
-  margin:20px auto 0;
+  margin:0 auto;
   box-shadow: 0 -1px 3px 0 $gray-400;
   @include breakpoint($PC) {
     max-width: 1440px;
-    margin: 4.5rem auto 0;
   }
 
   .information {
     @include display_flex(column, $gap_m);
-    background-image: url("/Ray_/images/subbg.gif");
+    background-image: url("./images/subbg.gif");
     padding: 1rem;
     @include breakpoint($tablet) {
       padding: 2.6rem;
@@ -23,9 +22,8 @@ footer {
     }
 
     &_item {
-      @include display_flex(column, 0);
       @include breakpoint($tablet) {
-        flex: 1 1 calc(50% - (2rem / 2));
+        flex: 1 1 calc(50% - 1rem);
       }
       @include breakpoint($PC) {
         flex: 1;

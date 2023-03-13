@@ -3,7 +3,7 @@
 
 header {
   margin: 10px auto 20px;
-  background-image: url("/Ray_/images/subbg.gif");
+  background-image: url("./images/subbg.gif");
   box-shadow: 0 0 5px 0 $gray-800;
   @include breakpoint($tablet) {
     margin: 10px auto 0;
@@ -19,7 +19,7 @@ header {
   flex: 1;
   padding: 1.5rem 1rem;
   @include breakpoint($tablet) {
-    background-image: url("/Ray_/images/subbg.gif");
+    background-image: url("./images/subbg.gif");
     display: flex;
     flex-direction: row;
     justify-content: space-between;

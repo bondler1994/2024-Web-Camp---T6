@@ -12,7 +12,7 @@
     @include display_flex(column, $gap_s);
   }
 
-  .dialog_container {
+  .dialog {
     clip-path: polygon(0 0, 100% 0, 100% 77%, 10% 77%, 0 90%);
     border-radius: 2px;
     padding: 0.1rem 0.1rem 0.2rem;
@@ -20,7 +20,7 @@
     font-size: .9rem;
   }
 
-  .dialog {
+  .dialog_text {
     clip-path: polygon(0 0, 100% 0, 100% 77%, 10% 77%, 0 90%);
     border-radius: 2px;
     padding: 1.3rem 2rem 3.5rem;
