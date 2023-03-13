@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     gap: $gap_m;
-    flex: 1 1 0;
+    flex-grow: 1;
     @include breakpoint($tablet) {
       justify-content: initial;
       order: 2;
@@ -34,9 +34,10 @@
     @include display_flex(row, $gap_s);
     width: auto;
     background-color: #fff;
-    flex: 1 1 0;
+    flex-grow:1;
+
     @include breakpoint($tablet) {
-      height: 56px; //強制跟旁邊的nav一樣高
+      height: 53px; //強制跟旁邊的nav一樣高
       padding: 0.6rem 0.8rem 0.3rem 1rem;
       box-shadow: -3px -1px 3px 0 $gray-400;
     }
@@ -52,21 +53,16 @@
 .nav_link_container {
   @include breakpoint($tablet) {
     justify-content: space-between;
-    flex-grow: 0;
+    flex-grow: 4;
     order: 1;
     border: 0;
-  }
-  @include breakpoint($PC) {
-    flex: 1 1 0;
   }
 
   .navbar-nav {
     background-color: #fff;
     @include breakpoint($tablet) {
+      flex-grow: 1;
       box-shadow: 3px -1px 3px 0 $gray-400;
-    }
-    @include breakpoint($PC) {
-      flex: 1 1 0;
     }
   }
 
@@ -140,8 +136,8 @@
 
 .card_articles_container {
   @include display_flex(column, $gap_m);
-  margin-top: -30px;
   padding: 0 1rem 1.5rem;
+  margin-top: -30px;
   @include breakpoint($tablet) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -231,9 +227,7 @@
   }
 
   &_write {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
+    @include display_flex(column, .3rem);
   }
 
   input,

@@ -33,10 +33,9 @@ main {
   }
 
   &_item {
-    @include display_flex(column, $gap_s);
+    @include display_flex(column, 0);
     @include breakpoint($PC) {
-      flex:1;
-      gap:0;
+      flex:1 1 0;
     }
   }
 

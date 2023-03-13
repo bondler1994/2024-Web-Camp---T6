@@ -29,7 +29,6 @@ footer {
       }
       @include breakpoint($PC) {
         flex: 1;
-        gap:0;
       }
     }
   }
@@ -47,18 +46,5 @@ footer {
     max-width: 1440px;
     flex-direction: row;
     gap:0;
-  }
-  .copyright {
-    @extend %text_style;
-    @include breakpoint($tablet) {
-      order: 2;
-    }
-    @include breakpoint($PC) {
-      order: 1;
-    }
-
-    .privacy {
-      color: $primary_color;
-    }
   }
 }
