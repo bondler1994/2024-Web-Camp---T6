@@ -1,0 +1,13 @@
+@use "base/base";
+
+@use "utilities/color";
+@use "utilities/breakpoints";
+
+@use "layout/main";
+@use "layout/header";
+@use "layout/footer";
+
+@use "components/iconcard";
+
+@use "vendors/bootstrap/navbar";
+@use "vendors/bootstrap/carousel"; 

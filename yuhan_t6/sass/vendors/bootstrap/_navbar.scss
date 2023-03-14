@@ -1,0 +1,113 @@
+@use "../../utilities/breakpoints";
+@use "../../utilities/color";
+
+h1 {
+    width: 70%;
+    img {
+        width: 100%;
+    }
+}
+
+
+
+.businessplanet {
+    flex-direction: column;
+    .navbar-toggler-icon {
+        background: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2030%2030%27%3E%3Cpath%20stroke%3D%27rgba(128%2C%20182%2C%200%2C%201)%27%20stroke-linecap%3D%27round%27%20stroke-miterlimit%3D%2710%27%20stroke-width%3D%272%27%20d%3D%27M4%207h22M4%2015h22M4%2023h22%27%2F%3E%3C%2Fsvg%3E");
+  }
+
+    .btn-close {
+        background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2380B600'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>");
+    }
+
+}
+.offcanvas-body {
+    background: color.$accent;
+    @include breakpoints.sm {
+        background:color.$theme-secondary;
+        }
+    .nav-link {
+        color:color.$theme-secondary;
+        font-size: 20px;
+        text-transform: uppercase;
+        @include breakpoints.sm {
+        color:color.$accent;
+            }
+        }
+        & :hover {
+            color:color.$theme-primary;
+        }
+
+        .dropdown-menu {
+            padding:0;
+
+        }
+
+        .dropdown-item {
+            background:color.$theme-primary;
+            color:color.$theme-secondary;
+            text-transform: uppercase;
+        }
+    }
+
+.socialmedia {
+    ul{
+        display: flex;
+    }
+    a {
+        width: 29px;
+        height:27px;
+        display:inline-block;
+    }
+
+    .facebook {
+        background:url(../img/social.png)0px -27px;
+    }
+    .twitter {
+        background:url(../img/social.png)-37px -27px;
+    }
+    .circle {
+        background:url(../img/social.png)-74px -27px;
+    }
+    .web {
+        background:url(../img/social.png)-110px -27px;
+    }
+    .feed {
+        background:url(../img/social.png)-147px -27px;
+    }
+    
+
+    @include breakpoints.sm {
+        .facebook {
+            background:url(../img/social.png)0px -1px;
+        }
+        .facebook:hover{
+            background:url(../img/social.png)0px -27px;
+        }  
+        .twitter {
+            background:url(../img/social.png)-37px -1px;
+        }
+        .twitter:hover {
+            background:url(../img/social.png)-37px -27px;
+        }
+        .circle {
+            background:url(../img/social.png)-74px -1px;
+        }
+        .circle:hover {
+            background:url(../img/social.png)-74px -27px;
+        }
+        .web {
+            background:url(../img/social.png)-110px -1px;
+        }
+        .web:hover {
+            background:url(../img/social.png)-110px -27px;
+        }
+        .feed {
+            background:url(../img/social.png)-148px -1px;
+        }    
+        .feed:hover {
+            background:url(../img/social.png)-148px -27px;
+        }    
+    }
+}
+
