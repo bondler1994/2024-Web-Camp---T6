@@ -8,3 +8,18 @@ main {
         padding: 0 6rem;
     }
 }
+
+// sections
+.services {
+    @include breakpoints.sm {
+      background: color.$theme-secondary;
+      .row {
+        margin-top: -76px;
+        position: relative;
+      }
+    }
+  }
+
+.information, .featured {
+    background: color.$theme-secondary;
+}

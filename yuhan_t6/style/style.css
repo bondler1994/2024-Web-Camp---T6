@@ -32,9 +32,12 @@ main {
   }
   .services .row {
     margin-top: -76px;
-    z-index: 1;
     position: relative;
   }
+}
+
+.information, .featured {
+  background: #FFFFFF;
 }
 
 .icon-card {
@@ -43,7 +46,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: #CDCDCD, solid 0.5px;
+  border: #CDCDCD solid 1px;
 }
 @media (min-width: 576px) {
   .icon-card {
@@ -53,7 +56,8 @@ main {
 .icon-card:hover {
   background-color: #646464;
 }
-.icon-card:hover h5, .icon-card:hover p {
+.icon-card:hover h5,
+.icon-card:hover p {
   color: #FFFFFF;
 }
 .icon-card p {
