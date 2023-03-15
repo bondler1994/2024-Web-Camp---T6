@@ -31,7 +31,7 @@ header {
     text-align: right;
   }
 }
-%social {
+._icons a {
   display: inline-block;
   width: 27px;
   height: 27px;
@@ -48,35 +48,31 @@ header {
   }
   a {
     &:first-child {
-      @extend %social;
       @include social_position(0, 0);
       &:hover {
         @include social_position(0, 100%);
       }
     }
     &:nth-child(2) {
-      @extend %social;
       @include social_position(24.667%, 0);
       &:hover {
         @include social_position(24.667%, 100%);
       }
     }
     &:nth-child(3) {
-      @extend %social;
       @include social_position(49.333%, 0);
       &:hover {
         @include social_position(49.333%, 100%);
       }
     }
     &:nth-child(4) {
-      @extend %social;
       @include social_position(74%, 0);
       &:hover {
         @include social_position(74%, 100%);
       }
     }
     &:nth-child(5) {
-      @extend %social;
+      // @extend %social;
       @include social_position(100%, 0);
       &:hover {
         @include social_position(100%, 100%);
@@ -93,5 +89,8 @@ header {
   p {
     display: inline-block;
     font-size: 1rem;
+  }
+  a {
+    margin-left: 0.5rem;
   }
 }

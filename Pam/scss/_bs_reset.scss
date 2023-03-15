@@ -10,7 +10,6 @@
 .navbar-expand-lg {
   .navbar-collapse {
     background-color: $white;
-    gap: 0.5rem;
     @include desktop() {
       order: -1;
       box-shadow: 0px -1px 5px;
@@ -35,6 +34,7 @@
       &:hover,
       &:focus {
         background-color: $primary;
+        color: $dark;
       }
       &.active {
         background-color: $highlight;
@@ -62,9 +62,9 @@
 .carousel-control-next {
   top: 35%;
   bottom: 35%;
-  width: auto;
-  background-color: $dark;
-  align-items: stretch;
+  width: initial;
+  // background-color: $dark;
+  // align-items: stretch;
 }
 .carousel-control-prev {
   left: 0;
@@ -102,7 +102,6 @@
   display: inline-block;
   width: fit-content;
   height: fit-content;
-  font-size: 1rem;
 
   &::after {
     font-size: 1rem;
