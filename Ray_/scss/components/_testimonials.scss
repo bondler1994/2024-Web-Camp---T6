@@ -1,4 +1,5 @@
 @use "../base/color" as *;
+@use "../base/font" as *;
 @use "../utils/breakpoint" as *;
 @use "../utils/layout" as *;
 
@@ -8,11 +9,15 @@
     gap: $gap_l;
   }
 
+  &_title{
+    @extend %information_title;
+  }
+
   &_content{
     @include display_flex(column, $gap_s);
   }
 
-  .dialog {
+  &_dialog {
     clip-path: polygon(0 0, 100% 0, 100% 77%, 10% 77%, 0 90%);
     border-radius: 2px;
     padding: 0.1rem 0.1rem 0.2rem;
@@ -20,19 +25,19 @@
     font-size: .9rem;
   }
 
-  .dialog_text {
+  &_dialog_text {
     clip-path: polygon(0 0, 100% 0, 100% 77%, 10% 77%, 0 90%);
     border-radius: 2px;
     padding: 1.3rem 2rem 3.5rem;
     background-color: $gray;
   }
 
-  .people {
+  &_people {
     @include display_flex(row, $gap_s);
   }
 
-  .people_name,
-  .people_link {
+  &_people_name,
+  &_people_link {
     display: block;
     line-height: 1.4;
     @include breakpoint($PC){
@@ -40,7 +45,7 @@
     }
   }
 
-  .people_link {
+  &_people_link {
     font-style: italic;
     color: $primary_color;
 

@@ -4,13 +4,13 @@
   display: flex;
   justify-content: center;
   margin-bottom: 0;
-}
 
-  .phone {
-  color: $black;
-
-  &:hover {
-    text-decoration: underline;
+  &_phone {
     color: $black;
+
+    &:hover {
+      text-decoration: underline;
+      color: $black;
+    }
   }
 }

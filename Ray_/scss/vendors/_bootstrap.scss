@@ -6,35 +6,36 @@
 .navbar_container {
   padding: 1rem;
   @include breakpoint($tablet) {
-    padding: 0;
+    flex-direction: row-reverse;
     gap: 0.7rem;
+    padding: 0;
   }
 
-  .icon_search {
+  .navbar_item {
     display: flex;
     justify-content: space-between;
     gap: $gap_m;
-    flex-grow: 1;//手機板的時候搜尋要延伸
+    flex-grow: 1; //手機板的時候搜尋要延伸
     @include breakpoint($tablet) {
       justify-content: initial;
-      order: 2;
       gap: 0;
-    }
-
-    .navbar-toggler {
-      border: none;
-      &:focus {
-        border: none;
-        box-shadow: none;
-      }
     }
   }
 
-  .search {
+  .navbar-toggler {
+    border: none;
+
+    &:focus {
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  .navbar_search {
     @include display_flex(row, $gap_s);
     width: auto;
     background-color: #fff;
-    flex-grow:1;
+    flex-grow: 1;
 
     @include breakpoint($tablet) {
       height: 53px; //強制跟旁邊的nav一樣高
@@ -42,20 +43,19 @@
       box-shadow: -3px -1px 3px 0 $gray-400;
     }
 
-    &_input {
+    .navbar_input {
       margin: 0;
       border-radius: 0;
       background: $gray no-repeat 95% 50%/24px url("/Ray_/images/search.png");
     }
   }
-}
 
-.nav_link_container {
-  @include breakpoint($tablet) {
-    justify-content: space-between;
-    flex-grow: 4;
-    order: 1;
-    border: 0;
+  .navbar_link_container {
+    @include breakpoint($tablet) {
+      justify-content: space-between;
+      flex-grow: 4;
+      border: 0;
+    }
   }
 
   .navbar-nav {
@@ -64,30 +64,29 @@
       flex-grow: 1;
       box-shadow: 3px -1px 3px 0 $gray-400;
     }
-  }
 
-  .nav-item {
-    @include breakpoint($tablet) {
-      border-right: 0.1rem solid $gray-100;
-    }
-
-    .nav-link {
-      padding: 0.5rem 1rem;
-      text-transform: uppercase;
+    .nav-item {
       @include breakpoint($tablet) {
-        padding: 1rem 0.5rem;
-        font-size: 0.9rem;
+        border-right: 0.1rem solid $gray-100;
       }
-      @include breakpoint($PC) {
-        padding: 1rem 1.5rem;
-      }
-      &:hover {
-        background-color: $primary_color;
-        color: $white;
+
+      .nav-link {
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        @include breakpoint($tablet) {
+          padding: 1rem 0.5rem;
+          font-size: 0.9rem;
+        }
+        @include breakpoint($PC) {
+          padding: 1rem 1.5rem;
+        }
+        &:hover {
+          background-color: $primary_color;
+          color: $white;
+        }
       }
     }
   }
-
   .dropdown-menu {
     border-radius: 0;
     padding: 1rem;
@@ -135,7 +134,7 @@
   }
 }
 
-.card_articles_container {
+.card_group {
   @include display_flex(column, $gap_m);
   padding: 0 1rem 1.5rem;
   margin-top: -30px;
@@ -172,9 +171,7 @@
     }
 
     &-title {
-      @extend %card_text;
-      margin-bottom: 0;
-      text-align: center;
+      @extend %card_title;
     }
 
     &_img_container {
@@ -203,20 +200,19 @@
         color: $white;
       }
     }
-  }
-}
-
-.card:hover {
-  background-color: rgba(#ffffff, 0.05);
-
-  .card-body {
-    border: 1px solid $black;
-    background-color: rgba(50, 50, 50, 0.8);
-  }
-
-  .card-title,
-  .card-text {
-    color: $white;
+    &:hover {
+      background-color: rgba(#ffffff, 0.05);
+      .card {
+        &-body {
+          border: 1px solid $black;
+          background-color: rgba(50, 50, 50, 0.8);
+        }
+        &-title,
+        &-text {
+          color: $white;
+        }
+      }
+    }
   }
 }
 
@@ -226,8 +222,12 @@
     gap: $gap_l;
   }
 
+  &_title {
+    @extend %information_title;
+  }
+
   &_write {
-    @include display_flex(column, .3rem);
+    @include display_flex(column, 0.3rem);
   }
 
   input,
@@ -245,7 +245,7 @@
     box-shadow: none;
   }
 
-  .button_container {
+  &_button_container {
     display: flex;
     justify-content: center;
     gap: 1.2rem;
@@ -267,22 +267,13 @@
   }
 }
 
-.copyright_nav {
-  .nav {
-    flex-direction: column;
-    @include breakpoint($tablet) {
-      flex-direction: row;
-      order: 1;
-    }
-    @include breakpoint($PC) {
-      order: 2;
-    }
+.nav_container {
+  @include display_flex(column, 0);
+  @include breakpoint($tablet) {
+    flex-direction: row;
   }
 
   .nav-item {
-    @include breakpoint($tablet) {
-      padding: 0 1rem;
-    }
     + .nav-item {
       @include breakpoint($tablet) {
         border-left: 0.2rem solid $gray-400;
@@ -291,10 +282,11 @@
   }
 
   .nav-link {
-    @extend %text_style;
+    @extend %text_style_1;
     text-transform: uppercase;
+    padding: 0.5rem 0;
     @include breakpoint($tablet) {
-      padding: 0;
+      padding: 0 1rem;
       line-height: 1;
     }
     &:hover {

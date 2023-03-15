@@ -9,30 +9,32 @@
     gap: $gap_l;
   }
 
-  .text_container {
-    .text,
-    .more {
+  &_title {
+    @extend %introduce_title;
+  }
+
+  &_text {
+    p {
       color: $gray-400;
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
       @include breakpoint($tablet) {
         font-size: 1rem;
         line-height: 1.2;
       }
     }
-    .text {
-      display: -webkit-box;
-      overflow: hidden;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 4;
-    }
-    .more {
-      text-transform: capitalize;
-      color: $black;
+    span {
+      @extend %more;
     }
 
     &:hover {
-      .text,
-      .more {
-        @extend %text_hover;
+      .welcome {
+        .welcome_text,
+        .welcome_more {
+          @extend %text_hover;
+        }
       }
     }
   }

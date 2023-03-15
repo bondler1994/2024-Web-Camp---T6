@@ -3,46 +3,24 @@
 @use "../utils/breakpoint" as *;
 @use "../utils/layout" as *;
 
-footer {
-  margin:0 auto;
+.footer {
+  margin: 0 auto;
   box-shadow: 0 -1px 3px 0 $gray-400;
   @include breakpoint($PC) {
     max-width: 1440px;
   }
 
-  .information {
-    @include display_flex(column, $gap_m);
-    background-image: url("./images/subbg.gif");
-    padding: 1rem;
+  &_bottom {
+    @include display_flex(column, 0);
+    padding: 1rem 0;
     @include breakpoint($tablet) {
-      padding: 2.6rem;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: $gap_l;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
     }
-
-    &_item {
-      @include breakpoint($tablet) {
-        flex: 1 1 calc(50% - 1rem);
-      }
-      @include breakpoint($PC) {
-        flex: 1;
-      }
+    @include breakpoint($PC) {
+      max-width: 1440px;
+      flex-direction: row-reverse;
     }
-  }
-}
-
-.copyright_nav {
-  @include display_flex(column,$gap_s);
-  padding: 1rem 0;
-  @include breakpoint($tablet) {
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-  }
-  @include breakpoint($PC) {
-    max-width: 1440px;
-    flex-direction: row;
-    gap:0;
   }
 }

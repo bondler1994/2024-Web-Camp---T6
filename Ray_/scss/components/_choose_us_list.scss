@@ -1,9 +1,10 @@
 @use "../base/color" as *;
+@use "../base/font" as *;
 @use "../utils/breakpoint" as *;
 @use "../utils/layout" as *;
 
 .choose_us {
-  &_title{
+  &_title {
     margin-bottom: 2rem;
   }
 
@@ -13,71 +14,74 @@
     padding: 1rem 0;
     @include breakpoint($tablet) {
       border-bottom: 0.1rem solid $gray-100;
-    &:first-of-type{
-      padding-top: 0;
-    }
-    }
-
-    .icon {
-      position: relative;
-      border-radius: 100%;
-      background-color: $gray-100;
-      width: 3rem;
-      height: 3rem;
-      margin-left: 1rem;
-      @include breakpoint($PC) {
-        width: 3.5rem;
-        height: 3.5rem;
-      }
-
-      &::after {
-        content: "\F285";
-        position: absolute;
-        top: 35%;
-        left: 40%;
-        width: 100%;
-        height: 100%;
-        font-weight: 900;
-        color: white;
-        font-size: 0.8rem;
-        font-family: "Bootstrap-icons";
-        @include breakpoint($PC) {
-          top: 30%;
-          left: 35%;
-          font-size: 1.2rem;
-        }
+      &:first-of-type {
+        padding-top: 0;
       }
     }
-
-    .text {
-      color: $gray-400;
-      @include breakpoint($tablet) {
-        line-height: 1.2;
-      }
-      @include breakpoint($PC) {
-        width: 70%;
+    @include breakpoint($PC) {
+      &:nth-child(2) .choose_us_text,
+      &:nth-child(3) .choose_us_text {
+        padding-top: 1rem;
       }
     }
 
     &:hover {
-      .icon {
+      .choose_us_icon {
         transform: translateX(5%);
-        background-color: $primary_color;
-        transition: 0.5s transform;
       }
 
-      .text {
+      .choose_us_icon_img {
+        background-color: $primary_color;
+      }
+
+      .choose_us_text {
         color: $primary_color;
         font-weight: 500;
       }
     }
   }
 
-  .multi_line {
-    .text {
+  &_icon{
+    transition: 0.5s transform;
+  }
+
+  &_icon_img {
+    position: relative;
+    border-radius: 100%;
+    background-color: $gray-100;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1rem;
+    @include breakpoint($PC) {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+    &::after {
+      content: "\F285";
+      position: absolute;
+      top: 35%;
+      left: 40%;
+      width: 100%;
+      height: 100%;
+      font-weight: 900;
+      color: white;
+      font-size: 0.8rem;
+      font-family: "Bootstrap-icons";
       @include breakpoint($PC) {
-        padding-top: 1rem;
+        top: 30%;
+        left: 35%;
+        font-size: 1.2rem;
       }
+    }
+  }
+
+  &_text {
+    color: $gray-400;
+    @include breakpoint($tablet) {
+      line-height: 1.2;
+    }
+    @include breakpoint($PC) {
+      width: 70%;
     }
   }
 }

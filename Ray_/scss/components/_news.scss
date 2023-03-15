@@ -15,7 +15,7 @@
     }
   }
 
-  h2 {
+  &_title {
     flex-basis: 100%;
     @include breakpoint($PC) {
       flex-basis: initial;
@@ -38,14 +38,14 @@
         width: 10rem;
       }
     }
-
-    .text_container {
-      @include display_flex(column, $gap_s);
-      @include breakpoint($tablet) {
-        gap: $gap_l;
-      }
+  }
+  &_text {
+    @include display_flex(column, $gap_s);
+    @include breakpoint($tablet) {
+      gap: $gap_l;
     }
-    .date {
+
+    &_date {
       width: fit-content;
       padding: 0.3rem 0.5rem;
       background-color: $primary_color;
@@ -61,11 +61,11 @@
       }
     }
 
-    .text_link {
+    &_link {
       display: block;
     }
 
-    .text {
+    p {
       color: $gray-400;
       font-size: 0.8rem;
       @include breakpoint($tablet) {
@@ -78,16 +78,15 @@
       }
     }
 
-    .more {
-      text-transform: capitalize;
-      color: $black;
+    span {
+      @extend %more;
     }
   }
-}
 
-.text_container:hover {
-  .text,
-  .more {
-    @extend %text_hover;
+  &_text:hover {
+    p,
+    span {
+      @extend %text_hover;
+    }
   }
 }

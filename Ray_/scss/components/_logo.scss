@@ -1,8 +1,6 @@
-@use "../utils/breakpoint" as *;
-
-h1 {
-  a {
-    display: inline-block;
+.logo {
+  > a {
+    display: block;
     vertical-align: bottom;
     margin: 0;
     padding: 0;

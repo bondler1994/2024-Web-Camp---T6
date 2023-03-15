@@ -3,7 +3,7 @@
 @use "../utils/breakpoint" as *;
 
 .copyright {
-  @extend %text_style;
+  @extend %text_style_1;
   @include breakpoint($tablet) {
     order: 2;
   }

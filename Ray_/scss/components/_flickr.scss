@@ -1,3 +1,4 @@
+@use "../base/font" as *;
 @use "../utils/breakpoint" as *;
 @use "../utils/layout" as *;
 
@@ -6,13 +7,18 @@
   @include breakpoint($tablet) {
     gap: $gap_l;
   }
-  .img_group {
+  
+  &_title {
+    @extend %information_title;
+  }
+  
+  &_img_group {
     display: flex;
     flex-wrap: wrap;
     gap: 0.3rem;
+  }
 
-    .img_container {
-      flex: 1 1 calc(25% - ((0.3rem * 3) / 4));
-    }
+  &_img {
+    flex: 1 1 calc(25% - ((0.3rem * 3) / 4));
   }
 }
