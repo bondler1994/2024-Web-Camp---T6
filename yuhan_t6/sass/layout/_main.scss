@@ -2,17 +2,22 @@
 @use "../utilities/color";
 
 
-main {
+main, footer {
     display: inline-block;
     @include breakpoints.sm {
         padding: 0 6rem;
     }
 }
 
+// sections (common)
+.information, .featured, .socialmedia {
+    background: url("../img/subbg.gif");
+}
+
 // sections
 .services {
     @include breakpoints.sm {
-      background: color.$theme-secondary;
+      background: url("../img/subbg.gif");
       .row {
         margin-top: -76px;
         position: relative;
@@ -20,6 +25,14 @@ main {
     }
   }
 
-.information, .featured {
-    background: color.$theme-secondary;
+.information {
+    h3 {
+        text-transform: uppercase;
+    }
+}
+
+.socialmedia {
+    h4 {
+        text-transform: uppercase;
+    }
 }

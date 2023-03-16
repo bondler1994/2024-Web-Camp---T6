@@ -17,18 +17,22 @@ body {
   background: url(../img/bg.jpg), black;
 }
 
-main {
+main, footer {
   display: inline-block;
 }
 @media (min-width: 576px) {
-  main {
+  main, footer {
     padding: 0 6rem;
   }
 }
 
+.information, .featured, .socialmedia {
+  background: url("../img/subbg.gif");
+}
+
 @media (min-width: 576px) {
   .services {
-    background: #FFFFFF;
+    background: url("../img/subbg.gif");
   }
   .services .row {
     margin-top: -76px;
@@ -36,8 +40,12 @@ main {
   }
 }
 
-.information, .featured {
-  background: #FFFFFF;
+.information h3 {
+  text-transform: uppercase;
+}
+
+.socialmedia h4 {
+  text-transform: uppercase;
 }
 
 .icon-card {
@@ -81,6 +89,47 @@ main {
   padding: 0.3rem;
   background-color: #CDCDCD;
   color: #1C1C1C;
+}
+
+.article-card img {
+  width: 100%;
+}
+
+.news-card {
+  display: flex;
+  gap: 1rem;
+}
+.news-card .date {
+  background: #80b600;
+  color: #FFFFFF;
+  padding: 0.25rem;
+}
+.news-card p {
+  color: #646464;
+}
+
+.copyrights {
+  display: flex;
+  justify-content: space-between;
+}
+.copyrights span {
+  text-transform: uppercase;
+}
+.copyrights span:nth-child(1) {
+  color: #CDCDCD;
+}
+.copyrights span:nth-child(2) {
+  color: #80b600;
+}
+.copyrights ul {
+  display: flex;
+}
+.copyrights a {
+  color: #CDCDCD;
+  text-transform: uppercase;
+}
+.copyrights a:hover {
+  color: #80b600;
 }
 
 h1 {
@@ -215,6 +264,51 @@ h1 img {
   }
 }
 .visual-carousel .carousel-control-prev:hover, .visual-carousel .carousel-control-next:hover {
+  background-color: #80b600;
+}
+
+.custom-accordion h2 {
+  color: #484848;
+}
+.custom-accordion button {
+  font-size: 20px;
+  padding: 1rem;
+  border-bottom: #E7E7E7 solid 1px;
+}
+.custom-accordion .accordion-body {
+  padding: 1rem;
+  background: #E7E7E7;
+}
+
+.accordion-button {
+  background: transparent;
+}
+.accordion-button:hover {
+  color: #80b600;
+}
+.accordion-button::after {
+  display: none;
+}
+.accordion-button::before {
+  content: "";
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1rem;
+  background: url(/img/chevron-right.svg), #E7E7E7;
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 50%;
+  background-position: center;
+}
+.accordion-button::before:hover {
+  background: #80b600;
+}
+.accordion-button:focus {
+  border-color: #80b600;
+}
+.accordion-button:not(.collapsed)::before {
+  transform: rotate(90deg);
   background-color: #80b600;
 }
 

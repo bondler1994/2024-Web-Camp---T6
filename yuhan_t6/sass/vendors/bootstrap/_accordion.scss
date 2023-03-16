@@ -1,0 +1,71 @@
+@use "../../utilities/breakpoints";
+@use "../../utilities/color";
+
+.custom-accordion {
+    h2 {
+        color:color.$font-color-primary;
+    }
+    button {
+        font-size: 20px;   
+        padding: 1rem;
+        border-bottom: color.$theme-tertiary-200 solid 1px;
+    }
+
+    .accordion-body {
+        padding: 1rem;
+        background: color.$theme-tertiary-200;
+    }
+}
+
+
+
+
+.accordion-button {
+    &:hover {
+        color: color.$theme-primary;
+    }
+
+    background: transparent;
+    &::after{
+        display: none;
+    }
+    
+    &::before{
+        content: "";
+        width:2.5rem ;
+        height:2.5rem ;
+        margin-right: 1rem;
+        background: url(/img/chevron-right.svg),color.$theme-tertiary-200;
+        background-repeat:no-repeat;
+        background-size:1.25rem ;
+        transition: transform 0.2s ease-in-out;
+        border-radius: 50%;
+        background-position: center;
+    }
+
+    &::before:hover {
+        background:color.$theme-primary;
+    }
+
+    &:focus {
+        border-color:color.$theme-primary;
+    }
+
+    &:not(.collapsed)::before{
+    transform: rotate(90deg);
+    background-color: color.$theme-primary;
+    }
+}
+
+
+
+
+// .accordion-button:not(.collapsed) {
+
+// }
+// .accordion-button:focus {
+//     z-index: 3;
+//     border-color: var(--bs-accordion-btn-focus-border-color);
+//     outline: 0;
+//     box-shadow: var(--bs-accordion-btn-focus-box-shadow);
+// }

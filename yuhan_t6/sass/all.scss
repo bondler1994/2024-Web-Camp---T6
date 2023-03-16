@@ -8,6 +8,18 @@
 @use "layout/footer";
 
 @use "components/iconcard";
+@use "components/articlecard";
+@use "components/newscard";
+@use "components/dialogue";
+@use "components/minialbum";
+@use "components/copyrightslinks";
+
 
 @use "vendors/bootstrap/navbar";
 @use "vendors/bootstrap/carousel"; 
+@use "vendors/bootstrap/accordion"; 
+
+// @use "vendors/swiper/carouselslides"; 
+
+
+ 

@@ -1,0 +1,18 @@
+@use "../utilities/breakpoints";
+@use "../utilities/color";
+
+.news-card {
+    display: flex;
+    gap:1rem;
+
+    .date {
+        background: color.$theme-primary;
+        color:color.$theme-secondary;
+        padding: 0.25rem;
+    }
+
+    p {
+        color: color.$theme-tertiary-400;
+    }
+
+}

@@ -1,0 +1,30 @@
+@use "../utilities/breakpoints";
+@use "../utilities/color";
+
+.copyrights {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+        text-transform: uppercase;
+    }
+
+    span:nth-child(1) {
+        color:color.$theme-tertiary-300;
+    }
+    span:nth-child(2){
+        color:color.$theme-primary;
+    }
+
+    ul {
+        display: flex;
+    }
+
+    a {
+        color:color.$theme-tertiary-300;
+        text-transform: uppercase;
+        &:hover {
+            color:color.$theme-primary;
+        }
+    }
+}
