@@ -17,11 +17,8 @@ body {
   background: url(../img/bg.jpg), black;
 }
 
-main, footer {
-  display: inline-block;
-}
 @media (min-width: 576px) {
-  main, footer {
+  main {
     padding: 0 6rem;
   }
 }

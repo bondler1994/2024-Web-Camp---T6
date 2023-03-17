@@ -2,8 +2,7 @@
 @use "../utilities/color";
 
 
-main, footer {
-    display: inline-block;
+main {
     @include breakpoints.sm {
         padding: 0 6rem;
     }
