@@ -82,13 +82,21 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <form class="navbar_search" role="search">
-            <input
-              class="form-control navbar_search_input"
-              type="search"
-              placeholder="Search the Site"
-              aria-label="Search"
-              name="search"
-            />
+            <div class="input-group">
+              <input
+                class="form-control navbar_search_input"
+                type="search"
+                placeholder="Search the Site"
+                aria-label="Search"
+                name="search"
+              />
+              <button
+                class="btn navbar_search_submit"
+                type="submit"
+                id="button-addon2"
+              >
+              </button>
+            </div>
           </form>
         </div>
         <div
@@ -280,7 +288,8 @@
           <div class="choose_us">
             <h2 class="choose_us_title">Why choose us?</h2>
             <div class="choose_us_list">
-              <div class="choose_us_icon"> <!--防止因為gap變形-->
+              <div class="choose_us_icon">
+                <!--防止icon因為gap變形-->
                 <div class="choose_us_icon_img"></div>
               </div>
               <p class="choose_us_text">Etiam rutrum venenatis dui, non</p>

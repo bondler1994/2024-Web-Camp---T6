@@ -41,36 +41,36 @@
     }
   }
 
-  &_icon{
+  &_icon {
     transition: 0.5s transform;
-  }
 
-  &_icon_img {
-    position: relative;
-    border-radius: 100%;
-    background-color: $gray-100;
-    width: 3rem;
-    height: 3rem;
-    margin-left: 1rem;
-    @include breakpoint($PC) {
-      width: 3.5rem;
-      height: 3.5rem;
-    }
-    &::after {
-      content: "\F285";
-      position: absolute;
-      top: 35%;
-      left: 40%;
-      width: 100%;
-      height: 100%;
-      font-weight: 900;
-      color: white;
-      font-size: 0.8rem;
-      font-family: "Bootstrap-icons";
+    &_img {
+      position: relative;
+      border-radius: 100%;
+      background-color: $gray-100;
+      width: 3rem;
+      height: 3rem;
+      margin-left: 1rem;
       @include breakpoint($PC) {
-        top: 30%;
-        left: 35%;
-        font-size: 1.2rem;
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+      &::after {
+        content: "\F285";
+        position: absolute;
+        top: 35%;
+        left: 40%;
+        width: 100%;
+        height: 100%;
+        font-weight: 900;
+        color: white;
+        font-size: 0.8rem;
+        font-family: "Bootstrap-icons";
+        @include breakpoint($PC) {
+          top: 30%;
+          left: 35%;
+          font-size: 1.2rem;
+        }
       }
     }
   }
