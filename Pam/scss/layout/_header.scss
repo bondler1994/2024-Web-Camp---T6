@@ -31,7 +31,7 @@ header {
     text-align: right;
   }
 }
-._icons a {
+.social_icons a {
   display: inline-block;
   width: 27px;
   height: 27px;
@@ -40,7 +40,7 @@ header {
 @mixin social_position($bg-x, $bg-y) {
   background-position: $bg-x $bg-y;
 }
-._icons {
+.social_icons {
   display: none;
   font-size: 0;
   @include pad() {
@@ -72,7 +72,6 @@ header {
       }
     }
     &:nth-child(5) {
-      // @extend %social;
       @include social_position(100%, 0);
       &:hover {
         @include social_position(100%, 100%);
@@ -83,7 +82,7 @@ header {
     }
   }
 }
-._call {
+.contact_call {
   font-size: 0;
   a,
   p {

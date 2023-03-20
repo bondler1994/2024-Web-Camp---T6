@@ -1,20 +1,12 @@
-//variables and functions
-@import "variables";
-//bootstrap
+@import "./abstracts/variables";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
-//swiper
-@import "../node_modules/swiper/swiper.scss";
-@import "../node_modules/swiper/modules/navigation/navigation.scss";
-@import "../node_modules/swiper/modules/pagination/pagination.scss";
-//base setting
-@import "base";
-//bs_reset
-@import "bs_reset";
-//components
-@import "box";
-@import "box_horizontal";
-@import "more";
-//sections
-@import "header";
-@import "main";
-@import "footer";
+@import "./abstracts/breakpoint";
+@import "./abstracts/mixin";
+@import "./base/reset";
+@import "./base/bootstrap_reset";
+@import "./base/swiper_reset";
+@import "./components/product_card";
+@import "./components/about_card";
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/footer";
