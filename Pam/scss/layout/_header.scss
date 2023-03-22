@@ -1,4 +1,4 @@
-header {
+.header_content {
   @extend %flex_layout;
   flex-direction: column;
   gap: 1rem;
@@ -7,6 +7,7 @@ header {
     gap: 0;
   }
   background: url(../images/subbg.gif);
+  box-shadow: 0px 0px 5px 1px $secondary;
   h1 {
     width: 70%;
     height: 35px;

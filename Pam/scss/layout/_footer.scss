@@ -1,5 +1,6 @@
 .footer_content {
   margin-top: 5 * $margin_base;
+  box-shadow: 0px 0px 5px 1px $secondary;
   @extend %section_container;
 }
 .footer_items {
@@ -16,7 +17,8 @@
   }
 }
 ._triangle {
-  @include sizing(0);
+  // @include sizing(0);
+  width: 0;
   border-color: $primary transparent transparent transparent;
   border-width: 10px 20px 0 0;
   border-style: solid solid solid solid;
@@ -84,24 +86,19 @@
   margin-left: -0.5rem;
   margin-bottom: -0.5rem;
   a {
-    flex: 1 1 auto;
-    width: 16.6666%;
+    flex-grow: 1;
+    width: 25%;
     padding-left: 0.5rem;
     padding-bottom: 0.5rem;
-    overflow: hidden;
-    @include pad() {
-      width: 25%;
-    }
     img {
       width: 100%;
-      &:hover {
-        transform: scale(1.1);
-        transition: 0.5s;
-      }
+    }
+    &:hover {
+      opacity: 0.6;
     }
   }
 }
-.copyright {
+.copyright_wrap {
   background-color: $dark;
   padding: $padding_base 0;
   flex-direction: column;
@@ -110,16 +107,30 @@
   @include desktop() {
     flex-direction: row;
   }
-  p {
-    color: $secondary;
+  .copyright {
+    font-size: 0;
+    > * + * {
+      border-left: 2px $secondary solid;
+    }
+    span {
+      font-size: 14px;
+      padding: 0 10px;
+      color: $secondary;
+    }
+    a {
+      font-size: 14px;
+      padding: 0 10px;
+      color: $highlight;
+    }
   }
-  a {
-    color: $highlight;
-  }
+
   .bottom_nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: none;
+    @include desktop() {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     a {
       color: $secondary;
       padding-left: 0.5rem;

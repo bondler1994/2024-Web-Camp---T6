@@ -2,9 +2,11 @@
   padding: 0.5rem;
   row-gap: 0.5rem;
   align-items: stretch;
+  box-shadow: 0px 0px 5px 1px $secondary;
   @include desktop() {
     padding: 0;
     column-gap: 1rem;
+    box-shadow: initial;
   }
 }
 .navbar-expand-lg {
@@ -12,7 +14,7 @@
     background-color: $white;
     @include desktop() {
       order: -1;
-      box-shadow: 0px -1px 5px;
+      box-shadow: 0px 0px 5px 1px $secondary;
     }
     .navbar-nav {
       margin-left: -0.5rem;
@@ -132,9 +134,6 @@
   @include pad() {
     @include carousel_icon_bg_position(3.5%, 94%);
   }
-  // @include desktop() {
-  //   @include carousel_icon_bg_position(-5px, -181px);
-  // }
 }
 .next_icon {
   background-image: url(../images/slider_next.gif);

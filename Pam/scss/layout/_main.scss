@@ -1,3 +1,9 @@
+main {
+  box-shadow: 0px 0px 5px 1px $secondary;
+  background: url(../../images/subbg.gif);
+  padding-top: $padding_base * 2;
+  margin-top: -$padding_base * 2;
+}
 .bg_white {
   background-color: $white;
   @include desktop() {
@@ -10,7 +16,7 @@
 
   @include desktop() {
     padding: 0.5rem;
-    box-shadow: 0px -1px 5px;
+    box-shadow: 0px 0px 5px 1px $secondary;
     width: 25%;
   }
   form {
@@ -33,7 +39,8 @@
   }
 }
 .product {
-  @extend %section_container;
+  // @extend %section_container;
+  padding: $padding_base * 2;
   .row {
     @include desktop() {
       position: relative;
@@ -43,14 +50,18 @@
   }
 }
 .about {
-  @extend %section_container;
-  > hr {
-    display: none;
-    @include pad() {
-      margin-top: 3rem;
-      margin-bottom: 0;
-      display: block;
-    }
+  // @extend %section_container;
+  padding: $padding_base * 2;
+  p {
+    color: $secondary;
+  }
+}
+hr {
+  display: none;
+  @include pad() {
+    margin-top: 3rem;
+    margin-bottom: 0;
+    display: block;
   }
 }
 .about_items {
@@ -63,12 +74,20 @@
       @extend %img_fullfilled;
     }
   }
-}
-.more_link {
-  font-weight: 700;
-  text-transform: capitalize;
-  &:hover {
-    color: $highlight;
+  .welcome_text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  .more_link {
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    &:hover {
+      color: $highlight;
+    }
   }
 }
 .strip_wrap {
@@ -95,7 +114,8 @@
   h3 + div {
     margin-top: $margin_base * 2;
   }
-  @extend %section_container;
+  // @extend %section_container;
+  padding: $padding_base * 2;
   .swiper-slide {
     .shadow_wrap {
       // height: 0;
@@ -158,8 +178,11 @@
   }
   .swiper_indicator {
     position: absolute;
-    top: 3rem;
+    top: 2rem;
     right: 1.5rem;
     font-size: 0;
+    @include desktop() {
+      top: 3rem;
+    }
   }
 }

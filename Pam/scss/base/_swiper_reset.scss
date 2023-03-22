@@ -7,14 +7,20 @@
   height: fit-content;
 
   &::after {
-    font-size: 1rem;
+    font-size: $font_base * 1.5;
     color: $deco;
     font-weight: 900;
+    @include desktop() {
+      font-size: $font_base;
+    }
   }
   &:hover::after {
     color: $highlight;
   }
 }
 .swiper-button-next {
-  margin-left: 0.75rem;
+  margin-left: $margin_base * 2;
+  @include desktop() {
+    margin-left: $margin_base;
+  }
 }
