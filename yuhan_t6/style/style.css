@@ -45,6 +45,17 @@ body {
   text-transform: uppercase;
 }
 
+.featured::before {
+  content: "";
+  top: 0;
+  color: #CDCDCD;
+  position: absolute;
+  display: block;
+  width: 95%;
+  height: 1.5px;
+  background-color: #CDCDCD;
+}
+
 @media (min-width: 576px) {
   footer {
     padding: 0 6rem;
