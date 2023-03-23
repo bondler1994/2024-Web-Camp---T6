@@ -105,6 +105,25 @@ body {
   color: #646464;
 }
 
+.speechbubble {
+  position: relative;
+  padding: 1rem;
+  background-color: #E7E7E7;
+  border: #CDCDCD 1px solid;
+  border-radius: 3px;
+}
+.speechbubble::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 20px 30px 0 0;
+  border-color: #E7E7E7 transparent transparent transparent;
+  filter: drop-shadow(-1px 2px 0px #cecece);
+  bottom: -18px;
+  left: 5%;
+  transform: translateX(-50%);
+}
+
 .minialbum {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
