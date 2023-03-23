@@ -162,6 +162,33 @@ body {
   color: #80b600;
 }
 
+form input {
+  background-color: #E7E7E7;
+  border: #CDCDCD 0.5px solid;
+}
+form input ::placeholder {
+  color: #646464;
+}
+form .blank input {
+  width: 100%;
+}
+form .blank input:nth-child(3) {
+  height: 8rem;
+  vertical-align: top;
+}
+
+.buttons {
+  display: block;
+}
+.buttons input[type=submit]:nth-child(1) {
+  background-color: #1C1C1C;
+  color: #FFFFFF;
+}
+.buttons input[type=submit]:nth-child(2) {
+  background-color: #80b600;
+  color: #FFFFFF;
+}
+
 h1 {
   width: 70%;
 }
