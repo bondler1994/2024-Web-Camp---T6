@@ -162,6 +162,26 @@ body {
   color: #80b600;
 }
 
+.picture-card {
+  display: flex;
+  align-items: center;
+}
+.picture-card span {
+  display: block;
+  color: #646464;
+}
+.picture-card a {
+  color: #80b600;
+  font-style: italic;
+  font-weight: 500;
+}
+.picture-card .profilepicture {
+  width: 4rem;
+}
+.picture-card .profilepicture img {
+  width: 100%;
+}
+
 form input {
   background-color: #E7E7E7;
   border: #CDCDCD 0.5px solid;
