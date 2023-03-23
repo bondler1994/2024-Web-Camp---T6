@@ -1,0 +1,7 @@
+@use "../utilities/breakpoints";
+@use "../utilities/color";
+footer {
+    @include breakpoints.sm {
+        padding: 0 6rem;
+    }
+}

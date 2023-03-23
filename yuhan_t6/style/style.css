@@ -45,6 +45,12 @@ body {
   text-transform: uppercase;
 }
 
+@media (min-width: 576px) {
+  footer {
+    padding: 0 6rem;
+  }
+}
+
 .icon-card {
   background-color: #E7E7E7;
   padding: 1rem;
