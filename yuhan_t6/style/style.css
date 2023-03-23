@@ -401,4 +401,29 @@ h1 img {
   object-fit: cover;
 }
 
+@media (min-width: 768px) {
+  .featured {
+    position: relative;
+  }
+  .featured .custom-carousel {
+    position: static;
+  }
+  .featured .custom-carousel .swiper-button-next {
+    top: 0;
+    right: 25px;
+    color: #CDCDCD;
+  }
+  .featured .custom-carousel .swiper-button-next::after {
+    font-size: 20px;
+  }
+  .featured .custom-carousel .swiper-button-prev {
+    top: 0;
+    left: 1172px;
+    color: #CDCDCD;
+  }
+  .featured .custom-carousel .swiper-button-prev::after {
+    font-size: 20px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
