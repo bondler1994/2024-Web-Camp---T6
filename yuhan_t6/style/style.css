@@ -48,7 +48,6 @@ body {
 .featured::before {
   content: "";
   top: 0;
-  color: #CDCDCD;
   position: absolute;
   display: block;
   width: 95%;

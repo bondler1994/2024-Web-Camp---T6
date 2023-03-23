@@ -39,7 +39,6 @@ main {
 .featured::before {
     content: "";
     top:0;
-    color:color.$theme-tertiary-300;
     position: absolute;
     display: block;
     width: 95%; //try other ways
