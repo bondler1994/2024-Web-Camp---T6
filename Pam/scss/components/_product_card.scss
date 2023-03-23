@@ -1,27 +1,37 @@
+@use "../abstracts/" as *;
+
 .product_card {
-  background-color: $primary;
-  padding: $padding_base;
-  text-align: center;
-  height: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: $primary;
+  padding: $padding_base;
   @include pad() {
     flex-direction: column;
     gap: 1rem;
+    text-align: center;
+    height: 100%;
   }
   @include desktop() {
     padding: $padding_base * 2.5;
   }
+  &:hover {
+    background-color: rgb(100, 100, 100, 0.9);
+    .card_title,
+    .card_text {
+      color: $white;
+    }
+  }
   .card_title {
     font-size: $font_middle;
   }
-
   .card_img {
     display: none;
     @include pad() {
       display: block;
+      margin: 0 auto;
       @include sizing(40px);
-      @include centering_horizontal();
       img {
         @include sizing(100%);
       }
@@ -34,6 +44,7 @@
     display: none;
     @include pad() {
       display: block;
+      width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -44,49 +55,10 @@
       white-space: initial;
     }
   }
-  a {
-    background-color: $deco;
-    border: none;
-    padding: 0 $padding_base;
-    color: $dark;
-    margin-top: auto;
+  .card_btn {
+    @include btn_theme($deco, $dark, 0 $padding_base);
     @include pad() {
-      @include centering_horizontal();
-    }
-  }
-  // p {
-  //   @mixin line_clamp($text_height) {
-  //     line-height: 1.5rem;
-  //     height: $text_height;
-  //   }
-  //   position: relative;
-  //   @include line_clamp(1.5rem);
-  //   @include pad() {
-  //     @include line_clamp(4.5rem);
-  //   }
-  //   @include desktop() {
-  //     @include line_clamp(6rem);
-  //   }
-  //   overflow: hidden;
-  //   &::after {
-  //     content: "...";
-  //     color: black;
-  //     position: absolute;
-  //     right: 0;
-  //     bottom: 0;
-  //     padding: 0 5px;
-  //     background-color: $primary;
-  //   }
-  // }
-  &:hover {
-    background-color: rgb(100, 100, 100, 0.9);
-    .card_title,
-    p {
-      color: $white;
-      // &::after {
-      //   background-color: rgb(100, 100, 100, 0.9);
-      //   color: $white;
-      // }
+      margin-top: auto;
     }
   }
 }

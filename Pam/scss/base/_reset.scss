@@ -1,3 +1,4 @@
+@use "../abstracts/" as *;
 * {
   outline: 1px red solid;
 }
@@ -12,7 +13,7 @@ body {
     background: linear-gradient($dark 70px, transparent 70px 90%, $dark 90%),
       url(../images/bg.jpg);
   }
-  .container {
+  > .container {
     padding: 0;
     @media (min-width: 1440px) {
       max-width: 1251px;
