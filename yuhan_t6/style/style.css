@@ -105,6 +105,20 @@ body {
   color: #646464;
 }
 
+.minialbum {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5rem;
+}
+.minialbum img {
+  width: 100%;
+  height: auto;
+}
+.minialbum img:hover {
+  opacity: 0.4;
+}
+
 .copyrights {
   display: flex;
   justify-content: space-between;
