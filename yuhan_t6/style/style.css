@@ -157,6 +157,7 @@ body {
 .copyrights {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 .copyrights span {
   text-transform: uppercase;
@@ -169,6 +170,7 @@ body {
 }
 .copyrights ul {
   display: flex;
+  flex-direction: column;
 }
 .copyrights a {
   color: #CDCDCD;
