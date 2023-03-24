@@ -200,19 +200,15 @@ body {
   width: 100%;
 }
 
-form input {
+form input, form .blank {
   background-color: #E7E7E7;
   border: #CDCDCD 0.5px solid;
 }
-form input ::placeholder {
+form input ::placeholder, form .blank ::placeholder {
   color: #646464;
 }
-form .blank input {
+form div:nth-child(1) input, form div:nth-child(1) .blank {
   width: 100%;
-}
-form .blank input:nth-child(3) {
-  height: 8rem;
-  vertical-align: top;
 }
 
 .buttons {

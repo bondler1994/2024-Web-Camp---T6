@@ -365,7 +365,7 @@
     </main>
     <footer>
         <section class="socialmedia p-4">
-            <div class="row g-0">
+            <div class="row g-4">
                 <div class="item col-lg-3">
                     <h4>latest tweets</h4>
                     <span>loading tweets...</span>
@@ -393,10 +393,16 @@
                     <h4>get in touch</h4>
                     <div>
                         <form action="/action_page.php">
-                            <input type="text" id="fname" name="name" placeholder="Name" required>
-                            <input type="text" id="lname" name="email" placeholder="Email" required>
-                            <textarea rows="5" class="form-control w-100" placeholder="Message" required></textarea>
-                            <input type="submit" value="Submit">
+                            <div>
+                                <input type="text" id="fname" name="name" placeholder="Name" required>
+                                <input type="text" id="lname" name="email" placeholder="Email" required>
+                                <textarea class="blank" rows="5" class="form-control w-100" placeholder="Message"
+                                    required></textarea>
+                            </div>
+                            <div class="buttons">
+                                <input type="submit" value="CLEAR FORM">
+                                <input type="submit" value="SEND">
+                            </div>
                         </form>
                     </div>
                 </div>

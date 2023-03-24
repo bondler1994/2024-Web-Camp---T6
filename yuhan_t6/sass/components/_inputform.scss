@@ -3,35 +3,36 @@
 @use "../utilities/color";
 
 form {
-    input {
+    input, .blank {
       background-color: #{color.$theme-tertiary-200};
       border: #{color.$theme-tertiary-300} 0.5px solid;
       ::placeholder {
         color: #{color.$theme-tertiary-400};
       }
     }
-  
-    .blank {
-      input {
+    div:nth-child(1) {
+      input, .blank {
         width: 100%;
-        &:nth-child(3) {
-          height: 8rem;
-          // 沒有作用的原因
-          vertical-align: top;
-        }
       }
     }
   }
   
-  .buttons {
-    display: block;
-    input[type="submit"]:nth-child(1) {
-      background-color: color.$accent;
-      color: color.$font-color-tertiary;
-    }
-  
-    input[type="submit"]:nth-child(2) {
-      background-color: color.$theme-primary;
-      color: color.$font-color-tertiary;
-    }
+.buttons {
+  display: block;
+  input[type="submit"]:nth-child(1) {
+    background-color: color.$accent;
+    color: color.$font-color-tertiary;
   }
+
+  input[type="submit"]:nth-child(2) {
+    background-color: color.$theme-primary;
+    color: color.$font-color-tertiary;
+  }
+
+}
+
+
+
+
+  
+  
