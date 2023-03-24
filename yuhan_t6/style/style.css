@@ -56,7 +56,7 @@ body {
   top: 0;
   position: absolute;
   display: block;
-  width: 95%;
+  width: 96%;
   height: 1.5px;
   background-color: #CDCDCD;
 }
@@ -440,6 +440,20 @@ h1 img {
   .featured .custom-carousel .swiper-button-prev::after {
     font-size: 20px;
   }
+}
+.featured .mask {
+  display: none;
+}
+.featured .swiper-slide:hover .mask {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 /*# sourceMappingURL=style.css.map */

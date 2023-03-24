@@ -330,30 +330,66 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="./img/g1.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href=""><img src="./img/icon1.png" alt=""></a>
+                            <a href=""><img src="./img/icon2.png" alt=""></a>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/g2.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href=""><img src="./img/icon1.png" alt=""></a>
+                            <a href=""><img src="./img/icon2.png" alt=""></a>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/g3.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href=""><img src="./img/icon1.png" alt=""></a>
+                            <a href=""><img src="./img/icon2.png" alt=""></a>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/g4.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href=""><img src="./img/icon1.png" alt=""></a>
+                            <a href=""><img src="./img/icon2.png" alt=""></a>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/g3.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href=""><img src="./img/icon1.png" alt=""></a>
+                            <a href=""><img src="./img/icon2.png" alt=""></a>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/g2.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href=""><img src="./img/icon1.png" alt=""></a>
+                            <a href=""><img src="./img/icon2.png" alt=""></a>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/g1.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href=""><img src="./img/icon1.png" alt=""></a>
+                            <a href=""><img src="./img/icon2.png" alt=""></a>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/g4.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href=""><img src="./img/icon1.png" alt=""></a>
+                            <a href=""><img src="./img/icon2.png" alt=""></a>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/g1.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href=""><img src="./img/icon1.png" alt=""></a>
+                            <a href=""><img src="./img/icon2.png" alt=""></a>
+                        </div>
                     </div>
 
                 </div>
@@ -456,20 +492,27 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 4,
-            spaceBetween: 30,
-            slidesPerGroup: 4,
+            slidesPerView: 1,
+            spaceBetween: 24,
+            slidesPerGroup: 1,
+            breakpoints: {
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 24,
+                }
+            },
             loop: true,
             loopFillGroupWithBlank: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
         });
+
     </script>
 </body>
 
