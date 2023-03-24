@@ -45,6 +45,12 @@ body {
   text-transform: uppercase;
 }
 
+@media (min-width: 768px) {
+  .featured {
+    padding: 3rem 0 4rem;
+  }
+}
+
 .featured::before {
   content: "";
   top: 0;
@@ -420,6 +426,7 @@ h1 img {
     top: 0;
     right: 25px;
     color: #CDCDCD;
+    transform: translateY(50%);
   }
   .featured .custom-carousel .swiper-button-next::after {
     font-size: 20px;
@@ -428,6 +435,7 @@ h1 img {
     top: 0;
     left: 1172px;
     color: #CDCDCD;
+    transform: translateY(50%);
   }
   .featured .custom-carousel .swiper-button-prev::after {
     font-size: 20px;

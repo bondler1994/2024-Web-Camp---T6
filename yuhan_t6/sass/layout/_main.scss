@@ -36,7 +36,14 @@ main {
     }
 }
 
-// divider
+// featured
+.featured {
+    @include breakpoints.md {
+        padding:3rem 0 4rem;
+    }
+}
+
+// featured divider
 .featured::before {
     content: "";
     top:0;
@@ -46,3 +53,4 @@ main {
     height: 1.5px;
     background-color: color.$theme-tertiary-300; 
 }
+

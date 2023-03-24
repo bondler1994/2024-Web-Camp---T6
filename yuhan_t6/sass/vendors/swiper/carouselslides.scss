@@ -24,6 +24,7 @@
                 top:0;
                 right:25px;
                 color: color.$theme-tertiary-300;
+                transform: translateY(50%);
                 &::after {
                     font-size: 20px;
                 }
@@ -33,6 +34,7 @@
                 top:0;
                 left:1172px;
                 color: color.$theme-tertiary-300;
+                transform: translateY(50%);
                 &::after {
                     font-size: 20px;
                 }
