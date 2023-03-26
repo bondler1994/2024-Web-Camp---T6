@@ -18,12 +18,6 @@ body {
 }
 
 @media (min-width: 576px) {
-  nav {
-    padding: 0 6rem;
-  }
-}
-
-@media (min-width: 576px) {
   main {
     padding: 0 6rem;
   }
@@ -242,6 +236,15 @@ h1 img {
   width: 100%;
 }
 
+.phonenumber {
+  display: none;
+}
+@media (min-width: 576px) {
+  .phonenumber {
+    display: inline-block;
+  }
+}
+
 .businessplanet {
   flex-direction: column;
 }
@@ -250,6 +253,9 @@ h1 img {
 }
 .businessplanet .btn-close {
   background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2380B600'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>");
+}
+.businessplanet .navbar-container {
+  display: flex;
 }
 
 .offcanvas-body {
@@ -314,58 +320,61 @@ h1 img {
   }
 }
 
-.socialmedia ul {
+.icons ul {
   display: flex;
 }
-.socialmedia a {
+.icons a {
   width: 29px;
   height: 27px;
   display: inline-block;
 }
-.socialmedia .facebook {
+.icons .facebook {
   background: url(../img/social.png) 0px -27px;
 }
-.socialmedia .twitter {
+.icons .twitter {
   background: url(../img/social.png)-37px -27px;
 }
-.socialmedia .circle {
+.icons .circle {
   background: url(../img/social.png)-74px -27px;
 }
-.socialmedia .web {
+.icons .web {
   background: url(../img/social.png)-110px -27px;
 }
-.socialmedia .feed {
+.icons .feed {
   background: url(../img/social.png)-147px -27px;
 }
 @media (min-width: 576px) {
-  .socialmedia .facebook {
+  .icons {
+    display: none;
+  }
+  .icons .facebook {
     background: url(../img/social.png) 0px -1px;
   }
-  .socialmedia .facebook:hover {
+  .icons .facebook:hover {
     background: url(../img/social.png) 0px -27px;
   }
-  .socialmedia .twitter {
+  .icons .twitter {
     background: url(../img/social.png)-37px -1px;
   }
-  .socialmedia .twitter:hover {
+  .icons .twitter:hover {
     background: url(../img/social.png)-37px -27px;
   }
-  .socialmedia .circle {
+  .icons .circle {
     background: url(../img/social.png)-74px -1px;
   }
-  .socialmedia .circle:hover {
+  .icons .circle:hover {
     background: url(../img/social.png)-74px -27px;
   }
-  .socialmedia .web {
+  .icons .web {
     background: url(../img/social.png)-110px -1px;
   }
-  .socialmedia .web:hover {
+  .icons .web:hover {
     background: url(../img/social.png)-110px -27px;
   }
-  .socialmedia .feed {
+  .icons .feed {
     background: url(../img/social.png)-148px -1px;
   }
-  .socialmedia .feed:hover {
+  .icons .feed:hover {
     background: url(../img/social.png)-148px -27px;
   }
 }
