@@ -3,8 +3,8 @@
 @use "utilities/color";
 @use "utilities/breakpoints";
 
+@use "layout/nav";
 @use "layout/main";
-@use "layout/header";
 @use "layout/footer";
 
 @use "components/iconcard";

@@ -18,6 +18,12 @@ body {
 }
 
 @media (min-width: 576px) {
+  nav {
+    padding: 0 6rem;
+  }
+}
+
+@media (min-width: 576px) {
   main {
     padding: 0 6rem;
   }
@@ -274,6 +280,34 @@ h1 img {
   background: #80b600;
   color: #FFFFFF;
   text-transform: uppercase;
+}
+
+.offcanvas-custom form {
+  flex-direction: column;
+}
+.offcanvas-custom form input::placeholder {
+  color: rgb(91, 195, 0);
+}
+.offcanvas-custom form button {
+  background-color: #000000;
+  color: #80b600;
+  border: #80b600 solid 1px;
+}
+@media (min-width: 576px) {
+  .offcanvas-custom form {
+    flex-direction: column;
+  }
+  .offcanvas-custom form input::placeholder {
+    color: #646464;
+  }
+  .offcanvas-custom form input {
+    border-radius: 0;
+  }
+  .offcanvas-custom form button {
+    background-color: #000000;
+    color: #80b600;
+    border: #80b600 solid 1px;
+  }
 }
 
 .socialmedia ul {

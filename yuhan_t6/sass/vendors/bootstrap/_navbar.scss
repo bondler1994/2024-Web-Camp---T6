@@ -50,6 +50,37 @@ h1 {
         }
     }
 
+    // search bar styling
+    .offcanvas-custom form {
+        flex-direction: column;
+        input::placeholder {
+            color:rgb(91, 195, 0);
+        }
+
+        button {
+            background-color:#000000;
+            color:color.$theme-primary;
+            border: color.$theme-primary solid 1px;
+        }
+
+        @include breakpoints.sm{
+            flex-direction: column;
+            input::placeholder {
+                color: color.$theme-tertiary-400;
+            }
+            input {
+                border-radius: 0;
+            }
+
+    
+            button {
+                background-color:#000000;
+                color:color.$theme-primary;
+                border: color.$theme-primary solid 1px;
+            }
+        }
+    }
+
 .socialmedia {
     ul{
         display: flex;
