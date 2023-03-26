@@ -20,7 +20,12 @@ h1 {
     flex-direction: column;
     .navbar-toggler-icon {
         background: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2030%2030%27%3E%3Cpath%20stroke%3D%27rgba(128%2C%20182%2C%200%2C%201)%27%20stroke-linecap%3D%27round%27%20stroke-miterlimit%3D%2710%27%20stroke-width%3D%272%27%20d%3D%27M4%207h22M4%2015h22M4%2023h22%27%2F%3E%3C%2Fsvg%3E");
-  }
+    }
+
+    .navbar-container, .navlinks-container {
+        width: 100%;
+    }
+
 
     .btn-close {
         background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2380B600'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>");
@@ -31,11 +36,22 @@ h1 {
     }
 
 }
+
 .offcanvas-body {
     background: color.$accent;
     @include breakpoints.sm {
-        background:color.$theme-secondary;
+        background:transparent;
         }
+
+    @include breakpoints.sm {
+        gap:1rem;
+
+        ul {
+            border:color.$theme-tertiary-300 solid 1px;
+            background-color: color.$theme-secondary;
+        }
+    }
+
     .nav-link {
         color:color.$theme-secondary;
         font-size: 20px;
@@ -47,52 +63,28 @@ h1 {
         & :hover {
             color:color.$theme-primary;
         }
-
-        .dropdown-menu {
-            padding:0;
-
-        }
-
-        .dropdown-item {
-            background:color.$theme-primary;
-            color:color.$theme-secondary;
-            text-transform: uppercase;
+    
+    // blank nav-item 
+    @include breakpoints.sm {
+        .nav-item:nth-child(8){
+            width: 10rem;
         }
     }
 
- // search bar styling
-    .offcanvas-custom form {
-        position: relative;
-        input::placeholder {
-            color:rgb(91, 195, 0);
-        }
+    .dropdown-menu {
+        padding:0;
 
-        button {
-            background-color:transparent;
-            color:color.$theme-primary;
-            border:none;
-            position: absolute;
-            right: 5px;
-            &:hover {
-                background-color: none;
-                border: none;
-            }
-        }
-
-        @include breakpoints.sm{
-            flex-direction: column;
-            input::placeholder {
-                color: color.$theme-tertiary-400;
-            }
-            input {
-                border-radius: 0;
-            }
-
-            button {
-                color: color.$theme-tertiary-400;
-            }
-        }
     }
+
+    .dropdown-item {
+        background:color.$theme-primary;
+        color:color.$theme-secondary;
+        text-transform: uppercase;
+    }
+
+}
+
+ 
 
 .icons {
     ul{
@@ -156,3 +148,36 @@ h1 {
     }
 }
 
+// search bar styling
+.offcanvas-custom form {
+    position: relative;
+    input::placeholder {
+        color:rgb(91, 195, 0);
+    }
+
+    button {
+        background-color:transparent;
+        color:color.$theme-primary;
+        border:none;
+        position: absolute;
+        right: 5px;
+        &:hover {
+            background-color: none;
+            border: none;
+        }
+    }
+
+    @include breakpoints.sm{
+        flex-direction: column;
+        input::placeholder {
+            color: color.$theme-tertiary-400;
+        }
+        input {
+            border-radius: 0;
+        }
+
+        button {
+            color: color.$theme-tertiary-400;
+        }
+    }
+}
