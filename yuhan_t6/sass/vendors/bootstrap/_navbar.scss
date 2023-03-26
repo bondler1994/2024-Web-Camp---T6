@@ -52,15 +52,21 @@ h1 {
 
     // search bar styling
     .offcanvas-custom form {
-        flex-direction: column;
+        position: relative;
         input::placeholder {
             color:rgb(91, 195, 0);
         }
 
         button {
-            background-color:#000000;
+            background-color:transparent;
             color:color.$theme-primary;
-            border: color.$theme-primary solid 1px;
+            border:none;
+            position: absolute;
+            right: 5px;
+            &:hover {
+                background-color: none;
+                border: none;
+            }
         }
 
         @include breakpoints.sm{
@@ -72,11 +78,8 @@ h1 {
                 border-radius: 0;
             }
 
-    
             button {
-                background-color:#000000;
-                color:color.$theme-primary;
-                border: color.$theme-primary solid 1px;
+                color: color.$theme-tertiary-400;
             }
         }
     }
