@@ -18,6 +18,12 @@ h1 {
 
 .businessplanet {
     flex-direction: column;
+    padding: 0.5rem;
+    background-color: color.$theme-secondary;
+    @include breakpoints.sm {
+        background-color: transparent;
+        padding:0 6rem;
+    }
     .navbar-toggler-icon {
         background: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2030%2030%27%3E%3Cpath%20stroke%3D%27rgba(128%2C%20182%2C%200%2C%201)%27%20stroke-linecap%3D%27round%27%20stroke-miterlimit%3D%2710%27%20stroke-width%3D%272%27%20d%3D%27M4%207h22M4%2015h22M4%2023h22%27%2F%3E%3C%2Fsvg%3E");
     }
@@ -26,6 +32,7 @@ h1 {
         width: 100%;
     }
     
+
     
     .btn-close {
         background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2380B600'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>");
@@ -33,6 +40,19 @@ h1 {
 
     .navbar-container {
         display: flex;
+        justify-content: space-between;
+        background-color: color.$theme-secondary;
+        padding:0;
+        @include breakpoints.sm {
+            padding: 1rem;
+            border:color.$theme-tertiary-300 solid 1px;
+        }
+    }
+
+    .navlinks-container {
+        @include breakpoints.sm {
+            margin-top: 2rem;
+        }
     }
 
 }
@@ -105,9 +125,15 @@ h1 {
     }
     }
 
+    .icons {
+        @include breakpoints.sm {
+            display: none;
+        }
+    }
+
 }
 
- 
+
 
 .icons {
     ul{
@@ -137,7 +163,6 @@ h1 {
     
 
     @include breakpoints.sm {
-        display: none;
         .facebook {
             background:url(../img/social.png)0px -1px;
         }
