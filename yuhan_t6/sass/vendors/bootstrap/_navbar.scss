@@ -2,7 +2,7 @@
 @use "../../utilities/color";
 
 h1 {
-    width: 70%;
+    width: 90%;
     img {
         width: 100%;
     }
@@ -52,6 +52,16 @@ h1 {
         }
     }
 
+    // nav item's border
+    .nav-item {
+        @include breakpoints.sm {
+            border-left:color.$theme-tertiary-200 solid 1px;
+            &:nth-child(1) {
+                border-left:none;
+            }
+        }
+    }
+
     .nav-link {
         color:color.$theme-secondary;
         font-size: 20px;
@@ -84,6 +94,15 @@ h1 {
         background:color.$theme-primary;
         color:color.$theme-secondary;
         text-transform: uppercase;
+    }
+
+    form {
+        width: 100%;
+        @include breakpoints.sm{
+        padding: 0.5rem;
+        background-color: color.$theme-secondary;
+        border: color.$theme-tertiary-300 solid 1px;
+    }
     }
 
 }

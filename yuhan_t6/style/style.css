@@ -236,7 +236,7 @@ form div:nth-child(1) input, form div:nth-child(1) .blank {
 }
 
 h1 {
-  width: 70%;
+  width: 90%;
 }
 h1 img {
   width: 100%;
@@ -284,6 +284,14 @@ h1 img {
     background-color: #FFFFFF;
   }
 }
+@media (min-width: 576px) {
+  .offcanvas-body .nav-item {
+    border-left: #E7E7E7 solid 1px;
+  }
+  .offcanvas-body .nav-item:nth-child(1) {
+    border-left: none;
+  }
+}
 .offcanvas-body .nav-link {
   color: #FFFFFF;
   font-size: 20px;
@@ -313,6 +321,16 @@ h1 img {
   background: #80b600;
   color: #FFFFFF;
   text-transform: uppercase;
+}
+.offcanvas-body form {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .offcanvas-body form {
+    padding: 0.5rem;
+    background-color: #FFFFFF;
+    border: #CDCDCD solid 1px;
+  }
 }
 
 .icons ul {
