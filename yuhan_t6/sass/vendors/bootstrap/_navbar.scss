@@ -57,7 +57,11 @@ h1 {
         font-size: 20px;
         text-transform: uppercase;
         @include breakpoints.sm {
-        color:color.$accent;
+        color:color.$font-color-primary;
+        &:hover {
+            color:color.$font-color-tertiary;
+            background-color: color.$theme-primary;
+        }
             }
         }
         & :hover {
