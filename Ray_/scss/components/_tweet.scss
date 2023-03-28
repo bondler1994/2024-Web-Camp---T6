@@ -1,6 +1,5 @@
-@use "../base/font" as *;
-@use "../utils/breakpoint" as *;
-@use "../utils/layout" as *;
+@use "../base" as *;
+@use "../utils" as *;
 
 .tweet {
   @include display_flex(column, $gap_s);
@@ -15,7 +14,7 @@
   .tweet_text {
     font-size: 0.8rem;
     @include breakpoint($tablet) {
-      font-size: $font_size_s;
+      font-size: $font_size_xs;
     }
   }
 }

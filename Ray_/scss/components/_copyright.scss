@@ -1,15 +1,8 @@
-@use "../base/color" as *;
-@use "../base/font" as *;
-@use "../utils/breakpoint" as *;
+@use "../base" as *;
+@use "../utils" as *;
 
 .copyright {
   @extend %text_style_1;
-  @include breakpoint($tablet) {
-    order: 2;
-  }
-  @include breakpoint($PC) {
-    order: 1;
-  }
 
   .privacy {
     color: $primary_color;

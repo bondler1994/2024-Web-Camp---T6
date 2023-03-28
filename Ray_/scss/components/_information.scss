@@ -1,5 +1,4 @@
-@use "../utils/breakpoint" as *;
-@use "../utils/layout" as *;
+@use "../utils" as *;
 
 .information {
   @include display_flex(column, $gap_m);
@@ -14,7 +13,7 @@
 
   &_item {
     @include breakpoint($tablet) {
-      flex: 1 1 calc(50% - 1rem);
+      flex: 1 1 40%;
     }
     @include breakpoint($PC) {
       flex: 1;

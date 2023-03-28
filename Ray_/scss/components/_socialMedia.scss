@@ -1,5 +1,10 @@
-@use "../utils/breakpoint" as *;
-@use "../utils/layout" as *;
+@use "../utils" as *;
+
+// @mixin social_media_pc($x,$y) {
+//   background-position:$x,$y;
+//   background-size: 210px;
+// }
+
 
 .social_media_links {
   @include display_flex(row, 1.2rem);
@@ -26,7 +31,7 @@
     &:hover {
       background: 0px 23px/150px url("./images/social.png");
       @include breakpoint($PC) {
-        background-position: 0 31px;
+        background-position: 0 32px;
         background-size: 210px;
       }
     }
@@ -40,7 +45,7 @@
     &:hover {
       background: 118px 23px/150px url("./images/social.png");
       @include breakpoint($PC) {
-        background-position: -44px 31px;
+        background-position: -44px 32px;
         background-size: 210px;
       }
     }
@@ -48,13 +53,13 @@
   .fliker {
     background: 87px 0/150px url("./images/social.png");
     @include breakpoint($PC) {
-      background-position: -87px 0;
+      background-position: -88px 0;
       background-size: 210px;
     }
     &:hover {
       background: 87px 23px/150px url("./images/social.png");
       @include breakpoint($PC) {
-        background-position: -87px 31px;
+        background-position: -88px 32px;
         background-size: 210px;
       }
     }
@@ -68,7 +73,7 @@
     &:hover {
       background: 56px 23px/150px url("./images/social.png");
       @include breakpoint($PC) {
-        background-position: 32px 31px;
+        background-position: 32px 32px;
         background-size: 210px;
       }
     }
@@ -82,7 +87,7 @@
     &:hover {
       background: 23px 23px/150px url("./images/social.png");
       @include breakpoint($PC) {
-        background-position: 78px 31px;
+        background-position: 78px 32px;
         background-size: 210px;
       }
     }

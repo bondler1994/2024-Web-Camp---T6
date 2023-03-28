@@ -1,7 +1,9 @@
 @use "../base/color" as *;
 @use "../utils/breakpoint" as *;
 
-$font_size_ss: 1rem;
+
+$font_size_xxs: .9rem;
+$font_size_xs: 1rem;
 $font_size_s: 1.2rem;
 $font_size_m: 1.5rem;
 $font_size_l: 2rem;
@@ -15,7 +17,7 @@ $font_size_l: 2rem;
 
 %information_title {
   font-size: $font_size_s;
-  @include breakpoint(1440px) {
+  @include breakpoint($PC-l) {
     font-size: $font_size_m;
   }
 }
@@ -28,24 +30,6 @@ $font_size_l: 2rem;
 %text_style_1 {
   color: $gray-600;
   text-align: center;
-}
-
-%card_title {
-  @include breakpoint($tablet) {
-    margin-bottom: 0;
-    text-align: center;
-    font-size: $font_size_ss;
-    color: $gray-600;
-    font-weight: 500;
-  }
-  @include breakpoint(1440px) {
-    font-size: $font_size_s;
-  }
-}
-
-%card_text {
-  color: $gray-600;
-  font-weight: 500;
 }
 
 %more {

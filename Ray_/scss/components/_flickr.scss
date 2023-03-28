@@ -1,6 +1,5 @@
-@use "../base/font" as *;
-@use "../utils/breakpoint" as *;
-@use "../utils/layout" as *;
+@use "../base" as *;
+@use "../utils" as *;
 
 .flickr {
   @include display_flex(column, $gap_s);
@@ -13,12 +12,11 @@
   }
   
   &_img_group {
-    display: flex;
+    @include display_flex(row, .3rem);
     flex-wrap: wrap;
-    gap: 0.3rem;
   }
 
   &_img {
-    flex: 1 1 calc(25% - ((0.3rem * 3) / 4));
+    flex: 1 1 20%;
   }
 }

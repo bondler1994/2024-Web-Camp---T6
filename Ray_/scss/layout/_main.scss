@@ -1,7 +1,10 @@
-@use "../base/color" as *;
-@use "../base/font" as *;
-@use "../utils/breakpoint" as *;
-@use "../utils/layout" as *;
+@use "../base" as *;
+@use "../utils" as *;
+
+@use "../components/introduce" as *;
+@use "../components/welcome" as *;
+@use "../components/chooseUslist" as *;
+@use "../components/news" as *;
 
 main {
   background-image: url("./images/subbg.gif");

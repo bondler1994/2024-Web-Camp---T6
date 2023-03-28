@@ -1,5 +1,4 @@
-@use "../utils/breakpoint" as *;
-@use "../utils/layout" as *;
+@use "../utils" as *;
 
 .connection{
   @include display_flex(column-reverse,.5rem);

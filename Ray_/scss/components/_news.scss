@@ -1,7 +1,5 @@
-@use "../base/color" as *;
-@use "../base/font" as *;
-@use "../utils/breakpoint" as *;
-@use "../utils/layout" as *;
+@use "../base" as *;
+@use "../utils" as *;
 
 .news {
   @include display_flex(column, $gap_m);
@@ -18,7 +16,7 @@
   &_title {
     flex-basis: 100%;
     @include breakpoint($PC) {
-      flex-basis: initial;
+      flex-basis: auto;
     }
   }
 
@@ -26,10 +24,7 @@
     @include display_flex(row, $gap_m);
     @include breakpoint($tablet) {
       gap: $gap_l;
-      flex: 1 1 calc(50% - 1rem);
-    }
-    @include breakpoint($PC) {
-      flex: initial;
+      flex:1 1 0;
     }
 
     img {
@@ -47,16 +42,14 @@
 
     &_date {
       width: fit-content;
-      padding: 0.3rem 0.5rem;
+      padding: .3rem 1rem .5rem;
       background-color: $primary_color;
       font-weight: 500;
       color: $white;
       @include breakpoint($tablet) {
-        padding: 0.1rem;
         font-size: 0.5rem;
       }
       @include breakpoint($PC) {
-        padding: 0.3rem 0.5rem;
         font-size: 1rem;
       }
     }

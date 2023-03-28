@@ -1,7 +1,5 @@
-@use "../base/color" as *;
-@use "../base/font" as *;
-@use "../utils/breakpoint" as *;
-@use "../utils/layout" as *;
+@use "../base" as *;
+@use "../utils" as *;
 
 .choose_us {
   &_title {
@@ -12,16 +10,15 @@
     @include display_flex(row, $gap_m);
     align-items: center;
     padding: 1rem 0;
+
     @include breakpoint($tablet) {
       border-bottom: 0.1rem solid $gray-100;
-      &:first-of-type {
-        padding-top: 0;
-      }
-    }
-    @include breakpoint($PC) {
-      &:nth-child(2) .choose_us_text,
-      &:nth-child(3) .choose_us_text {
-        padding-top: 1rem;
+    
+      &:nth-child(3),
+      &:nth-child(4) {
+        .choose_us_text {
+          align-self: flex-end;
+        }
       }
     }
 
@@ -50,7 +47,6 @@
       background-color: $gray-100;
       width: 3rem;
       height: 3rem;
-      margin-left: 1rem;
       @include breakpoint($PC) {
         width: 3.5rem;
         height: 3.5rem;
@@ -64,12 +60,12 @@
         height: 100%;
         font-weight: 900;
         color: white;
-        font-size: 0.8rem;
-        font-family: "Bootstrap-icons";
+        font-size: $font_size_xxs;
+        font-family: "Bootstrap-icons"; //要加上這個才能顯示
         @include breakpoint($PC) {
           top: 30%;
           left: 35%;
-          font-size: 1.2rem;
+          font-size: $font_size_s;
         }
       }
     }

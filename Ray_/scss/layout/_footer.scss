@@ -1,7 +1,11 @@
-@use "../base/color" as *;
-@use "../base/font" as *;
-@use "../utils/breakpoint" as *;
-@use "../utils/layout" as *;
+@use "../base" as *;
+@use "../utils" as *;
+
+@use "../components/information" as *;
+@use "../components/tweet" as *;
+@use "../components/testimonials" as *;
+@use "../components/flickr" as *;
+@use "../components/copyright" as *;
 
 .footer {
   margin: 0 auto;

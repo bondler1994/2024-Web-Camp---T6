@@ -1,6 +1,11 @@
 @use "../base/color" as *;
 @use "../utils/breakpoint" as *;
 
+@use "../components/logo";
+@use "../components/connection";
+@use "../components/socialMedia";
+@use "../components/contactMethod";
+
 .header {
   margin: 10px auto 20px;
   background-image: url("./images/subbg.gif");

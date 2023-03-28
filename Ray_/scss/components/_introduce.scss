@@ -1,5 +1,4 @@
-@use "../utils/breakpoint" as *;
-@use "../utils/layout" as *;
+@use "../utils" as *;
 
 .introduce {
   @include display_flex(column, $gap_m);
@@ -16,18 +15,8 @@
   }
 
   &_item {
-    @include breakpoint($PC) {
-      flex: 1 1 0;
-    }
-
-    &:nth-child(1),
-    &:nth-child(2) {
-      @include breakpoint($tablet) {
-        flex-basis: calc(50% - ($gap_l/2))
-      }
-      @include breakpoint($PC) {
-        flex-basis: 0;
-      }
+    @include breakpoint($tablet) {
+      flex: 1 1 30%;
     }
   }
 }

@@ -1,8 +1,5 @@
-@use "../base/color" as *;
-@use "../base/font" as *;
-@use "../utils/breakpoint" as *;
-@use "../utils/layout" as *;
-
+@use "../base" as *;
+@use "../utils" as *;
 .testimonials {
   @include display_flex(column, $gap_s);
   @include breakpoint($tablet) {
@@ -22,7 +19,7 @@
     border-radius: 2px;
     padding: 0.1rem 0.1rem 0.2rem;
     background-color: $gray-100;
-    font-size: .9rem;
+    font-size: $font_size_xxs;
   }
 
   &_dialog_text {
