@@ -1,0 +1,64 @@
+@use "../abstracts/" as *;
+
+.product_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: $primary;
+  padding: $padding_base;
+  @include pad() {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    height: 100%;
+  }
+  @include desktop() {
+    padding: $padding_base * 2.5;
+  }
+  &:hover {
+    background-color: rgb(100, 100, 100, 0.9);
+    .card_title,
+    .card_text {
+      color: $white;
+    }
+  }
+  .card_title {
+    font-size: $font_middle;
+  }
+  .card_img {
+    display: none;
+    @include pad() {
+      display: block;
+      margin: 0 auto;
+      @include sizing(40px);
+      img {
+        @include sizing(100%);
+      }
+    }
+    @include desktop() {
+      @include sizing(60px);
+    }
+  }
+  .card_text {
+    display: none;
+    @include pad() {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    @include desktop() {
+      overflow: initial;
+      text-overflow: initial;
+      white-space: initial;
+    }
+  }
+  .card_btn {
+    @include btn_theme($deco, $dark, 0 $padding_base);
+    @include pad() {
+      margin-top: auto;
+    }
+  }
+}

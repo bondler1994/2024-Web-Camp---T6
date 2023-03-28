@@ -1,10 +1,13 @@
+@use "../abstracts/" as *;
 .navbar {
   padding: 0.5rem;
   row-gap: 0.5rem;
   align-items: stretch;
+  @include section_shadow();
   @include desktop() {
     padding: 0;
     column-gap: 1rem;
+    box-shadow: initial;
   }
 }
 .navbar-expand-lg {
@@ -12,7 +15,7 @@
     background-color: $white;
     @include desktop() {
       order: -1;
-      box-shadow: 0px -1px 5px;
+      @include section_shadow();
     }
     .navbar-nav {
       margin-left: -0.5rem;
@@ -57,22 +60,59 @@
     @include focus_hightlight();
   }
 }
-
+.carousel-item {
+  img {
+    height: 300px;
+    object-fit: cover;
+    @include pad() {
+      height: initial;
+      object-fit: initial;
+      object-position: initial;
+    }
+  }
+  @mixin carousel_img_position($carousel_x, $carousel_y) {
+    object-position: $carousel_x $carousel_y;
+    @include pad() {
+      object-position: initial;
+    }
+  }
+  &:nth-of-type(1) {
+    img {
+      @include carousel_img_position(50%, 50%);
+    }
+  }
+  &:nth-of-type(2) {
+    img {
+      @include carousel_img_position(70%, 50%);
+    }
+  }
+  &:nth-of-type(3) {
+    img {
+      @include carousel_img_position(92%, 50%);
+    }
+  }
+}
 .carousel-control-prev,
 .carousel-control-next {
   top: 35%;
   bottom: 35%;
   width: initial;
-  // background-color: $dark;
-  // align-items: stretch;
 }
 .carousel-control-prev {
-  left: 0;
-  right: 95.5%;
+  width: 35px;
+  @include pad() {
+    width: initial;
+    left: 0;
+    right: 95.5%;
+  }
 }
 .carousel-control-next {
-  left: 95.5%;
-  right: 0;
+  width: 35px;
+  @include pad() {
+    width: initial;
+    left: 95.5%;
+    right: 0;
+  }
 }
 .carousel-control-prev-icon {
   background-image: url(../images/slider_prev.gif);
@@ -84,34 +124,19 @@
 .carousel-control-next-icon {
   width: 100%;
   height: 100%;
-  background-position: 0 -2px;
   background-size: 100%;
-  &:hover {
-    background-position: 0 92%;
+  @mixin carousel_icon_bg_position($carousel_icon_y, $carousel_icon_y_hover) {
+    background-position: 0 $carousel_icon_y;
+    &:hover {
+      background-position: 0 $carousel_icon_y_hover;
+    }
+  }
+  @include carousel_icon_bg_position(-5px, -109px);
+  @include pad() {
+    @include carousel_icon_bg_position(3.5%, 94%);
   }
 }
 .next_icon {
   background-image: url(../images/slider_next.gif);
   background-position: 0 0;
-}
-// swiper reset
-.swiper-button-next,
-.swiper-button-prev {
-  position: static;
-  margin: 0;
-  display: inline-block;
-  width: fit-content;
-  height: fit-content;
-
-  &::after {
-    font-size: 1rem;
-    color: $deco;
-    font-weight: 900;
-  }
-  &:hover::after {
-    color: $highlight;
-  }
-}
-.swiper-button-next {
-  margin-left: 0.75rem;
 }

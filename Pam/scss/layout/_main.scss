@@ -1,56 +1,35 @@
-.bg_white {
-  background-color: $white;
-  @include desktop() {
-    background-color: transparent;
-  }
+@use "../abstracts/" as *;
+main {
+  background: url(../../images/subbg.gif);
+  padding-top: $padding_base * 2;
+  margin-top: -$padding_base * 2;
+  @include section_shadow();
 }
-.search_wrap {
-  width: 230px;
-  background-color: $white;
 
-  @include desktop() {
-    padding: 0.5rem;
-    box-shadow: 0px -1px 5px;
-    width: 25%;
-  }
-  form {
-    background-color: $deco_light;
-    border: 1px $primary solid;
-    height: 100%;
-  }
-  input {
-    background-color: $deco_light;
-    border: none;
-    &:focus {
-      @include focus_hightlight();
-    }
-  }
-  button {
-    background: url(../images/search.png) no-repeat center;
-    &:focus {
-      @include focus_hightlight();
-    }
-  }
-}
 .product {
-  @extend %section_container;
-  .row > div {
+  // @extend %section_container;
+  padding: $padding_base * 2;
+  .row {
     @include desktop() {
       position: relative;
       z-index: 1;
-      margin-top: -2rem;
+      margin-top: -5rem;
     }
   }
 }
 .about {
-  @extend %section_container;
-  > hr {
-    display: none;
-    @include pad() {
-      margin-top: 3rem;
-      margin-bottom: 0;
-      display: block;
-    }
+  // @extend %section_container;
+  padding: $padding_base * 2;
+  p {
+    color: $secondary;
+  }
+}
+hr {
+  display: none;
+  @include pad() {
+    margin-top: 3rem;
+    margin-bottom: 0;
+    display: block;
   }
 }
 .about_items {
@@ -63,10 +42,20 @@
       @extend %img_fullfilled;
     }
   }
-}
-.more_link {
-  &:hover {
-    color: $highlight;
+  .welcome_text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  .more_link {
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    &:hover {
+      color: $highlight;
+    }
   }
 }
 .strip_wrap {
@@ -93,7 +82,8 @@
   h3 + div {
     margin-top: $margin_base * 2;
   }
-  @extend %section_container;
+  // @extend %section_container;
+  padding: $padding_base * 2;
   .swiper-slide {
     .shadow_wrap {
       // height: 0;
@@ -101,7 +91,7 @@
       padding-left: 100%;
       overflow: hidden;
       position: absolute;
-      top: 300px;
+      top: 600px;
       transition: top 1s;
     }
     ._shadow {
@@ -156,8 +146,11 @@
   }
   .swiper_indicator {
     position: absolute;
-    top: 3rem;
+    top: 2rem;
     right: 1.5rem;
     font-size: 0;
+    @include desktop() {
+      top: 3rem;
+    }
   }
 }

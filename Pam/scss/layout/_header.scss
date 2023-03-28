@@ -1,12 +1,18 @@
-header {
-  @extend %flex_layout;
+@use "../abstracts/" as *;
+@use "../base/reset" as *;
+
+.header_content {
+  display: flex;
   flex-direction: column;
   gap: 1rem;
+  align-items: center;
   @include desktop() {
     flex-direction: row;
+    justify-content: space-between;
     gap: 0;
   }
   background: url(../images/subbg.gif);
+  @include section_shadow();
   h1 {
     width: 70%;
     height: 35px;
@@ -31,22 +37,24 @@ header {
     text-align: right;
   }
 }
-._icons a {
-  display: inline-block;
-  width: 27px;
-  height: 27px;
-  background: url(../images/social.png);
-}
+
 @mixin social_position($bg-x, $bg-y) {
   background-position: $bg-x $bg-y;
 }
-._icons {
+.social_icons {
   display: none;
   font-size: 0;
   @include pad() {
     display: block;
   }
   a {
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    background: url(../images/social.png);
+    & + a {
+      margin-left: 0.5rem;
+    }
     &:first-child {
       @include social_position(0, 0);
       &:hover {
@@ -72,25 +80,54 @@ header {
       }
     }
     &:nth-child(5) {
-      // @extend %social;
       @include social_position(100%, 0);
       &:hover {
         @include social_position(100%, 100%);
       }
     }
-    & + a {
-      margin-left: 0.5rem;
-    }
   }
 }
-._call {
+.contact_call {
   font-size: 0;
-  a,
-  p {
+  > * + * {
+    margin-left: 0.5rem;
+  }
+  * {
     display: inline-block;
     font-size: 1rem;
   }
-  a {
-    margin-left: 0.5rem;
+}
+.bg_white {
+  background-color: $white;
+  @include desktop() {
+    background-color: transparent;
+  }
+}
+.search_wrap {
+  width: 230px;
+  background-color: $white;
+
+  @include desktop() {
+    padding: 0.5rem;
+    width: 25%;
+    @include section_shadow();
+  }
+  form {
+    background-color: $deco_light;
+    border: 1px $primary solid;
+    height: 100%;
+  }
+  input {
+    background-color: $deco_light;
+    border: none;
+    &:focus {
+      @include focus_hightlight();
+    }
+  }
+  button {
+    background: url(../images/search.png) no-repeat center;
+    &:focus {
+      @include focus_hightlight();
+    }
   }
 }
