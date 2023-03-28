@@ -5,6 +5,8 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    @include breakpoints.sm {
+    flex-direction: row; }
 
     span {
         text-transform: uppercase;
@@ -20,6 +22,9 @@
     ul {
         display: flex;
         flex-direction: column;
+            @include breakpoints.sm {
+            flex-direction: row;        
+        }
     }
 
     a {
@@ -30,3 +35,5 @@
         }
     }
 }
+
+    

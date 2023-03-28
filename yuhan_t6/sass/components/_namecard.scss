@@ -4,6 +4,7 @@
 .picture-card {
     display: flex;
     align-items: center;
+    gap:1rem;
     span {
         display: block;
         color: color.$theme-tertiary-400;

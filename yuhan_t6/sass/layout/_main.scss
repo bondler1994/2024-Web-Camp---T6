@@ -44,13 +44,16 @@ main {
 }
 
 // featured divider
+@include breakpoints.sm {
 .featured::before {
     content: "";
     top:0;
     position: absolute;
     display: block;
-    width: 96%; //try other ways
+    width: calc(100% - 3rem); 
     height: 1.5px;
     background-color: color.$theme-tertiary-300; 
 }
+}
+
 
