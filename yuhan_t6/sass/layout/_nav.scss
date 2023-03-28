@@ -1,10 +1,6 @@
 @use "../utilities/breakpoints";
 @use "../utilities/color";
 
-.businessplanet {
-    @include breakpoints.sm {
-        padding: 0 6rem;
-    }
-}
+
 
 

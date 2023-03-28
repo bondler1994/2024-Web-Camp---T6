@@ -2,7 +2,7 @@
 @use "../utilities/color";
 
 
-main {
+body {
     @include breakpoints.sm {
         padding: 0 6rem;
     }
