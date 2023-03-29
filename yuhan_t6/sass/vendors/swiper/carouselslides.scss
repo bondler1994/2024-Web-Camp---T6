@@ -13,7 +13,7 @@
     }
 }
 
-
+// positioning
 @include breakpoints.md {
     .featured {
         position: relative;
@@ -23,21 +23,14 @@
             .swiper-button-next {
                 top:0;
                 right:25px;
-                color: color.$theme-tertiary-300;
                 transform: translateY(50%);
-                &::after {
-                    font-size: 20px;
-                }
+    
             }
 
             .swiper-button-prev {
                 top:0;
                 left:1172px;
-                color: color.$theme-tertiary-300;
                 transform: translateY(50%);
-                &::after {
-                    font-size: 20px;
-                }
             }
         }
 
@@ -64,4 +57,26 @@
         }
     }
 
+}
+
+//  styling
+.featured {
+    .swiper-button-next, .swiper-button-prev {
+        background-color: #333;
+        color:color.$theme-secondary;
+        opacity: .8;
+        &:hover {
+            background-color: color.$theme-primary;
+        }
+        &::after {
+            font-size: 20px;
+        }
+        @include breakpoints.sm {
+            background-color:initial;
+            color: color.$theme-tertiary-300;
+            &:hover {
+                background-color:initial;
+            }    
+        }
+    }
 }

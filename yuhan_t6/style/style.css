@@ -586,20 +586,12 @@ h1 img {
   .featured .custom-carousel .swiper-button-next {
     top: 0;
     right: 25px;
-    color: #CDCDCD;
     transform: translateY(50%);
-  }
-  .featured .custom-carousel .swiper-button-next::after {
-    font-size: 20px;
   }
   .featured .custom-carousel .swiper-button-prev {
     top: 0;
     left: 1172px;
-    color: #CDCDCD;
     transform: translateY(50%);
-  }
-  .featured .custom-carousel .swiper-button-prev::after {
-    font-size: 20px;
   }
 }
 .featured .mask {
@@ -615,6 +607,27 @@ h1 img {
   background-color: rgba(0, 0, 0, 0.3);
   align-items: center;
   justify-content: space-evenly;
+}
+
+.featured .swiper-button-next, .featured .swiper-button-prev {
+  background-color: #333;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+.featured .swiper-button-next:hover, .featured .swiper-button-prev:hover {
+  background-color: #80b600;
+}
+.featured .swiper-button-next::after, .featured .swiper-button-prev::after {
+  font-size: 20px;
+}
+@media (min-width: 576px) {
+  .featured .swiper-button-next, .featured .swiper-button-prev {
+    background-color: initial;
+    color: #CDCDCD;
+  }
+  .featured .swiper-button-next:hover, .featured .swiper-button-prev:hover {
+    background-color: initial;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
