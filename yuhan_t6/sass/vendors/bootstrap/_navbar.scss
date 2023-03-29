@@ -87,9 +87,14 @@ h1 {
         }
     }
 
+    @include breakpoints.sm {.navbar-nav {
+        align-items: center;
+        }
+    }
+
     .nav-link {
         color:color.$theme-secondary;
-        font-size: 20px;
+        font-size: 16px;
         text-transform: uppercase;
         @include breakpoints.sm {
         color:color.$font-color-primary;
@@ -124,9 +129,10 @@ h1 {
     form {
         width: 100%;
         @include breakpoints.sm{
-        // padding: 0.5rem;
+        padding:6px 10px;
         background-color: color.$theme-secondary;
         border: color.$theme-tertiary-300 solid 1px;
+
     }
     }
 
@@ -134,6 +140,10 @@ h1 {
         @include breakpoints.sm {
             display: none;
         }
+    }
+
+    input {
+        background-color: color.$theme-tertiary-200;
     }
 
 }
@@ -226,7 +236,7 @@ h1 {
             color: color.$theme-tertiary-400;
         }
         input {
-            border-radius: 0;
+            // border-radius: 0; 
         }
 
         button {
