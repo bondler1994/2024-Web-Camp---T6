@@ -1,55 +1,59 @@
 @use "../abstracts/" as *;
-.footer_content {
+.footer_info {
   margin-top: 5 * $margin_base;
-  @include section_shadow();
-  @extend %section_container;
+  box-shadow: 0px 0px 5px 1px $secondary;
+  background-image: url(../images/subbg.gif);
+  padding: $padding_base * 2;
+  @include device_lg() {
+    padding: 2.5rem;
+  }
 }
-.footer_items {
+.footer_item {
   > * + * {
     margin-top: $margin_base * 2;
   }
 }
-._dialog {
-  p {
-    background-color: $primary;
-    padding: $padding_base;
-    border: 1px $deco solid;
-    border-radius: 3px 3px 3px 0;
+.dialog_wrapper {
+  background-color: $primary;
+  padding: 1rem 1.5rem;
+  border: 1px $deco solid;
+  border-radius: 3px 3px 3px 0;
+  &::after {
+    content: "";
+    width: 0;
+    border-color: $primary transparent transparent transparent;
+    border-width: 10px 20px 0 0;
+    border-style: solid solid solid solid;
+    filter: drop-shadow(-1px 2px 0 $deco);
+    position: absolute;
+    left: 0;
+    bottom: -9px;
   }
 }
-._triangle {
-  // @include sizing(0);
-  width: 0;
-  border-color: $primary transparent transparent transparent;
-  border-width: 10px 20px 0 0;
-  border-style: solid solid solid solid;
-  filter: drop-shadow(-1px 2px 0 $deco);
-  margin-top: -2px;
-  margin-left: 1px;
-}
-._speaker {
-  font-size: 0;
+
+.dialog_speaker {
   display: flex;
   gap: 1rem;
-  .img_wrap {
-    display: inline-block;
-    @include sizing(50px);
+  .img_wrapper {
+    @include element_sizing(50px);
     img {
-      @include sizing(100%);
+      @include element_sizing(100%);
     }
   }
   p {
-    font-size: 1rem;
-    a {
-      color: $highlight;
-      font-style: italic;
-      &:hover {
-        transform: scale(1.1);
-      }
+    line-height: 1.2;
+  }
+  a {
+    display: block;
+    color: $highlight;
+    font-style: italic;
+    line-height: 1.2;
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }
-.footer_items {
+.footer_item {
   form {
     display: flex;
     flex-direction: column;
@@ -61,11 +65,11 @@
       border-radius: 3px;
       padding: 0 0.5rem;
       &:focus-visible {
-        @include focus_hightlight();
+        box-shadow: 0 0 0 0.15rem $highlight;
         outline: none;
       }
     }
-    ._send {
+    .form_btn {
       font-size: 0;
       > * + * {
         margin-left: 0.5rem;
@@ -99,13 +103,13 @@
     }
   }
 }
-.copyright_wrap {
+.copyright_wrapper {
   background-color: $dark;
   padding: $padding_base 0;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  @include desktop() {
+  @include device_lg() {
     flex-direction: row;
   }
   .copyright {
@@ -114,11 +118,13 @@
       border-left: 2px $secondary solid;
     }
     span {
+      display: inline-block;
       font-size: 14px;
       padding: 0 10px;
       color: $secondary;
     }
     a {
+      display: inline-block;
       font-size: 14px;
       padding: 0 10px;
       color: $highlight;
@@ -127,7 +133,7 @@
 
   .bottom_nav {
     display: none;
-    @include desktop() {
+    @include device_lg() {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
