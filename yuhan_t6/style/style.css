@@ -45,6 +45,10 @@ body {
   text-transform: uppercase;
 }
 
+.featured h3 {
+  text-transform: uppercase;
+}
+
 @media (min-width: 768px) {
   .featured {
     padding: 3rem 0 4rem;
@@ -137,6 +141,12 @@ body {
 }
 .news-card p {
   color: #646464;
+}
+.news-card .picture {
+  width: 400px;
+}
+.news-card .picture img {
+  width: 100%;
 }
 
 .speechbubble {

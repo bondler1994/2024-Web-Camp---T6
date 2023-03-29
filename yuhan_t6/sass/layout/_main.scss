@@ -36,6 +36,12 @@ body {
     }
 }
 
+.featured {
+    h3 {
+        text-transform: uppercase;
+    }
+}
+
 // featured
 .featured {
     @include breakpoints.md {
