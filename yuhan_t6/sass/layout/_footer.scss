@@ -11,3 +11,13 @@ footer {
         }
     }
 }
+
+// phone 
+footer {
+    .copyrights {
+        padding-left: 1rem;
+        @include breakpoints.xl {
+            padding:0;
+        }
+    }
+}

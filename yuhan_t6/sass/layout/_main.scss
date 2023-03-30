@@ -3,11 +3,11 @@
 
 
 body {
-    @include breakpoints.lg {
+    @include breakpoints.xl {
         padding: 0 4rem;
     }
-    @include breakpoints.xl {
-        padding:0 6rem
+    @include breakpoints.xxl {
+        padding:0 6rem;
     }
 
 }

@@ -20,12 +20,12 @@ body {
   background-size: 277px 85%, 100%;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   body {
     padding: 0 4rem;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   body {
     padding: 0 6rem;
   }
@@ -88,6 +88,15 @@ body {
 @media (min-width: 576px) {
   footer .socialmedia {
     box-shadow: 0px 0px 5px -1px;
+  }
+}
+
+footer .copyrights {
+  padding-left: 1rem;
+}
+@media (min-width: 1200px) {
+  footer .copyrights {
+    padding: 0;
   }
 }
 
@@ -413,12 +422,14 @@ h1 img {
   }
 }
 @media (min-width: 576px) {
-  .offcanvas-body {
-    gap: 1rem;
-  }
   .offcanvas-body ul {
     border: #CDCDCD solid 1px;
     background-color: #FFFFFF;
+  }
+}
+@media (min-width: 992px) {
+  .offcanvas-body {
+    gap: 1rem;
   }
 }
 @media (min-width: 576px) {
