@@ -3,9 +3,10 @@
 
 
 body {
-    @include breakpoints.sm {
+    @include breakpoints.lg {
         padding: 0 6rem;
     }
+
 }
 
 // sections (common)

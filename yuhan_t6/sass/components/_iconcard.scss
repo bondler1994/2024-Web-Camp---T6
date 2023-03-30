@@ -16,6 +16,8 @@
 
     &:hover {
       background-color: color.$theme-tertiary-400;
+      opacity: .9;
+      border: none;
       h5,
       p {
         color: color.$font-color-tertiary;

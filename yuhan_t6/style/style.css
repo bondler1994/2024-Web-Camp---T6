@@ -17,7 +17,7 @@ body {
   background: url(../img/bg.jpg), black;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   body {
     padding: 0 6rem;
   }
@@ -82,6 +82,8 @@ body {
 }
 .icon-card:hover {
   background-color: #646464;
+  opacity: 0.9;
+  border: none;
 }
 .icon-card:hover h5,
 .icon-card:hover p {
@@ -127,6 +129,42 @@ body {
 }
 
 .article-card img {
+  width: 100%;
+}
+.article-card span {
+  display: inline-block;
+}
+.article-card span a {
+  color: #000000;
+  font-weight: 500;
+}
+.article-card span a:hover {
+  opacity: 0.6;
+}
+
+.news-card {
+  display: flex;
+  gap: 1rem;
+}
+.news-card .date {
+  background: #80b600;
+  color: #FFFFFF;
+  padding: 0.25rem;
+}
+.news-card p {
+  color: #646464;
+}
+.news-card p a {
+  color: #000000;
+  font-weight: 500;
+}
+.news-card p a:hover {
+  opacity: 0.6;
+}
+.news-card .picture {
+  width: 400px;
+}
+.news-card .picture img {
   width: 100%;
 }
 
@@ -228,6 +266,7 @@ form input ::placeholder, form .blank ::placeholder {
   color: #646464;
 }
 form div:nth-child(1) input, form div:nth-child(1) .blank {
+  border-radius: 4px;
   width: 100%;
 }
 
@@ -568,23 +607,24 @@ h1 img {
   object-fit: cover;
 }
 
-@media (min-width: 768px) {
+.featured {
+  position: relative;
+}
+@media (min-width: 576px) {
   .featured .custom-carousel {
     position: static;
   }
   .featured .custom-carousel .swiper-button-next {
     top: 0;
-    left: 1194px;
+    right: 20px;
     transform: translateY(50%);
   }
   .featured .custom-carousel .swiper-button-prev {
     top: 0;
-    left: 1144px;
+    right: 50px;
+    left: auto;
     transform: translateY(50%);
   }
-}
-.featured {
-  position: relative;
 }
 
 .featured .mask {

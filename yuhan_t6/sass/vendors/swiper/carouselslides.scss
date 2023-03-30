@@ -13,32 +13,50 @@
     }
 }
 
-// positioning
-@include breakpoints.md {
-    .featured {
-        // position: relative;
-        .custom-carousel {
-            position: static;
+// @include breakpoints.md {
+//     .featured {
+//         // position: relative;
+//         .custom-carousel {
+//             position: static;
             
-            .swiper-button-next {
-                top:0;
-                left:1194px;
-                transform: translateY(50%);
+//             .swiper-button-next {
+//                 top:0;
+//                 left:1194px;
+//                 transform: translateY(50%);
     
-            }
+//             }
 
-            .swiper-button-prev {
-                top:0;
-                left: 1144px;
-                transform: translateY(50%);
-            }
-        }
+//             .swiper-button-prev {
+//                 top:0;
+//                 left: 1144px;
+//                 transform: translateY(50%);
+//             }
+//         }
 
-    }
-}
+//     }
+// }
+
 
 .featured {
     position: relative;
+    @include breakpoints.sm {
+    .custom-carousel {
+        position: static;
+        .swiper-button-next {
+            top:0;
+            right:20px;
+            transform: translateY(50%);
+
+        }
+
+        .swiper-button-prev {
+            top:0;
+            right:50px;
+            left:auto;
+            transform: translateY(50%);
+        }
+    }
+}
 }
 
 // mask 
