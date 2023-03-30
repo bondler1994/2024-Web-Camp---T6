@@ -11,6 +11,6 @@
 // @import "./layout/main";
 // @import "./layout/footer";
 @use "../node_modules/bootstrap/scss/bootstrap.scss";
-@use "./base/" as b;
-@use "./components/" as *;
-@use "./layout/" as *;
+@use "./base/reset";
+@use "./components";
+@use "./layout";

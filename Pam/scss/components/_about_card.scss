@@ -3,7 +3,18 @@
   display: flex;
   gap: 1.5rem;
   .card_img {
-    flex-basis: 50%;
+    flex: 0 1 50%;
+  }
+  .card_content {
+    flex: 1 1 0;
+    .news_text {
+      margin-top: auto;
+    }
+  }
+}
+
+.about_card {
+  .card_img {
     img {
       width: 100%;
       height: 100%;
@@ -11,15 +22,16 @@
     }
   }
   .card_content {
-    flex-basis: 0;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    padding-bottom: 0.5rem;
     .news_date {
       background-color: $highlight;
-      width: fit-content;
       color: $white;
+
+      width: fit-content;
       padding: 0 $padding_base;
     }
     .news_text {
@@ -28,7 +40,6 @@
       display: -webkit-box;
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
-      margin-top: auto;
     }
   }
 }

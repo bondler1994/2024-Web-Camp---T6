@@ -1,43 +1,23 @@
-@use "./variables" as *;
-//constant ratio container for img  with RWD
-@mixin ratio_container($ratio) {
-  width: 100%;
-  height: 0;
-  padding-top: $ratio;
-  position: relative;
+//breakpoint
+@mixin device_md() {
+  @media (min-width: 576px) {
+    @content;
+  }
 }
-%img_fullfilled {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+@mixin device_lg() {
+  @media (min-width: 992px) {
+    @content;
+  }
 }
 
-@mixin sizing($width, $height: $width) {
+@mixin element_sizing($width, $height: $width) {
   width: $width;
   height: $height;
 }
-@mixin centering_horizontal() {
-  margin-left: auto;
-  margin-right: auto;
-}
 
-%section_container {
-  background-image: url(../images/subbg.gif);
-  padding: $padding_base * 2;
-}
-@mixin section_shadow() {
-  box-shadow: 0px 0px 5px 1px $secondary;
-}
-// input area/btn focus status
-@mixin focus_hightlight() {
-  box-shadow: 0 0 0 0.15rem $highlight;
-}
-
-@mixin btn_theme($bg_color, $color, $paddings...) {
+@mixin btn_theme($bg_color, $font_color, $paddings...) {
   background-color: $bg_color;
-  color: $color;
+  color: $font_color;
   border: none;
   padding: $paddings;
 }

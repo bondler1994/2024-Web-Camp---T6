@@ -1,0 +1,92 @@
+@use "../abstracts" as *;
+
+.navbar.theme_t6 {
+  padding: 0.5rem;
+  row-gap: 0.5rem;
+  align-items: stretch;
+  box-shadow: 0px 0px 5px 1px $secondary;
+  @include device_lg() {
+    padding: 0;
+    column-gap: 1rem;
+    box-shadow: initial;
+  }
+}
+.bg_white {
+  background-color: $white;
+  @include device_lg() {
+    background-color: transparent;
+  }
+}
+.search_wrapper {
+  width: 230px;
+  @include device_lg() {
+    width: 25%;
+    background-color: $white;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 5px 1px $secondary;
+  }
+  form {
+    background-color: $deco_light;
+    border: 1px $primary solid;
+    height: 100%;
+  }
+  input {
+    background-color: $deco_light;
+    border: none;
+    &:focus {
+      box-shadow: 0 0 0 0.15rem $highlight;
+    }
+  }
+  button {
+    background: url(../images/search.png) no-repeat center;
+    &:focus {
+      box-shadow: 0 0 0 0.15rem $highlight;
+    }
+  }
+}
+.navbar-expand-lg.theme_t6 .navbar-collapse {
+  background-color: $white;
+  @include device_lg() {
+    order: -1;
+    box-shadow: 0px 0px 5px 1px $secondary;
+  }
+}
+.navbar.theme_t6 .navbar-nav {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  @include device_lg() {
+    margin-left: 0;
+  }
+}
+.navbar-light.theme_t6 .navbar-nav .nav-link {
+  text-align: center;
+  color: $dark;
+  &:hover,
+  &:focus {
+    background-color: $primary;
+    color: $dark;
+  }
+  &.active {
+    background-color: $highlight;
+    color: $white;
+  }
+}
+.theme_t6 .nav-link {
+  padding: 1rem 0;
+}
+.theme_t6 .navbar-expand-lg .nav-link {
+  @include device_lg() {
+    padding: 1rem;
+  }
+}
+.theme_t6 .dropdown-item {
+  &:hover,
+  &:focus {
+    background-color: $primary;
+  }
+}
+.theme_t6 .navbar-toggler {
+  &:focus {
+    box-shadow: 0 0 0 0.15rem $highlight;
+  }
+}

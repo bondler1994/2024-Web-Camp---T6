@@ -1,15 +1,15 @@
 @use "../abstracts/" as *;
 * {
-  outline: 1px red solid;
+  // outline: 1px red solid;
 }
 
 body {
   background: url(../images/bg.jpg);
-  @include pad() {
+  @include device_md() {
     background: linear-gradient($dark 120px, transparent 120px 90%, $dark 90%),
       url(../images/bg.jpg);
   }
-  @include desktop() {
+  @include device_lg() {
     background: linear-gradient($dark 70px, transparent 70px 90%, $dark 90%),
       url(../images/bg.jpg);
   }
