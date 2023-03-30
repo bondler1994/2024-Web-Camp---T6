@@ -15,11 +15,25 @@ h4 {
 
 body {
   background: url(../img/bg.jpg), black;
+  background-repeat: repeat-x, repeat;
+  background-position: top 5rem center, center;
+  background-size: 277px 85%, 100%;
 }
 
 @media (min-width: 992px) {
   body {
+    padding: 0 4rem;
+  }
+}
+@media (min-width: 1200px) {
+  body {
     padding: 0 6rem;
+  }
+}
+
+@media (min-width: 576px) {
+  main {
+    box-shadow: 0px 0px 5px -1px;
   }
 }
 
@@ -66,6 +80,17 @@ body {
     background-color: #CDCDCD;
   }
 }
+@media (min-width: 576px) {
+  footer {
+    margin-top: 60px;
+  }
+}
+@media (min-width: 576px) {
+  footer .socialmedia {
+    box-shadow: 0px 0px 5px -1px;
+  }
+}
+
 .icon-card {
   background-color: #E7E7E7;
   padding: 1rem;

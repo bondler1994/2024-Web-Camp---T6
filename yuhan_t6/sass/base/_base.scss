@@ -19,4 +19,7 @@ a {
   
 body {
     background: url(../img/bg.jpg),black;
+    background-repeat: repeat-x, repeat;
+    background-position: top 5rem center, center;
+    background-size: 277px 85%, 100%;  
 }

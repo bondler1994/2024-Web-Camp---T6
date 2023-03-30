@@ -1,7 +1,13 @@
 @use "../utilities/breakpoints";
 @use "../utilities/color";
-// footer {
-//     @include breakpoints.sm {
-//         padding: 0 6rem;
-//     }
-// }
+
+footer {
+    @include breakpoints.sm {
+        margin-top: 60px;
+    }
+    .socialmedia {
+        @include breakpoints.sm {
+            box-shadow: 0px 0px 5px -1px;
+        }
+    }
+}
