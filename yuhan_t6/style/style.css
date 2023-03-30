@@ -252,7 +252,7 @@ body {
   justify-content: space-between;
   flex-direction: column;
 }
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .copyrights {
     flex-direction: row;
   }
@@ -273,14 +273,53 @@ body {
 @media (min-width: 576px) {
   .copyrights ul {
     flex-direction: row;
+    gap: 1rem;
   }
 }
 .copyrights a {
-  color: #CDCDCD;
+  color: #646464;
   text-transform: uppercase;
 }
 .copyrights a:hover {
   color: #80b600;
+}
+.copyrights div {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 576px) {
+  .copyrights div {
+    flex-direction: row;
+    gap: 1rem;
+    position: relative;
+  }
+}
+
+@media (min-width: 576px) {
+  .copyrights div::before {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 1.5px;
+    top: 6px;
+    left: 189px;
+    background-color: #CDCDCD;
+  }
+}
+
+@media (min-width: 576px) {
+  .copyrights nav li {
+    position: relative;
+  }
+  .copyrights nav li + li ::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 1.5px;
+    top: 7px;
+    left: -9px;
+    background-color: #CDCDCD;
+  }
 }
 
 form input, form .blank {

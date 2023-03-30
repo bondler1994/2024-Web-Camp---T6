@@ -1,12 +1,14 @@
 @use "../utilities/breakpoints";
 @use "../utilities/color";
 
+// positioning & styling
 .copyrights {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    @include breakpoints.sm {
-    flex-direction: row; }
+    @include breakpoints.lg {
+    flex-direction: row; 
+    }
 
     span {
         text-transform: uppercase;
@@ -23,16 +25,63 @@
         display: flex;
         flex-direction: column;
             @include breakpoints.sm {
-            flex-direction: row;        
+            flex-direction: row;  
+            gap:1rem;      
         }
     }
 
     a {
-        color:color.$theme-tertiary-300;
+        color:color.$theme-tertiary-400;
         text-transform: uppercase;
         &:hover {
             color:color.$theme-primary;
         }
     }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        @include breakpoints.sm {
+           flex-direction: row;
+            gap:1rem;
+            position: relative;
+        }
+    }
 }
 
+// nav dividers
+.copyrights {
+  @include breakpoints.sm {
+    div::before {
+        content: "";
+        position: absolute;
+        height: 12px;
+        width: 1.5px;
+        top: 6px;
+        left:189px;
+        background-color:color.$theme-tertiary-300;
+    }
+  }
+}
+
+
+
+
+.copyrights {
+    nav {
+        @include breakpoints.sm {
+            li {
+                position: relative;
+            }
+            li + li ::before {
+                content: "";
+                position: absolute;
+                height: 50%;
+                width: 1.5px;
+                top: 7px;
+                left:-9px;
+                background-color:color.$theme-tertiary-300;
+            }
+        }
+    }
+}
