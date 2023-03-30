@@ -16,25 +16,29 @@
 // positioning
 @include breakpoints.md {
     .featured {
-        position: relative;
+        // position: relative;
         .custom-carousel {
             position: static;
             
             .swiper-button-next {
                 top:0;
-                right:25px;
+                left:1194px;
                 transform: translateY(50%);
     
             }
 
             .swiper-button-prev {
                 top:0;
-                left:1172px;
+                left: 1144px;
                 transform: translateY(50%);
             }
         }
 
     }
+}
+
+.featured {
+    position: relative;
 }
 
 // mask 
@@ -65,18 +69,20 @@
         background-color: #333;
         color:color.$theme-secondary;
         opacity: .8;
-        &:hover {
-            background-color: color.$theme-primary;
-        }
-        &::after {
-            font-size: 20px;
-        }
         @include breakpoints.sm {
             background-color:initial;
             color: color.$theme-tertiary-300;
-            &:hover {
+        }
+
+        &:hover {
+            background-color: color.$theme-primary;
+            @include breakpoints.sm {
                 background-color:initial;
-            }    
+            }
+        }
+        
+        &::after {
+            font-size: 20px;
         }
     }
 }

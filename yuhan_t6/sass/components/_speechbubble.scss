@@ -1,6 +1,7 @@
 @use "../utilities/breakpoints";
 @use "../utilities/color";
 
+// speech bubble
 .speechbubble {
     position: relative;
     padding: 1rem;
@@ -16,7 +17,32 @@
         border-color:#{color.$theme-tertiary-200} transparent transparent transparent;
         filter: drop-shadow(-1px 2px 0px #cecece);
         bottom: -18px;
-        left: 5%;
+        left: 15px;
         transform: translateX(-50%);
         }
     }
+
+// name card
+.picture-card {
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    span {
+        display: block;
+        color: #000000;
+    }
+
+    a {
+        color: color.$theme-primary;
+        font-style: italic;
+        font-weight: 500;
+    }
+
+    .profilepicture {
+        width: 4rem;
+
+        img {
+            width: 100%;
+        }
+    }
+}
