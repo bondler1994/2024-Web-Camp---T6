@@ -52,7 +52,7 @@
 
   .icon-card {
     p {
-      @include breakpoints.md {
+      @include breakpoints.sm {
         display: -webkit-inline-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 5;

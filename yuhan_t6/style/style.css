@@ -153,7 +153,7 @@ footer .copyrights {
   margin: 1rem 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .icon-card p {
     display: -webkit-inline-box;
     -webkit-box-orient: vertical;
@@ -392,6 +392,10 @@ h1 img {
 }
 .phonenumber ul {
   margin: 0;
+}
+
+.number a {
+  color: #1C1C1C;
 }
 
 .businessplanet {
