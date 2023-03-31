@@ -119,6 +119,20 @@ header h1 img {
   width: 200%;
 }
 
+.navbar {
+  padding: 0;
+}
+.navbar .navbar-collapse .nav-item, .navbar .navbar-collapse .dropdown-item {
+  padding: 8px 10px;
+  outline: 1px solid #e8e8e8;
+}
+.navbar .navbar-collapse .nav-item:hover, .navbar .navbar-collapse .dropdown-item:hover {
+  background-color: #7fb503;
+}
+.navbar .navbar-collapse .nav-item a:hover, .navbar .navbar-collapse .dropdown-item a:hover {
+  color: #fff;
+}
+
 .search_box {
   outline: 1px solid #cbc2c2;
   display: flex;
@@ -187,20 +201,6 @@ header h1 img {
   width: 10%;
 }
 
-.navbar {
-  padding: 0;
-}
-.navbar .navbar-collapse .nav-item, .navbar .navbar-collapse .dropdown-item {
-  padding: 8px 0;
-  outline: 1px solid #e8e8e8;
-}
-.navbar .navbar-collapse .nav-item:hover, .navbar .navbar-collapse .dropdown-item:hover {
-  background-color: #7fb503;
-}
-.navbar .navbar-collapse .nav-item a:hover, .navbar .navbar-collapse .dropdown-item a:hover {
-  color: #fff;
-}
-
 .carousel .carousel-control-prev,
 .carousel .carousel-control-next {
   width: 40px;
@@ -209,4 +209,62 @@ header h1 img {
   display: flex;
   align-items: center;
   background-color: #343333;
+}
+
+.service {
+  position: relative;
+  top: 0px;
+}
+@media (min-width: 576px) {
+  .service {
+    top: -25px;
+  }
+}
+@media (min-width: 576px) {
+  .service .row {
+    margin: 0;
+  }
+}
+
+.card_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e8e8e8;
+  padding: 30px;
+  outline: 1px solid #b3b3b3;
+}
+.card_item:hover {
+  background-color: rgba(98, 98, 98, 0.8);
+  color: #fff;
+}
+.card_item .card_item_img {
+  margin-top: 20px;
+  width: 70px;
+  height: 70px;
+}
+.card_item .card_item_img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card_item h2 {
+  font-size: 20px;
+}
+.card_item h2,
+.card_item p {
+  text-align: center;
+  margin-top: 20px;
+}
+.card_item a {
+  text-decoration: none;
+  color: #000;
+  background-color: #cdcdcd;
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 20px;
+}
+.card_item a:hover {
+  background-color: #7fb503;
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */

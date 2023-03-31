@@ -16,7 +16,7 @@ h1,h2,h3,p{
 }
 
 
-// header 
+// --- header ---
 header{
   background: url(../images/subbg.gif);
   display: flex;
@@ -39,7 +39,6 @@ header{
   }
 }
 
-// 
 .header_contact{
   display: none;
   @media(min-width:768px) {
@@ -59,7 +58,7 @@ header{
     
   } 
   }
- 
+
   // social_media icon
 .contact_social_media{
     a{
@@ -99,8 +98,7 @@ header{
   }
 }
 
-// nav
-
+// <!-- 導覽列與搜尋 -->
 .navbar_search{
   margin-top: 20px;
   @media(min-width:768px){
@@ -109,6 +107,7 @@ header{
   }
   
 }
+
 .navvv{
   @media(min-width:768px){
     flex-grow: 1;
@@ -125,8 +124,23 @@ header{
   width: 200%;
 }
 
-
-
+.navbar{
+  padding: 0;
+  .navbar-collapse{
+    .nav-item,.dropdown-item{
+      padding: 8px 10px;
+      outline: 1px solid #e8e8e8;
+      &:hover{
+        background-color: #7fb503;
+      }
+      a{
+        &:hover{
+          color:#fff;
+        }
+      }
+    }
+}
+}
 
 // 做個搜尋框
 .search_box{
@@ -137,7 +151,6 @@ header{
   background-color: #e8e8e8;
   padding: 5px 10px;
 }
-
 
 .form_1{
   display: flex;
@@ -165,8 +178,6 @@ header{
     display: none;
   }
 }
-
-
 
 .form_2{
   display: none;
@@ -196,35 +207,11 @@ header{
     width: 10%;
   }
 }
- 
-
-.navbar{
-  padding: 0;
-  .navbar-collapse{
-    .nav-item,.dropdown-item{
-      padding: 8px 0;
-      outline: 1px solid #e8e8e8;
-      &:hover{
-        background-color: #7fb503;
-      }
-      a{
-        &:hover{
-          color:#fff;
-        }
-      }
-    }
-}
-}
 
 
 
-
-
-
-
-// main
-
-// 輪播圖
+// ----main----
+//  <!-- 輪播圖 -->
 .carousel{
   .carousel-control-prev,
   .carousel-control-next{
@@ -236,6 +223,66 @@ header{
     background-color: #343333;
    }
 }
+//  <!-- 服務項目 四個卡片-->
+.service{
+  position: relative;
+  top: 0px;
+  @media (min-width:576px) {
+    top: -25px;
+  }
+  .row{
+    @media (min-width:576px){
+      margin: 0;
+    }
+  }
+}
+.card_item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e8e8e8;
+  padding: 30px;
+  outline: 1px solid #b3b3b3;
+  &:hover{
+    background-color: rgba($color: #626262b0, $alpha: 0.8);
+    color:#fff;
+  }
+  .card_item_img{
+    margin-top: 20px;
+    width: 70px;
+    height: 70px;
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  h2{
+    font-size: 20px;
+  }
+  h2,
+  p{
+    text-align: center;
+    margin-top: 20px;
+  }
+  a{
+    text-decoration: none;
+    color:#000;
+    background-color: #cdcdcd;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 20px;
+    
+    &:hover{
+      background-color: #7fb503;
+      color:#ffffff;
+    }
+  }
+}
+
+// <!-- 公司介紹 -->
 
 
-// footer
+// <!-- 未來工作圖片輪播 -->
+
+
+// ---footer---
