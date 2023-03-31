@@ -80,6 +80,10 @@ body {
     background-color: #CDCDCD;
   }
 }
+.information h3 {
+  margin-top: 1rem;
+}
+
 @media (min-width: 576px) {
   footer {
     margin-top: 60px;
@@ -355,6 +359,10 @@ form div:nth-child(1) input, form div:nth-child(1) .blank {
   color: #FFFFFF;
 }
 
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
 h1 {
   width: 90%;
 }
@@ -366,6 +374,10 @@ h1 img {
   .navbar-container {
     box-shadow: 0px 0px 5px -1px;
   }
+}
+
+.businessplanet .navbar-container {
+  padding: 0 1rem;
 }
 
 .phonenumber {
@@ -405,7 +417,6 @@ h1 img {
   display: flex;
   justify-content: space-between;
   background-color: #FFFFFF;
-  padding: 0;
 }
 @media (min-width: 576px) {
   .businessplanet .navbar-container {
@@ -618,6 +629,16 @@ h1 img {
     bottom: 0;
     left: 0;
     z-index: -1;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-nav .nav-item {
+    height: 100%;
+  }
+  .navbar-nav .nav-item .nav-link {
+    height: 100%;
+    padding-top: 12px;
   }
 }
 

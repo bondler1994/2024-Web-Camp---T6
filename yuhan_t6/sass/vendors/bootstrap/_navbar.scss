@@ -15,6 +15,14 @@ h1 {
     }
 }
 
+// navbar spacing 
+.businessplanet {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+}
+
+
 // phone number
 .phonenumber {
     display: none;
@@ -54,7 +62,6 @@ h1 {
         display: flex;
         justify-content: space-between;
         background-color: color.$theme-secondary;
-        padding:0;
         @include breakpoints.sm {
             padding: 1.5rem;
             border:color.$theme-tertiary-300 solid 1px;
@@ -293,4 +300,17 @@ h1 {
         z-index: -1;
     }
 }
+}
+
+// navbar smartphone setting
+.navbar-nav {
+    @include breakpoints.lg {
+        .nav-item {
+            height: 100%;
+            .nav-link {
+                height: 100%;
+                padding-top: 12px;
+            }
+        }
+    }
 }
