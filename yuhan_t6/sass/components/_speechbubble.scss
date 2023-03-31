@@ -5,8 +5,8 @@
 .speechbubble {
     position: relative;
     padding: 1rem;
-    background-color:#{color.$theme-tertiary-200};
-    border:#{color.$theme-tertiary-300} 1px solid;
+    background-color:color.$theme-tertiary-200;
+    border:color.$theme-tertiary-300 1px solid;
     border-radius: 3px;
 
     &::before {
@@ -14,7 +14,7 @@
         position: absolute;
         border-style: solid;
         border-width: 20px 30px 0 0;
-        border-color:#{color.$theme-tertiary-200} transparent transparent transparent;
+        border-color:color.$theme-tertiary-200 transparent transparent transparent;
         filter: drop-shadow(-1px 2px 0px #cecece);
         bottom: -18px;
         left: 15px;

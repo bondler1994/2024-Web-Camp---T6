@@ -1,7 +1,7 @@
 @use "../utilities/breakpoints";
 @use "../utilities/color";
 
-// AI revised, the icon-card's breakpoints is missing. added again.
+
   .icon-card {
     background-color: color.$theme-tertiary-200;
     padding: 1rem;
@@ -49,28 +49,9 @@
     }
   }
 
-  // paragraph setting 
-  // .icon-card {
-  //   @include breakpoints.md {
-  //     p {
-  //       display: -webkit-inline-box;
-  //       -webkit-box-orient: vertical;
-  //       -webkit-line-clamp: 3;
-  //       overflow: hidden;
-  //     }
-
-  //   }
-  // }
 
   .icon-card {
     p {
-      // @include breakpoints.md {
-      //   display: -webkit-inline-box;
-      //   -webkit-box-orient: vertical;
-      //   -webkit-line-clamp: 3;
-      //   overflow: hidden;
-      // }
-
       @include breakpoints.md {
         display: -webkit-inline-box;
         -webkit-box-orient: vertical;

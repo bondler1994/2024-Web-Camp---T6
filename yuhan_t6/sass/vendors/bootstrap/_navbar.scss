@@ -8,6 +8,13 @@ h1 {
     }
 }
 
+// navbar 
+.navbar-container {
+    @include breakpoints.sm {
+        box-shadow: 0px 0px 5px -1px;
+    }
+}
+
 // phone number
 .phonenumber {
     display: none;
@@ -218,7 +225,7 @@ h1 {
 .offcanvas-custom form {
     position: relative;
     input::placeholder {
-        color:rgb(91, 195, 0);
+        color:#5bc300;
     }
 
     button {
@@ -237,9 +244,6 @@ h1 {
         flex-direction: column;
         input::placeholder {
             color: color.$theme-tertiary-400;
-        }
-        input {
-            // border-radius: 0; 
         }
 
         button {

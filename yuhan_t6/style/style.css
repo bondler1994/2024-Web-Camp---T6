@@ -362,6 +362,12 @@ h1 img {
   width: 100%;
 }
 
+@media (min-width: 576px) {
+  .navbar-container {
+    box-shadow: 0px 0px 5px -1px;
+  }
+}
+
 .phonenumber {
   display: none;
 }
@@ -555,7 +561,7 @@ h1 img {
   position: relative;
 }
 .offcanvas-custom form input::placeholder {
-  color: rgb(91, 195, 0);
+  color: #5bc300;
 }
 .offcanvas-custom form button {
   background-color: transparent;

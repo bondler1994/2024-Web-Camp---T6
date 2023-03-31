@@ -4,10 +4,10 @@
 
 form {
     input, .blank {
-      background-color: #{color.$theme-tertiary-200};
-      border: #{color.$theme-tertiary-300} 0.5px solid;
+      background-color: color.$theme-tertiary-200;
+      border: color.$theme-tertiary-300 0.5px solid;
       ::placeholder {
-        color: #{color.$theme-tertiary-400};
+        color: color.$theme-tertiary-400;
       }
     }
     div:nth-child(1) {
