@@ -130,6 +130,7 @@ header h1 img {
 
 .form_1 {
   display: flex;
+  padding: 10px;
 }
 .form_1 .search_box {
   outline: 1px solid #cbc2c2;
@@ -184,4 +185,28 @@ header h1 img {
   background-color: #e8e8e8;
   border: none;
   width: 10%;
+}
+
+.navbar {
+  padding: 0;
+}
+.navbar .navbar-collapse .nav-item, .navbar .navbar-collapse .dropdown-item {
+  padding: 8px 0;
+  outline: 1px solid #e8e8e8;
+}
+.navbar .navbar-collapse .nav-item:hover, .navbar .navbar-collapse .dropdown-item:hover {
+  background-color: #7fb503;
+}
+.navbar .navbar-collapse .nav-item a:hover, .navbar .navbar-collapse .dropdown-item a:hover {
+  color: #fff;
+}
+
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+  width: 40px;
+  height: 130px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background-color: #343333;
 }/*# sourceMappingURL=style.css.map */
