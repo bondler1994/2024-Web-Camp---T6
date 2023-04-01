@@ -38,20 +38,34 @@
     width: initial;
   }
 }
-@mixin carousel_control_width($position_abs_left, $position_abs_right) {
-  width: 35px;
-  @include device_md() {
-    width: initial;
-    left: $position_abs_left;
-    right: $position_abs_right;
-  }
+// @mixin carousel_control_width($position_abs_left, $position_abs_right) {
+//   width: 35px;
+//   @include device_md() {
+//     width: initial;
+//     left: $position_abs_left;
+//     right: $position_abs_right;
+//   }
+// }
+@mixin carousel_control_width($icon_width, $icon_left, $icon_right) {
+  width: $icon_width;
+  left: $icon_left;
+  right: $icon_right;
 }
 .theme_t6 .carousel-control-prev {
-  @include carousel_control_width(0, 95.5%);
+  // @include carousel_control_width(0, 95.5%);
+  @include carousel_control_width(35px, 0, auto);
+  @include device_md() {
+    @include carousel_control_width(auto, 0, 95.5%);
+  }
 }
 .theme_t6 .carousel-control-next {
-  @include carousel_control_width(95.5%, 0);
+  // @include carousel_control_width(95.5%, 0);
+  @include carousel_control_width(35px, auto, 0);
+  @include device_md() {
+    @include carousel_control_width(auto, 95.5%, 0);
+  }
 }
+
 .theme_t6 .carousel-control-prev-icon {
   background-image: url(../images/slider_prev.gif);
 }

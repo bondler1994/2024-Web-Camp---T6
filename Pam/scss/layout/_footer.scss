@@ -1,12 +1,12 @@
 @use "../abstracts/" as *;
 .footer_info {
   margin-top: 5 * $margin_base;
-  box-shadow: 0px 0px 5px 1px $secondary;
-  background-image: url(../images/subbg.gif);
   padding: $padding_base * 2;
   @include device_lg() {
     padding: 2.5rem;
   }
+  box-shadow: 0px 0px 5px 1px $secondary;
+  background-image: url(../images/subbg.gif);
 }
 .footer_item {
   > * + * {
@@ -14,20 +14,23 @@
   }
 }
 .dialog_wrapper {
-  background-color: $primary;
   padding: 1rem 1.5rem;
+
+  background-color: $primary;
   border: 1px $deco solid;
   border-radius: 3px 3px 3px 0;
+
   &::after {
     content: "";
+    position: absolute;
+    left: 0;
+    bottom: -9px;
+
     width: 0;
     border-color: $primary transparent transparent transparent;
     border-width: 10px 20px 0 0;
     border-style: solid solid solid solid;
     filter: drop-shadow(-1px 2px 0 $deco);
-    position: absolute;
-    left: 0;
-    bottom: -9px;
   }
 }
 
@@ -45,53 +48,57 @@
   }
   a {
     display: block;
+    line-height: 1.2;
+
     color: $highlight;
     font-style: italic;
-    line-height: 1.2;
+
     &:hover {
       transform: scale(1.1);
     }
   }
 }
-.footer_item {
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    > input,
-    textarea {
-      background-color: $primary;
-      border: 1px $deco solid;
-      border-radius: 3px;
-      padding: 0 0.5rem;
-      &:focus-visible {
-        box-shadow: 0 0 0 0.15rem $highlight;
-        outline: none;
-      }
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  > input,
+  textarea {
+    padding: 0 0.5rem;
+
+    background-color: $primary;
+    border: 1px $deco solid;
+    border-radius: 3px;
+
+    &:focus-visible {
+      box-shadow: 0 0 0 0.15rem $highlight;
+      outline: none;
     }
-    .form_btn {
-      font-size: 0;
-      > * + * {
-        margin-left: 0.5rem;
-      }
-      :first-child {
-        font-size: 1rem;
-        @include btn_theme(black, $white, 0.5rem);
-      }
-      :nth-child(2) {
-        font-size: 1rem;
-        @include btn_theme($highlight, $white, 0.5rem);
-      }
+  }
+
+  .form_btn {
+    font-size: 0;
+    > * + * {
+      margin-left: 0.5rem;
+    }
+    :first-child {
+      font-size: 1rem;
+      @include btn_theme(black, $white, 0.5rem);
+    }
+    :nth-child(2) {
+      font-size: 1rem;
+      @include btn_theme($highlight, $white, 0.5rem);
     }
   }
 }
+
 .photo_wall {
   display: flex;
   flex-wrap: wrap;
   margin-left: -0.5rem;
   margin-bottom: -0.5rem;
   a {
-    flex-grow: 1;
+    flex: 1 1 auto;
     width: 25%;
     padding-left: 0.5rem;
     padding-bottom: 0.5rem;
@@ -104,29 +111,29 @@
   }
 }
 .copyright_wrapper {
+  justify-content: center;
+  @include device_lg() {
+    justify-content: space-between;
+  }
   background-color: $dark;
   padding: $padding_base 0;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  @include device_lg() {
-    flex-direction: row;
-  }
+
   .copyright {
     font-size: 0;
     > * + * {
       border-left: 2px $secondary solid;
     }
-    span {
+    span,
+    a {
       display: inline-block;
-      font-size: 14px;
       padding: 0 10px;
+    }
+    span {
+      font-size: 14px;
       color: $secondary;
     }
     a {
-      display: inline-block;
       font-size: 14px;
-      padding: 0 10px;
       color: $highlight;
     }
   }
@@ -139,17 +146,19 @@
       justify-content: center;
     }
     a {
-      color: $secondary;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
-      + a {
-        border-left: 2px $secondary solid;
+
+      color: $secondary;
+      &:hover {
+        color: $white;
       }
       &.active {
         color: $highlight;
       }
-      &:hover {
-        color: $white;
+
+      + a {
+        border-left: 2px $secondary solid;
       }
     }
   }

@@ -1,34 +1,47 @@
 @use "../abstracts" as *;
 
 .navbar.theme_t6 {
-  padding: 0.5rem;
-  row-gap: 0.5rem;
+  padding: 0;
+  column-gap: 0;
+  @include device_lg() {
+    column-gap: 1rem;
+  }
+
   align-items: stretch;
+
   box-shadow: 0px 0px 5px 1px $secondary;
   @include device_lg() {
-    padding: 0;
-    column-gap: 1rem;
     box-shadow: initial;
   }
 }
-.bg_white {
+
+.hambergur_wrapper {
+  flex: 1 1 auto;
+  padding: 0.5rem;
   background-color: $white;
   @include device_lg() {
-    background-color: transparent;
+    display: none;
   }
 }
 .search_wrapper {
+  flex: 0 1 auto;
+  padding: 0.5rem;
+
   width: 230px;
   @include device_lg() {
     width: 25%;
-    background-color: $white;
-    padding: 0.5rem;
+  }
+  background-color: $white;
+  box-shadow: none;
+  @include device_lg() {
     box-shadow: 0px 0px 5px 1px $secondary;
   }
+
   form {
+    height: 100%;
+
     background-color: $deco_light;
     border: 1px $primary solid;
-    height: 100%;
   }
   input {
     background-color: $deco_light;
@@ -44,37 +57,36 @@
     }
   }
 }
+
 .navbar-expand-lg.theme_t6 .navbar-collapse {
   background-color: $white;
+  box-shadow: none;
   @include device_lg() {
-    order: -1;
     box-shadow: 0px 0px 5px 1px $secondary;
   }
-}
-.navbar.theme_t6 .navbar-nav {
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
+
+  order: 0;
   @include device_lg() {
-    margin-left: 0;
+    order: -1;
   }
 }
+
 .navbar-light.theme_t6 .navbar-nav .nav-link {
   text-align: center;
   color: $dark;
   &:hover,
   &:focus {
     background-color: $primary;
-    color: $dark;
   }
   &.active {
     background-color: $highlight;
     color: $white;
   }
 }
-.theme_t6 .nav-link {
+.theme_t6 .navbar-nav .nav-link {
   padding: 1rem 0;
 }
-.theme_t6 .navbar-expand-lg .nav-link {
+.theme_t6.navbar-expand-lg .navbar-nav .nav-link {
   @include device_lg() {
     padding: 1rem;
   }
