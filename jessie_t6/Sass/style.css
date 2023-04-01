@@ -12,6 +12,10 @@ h1, h2, h3, p {
   margin: 0;
 }
 
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
 header {
   background: url(../images/subbg.gif);
   display: flex;
@@ -201,6 +205,10 @@ header h1 img {
   width: 10%;
 }
 
+main {
+  background-color: #fff;
+}
+
 .carousel .carousel-control-prev,
 .carousel .carousel-control-next {
   width: 40px;
@@ -267,4 +275,25 @@ header h1 img {
 .card_item a:hover {
   background-color: #7fb503;
   color: #ffffff;
+}
+
+.introduce_welcome {
+  width: 100%;
+}
+.introduce_welcome .introduce_welcome_img {
+  width: 100%;
+}
+.introduce_welcome .introduce_welcome_img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.text_more {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+}
+.text_more:hover {
+  color: #eb5611;
 }/*# sourceMappingURL=style.css.map */
