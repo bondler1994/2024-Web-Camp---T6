@@ -2,20 +2,23 @@
 
 .header_content {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 1rem;
-  align-items: center;
+  justify-content: normal;
   @include device_lg() {
     flex-direction: row;
-    justify-content: space-between;
     gap: 0;
+    justify-content: space-between;
   }
+
   background: url(../images/subbg.gif);
   box-shadow: 0px 0px 5px 1px $secondary;
+
   h1 {
+    font-size: 0;
     width: 70%;
     height: 35px;
-    font-size: 0;
     @include device_md() {
       width: 330px;
       height: 50px;
@@ -34,52 +37,42 @@
   }
 }
 
-@mixin social_position($sprites_x, $sprites_y) {
-  background-position: $sprites_x $sprites_y;
-}
 .social_icons {
-  display: none;
   font-size: 0;
+  display: none;
   @include device_md() {
     display: block;
   }
   a {
     display: inline-block;
-    width: 27px;
-    height: 27px;
-    background: url(../images/social.png);
     & + a {
       margin-left: 0.5rem;
     }
-    &:first-child {
-      @include social_position(0, 0);
+
+    width: 27px;
+    height: 27px;
+    background: url(../images/social.png);
+
+    @mixin social_position($sprites_x) {
+      background-position: $sprites_x 0;
       &:hover {
-        @include social_position(0, 100%);
+        background-position: $sprites_x 100%;
       }
+    }
+    &:first-child {
+      @include social_position(0);
     }
     &:nth-child(2) {
-      @include social_position(24.667%, 0);
-      &:hover {
-        @include social_position(24.667%, 100%);
-      }
+      @include social_position(24.667%);
     }
     &:nth-child(3) {
-      @include social_position(49.333%, 0);
-      &:hover {
-        @include social_position(49.333%, 100%);
-      }
+      @include social_position(49.333%);
     }
     &:nth-child(4) {
-      @include social_position(74%, 0);
-      &:hover {
-        @include social_position(74%, 100%);
-      }
+      @include social_position(74%);
     }
     &:nth-child(5) {
-      @include social_position(100%, 0);
-      &:hover {
-        @include social_position(100%, 100%);
-      }
+      @include social_position(100%);
     }
   }
 }
@@ -92,7 +85,10 @@
     display: inline-block;
     font-size: 14px;
   }
-  a:hover {
-    color: $highlight;
+  a {
+    color: $dark;
+    &:hover {
+      color: $highlight;
+    }
   }
 }
