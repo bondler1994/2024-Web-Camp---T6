@@ -22,11 +22,16 @@
         }
     }
 
+ 
     .picture {
-        width: 400px;
+        flex:1 1 0;
         img {
             width: 100%;
         }
+    }
+
+    .text {
+        flex:2 0 0;
     }
 
 }

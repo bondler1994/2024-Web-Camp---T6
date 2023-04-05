@@ -200,10 +200,10 @@ footer .copyrights {
   opacity: 0.6;
 }
 .news-card .picture {
-  width: 400px;
+  flex: 1 1 70%;
 }
-.news-card .picture img {
-  width: 100%;
+.news-card p {
+  flex: 2 2 auto;
 }
 
 .speechbubble {
