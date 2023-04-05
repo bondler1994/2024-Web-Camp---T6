@@ -18,6 +18,8 @@ body {
   background-repeat: repeat-x, repeat;
   background-position: top 5rem center, center;
   background-size: 277px 85%, 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 @media (min-width: 1200px) {
@@ -51,15 +53,7 @@ body {
   }
 }
 
-.information h3 {
-  text-transform: uppercase;
-}
-
-.socialmedia h4 {
-  text-transform: uppercase;
-}
-
-.featured h3 {
+.featured h3, .socialmedia h4, .information h3 {
   text-transform: uppercase;
 }
 
@@ -200,10 +194,13 @@ footer .copyrights {
   opacity: 0.6;
 }
 .news-card .picture {
-  flex: 1 1 70%;
+  flex: 1 1 0;
 }
-.news-card p {
-  flex: 2 2 auto;
+.news-card .picture img {
+  width: 100%;
+}
+.news-card .text {
+  flex: 2 0 0;
 }
 
 .speechbubble {
@@ -211,7 +208,7 @@ footer .copyrights {
   padding: 1rem;
   background-color: #E7E7E7;
   border: #CDCDCD 1px solid;
-  border-radius: 3px;
+  border-radius: 3px 3px 3px 0;
 }
 .speechbubble::before {
   content: "";

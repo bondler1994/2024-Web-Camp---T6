@@ -34,21 +34,25 @@ main {
     }
   }
 
+%Capitalization {
+    text-transform: uppercase;
+}
+
 .information {
     h3 {
-        text-transform: uppercase;
+        @extend %Capitalization;
     }
 }
 
 .socialmedia {
     h4 {
-        text-transform: uppercase;
+        @extend  %Capitalization;
     }
 }
 
 .featured {
     h3 {
-        text-transform: uppercase;
+        @extend %Capitalization;
     }
 }
 
