@@ -41,6 +41,7 @@
         transition: transform 0.2s ease-in-out;
         border-radius: 50%;
         background-position: center;
+        flex:0 0 40px;
     }
 
     &::before:hover {
@@ -56,16 +57,3 @@
     background-color: color.$theme-primary;
     }
 }
-
-
-
-
-// .accordion-button:not(.collapsed) {
-
-// }
-// .accordion-button:focus {
-//     z-index: 3;
-//     border-color: var(--bs-accordion-btn-focus-border-color);
-//     outline: 0;
-//     box-shadow: var(--bs-accordion-btn-focus-box-shadow);
-// }

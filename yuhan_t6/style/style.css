@@ -708,6 +708,7 @@ h1 img {
   transition: transform 0.2s ease-in-out;
   border-radius: 50%;
   background-position: center;
+  flex: 0 0 40px;
 }
 .accordion-button::before:hover {
   background: #80b600;
