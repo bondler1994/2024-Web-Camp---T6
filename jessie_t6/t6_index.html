@@ -13,12 +13,12 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-    <!-- font google -->
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./Sass/style.css" />
   </head>
@@ -288,7 +288,7 @@
         <!-- 公司介紹 -->
         <section class="introduce row">
           <!-- welcome -->
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-lg-4">
             <h3>welcome</h3>
             <div class="introduce_welcome">
               <div class="introduce_welcome_img">
@@ -304,11 +304,11 @@
             </div>
           </div>
           <!-- why choose us? -->
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-lg-4">
             <h3>WHY CHOOSE US?</h3>
             <div>
               <div>
-                <div>1</div>
+                <div class="btn_box">1</div>
                 <p>Etiam rutrum venenatis dui, non</p>
               </div>
               <div>
@@ -326,54 +326,247 @@
             </div>
           </div>
           <!-- news&event -->
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-lg-4">
             <h3>news & events</h3>
-            <div>
-              <div>
-                <div class="">
-                  <img src="./images/news1.jpg" alt="news1
-                  ">
-                </div>
-                <div>
-                  <div>12.12.12 </div>
-                  <p>
-                    Aliquam ac diam in lorem vulputate auctor. Aliquam
-                    rhoncus nunc et justo imperdiet blandit ...
-                    <a class="text_more" href="##">More</a>
-                  </p>
-                
+            <div class="event_box">
+              <div class="event_box_img">
+                <img
+                  src="./images/news1.jpg"
+                  alt="news1
+                  "
+                />
+              </div>
+              <div class="event_box_text">
+                <div class="date">12.12.12</div>
+                <p class="text">
+                  Aliquam ac diam in lorem vulputate auctor. Aliquam rhoncus
+                  nunc et justo imperdiet blandit ...
+                  <a class="text_more" href="##">More</a>
+                </p>
               </div>
               <div></div>
             </div>
-            <div>
-              <div class="">
-                <img src="./images/news2.jpg" alt="news1
-                ">
+            <div class="event_box">
+              <div class="event_box_img">
+                <img
+                  src="./images/news2.jpg"
+                  alt="news1
+                "
+                />
               </div>
-              <div>
-                <div>12.12.12 </div>
-                <p>
-                  Sed auctor laoreet augue, id pulvinar lacus mattis non.
-                  In hac habitasse platea dictumst Proin et lorem ...
+              <div class="event_box_text">
+                <div class="date">12.12.12</div>
+                <p class="text">
+                  Sed auctor laoreet augue, id pulvinar lacus mattis non. In hac
+                  habitasse platea dictumst Proin et lorem ...
                   <a class="text_more" href="##">More</a>
                 </p>
-              
               </div>
+            </div>
           </div>
-          
-
         </section>
         <!-- 未來工作圖片輪播 -->
-        <section></section>
+        <section>
+          <h3>FEATURED WORKS</h3>
+          <!-- Swiper -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/featured-1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/featured-2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/featured-3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/featured-4.jpg" />
+              </div>
+            </div>
+            <div class="swiper-button-next">11</div>
+            <div class="swiper-button-prev">22</div>
+          </div>
+        </section>
       </main>
 
       <!-- footer -->
       <footer>
         <!-- 聯繫與更多資訊 -->
-        <section></section>
+        <section class="footer_box">
+          <!-- LATEST TWEETS -->
+          <div class="col-12 col-md-3">
+            <h3>LATEST TWEETS</h3>
+            <p>loading tweets...</p>
+          </div>
+          <!-- TESTIMONIALS -->
+          <div class="col-12 col-md-3">
+            <h3>TESTIMONIALS</h3>
+            <div>
+              <p>
+                "Sed dapibus molestie interdum. Fusce nec est ante, sit amet
+                lacinia lorem. Maecenas nec eros ut mauris pulvinar suscipit.
+                Aliquam erat
+              </p>
+            </div>
+            <div><img src="./images/Stephen.jpg" alt="Stephen" /></div>
+          </div>
+          <!-- GET IN TOUCH! -->
+          <div class="col-12 col-md-3">
+            <h3>GET IN TOUCH!</h3>
+            <form class="input_box">
+              <input
+                type="text"
+                class="form-control"
+                id="FormName"
+                placeholder="Name"
+                required=""
+              />
+              <input
+                type="email"
+                class="form-control"
+                id="FormEmail"
+                placeholder="Email"
+                required=""
+              />
+              <textarea
+                rows="5"
+                class="form-control w-100"
+                placeholder="Message"
+                required=""
+              ></textarea>
+            </form>
+
+            <div>
+              <button class="button_reset" type="reset">CLEAR FORM</button>
+              <button class="button_send" type="submit">SEND!</button>
+            </div>
+          </div>
+          <!-- FLICKR -->
+          <div class="col-12 col-md-3">
+            <h3>FLICKR</h3>
+            <div class="flickr_box">
+              <div class="flickr_img">
+                <a href="##"><img src="../images/f1.jpg" alt="" /></a>
+              </div>
+              <div class="flickr_img">
+                <a href="##"><img src="../images/f2.jpg" alt="" /></a>
+              </div>
+              <div class="flickr_img">
+                <a href="##"><img src="../images/f3.jpg" alt="" /></a>
+              </div>
+              <div class="flickr_img">
+                <a href="##"><img src="../images/f4.jpg" alt="" /></a>
+              </div>
+              <div class="flickr_img">
+                <a href="##"><img src="../images/f5.jpg" alt="" /></a>
+              </div>
+              <div class="flickr_img">
+                <a href="##"><img src="../images/f6.jpg" alt="" /></a>
+              </div>
+              <div class="flickr_img">
+                <a href="##"><img src="../images/f7.jpg" alt="" /></a>
+              </div>
+              <div class="flickr_img">
+                <a href="##"><img src="../images/f8.jpg" alt="" /></a>
+              </div>
+              <div class="flickr_img">
+                <a href="##"><img src="../images/f9.jpg" alt="" /></a>
+              </div>
+              <div class="flickr_img">
+                <a href="##"><img src="../images/f10.jpg" alt="" /></a>
+              </div>
+              <div class="flickr_img">
+                <a href="##"><img src="../images/f11.jpg" alt="" /></a>
+              </div>
+              <div class="flickr_img">
+                <a href="##"><img src="../images/f12.jpg" alt="" /></a>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- copyright footer_nav -->
-        <div class="copyright"></div>
+        <div class="footer_nav">
+          <div class="copyright">
+            <p class="">
+              BUSINESS PLANET ＆copy 2020 |
+              <a class="" href="##">Privacy Policy</a>
+            </p>
+          </div>
+          <!-- footer_nav清單 -->
+          <ul class="footer_navbar navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FEATURES</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                PORTFOLIO
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Another action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                BLOG
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Another action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACTS</a>
+            </li>
+          </ul>
+        </div>
       </footer>
     </div>
+    <!-- bootstrapjs -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="../swiper.js"></script>
   </body>
 </html>
