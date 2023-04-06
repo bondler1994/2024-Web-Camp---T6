@@ -203,31 +203,31 @@ h1 {
 
     @include breakpoints.sm {
         .facebook {
-            background:url(../img/social.png)0px -1px;
+            background:url(../img/social.png)0px 0px;
         }
         .facebook:hover{
             background:url(../img/social.png)0px -27px;
         }  
         .twitter {
-            background:url(../img/social.png)-37px -1px;
+            background:url(../img/social.png)-37px 0px;
         }
         .twitter:hover {
             background:url(../img/social.png)-37px -27px;
         }
         .circle {
-            background:url(../img/social.png)-74px -1px;
+            background:url(../img/social.png)-74px 0px;
         }
         .circle:hover {
             background:url(../img/social.png)-74px -27px;
         }
         .web {
-            background:url(../img/social.png)-110px -1px;
+            background:url(../img/social.png)-110px 0px;
         }
         .web:hover {
             background:url(../img/social.png)-110px -27px;
         }
         .feed {
-            background:url(../img/social.png)-148px -1px;
+            background:url(../img/social.png)-148px 0px;
         }    
         .feed:hover {
             background:url(../img/social.png)-148px -27px;

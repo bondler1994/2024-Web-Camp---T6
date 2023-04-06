@@ -16,8 +16,8 @@ footer {
 footer {
     .copyrights {
         padding-left: 1rem;
-        @include breakpoints.xl {
-            padding:0;
+        @include breakpoints.sm {
+            padding:0 1rem;
         }
     }
 }

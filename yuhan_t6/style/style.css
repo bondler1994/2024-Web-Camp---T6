@@ -92,9 +92,9 @@ body {
 footer .copyrights {
   padding-left: 1rem;
 }
-@media (min-width: 1200px) {
+@media (min-width: 576px) {
   footer .copyrights {
-    padding: 0;
+    padding: 0 1rem;
   }
 }
 
@@ -538,31 +538,31 @@ h1 img {
 }
 @media (min-width: 576px) {
   .icons .facebook {
-    background: url(../img/social.png) 0px -1px;
+    background: url(../img/social.png) 0px 0px;
   }
   .icons .facebook:hover {
     background: url(../img/social.png) 0px -27px;
   }
   .icons .twitter {
-    background: url(../img/social.png)-37px -1px;
+    background: url(../img/social.png)-37px 0px;
   }
   .icons .twitter:hover {
     background: url(../img/social.png)-37px -27px;
   }
   .icons .circle {
-    background: url(../img/social.png)-74px -1px;
+    background: url(../img/social.png)-74px 0px;
   }
   .icons .circle:hover {
     background: url(../img/social.png)-74px -27px;
   }
   .icons .web {
-    background: url(../img/social.png)-110px -1px;
+    background: url(../img/social.png)-110px 0px;
   }
   .icons .web:hover {
     background: url(../img/social.png)-110px -27px;
   }
   .icons .feed {
-    background: url(../img/social.png)-148px -1px;
+    background: url(../img/social.png)-148px 0px;
   }
   .icons .feed:hover {
     background: url(../img/social.png)-148px -27px;
@@ -734,12 +734,12 @@ h1 img {
     position: static;
   }
   .featured .custom-carousel .swiper-button-next {
-    top: 0;
+    top: 44px;
     right: 20px;
     transform: translateY(50%);
   }
   .featured .custom-carousel .swiper-button-prev {
-    top: 0;
+    top: 44px;
     right: 50px;
     left: auto;
     transform: translateY(50%);
