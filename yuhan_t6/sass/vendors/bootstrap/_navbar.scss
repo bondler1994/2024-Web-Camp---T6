@@ -1,6 +1,15 @@
 @use "../../utilities/breakpoints";
 @use "../../utilities/color";
 
+@mixin sprite-g ($x) {
+    background:url(../img/social.png) $x -27px; 
+}
+@mixin sprite-b ($x) {
+    background:url(../img/social.png) $x 0px; 
+}
+
+
+
 h1 {
     width: 90%;
     img {
@@ -185,52 +194,53 @@ h1 {
     }
 
     .facebook {
-        background:url(../img/social.png)0px -27px;
+        @include sprite-g(0px);
     }
     .twitter {
-        background:url(../img/social.png)-37px -27px;
+        @include sprite-g(-37px);
     }
     .circle {
-        background:url(../img/social.png)-74px -27px;
+        @include sprite-g(-74px);
     }
     .web {
-        background:url(../img/social.png)-110px -27px;
+        @include sprite-g(-110px);
     }
     .feed {
-        background:url(../img/social.png)-147px -27px;
+        @include sprite-g(-147px);
     }
     
 
     @include breakpoints.sm {
         .facebook {
-            background:url(../img/social.png)0px 0px;
+            // background:url(../img/social.png)0px 0px;
+            @include sprite-b(0px)
         }
         .facebook:hover{
-            background:url(../img/social.png)0px -27px;
+            @include sprite-g(0px)
         }  
         .twitter {
-            background:url(../img/social.png)-37px 0px;
+            @include sprite-b(-37px)
         }
         .twitter:hover {
-            background:url(../img/social.png)-37px -27px;
+            @include sprite-g(-37px)
         }
         .circle {
-            background:url(../img/social.png)-74px 0px;
+            @include sprite-b(-74px)
         }
         .circle:hover {
-            background:url(../img/social.png)-74px -27px;
+            @include sprite-g(-74px)
         }
         .web {
-            background:url(../img/social.png)-110px 0px;
+            @include sprite-b(-110px)
         }
         .web:hover {
-            background:url(../img/social.png)-110px -27px;
+            @include sprite-g (-110px)
         }
         .feed {
-            background:url(../img/social.png)-148px 0px;
+            @include sprite-b(-148px)
         }    
         .feed:hover {
-            background:url(../img/social.png)-148px -27px;
+            @include sprite-g(-148px)
         }    
     }
 }

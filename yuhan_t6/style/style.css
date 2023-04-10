@@ -89,7 +89,6 @@ body {
     box-shadow: 0px 0px 5px -1px;
   }
 }
-
 footer .copyrights {
   padding-left: 1rem;
 }
@@ -523,16 +522,16 @@ h1 img {
   background: url(../img/social.png) 0px -27px;
 }
 .icons .twitter {
-  background: url(../img/social.png)-37px -27px;
+  background: url(../img/social.png) -37px -27px;
 }
 .icons .circle {
-  background: url(../img/social.png)-74px -27px;
+  background: url(../img/social.png) -74px -27px;
 }
 .icons .web {
-  background: url(../img/social.png)-110px -27px;
+  background: url(../img/social.png) -110px -27px;
 }
 .icons .feed {
-  background: url(../img/social.png)-147px -27px;
+  background: url(../img/social.png) -147px -27px;
 }
 @media (min-width: 576px) {
   .icons .facebook {
@@ -542,28 +541,28 @@ h1 img {
     background: url(../img/social.png) 0px -27px;
   }
   .icons .twitter {
-    background: url(../img/social.png)-37px 0px;
+    background: url(../img/social.png) -37px 0px;
   }
   .icons .twitter:hover {
-    background: url(../img/social.png)-37px -27px;
+    background: url(../img/social.png) -37px -27px;
   }
   .icons .circle {
-    background: url(../img/social.png)-74px 0px;
+    background: url(../img/social.png) -74px 0px;
   }
   .icons .circle:hover {
-    background: url(../img/social.png)-74px -27px;
+    background: url(../img/social.png) -74px -27px;
   }
   .icons .web {
-    background: url(../img/social.png)-110px 0px;
+    background: url(../img/social.png) -110px 0px;
   }
   .icons .web:hover {
-    background: url(../img/social.png)-110px -27px;
+    background: url(../img/social.png) -110px -27px;
   }
   .icons .feed {
-    background: url(../img/social.png)-148px 0px;
+    background: url(../img/social.png) -148px 0px;
   }
   .icons .feed:hover {
-    background: url(../img/social.png)-148px -27px;
+    background: url(../img/social.png) -148px -27px;
   }
 }
 

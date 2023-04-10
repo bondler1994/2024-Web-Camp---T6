@@ -10,10 +10,7 @@ footer {
             box-shadow: 0px 0px 5px -1px;
         }
     }
-}
 
-// phone 
-footer {
     .copyrights {
         padding-left: 1rem;
         @include breakpoints.sm {

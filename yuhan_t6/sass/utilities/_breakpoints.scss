@@ -1,4 +1,4 @@
-// define breakpoints
+
 @mixin sm {
     @media (min-width: 576px) {
       @content;
@@ -29,7 +29,7 @@
     }
   }
 
-   // Define mixins for different ranges
+
    @mixin md-to-lg {
     @media screen and (min-width: 576px) and (max-width:992px) {
       @content;

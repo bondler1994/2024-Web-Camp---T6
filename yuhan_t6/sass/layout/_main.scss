@@ -56,14 +56,14 @@ main {
     }
 }
 
-// featured
+
 .featured {
     @include breakpoints.md {
         padding:3rem 0 4rem;
     }
 }
 
-// featured divider
+// 分隔線
 @include breakpoints.sm {
 .featured::before {
     content: "";
@@ -76,7 +76,7 @@ main {
 }
 }
 
-// smartphone spacing
+// 手機版間距
 .information {
     h3 {
         margin-top: 1rem;
