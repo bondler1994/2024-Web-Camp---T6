@@ -47,10 +47,8 @@
     .icon {
       margin:1rem 0;
     }
-  }
 
-
-  .icon-card {
+    // 卡片欄位行數設定
     p {
       @include breakpoints.sm {
         display: -webkit-inline-box;
@@ -59,12 +57,9 @@
         overflow: hidden;
       }
     }
-  }
-  
-  // paragraph button setting 
-  .icon-card {
+
+    // 卡片按鈕設定 固定按鈕位置
     a {
       margin-top: auto;
     }
   }
-  

@@ -2,14 +2,13 @@
 @use "../utilities/breakpoints";
 @use "../utilities/color";
 
-.minialbum {
+.gridalbum {
     display: grid;
     grid-template-rows: repeat(3,1fr);
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 0.5rem;
     img {
         width: 100%;
-        height: auto;
     &:hover {
         opacity: .4;
     }

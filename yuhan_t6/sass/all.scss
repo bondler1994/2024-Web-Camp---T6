@@ -4,13 +4,13 @@
 @use "layout/main";
 @use "layout/footer";
 
-@use "components/iconcard";
-@use "components/articlecard";
-@use "components/newscard";
-@use "components/speechbubble";
-@use "components/minialbum";
-@use "components/copyrightslinks";
-@use "components/inputform";
+@use "components/IconCard";
+@use "components/ArticleCard";
+@use "components/NewsCard";
+@use "components/SpeechBubble";
+@use "components/GridAlbum";
+@use "components/NavLinks";
+@use "components/InputForm";
 
 
 @use "vendors/bootstrap/navbar";
