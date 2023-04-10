@@ -22,27 +22,3 @@
         }
     }
 
-// name card
-.picture-card {
-    display: flex;
-    align-items: center;
-    gap:1rem;
-    span {
-        display: block;
-        color: #000000;
-    }
-
-    a {
-        color: color.$theme-primary;
-        font-style: italic;
-        font-weight: 500;
-    }
-
-    .profilepicture {
-        width: 4rem;
-
-        img {
-            width: 100%;
-        }
-    }
-}
