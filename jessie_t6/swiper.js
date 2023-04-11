@@ -32,5 +32,4 @@ var swiper = new Swiper(".swiper", {
 },
 });
 
-// loop: true,
-// loopFillGroupWithBlank: true,
+// 還在摸索中ＱＱ...js
