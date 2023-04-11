@@ -19,6 +19,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./Sass/style.css" />
   </head>
@@ -45,9 +53,9 @@
       <!-- 導覽列與搜尋 -->
       <div class="navbar_search">
         <!-- 導覽列 -->
-        <div class="navvv">
+        <div class="nav_box">
           <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <div class="zz">
+            <div class="nav_box_list">
               <!-- 小搜尋框 -->
               <form class="form_1">
                 <div class="search_box">
@@ -215,7 +223,7 @@
           </div>
         </section>
         <!-- 服務項目 四個卡片-->
-        <section class="service">
+        <section class="service m-4">
           <div class="row">
             <div class="col-12 col-sm-6 col-lg-3">
               <div class="card_item">
@@ -233,7 +241,7 @@
             </div>
             <div class="col-12 col-sm-6 col-lg-3">
               <div class="card_item">
-                <h2>GROWTH STRATEGY</h2>
+                <h2>PERFECT SUPPORT</h2>
                 <div class="card_item_img">
                   <img
                     src="./images/perfect support.png"
@@ -241,9 +249,9 @@
                   />
                 </div>
                 <p>
-                  Vestibulum dignissim, dui ac hendrerit blandit, sapien orci
-                  dictum nibh, vel suscipit augue nibh in enim. Nullam dignissim
-                  euismodnunc at
+                  Donec semper, dolor eu iaculis laoreet, erat diam interdum
+                  nisi, vel consequat leo neque in ante. Curabitur fringilla
+                  tristque nisl ut
                 </p>
                 <a href="##">More</a>
               </div>
@@ -251,7 +259,7 @@
 
             <div class="col-12 col-sm-6 col-lg-3">
               <div class="card_item">
-                <h2>GROWTH STRATEGY</h2>
+                <h2>PARTNERS PROGRAMS</h2>
                 <div class="card_item_img">
                   <img
                     src="./images/partners program.png"
@@ -259,16 +267,15 @@
                   />
                 </div>
                 <p>
-                  Vestibulum dignissim, dui ac hendrerit blandit, sapien orci
-                  dictum nibh, vel suscipit augue nibh in enim. Nullam dignissim
-                  euismodnunc at
+                  Nunc pellentesque malesuada enim utdignissim. Etiam aliquam
+                  malesuada magna, vel scelerisque lectus pharetra quis. Cras
                 </p>
                 <a href="##">More</a>
               </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3">
               <div class="card_item">
-                <h2>GROWTH STRATEGY</h2>
+                <h2>PREMIUM SERVICES</h2>
                 <div class="card_item_img">
                   <img
                     src="./images/premium service.png"
@@ -276,9 +283,8 @@
                   />
                 </div>
                 <p>
-                  Vestibulum dignissim, dui ac hendrerit blandit, sapien orci
-                  dictum nibh, vel suscipit augue nibh in enim. Nullam dignissim
-                  euismodnunc at
+                  Duis molestie commodo sapien, non mollis diam consequat in.
+                  Nulla blandit viverra sodales. Donec sit amet diam neque
                 </p>
                 <a href="##">More</a>
               </div>
@@ -286,9 +292,9 @@
           </div>
         </section>
         <!-- 公司介紹 -->
-        <section class="introduce row">
+        <section class="introduce row m-4">
           <!-- welcome -->
-          <div class="col-12 col-lg-4">
+          <div class="col-12 col-lg-4 p-4">
             <h3>welcome</h3>
             <div class="introduce_welcome">
               <div class="introduce_welcome_img">
@@ -304,29 +310,37 @@
             </div>
           </div>
           <!-- why choose us? -->
-          <div class="col-12 col-lg-4">
+          <div class="col-12 col-lg-4 p-4">
             <h3>WHY CHOOSE US?</h3>
             <div>
-              <div>
-                <div class="btn_box">1</div>
+              <div class="reason">
+                <div class="reason_icon">
+                  <i class="fa-solid fa-angle-right"></i>
+                </div>
                 <p>Etiam rutrum venenatis dui, non</p>
               </div>
-              <div>
-                <div>1</div>
+              <div class="reason">
+                <div class="reason_icon">
+                  <i class="fa-solid fa-angle-right"></i>
+                </div>
                 <p>Aliquam ac diam in lorem vulputate auctor.</p>
               </div>
-              <div>
-                <div>1</div>
+              <div class="reason">
+                <div class="reason_icon">
+                  <i class="fa-solid fa-angle-right"></i>
+                </div>
                 <p>Vestibulum vitae urma quis eros convallis</p>
               </div>
-              <div>
-                <div>1</div>
+              <div class="reason">
+                <div class="reason_icon">
+                  <i class="fa-solid fa-angle-right"></i>
+                </div>
                 <p>Sed magna magna, congue</p>
               </div>
             </div>
           </div>
           <!-- news&event -->
-          <div class="col-12 col-lg-4">
+          <div class="col-12 col-lg-4 p-4 news_event">
             <h3>news & events</h3>
             <div class="event_box">
               <div class="event_box_img">
@@ -366,26 +380,47 @@
           </div>
         </section>
         <!-- 未來工作圖片輪播 -->
-        <section>
+        <section class="featured_works m-4">
           <h3>FEATURED WORKS</h3>
           <!-- Swiper -->
           <div class="swiper">
+            <div>
+              <button class="swiper-button-prev"></button>
+              <button class="swiper-button-next"></button>
+            </div>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="images/featured-1.jpg" />
+                <img src="images/g1.jpg" />
               </div>
               <div class="swiper-slide">
-                <img src="images/featured-2.jpg" />
+                <img src="images/g2.jpg" />
+                <div class="hover_link"></div>
               </div>
               <div class="swiper-slide">
-                <img src="images/featured-3.jpg" />
+                <img src="images/g3.jpg" />
+                <div class="hover_link"></div>
               </div>
               <div class="swiper-slide">
-                <img src="images/featured-4.jpg" />
+                <img src="images/g4.jpg" />
+                <div class="hover_link"></div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/g1.jpg" />
+                <div class="hover_link"></div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/g2.jpg" />
+                <div class="hover_link"></div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/g3.jpg" />
+                <div class="hover_link"></div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/g4.jpg" />
+                <div class="hover_link"></div>
               </div>
             </div>
-            <div class="swiper-button-next">11</div>
-            <div class="swiper-button-prev">22</div>
           </div>
         </section>
       </main>
@@ -395,24 +430,30 @@
         <!-- 聯繫與更多資訊 -->
         <section class="footer_box">
           <!-- LATEST TWEETS -->
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-3 p-4">
             <h3>LATEST TWEETS</h3>
             <p>loading tweets...</p>
           </div>
           <!-- TESTIMONIALS -->
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-3 p-4">
             <h3>TESTIMONIALS</h3>
-            <div>
+            <div class="quote">
               <p>
                 "Sed dapibus molestie interdum. Fusce nec est ante, sit amet
                 lacinia lorem. Maecenas nec eros ut mauris pulvinar suscipit.
                 Aliquam erat
               </p>
             </div>
-            <div><img src="./images/Stephen.jpg" alt="Stephen" /></div>
+            <div class="people">
+              <div><img src="./images/Stephen.jpg" alt="Stephen" /></div>
+              <div class="people_info">
+                <p>Stephen Bingham</p>
+                <a href="##"><i>demolink.org</i></a>
+              </div>
+            </div>
           </div>
           <!-- GET IN TOUCH! -->
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-3 p-4">
             <h3>GET IN TOUCH!</h3>
             <form class="input_box">
               <input
@@ -443,7 +484,7 @@
             </div>
           </div>
           <!-- FLICKR -->
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-3 p-4">
             <h3>FLICKR</h3>
             <div class="flickr_box">
               <div class="flickr_img">
@@ -493,7 +534,7 @@
               <a class="" href="##">Privacy Policy</a>
             </p>
           </div>
-          <!-- footer_nav清單 -->
+          <!-- footer_nav的清單 -->
           <ul class="footer_navbar navbar-nav">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">HOME</a>

@@ -2,10 +2,13 @@
 // body
 body{
   background-image:url(../images/background.jpg);
-  
+  box-shadow: inset 0 92px #161616, inset 0 -220px #161616;
+
 }
+
+
 *{
-  outline: 1px solid red;
+  // outline: 1px solid red;
   padding: 0;
   margin: 0;
 }
@@ -18,6 +21,9 @@ h1,h2,h3{
 text-transform: uppercase;
 }
 
+h3{
+margin-bottom: 30px; 
+}
 
 
 // --- header ---
@@ -26,8 +32,7 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  margin-top: 10px;
+  padding: 35px;
   outline: 1px solid #b3b3b3;
   @media (min-width:768px) {
     display: flex;
@@ -112,7 +117,7 @@ header{
   
 }
 
-.navvv{
+.nav_box{
   @media(min-width:768px){
     flex-grow: 1;
     margin-right: 10px;
@@ -120,7 +125,7 @@ header{
  
 }
 
-.zz{
+.nav_box_list{
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -238,7 +243,7 @@ main{
   position: relative;
   top: 0px;
   @media (min-width:576px) {
-    top: -25px;
+    top: -45px;
   }
   .row{
     @media (min-width:576px){
@@ -291,9 +296,12 @@ main{
 
 // <!-- 公司介紹 -->
 // welcome
+
+.introduce{
+  border-bottom: 1px solid #cfcfcf;
+}
 .introduce_welcome{
  width: 100%;
- margin-top: 30px;
  p{
  margin-top: 30px;
  }
@@ -315,21 +323,46 @@ main{
   }
 }
 // why choose us?
-.btn_box{
-  width: 50px;
-  height: 50px;
-  background: yellowgreen;
-  border-radius: 50%;
-  &::after{
-    content:"" ;
-    color: red;
+
+
+.reason{
+  display: flex;
+  border-bottom: 1px solid #e7e7e7;
+  gap:10px;
+  margin: 10px 10px;
+  padding-bottom: 20px;
+  p{
+    margin: auto 0;
   }
-}
+  .reason_icon{
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: #dadada;
+  border-radius: 50%;
+  &:hover{
+    background:#7fb503 ;
+    transform: rotate(90deg);
+  }
+  .fa-solid{
+    margin: 0 auto;
+    color:#fff;
+  }
+}}
+
+
 
 // news&event
+.news_event{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .event_box{
   display: flex;
-  margin-top: 30px;
+  
 }
 .event_box_img{
   width: 400px;
@@ -357,6 +390,40 @@ margin-top: 10px;
 }
 
 // <!-- 未來工作圖片輪播 -->
+.featured_works{
+  padding-bottom: 40px;
+}
+// swiper
+.swiper {
+  width: 100%;
+  height: 200px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+ img{
+  width: 100%;
+ }
+}
+
+@media (max-width: 760px) {
+  .swiper-button-next {
+    right: 20px;
+    transform: rotate(90deg);
+  }
+
+  .swiper-button-prev {
+    left: 20px;
+    transform: rotate(90deg);
+  }
+}
+
 
 
 // ---footer---
@@ -374,23 +441,41 @@ footer{
   }
 }
 
+// <!-- LATEST TWEETS -->
 
-.flickr_box{
+
+// <!-- TESTIMONIALS -->
+
+.quote{
+  padding: 30px 20px 30px 30px;
+  border-radius: 4px;
+  background-color: #e7e7e7;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 10% 75%, 0 100%);
+  margin-bottom: 10px;
+  p{
+    padding-bottom:40px ;
+  }
+}
+.people{
   display: flex;
-  flex-wrap: wrap;
-}
+  gap: 20px;
+  .people_info{
+    a{
+      text-decoration: none;
+      color: #8BC34A;
+      font-weight: 700;
+    }
+  }
 
-.flickr_img{
-width: 80px;
-img{
-  width: 100%;
-  object-fit: cover;
-}
 }
 
 // <!-- GET IN TOUCH! -->
-
-
+input{
+  margin-bottom: 10px;
+}
+textarea{
+  margin-bottom: 20px;
+}
 .button_reset{
   background-color: #000;
   color: #fff;
@@ -411,39 +496,26 @@ img{
 }
 
 
+
+
 // <!-- FLICKR -->
-.swiper {
-  width: 100%;
-  height: 200px;
-}
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+.flickr_box{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
- img{
+  flex-wrap: wrap;
+  gap:5px;
+}
+
+.flickr_img{
+width: 65px;
+img{
   width: 100%;
- }
+  object-fit: cover;
+}
 }
 
 
-
-@media (max-width: 760px) {
-  .swiper-button-next {
-    right: 20px;
-    transform: rotate(90deg);
-  }
-
-  .swiper-button-prev {
-    left: 20px;
-    transform: rotate(90deg);
-  }
-}
-
+// <!-- copyright footer_nav -->
 .footer_nav{
   display: flex;
   flex-direction: column-reverse; 
@@ -455,24 +527,24 @@ img{
   };
 }
 
-// <!-- copyright footer_nav -->
-
 .copyright{
   display: flex;
   align-items: center;
   p{
     color: #cbc2c2;
     a{
-      color: #fff;
+      color: #7fb503;
       text-decoration: none;
       &:hover{
-        color:#7fb503;
+        color:#fff;
       }
     }
   }
 }
 
 // <!-- footer_nav清單 -->
+
+
 .footer_navbar{
   display: flex;
   flex-direction: row;
@@ -485,4 +557,6 @@ img{
   }
   
 }
+
+
 
