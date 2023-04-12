@@ -2,13 +2,13 @@
 $iphone: 393px; //iPhone 14 pro  393px
 $sm: 576px;
 $ipad: 768px; //平板，畫面比例同手機
-$lg: 992px;
+$lg: 991px;
 $xl: 1200px;
-$web: 1440px; // 設計圖尺寸
-$lg-web: 1920px; // 桌機驗收
+$web: 1440px; 
+$lg-web: 1920px; 
 
-@mixin breakpoint($min_width) {
-  @media (min-width: $min_width) {
+@mixin breakpoint($max_width) {
+  @media (max-width: $max_width) {
     @content;
   }
 }

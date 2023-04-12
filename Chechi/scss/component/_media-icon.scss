@@ -1,0 +1,11 @@
+@mixin sprite($x,$y) {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    background-image: url("../../images/social.png");
+    background-position: $x $y;
+    background-repeat: no-repeat;
+    &:hover {
+        background-position: $x 104%;
+    }
+}
