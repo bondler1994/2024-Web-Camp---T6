@@ -391,8 +391,22 @@ margin-top: 10px;
 
 // <!-- 未來工作圖片輪播 -->
 .featured_works{
-  padding-bottom: 40px;
+  padding-bottom: 50px;
+
+  .featured_works_box{
+  display: flex; 
+  justify-content: space-between;
 }
+}
+
+.swiper_button_prev,
+.swiper_button_next{
+  background-color: transparent;
+  font-size: 30px;
+  color: #9E9E9E;
+  border: transparent;
+  }
+
 // swiper
 .swiper {
   width: 100%;
@@ -412,17 +426,21 @@ margin-top: 10px;
  }
 }
 
-@media (max-width: 760px) {
-  .swiper-button-next {
-    right: 20px;
-    transform: rotate(90deg);
-  }
 
-  .swiper-button-prev {
-    left: 20px;
-    transform: rotate(90deg);
-  }
-}
+
+
+
+// @media (max-width: 760px) {
+//   .swiper-button-next {
+//     right: 20px;
+//     transform: rotate(90deg);
+//   }
+
+//   .swiper-button-prev {
+//     left: 20px;
+//     transform: rotate(90deg);
+//   }
+// }
 
 
 

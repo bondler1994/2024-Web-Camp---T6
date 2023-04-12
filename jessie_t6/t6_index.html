@@ -28,7 +28,7 @@
       referrerpolicy="no-referrer"
     />
     <!-- css -->
-    <link rel="stylesheet" href="./ CSS/style.css" />
+    <link rel="stylesheet" href="./Sass/style.css" />
   </head>
   <body>
     <div class="container-lg">
@@ -381,13 +381,20 @@
         </section>
         <!-- 未來工作圖片輪播 -->
         <section class="featured_works m-4">
-          <h3>FEATURED WORKS</h3>
           <!-- Swiper -->
-          <div class="swiper">
+          <div class="featured_works_box">
+            <h3>FEATURED WORKS</h3>
             <div>
-              <button class="swiper-button-prev"></button>
-              <button class="swiper-button-next"></button>
+              <button class="swiper_button_prev">
+                <i class="fa-solid fa-angle-left"></i>
+              </button>
+              <button class="swiper_button_next">
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
             </div>
+          </div>
+
+          <div class="swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img src="images/g1.jpg" />
@@ -430,12 +437,12 @@
         <!-- 聯繫與更多資訊 -->
         <section class="footer_box">
           <!-- LATEST TWEETS -->
-          <div class="col-12 col-md-3 p-4">
+          <div class="col-12 col-md-6 p-4">
             <h3>LATEST TWEETS</h3>
             <p>loading tweets...</p>
           </div>
           <!-- TESTIMONIALS -->
-          <div class="col-12 col-md-3 p-4">
+          <div class="col-12 col-md-6 p-4">
             <h3>TESTIMONIALS</h3>
             <div class="quote">
               <p>
@@ -453,7 +460,7 @@
             </div>
           </div>
           <!-- GET IN TOUCH! -->
-          <div class="col-12 col-md-3 p-4">
+          <div class="col-12 col-md-6 p-4">
             <h3>GET IN TOUCH!</h3>
             <form class="input_box">
               <input
@@ -484,7 +491,7 @@
             </div>
           </div>
           <!-- FLICKR -->
-          <div class="col-12 col-md-3 p-4">
+          <div class="col-12 col-md-6 p-4">
             <h3>FLICKR</h3>
             <div class="flickr_box">
               <div class="flickr_img">

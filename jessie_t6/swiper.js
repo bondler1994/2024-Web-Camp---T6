@@ -5,8 +5,8 @@ var swiper = new Swiper(".swiper", {
   slidesPerGroup: 4,
  
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper_button_next",
+    prevEl: ".swiper_button_prev",
   },
   on: {
     resize: function () {
