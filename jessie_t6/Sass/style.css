@@ -26,7 +26,7 @@ header {
   flex-direction: column;
   align-items: center;
   padding: 35px;
-  outline: 1px solid #b3b3b3;
+  outline: 1px solid #9E9E9E;
 }
 @media (min-width: 768px) {
   header {
@@ -244,7 +244,7 @@ main {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 4;
 }
 
 .card_item {
@@ -254,6 +254,7 @@ main {
   background-color: #e8e8e8;
   padding: 30px;
   outline: 1px solid #b3b3b3;
+  height: 100%;
 }
 .card_item:hover {
   background-color: rgba(98, 98, 98, 0.8);
@@ -271,6 +272,7 @@ main {
 }
 .card_item h2 {
   font-size: 20px;
+  flex: 1 1 0;
 }
 .card_item h2,
 .card_item p {
@@ -354,10 +356,23 @@ main {
 
 .event_box {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+@media (min-width: 576px) {
+  .event_box {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 
 .event_box_img {
-  width: 400px;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .event_box_img {
+    width: 40%;
+  }
 }
 .event_box_img img {
   width: 100%;
@@ -368,6 +383,8 @@ main {
 
 .event_box_text {
   margin-left: 20px;
+  flex-basis: 0;
+  flex-grow: 1;
 }
 
 .date {
@@ -385,7 +402,7 @@ main {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 6;
 }
 
 .featured_works {
@@ -442,8 +459,8 @@ footer {
   padding: 30px 20px 30px 30px;
   border-radius: 4px;
   background-color: #e7e7e7;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 10% 75%, 0 100%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 10% 75%, 0 100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 20% 90%, 0 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 20% 90%, 0 100%);
   margin-bottom: 10px;
 }
 .quote p {
@@ -460,7 +477,7 @@ footer {
   font-weight: 700;
 }
 
-input {
+.input_box input {
   margin-bottom: 10px;
 }
 
@@ -519,9 +536,11 @@ textarea {
 .copyright {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .copyright p {
   color: #cbc2c2;
+  text-align: center;
 }
 .copyright p a {
   color: #7fb503;

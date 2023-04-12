@@ -59,12 +59,8 @@
               <!-- 小搜尋框 -->
               <form class="little_form">
                 <div class="search_box">
-                  <input
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
-                  <button type="submit"></button>
+                  <input type="search" name="text" placeholder="search" />
+                  <button type="submit" name="submit"></button>
                 </div>
               </form>
               <!-- 收起來的漢堡  -->
@@ -157,7 +153,7 @@
         <form class="big_form">
           <div class="search_box">
             <input type="search" placeholder="Search" aria-label="Search" />
-            <button type="submit"></button>
+            <button type="submit" required></button>
           </div>
         </form>
       </div>
@@ -474,27 +470,26 @@
                 class="form-control"
                 id="FormName"
                 placeholder="Name"
-                required=""
+                required
               />
               <input
                 type="email"
                 class="form-control"
                 id="FormEmail"
                 placeholder="Email"
-                required=""
+                required
               />
               <textarea
                 rows="5"
                 class="form-control w-100"
                 placeholder="Message"
-                required=""
+                required
               ></textarea>
+              <div>
+                <button class="button_reset" type="reset">CLEAR FORM</button>
+                <button class="button_send" type="submit">SEND!</button>
+              </div>
             </form>
-
-            <div>
-              <button class="button_reset" type="reset">CLEAR FORM</button>
-              <button class="button_send" type="submit">SEND!</button>
-            </div>
           </div>
           <!-- FLICKR -->
           <div class="col-12 col-md-6 col-lg-3 p-4">
