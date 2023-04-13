@@ -140,6 +140,10 @@ header h1 img {
   color: #fff;
 }
 
+.dropdown .dropdown-menu {
+  padding: 0;
+}
+
 .search_box {
   outline: 1px solid #cbc2c2;
   display: flex;
@@ -399,10 +403,6 @@ main {
 
 .text {
   margin-top: 10px;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
 }
 
 .featured_works {
@@ -437,6 +437,10 @@ main {
 }
 .swiper-slide img {
   width: 100%;
+}
+
+.swiper-slide img:hover {
+  background-color: #343333;
 }
 
 footer {
@@ -561,10 +565,12 @@ textarea {
     flex-direction: row;
   }
 }
-.footer_navbar a {
-  color: #cbc2c2;
+.footer_navbar > li {
   margin: 0 10px;
 }
-.footer_navbar a:hover {
+.footer_navbar > li a {
+  color: #cbc2c2;
+}
+.footer_navbar > li a:hover {
   color: #7fb400;
 }/*# sourceMappingURL=style.css.map */

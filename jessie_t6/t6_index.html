@@ -28,7 +28,7 @@
       referrerpolicy="no-referrer"
     />
     <!-- css -->
-    <link rel="stylesheet" href="./Sass/style.css" />
+    <link rel="stylesheet" href="./scss/style.css" />
   </head>
   <body>
     <div class="container-lg">
@@ -152,8 +152,13 @@
         <!-- 大搜尋框 -->
         <form class="big_form">
           <div class="search_box">
-            <input type="search" placeholder="Search" aria-label="Search" />
-            <button type="submit" required></button>
+            <input
+              type="search"
+              placeholder="Search"
+              aria-label="search"
+              required="required"
+            />
+            <button type="submit" required="required"></button>
           </div>
         </form>
       </div>
@@ -400,6 +405,11 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img src="images/g1.jpg" />
+
+                <div class="hover_link">
+                  <a href="##"><img src="./images/icon1.png" /></a>
+                  <a href="##"><img src="./images/icon2.png" /></a>
+                </div>
               </div>
               <div class="swiper-slide">
                 <img src="images/g2.jpg" />
@@ -470,20 +480,20 @@
                 class="form-control"
                 id="FormName"
                 placeholder="Name"
-                required
+                required="required"
               />
               <input
                 type="email"
                 class="form-control"
                 id="FormEmail"
                 placeholder="Email"
-                required
+                required="required"
               />
               <textarea
                 rows="5"
                 class="form-control w-100"
                 placeholder="Message"
-                required
+                required="required"
               ></textarea>
               <div>
                 <button class="button_reset" type="reset">CLEAR FORM</button>
