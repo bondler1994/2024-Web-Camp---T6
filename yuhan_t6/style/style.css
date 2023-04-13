@@ -380,74 +380,69 @@ footer .socialmedia h4 {
   text-transform: uppercase;
 }
 
-h1 {
-  width: 90%;
+.business-planet {
+  flex-direction: column;
+  background-color: #FFFFFF;
 }
-h1 img {
-  width: 100%;
-}
-
 @media (min-width: 576px) {
-  .navbar-container {
+  .business-planet {
+    background-color: transparent;
+    padding: 0;
+  }
+}
+.business-planet .navbar-container {
+  padding: 0 1rem;
+}
+@media (min-width: 576px) {
+  .business-planet {
     box-shadow: 0px 0px 5px -1px;
   }
 }
-
-.businessplanet .navbar-container {
-  padding: 0 1rem;
+.business-planet h1 {
+  width: 90%;
 }
-
-.phonenumber {
+.business-planet h1 img {
+  width: 100%;
+}
+.business-planet .phone-number {
   display: none;
 }
 @media (min-width: 576px) {
-  .phonenumber {
+  .business-planet .phone-number {
     display: flex;
     flex-direction: column;
     align-items: end;
   }
 }
-.phonenumber ul {
+.business-planet .phone-number ul {
   margin: 0;
 }
-
-.number a {
+.business-planet .phone-number .number a {
   color: #1C1C1C;
 }
-
-.businessplanet {
-  flex-direction: column;
-  background-color: #FFFFFF;
-}
-@media (min-width: 576px) {
-  .businessplanet {
-    background-color: transparent;
-    padding: 0;
-  }
-}
-.businessplanet .navbar-toggler-icon {
+.business-planet .navbar-toggler-icon {
   background: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2030%2030%27%3E%3Cpath%20stroke%3D%27rgba(128%2C%20182%2C%200%2C%201)%27%20stroke-linecap%3D%27round%27%20stroke-miterlimit%3D%2710%27%20stroke-width%3D%272%27%20d%3D%27M4%207h22M4%2015h22M4%2023h22%27%2F%3E%3C%2Fsvg%3E");
 }
-.businessplanet .navbar-container, .businessplanet .navlinks-container {
+.business-planet .navbar-container, .business-planet .navlinks-container {
   width: 100%;
 }
-.businessplanet .btn-close {
+.business-planet .btn-close {
   background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2380B600'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>");
   background-repeat: no-repeat;
 }
-.businessplanet .navbar-container {
+.business-planet .navbar-container {
   display: flex;
   justify-content: space-between;
   background-color: #FFFFFF;
 }
 @media (min-width: 576px) {
-  .businessplanet .navbar-container {
+  .business-planet .navbar-container {
     padding: 1.5rem;
     border: #CDCDCD solid 1px;
   }
 }
 @media (min-width: 576px) {
-  .businessplanet .navlinks-container {
+  .business-planet .navlinks-container {
     margin-top: 2rem;
   }
 }
