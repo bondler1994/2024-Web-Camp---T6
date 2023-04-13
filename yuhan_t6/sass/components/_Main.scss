@@ -1,27 +1,58 @@
 @use "../utilities/breakpoints";
 @use "../utilities/color";
+@use "../utilities/mixin";
 
 main {
     @include breakpoints.sm {
         box-shadow: 0px 0px 5px -1px;
     }
+
+    .services {
+        @include breakpoints.sm {
+            @include mixin.sub-background;
+            .row {
+                margin-top: -76px;
+                position: relative;
+              }        
+        }
+    }
+
+    .information {
+        @include mixin.sub-background; 
+    }
+
+    .featured {
+        @include mixin.sub-background;
+        // 分隔線
+        @include breakpoints.sm {
+            &::before {
+                content: "";
+                top:0;
+                position: absolute;
+                display: block;
+                width: calc(100% - 3rem); 
+                height: 1.5px;
+                background-color: color.$theme-tertiary-300; 
+            }
+        }
+    }
 }
 
 // sections (common)
-.information, .featured, .socialmedia {
-    background: url("../img/subbg.gif");
-}
+// .information, .featured, .socialmedia {
+//     background: url("../img/subbg.gif");
+// }
 
 // sections
-.services {
-    @include breakpoints.sm {
-      background: url("../img/subbg.gif");
-      .row {
-        margin-top: -76px;
-        position: relative;
-      }
-    }
-  }
+// .services {
+//     @include breakpoints.sm {
+//       background: url("../img/subbg.gif");
+//       .row {
+//         margin-top: -76px;
+//         position: relative;
+//       }
+//     }
+//   }
 
 %Capitalization {
     text-transform: uppercase;
@@ -46,15 +77,15 @@ main {
 }
 
 // 分隔線
-@include breakpoints.sm {
-    .featured::before {
-        content: "";
-        top:0;
-        position: absolute;
-        display: block;
-        width: calc(100% - 3rem); 
-        height: 1.5px;
-        background-color: color.$theme-tertiary-300; 
-    }
-    }
+// @include breakpoints.sm {
+//     .featured::before {
+//         content: "";
+//         top:0;
+//         position: absolute;
+//         display: block;
+//         width: calc(100% - 3rem); 
+//         height: 1.5px;
+//         background-color: color.$theme-tertiary-300; 
+//     }
+//     }
     

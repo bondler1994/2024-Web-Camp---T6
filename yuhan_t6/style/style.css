@@ -84,27 +84,23 @@ footer .copyrights {
     box-shadow: 0px 0px 5px -1px;
   }
 }
-
-.information, .featured, .socialmedia {
-  background: url("../img/subbg.gif");
-}
-
 @media (min-width: 576px) {
-  .services {
+  main .services {
     background: url("../img/subbg.gif");
   }
-  .services .row {
+  main .services .row {
     margin-top: -76px;
     position: relative;
   }
 }
-
-.featured h3, .socialmedia h4, .information h3 {
-  text-transform: uppercase;
+main .information {
+  background: url("../img/subbg.gif");
 }
-
+main .featured {
+  background: url("../img/subbg.gif");
+}
 @media (min-width: 576px) {
-  .featured::before {
+  main .featured::before {
     content: "";
     top: 0;
     position: absolute;
@@ -114,6 +110,11 @@ footer .copyrights {
     background-color: #CDCDCD;
   }
 }
+
+.featured h3, .socialmedia h4, .information h3 {
+  text-transform: uppercase;
+}
+
 .article-card img {
   width: 100%;
 }
@@ -371,6 +372,10 @@ input[type=search]::-webkit-search-cancel-button {
 }
 .news-card .text {
   flex: 2 0 0;
+}
+
+footer .socialmedia {
+  background: url("../img/subbg.gif");
 }
 
 h1 {

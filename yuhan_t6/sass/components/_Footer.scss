@@ -1,0 +1,7 @@
+@use '../utilities/mixin';
+
+footer {
+    .socialmedia {
+        @include mixin.sub-background;
+    }
+}
