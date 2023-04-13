@@ -3,12 +3,8 @@ body {
   box-shadow: inset 0 92px #161616, inset 0 -220px #161616;
 }
 
-* {
+h1, h2, h3, p, ul, li {
   padding: 0;
-  margin: 0;
-}
-
-h1, h2, h3, p {
   margin: 0;
 }
 

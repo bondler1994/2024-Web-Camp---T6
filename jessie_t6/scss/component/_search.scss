@@ -1,0 +1,66 @@
+
+// 做個搜尋框
+.search_box{
+  outline: 1px solid #cbc2c2;
+  display: flex;
+  width: 300px;
+  height: 35px;
+  background-color: #e8e8e8;
+  padding: 5px 10px;
+}
+
+.little_form{
+  display: flex;
+  padding: 10px;
+  .search_box{
+  outline: 1px solid #cbc2c2;
+  display: flex;
+  width: 150px;
+  height: 38px;
+  background-color: #e8e8e8;
+  padding: 5px 10px;
+  }
+  input{
+  background-color: #e8e8e8;
+  border: none;
+  width: 80%;
+  }
+  button{
+  background: url(../images/search.png) no-repeat 0 5px;
+  background-color: #e8e8e8;
+  border: none;
+  width: 20%;
+  }
+  @media(min-width:768px){
+    display: none;
+  }
+}
+
+.big_form{
+  display: none;
+  @media(min-width:992px) {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #fff;
+  }
+  .search_box{
+    outline: 1px solid #cbc2c2;
+    display: flex;
+    width: 200px;
+    height: 35px;
+    background-color: #e8e8e8;
+    padding: 5px 10px;
+  }
+  input{
+    background-color:#e8e8e8;
+    border: none;
+    width: 90%;
+  }
+    button{
+    background: url(../images/search.png) no-repeat 0 5px;
+    background-color: #e8e8e8;
+  
+    border: none;
+    width: 10%;
+  }
+}

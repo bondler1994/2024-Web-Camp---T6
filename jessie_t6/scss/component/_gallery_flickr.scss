@@ -1,0 +1,15 @@
+// <!-- FLICKR -->
+
+.flickr_box{
+  display: flex;
+  flex-wrap: wrap;
+  gap:5px;
+}
+
+.flickr_img{
+width: 65px;
+img{
+  width: 100%;
+  object-fit: cover;
+}
+}

@@ -1,0 +1,21 @@
+
+
+// <!-- 公司介紹 -->
+// welcome
+
+.introduce{
+  border-bottom: 1px solid #cfcfcf;
+}
+.introduce_welcome{
+ width: 100%;
+ p{
+ margin-top: 30px;
+ }
+ .introduce_welcome_img{
+  width: 100%;
+  img{
+    width: 100%;
+  object-fit: cover;
+  }
+ }
+}

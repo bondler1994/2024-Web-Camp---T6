@@ -1,0 +1,28 @@
+// why choose us?
+.reason{
+  display: flex;
+  border-bottom: 1px solid #e7e7e7;
+  gap:10px;
+  margin: 10px 10px;
+  padding-bottom: 20px;
+  p{
+    margin: auto 0;
+  }
+  .reason_icon{
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: #dadada;
+  border-radius: 50%;
+  &:hover{
+    background:#7fb503 ;
+    transform: rotate(90deg);
+  }
+  .fa-solid{
+    margin: 0 auto;
+    color:#fff;
+  }
+}}
+

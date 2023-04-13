@@ -1,0 +1,15 @@
+//  <!-- 輪播圖 -->
+.carousel{
+  .carousel-control-prev,
+  .carousel-control-next{
+    width: 40px;
+    height: 130px;
+    margin: auto;;
+    display: flex;
+    align-items: center;
+    background-color: #343333;
+    &:hover{
+      background-color:#7fb503;
+    }
+   }
+}

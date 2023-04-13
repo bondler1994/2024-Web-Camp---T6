@@ -1,0 +1,30 @@
+
+@use "../component/carousel_bootstrap"; 
+// 輪播圖
+@use "../component/card_servic";
+// 四張卡片
+@use "../component/card_introduce";
+// 公司介紹
+@use "../component/accordion";
+// why choose us
+@use "../component/card_news";
+// news&event
+@use "../component/carousel_swiper";
+// <!-- 未來工作圖片輪播 -->
+
+// ----main----
+main{
+  background:url(../images/subbg.gif);
+}
+
+//more
+.text_more{
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  &:hover{
+    color:#eb5611;
+  }
+}
+
+

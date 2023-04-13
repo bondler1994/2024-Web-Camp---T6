@@ -1,0 +1,63 @@
+//  <!-- 服務項目 四個卡片-->
+.service{
+  position: relative;
+  top: 0px;
+  @media (min-width:576px) {
+    top: -45px;
+  }
+  .row{
+    @media (min-width:576px){
+      margin: 0;
+    }
+  }
+  p{
+    overflow: hidden;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 4; 
+  }
+}
+.card_item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e8e8e8;
+  padding: 30px;
+  outline: 1px solid #cdcdcd;
+  height: 100%;
+  &:hover{
+    background-color: rgba($color: #626262b0, $alpha: 0.8);
+    color:#fff;
+  }
+  .card_item_img{
+    margin-top: 20px;
+    width: 70px;
+    height: 70px;
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  h2{
+    font-size: 20px;
+    flex:1 1 0;
+  }
+  h2,
+  p{
+    text-align: center;
+    margin-top: 20px;
+  }
+  a{
+    text-decoration: none;
+    color:#000;
+    background-color: #cdcdcd;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 20px;
+    
+    &:hover{
+      background-color: #7fb503;
+      color:#ffffff;
+    }
+  }
+}

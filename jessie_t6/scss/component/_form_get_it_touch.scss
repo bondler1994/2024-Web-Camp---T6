@@ -1,0 +1,25 @@
+// <!-- GET IN TOUCH! -->
+.input_box input{
+  margin-bottom: 10px;
+}
+textarea{
+  margin-bottom: 20px;
+}
+.button_reset{
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  &:hover{
+    color:#eb5611;
+  }
+}
+.button_send{
+  background-color: #7fb400;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  &:hover{
+    color:#eb5611;
+  }
+}

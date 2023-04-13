@@ -1,0 +1,28 @@
+// <!-- copyright footer_nav -->
+.footer_nav{
+  display: flex;
+  flex-direction: column-reverse; 
+  background-color: #000;
+  padding: 10px 0;
+  @media (min-width:576px) {
+    justify-content: space-between;
+    flex-direction: row;
+  };
+}
+
+.copyright{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  p{
+    color: #cbc2c2;
+    text-align: center;
+    a{
+      color: #7fb503;
+      text-decoration: none;
+      &:hover{
+        color:#fff;
+      }
+    }
+  }
+}

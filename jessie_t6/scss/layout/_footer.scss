@@ -1,0 +1,26 @@
+
+
+@use "../component/testimonial";
+// 感言
+@use "../component/form_get_it_touch";
+// 表單
+@use "../component/gallery_flickr";
+// 圖片集
+
+@use "../component/navbar_footer";
+@use "../component/copy_right";
+
+// ---footer---
+footer{
+  margin-top: 50px;
+}
+
+.footer_box{
+  background: url(../images/subbg.gif);
+  display: flex;
+  flex-direction: column;
+  @media (min-width:768px) {
+    display: flex;
+    flex-direction: row;
+  }
+}

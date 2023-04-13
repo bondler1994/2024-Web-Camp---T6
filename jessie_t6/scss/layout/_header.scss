@@ -1,0 +1,46 @@
+
+
+@use "../component/iconlist_social_media";
+
+// --- header ---
+header{
+  background: url(../images/subbg.gif);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px;
+  outline: 1px solid #9E9E9E;
+  @media (min-width:768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  h1{
+    width: 300px;
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.header_contact{
+  display: none;
+  @media(min-width:768px) {
+   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  }
+  p{
+    font-size: 14px;
+    a{
+      text-decoration: none;
+      color: #000;
+      &:hover{
+        color:orange;
+      }
+    }
+    
+  } 
+  }
+

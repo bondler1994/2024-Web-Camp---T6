@@ -1,0 +1,22 @@
+
+// 歸零
+h1,h2,h3,p,ul,li{
+  margin: 0;
+  padding: 0;
+}
+
+
+// *{
+//   outline: 1px solid red;
+// }
+
+
+// 共用樣式
+
+h1,h2,h3{
+  text-transform: uppercase;
+  }
+  
+  h3{
+  margin-bottom: 30px; 
+  }

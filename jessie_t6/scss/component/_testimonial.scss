@@ -1,0 +1,26 @@
+
+// <!-- TESTIMONIALS -->
+
+
+.quote{
+  padding: 30px 20px 30px 30px;
+  border-radius: 4px;
+  background-color: #e7e7e7;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 20% 90%, 0 100%);
+  margin-bottom: 10px;
+  p{
+    padding-bottom:40px ;
+  }
+}
+.people{
+  display: flex;
+  gap: 20px;
+  .people_info{
+    a{
+      text-decoration: none;
+      color: #8BC34A;
+      font-weight: 700;
+    }
+  }
+
+}
