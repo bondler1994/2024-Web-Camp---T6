@@ -34,6 +34,7 @@
 }
 
 .swiper-slide {
+  
   height: 225px;
   display: flex;
   background: #eee;
@@ -45,8 +46,40 @@
     height: 100%;
     display: block;
     object-fit: cover;
+  
   }
   &__content {
     height: 300px;
   }
+ 
+  &:hover::after {
+    content: "loremx";
+    background: no-repeat center 65% / 25px url(/images/icon1.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    display: flex;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
 }
+&:hover::before {
+  content: "";
+  width:100%;
+  height:100%;
+  background:rgba(0, 0, 0, .5);
+  position:absolute;
+  top:0px;
+  left:0px;
+  display:inline-block;
+  box-sizing:border-box;
+  text-align:center;
+}
+  }
+

@@ -40,14 +40,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css">
     <!-- my CSS -->
     <link href="css/input.css" rel="stylesheet" />
     <title>business_planet</title>
   </head>
   <body>
-    <div class="container my_container p-0 px-md-4 px-lg-5 px-xl-0">
+    <div class="mt-2 container my_container p-0 px-md-4 px-lg-5 px-xl-0">
       <header>
-        <div class="mt-2 header">
+        <div class=" header">
           <a href="##">
             <h1>
               <img
@@ -66,7 +67,7 @@
               <a href="##"></a>
             </div>
             <div class="header_info_tel">
-              Call Us Now:
+            <span>Call Us Now:</span>
               <a class="tel_info" href="tel:+1 (777) 784-25-43">
                 +1 (777) 784-25-43</a>
             </div>
@@ -265,7 +266,7 @@
 
         <section class="main_content">
           <div class="product pb-4">
-            <div class="row my_row g-4">
+            <div class="row g-4">
               <div class="col-12 col-sm-6 col-xl-3">
                 <div class="card h-100">
                   <div class="card-body">
@@ -397,9 +398,9 @@
                             />
                           </div>
                           <div class="news_list_item_content">
-                            <div class="news_list_item_content_date">
+                            <date class="news_list_item_content_date">
                               12.12.12
-                            </div>
+                            </date>
                             <p>
                               Aliquam ac diam in lorem vulputate auctor. Aliquam
                               rhoncus nunc et justo imperdiet blandit...<a
@@ -420,9 +421,9 @@
                             />
                           </div>
                           <div class="news_list_item_content">
-                            <div class="news_list_item_content_date">
+                            <date class="news_list_item_content_date">
                               12.12.12
-                            </div>
+                            </date>
                             <p>
                               Sed auctor laoreet augue, is pulvinar lacus mattis
                               non. In hac habitassw platea dictumst. Proin et
@@ -456,7 +457,7 @@
             <div class="swiper-wrapper py-5">
               <!-- Slides -->
               <div class="swiper-slide">
-                <img src="/images/g1.jpg" alt="slide_runing" />
+                  <img src="/images/g1.jpg">
               </div>
               <div class="swiper-slide">
                 <img src="/images/g2.jpg" alt="slide_runing" />
@@ -533,7 +534,7 @@
                     rows="5"
                   ></textarea>
                   <div class="buttons">
-                    <button class="buttons_form">clear form</button>
+                    <button type="reset" class="buttons_form">clear form</button>
                     <button class="buttons_send">send!</button>
                   </div>
                 </form>
