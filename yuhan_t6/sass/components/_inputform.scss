@@ -1,8 +1,8 @@
-
 @use "../utilities/breakpoints";
 @use "../utilities/color";
 
-form {
+.message {
+  form {
     input, .blank {
       background-color: color.$theme-tertiary-200;
       border: color.$theme-tertiary-300 0.5px solid;
@@ -16,20 +16,22 @@ form {
         width: 100%;
       }
     }
-  }
-  
-.buttons {
-  display: block;
-  input[type="submit"]:nth-child(1) {
-    background-color: color.$accent;
-    color: color.$font-color-tertiary;
-  }
 
-  input[type="submit"]:nth-child(2) {
-    background-color: color.$theme-primary;
-    color: color.$font-color-tertiary;
-  }
-
+    .buttons {
+      display: block;
+      input[type="submit"]:nth-child(1) {
+        background-color: color.$accent;
+        color: color.$font-color-tertiary;
+      }
+    
+      input[type="submit"]:nth-child(2) {
+        background-color: color.$theme-primary;
+        color: color.$font-color-tertiary;
+      }
+    
+    }
+    
+  } 
 }
 
 // delete x

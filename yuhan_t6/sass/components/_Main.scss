@@ -19,10 +19,17 @@ main {
 
     .information {
         @include mixin.sub-background; 
+        h3 {
+            @include mixin.capitalized;
+        }
     }
 
     .featured {
         @include mixin.sub-background;
+        
+        h3 {
+            @include mixin.capitalized;
+        }
         // 分隔線
         @include breakpoints.sm {
             &::before {
@@ -37,55 +44,3 @@ main {
         }
     }
 }
-
-// sections (common)
-// .information, .featured, .socialmedia {
-//     background: url("../img/subbg.gif");
-// }
-
-// sections
-// .services {
-//     @include breakpoints.sm {
-//       background: url("../img/subbg.gif");
-//       .row {
-//         margin-top: -76px;
-//         position: relative;
-//       }
-//     }
-//   }
-
-%Capitalization {
-    text-transform: uppercase;
-}
-
-.information {
-    h3 {
-        @extend %Capitalization;
-    }
-}
-
-.socialmedia {
-    h4 {
-        @extend  %Capitalization;
-    }
-}
-
-.featured {
-    h3 {
-        @extend %Capitalization;
-    }
-}
-
-// 分隔線
-// @include breakpoints.sm {
-//     .featured::before {
-//         content: "";
-//         top:0;
-//         position: absolute;
-//         display: block;
-//         width: calc(100% - 3rem); 
-//         height: 1.5px;
-//         background-color: color.$theme-tertiary-300; 
-//     }
-//     }
-    

@@ -3,5 +3,9 @@
 footer {
     .socialmedia {
         @include mixin.sub-background;
+
+        h4 {
+            @include mixin.capitalized;
+        }
     }
 }

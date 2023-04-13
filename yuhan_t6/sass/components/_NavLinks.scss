@@ -47,27 +47,20 @@
             position: relative;
         }
     }
-}
 
-// nav dividers
-.copyrights {
-  @include breakpoints.sm {
-    div::before {
-        content: "";
-        position: absolute;
-        height: 12px;
-        width: 1.5px;
-        top: 6px;
-        left:189px;
-        background-color:color.$theme-tertiary-300;
+    // nav dividers
+    @include breakpoints.sm {
+      div::before {
+          content: "";
+          position: absolute;
+          height: 12px;
+          width: 1.5px;
+          top: 6px;
+          left:189px;
+          background-color:color.$theme-tertiary-300;
+      }
     }
-  }
-}
 
-
-
-
-.copyrights {
     nav {
         @include breakpoints.sm {
             li {

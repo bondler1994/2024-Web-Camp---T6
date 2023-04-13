@@ -96,8 +96,14 @@ footer .copyrights {
 main .information {
   background: url("../img/subbg.gif");
 }
+main .information h3 {
+  text-transform: uppercase;
+}
 main .featured {
   background: url("../img/subbg.gif");
+}
+main .featured h3 {
+  text-transform: uppercase;
 }
 @media (min-width: 576px) {
   main .featured::before {
@@ -109,10 +115,6 @@ main .featured {
     height: 1.5px;
     background-color: #CDCDCD;
   }
-}
-
-.featured h3, .socialmedia h4, .information h3 {
-  text-transform: uppercase;
 }
 
 .article-card img {
@@ -129,16 +131,16 @@ main .featured {
   opacity: 0.6;
 }
 
-.gridalbum {
+.grid-album {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 0.5rem;
 }
-.gridalbum img {
+.grid-album img {
   width: 100%;
 }
-.gridalbum img:hover {
+.grid-album img:hover {
   opacity: 0.4;
 }
 
@@ -202,26 +204,25 @@ main .featured {
   margin-top: auto;
 }
 
-form input, form .blank {
+.message form input, .message form .blank {
   background-color: #E7E7E7;
   border: #CDCDCD 0.5px solid;
 }
-form input ::placeholder, form .blank ::placeholder {
+.message form input ::placeholder, .message form .blank ::placeholder {
   color: #646464;
 }
-form div:nth-child(1) input, form div:nth-child(1) .blank {
+.message form div:nth-child(1) input, .message form div:nth-child(1) .blank {
   border-radius: 4px;
   width: 100%;
 }
-
-.buttons {
+.message form .buttons {
   display: block;
 }
-.buttons input[type=submit]:nth-child(1) {
+.message form .buttons input[type=submit]:nth-child(1) {
   background-color: #1C1C1C;
   color: #FFFFFF;
 }
-.buttons input[type=submit]:nth-child(2) {
+.message form .buttons input[type=submit]:nth-child(2) {
   background-color: #80b600;
   color: #FFFFFF;
 }
@@ -317,7 +318,6 @@ input[type=search]::-webkit-search-cancel-button {
     position: relative;
   }
 }
-
 @media (min-width: 576px) {
   .copyrights div::before {
     content: "";
@@ -329,7 +329,6 @@ input[type=search]::-webkit-search-cancel-button {
     background-color: #CDCDCD;
   }
 }
-
 @media (min-width: 576px) {
   .copyrights nav li {
     position: relative;
@@ -376,6 +375,9 @@ input[type=search]::-webkit-search-cancel-button {
 
 footer .socialmedia {
   background: url("../img/subbg.gif");
+}
+footer .socialmedia h4 {
+  text-transform: uppercase;
 }
 
 h1 {
