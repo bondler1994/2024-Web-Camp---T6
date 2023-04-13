@@ -52,7 +52,6 @@ h1 {
 
 .businessplanet {
     flex-direction: column;
-    // padding: 0.5rem
     background-color: color.$theme-secondary;
     @include breakpoints.sm {
         background-color: transparent;
@@ -70,6 +69,7 @@ h1 {
     
     .btn-close {
         background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2380B600'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>");
+        background-repeat: no-repeat;
     }
 
     .navbar-container {
@@ -136,6 +136,9 @@ h1 {
         }
         & :hover {
             color:color.$theme-primary;
+            @include breakpoints.sm {
+                color:initial;
+            }
         }
     
     // blank nav-item 
@@ -299,7 +302,9 @@ h1 {
 
     // shadow
     .navbar-nav {
-        box-shadow: 0px 0px 5px -1px;
+        @include breakpoints.sm {
+            box-shadow: 0px 0px 5px -1px;
+        }
     }
 
     form {
