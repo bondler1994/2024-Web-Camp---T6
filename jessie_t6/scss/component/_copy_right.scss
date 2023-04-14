@@ -4,7 +4,7 @@
   flex-direction: column-reverse; 
   background-color: #000;
   padding: 10px 0;
-  @media (min-width:576px) {
+  @media (min-width:992px) {
     justify-content: space-between;
     flex-direction: row;
   };

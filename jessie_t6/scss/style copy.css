@@ -200,7 +200,6 @@ header h1 img {
   background-color: #e8e8e8;
   border: none;
   width: 90%;
-  outline: 0;
 }
 .big_form button {
   background: url(../images/search.png) no-repeat 0 5px;
@@ -527,7 +526,7 @@ textarea {
   background-color: #000;
   padding: 10px 0;
 }
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   .footer_nav {
     justify-content: space-between;
     flex-direction: row;
@@ -560,7 +559,6 @@ textarea {
   .footer_navbar {
     display: flex;
     flex-direction: row;
-    justify-content: center;
   }
 }
 .footer_navbar > li {
@@ -571,4 +569,4 @@ textarea {
 }
 .footer_navbar > li a:hover {
   color: #7fb400;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style copy.css.map */
