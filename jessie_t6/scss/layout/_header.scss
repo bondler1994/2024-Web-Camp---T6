@@ -1,9 +1,12 @@
-@use"../base" as*;
+@use"../base" as *;
 
 @use "../component/iconlist_social_media";
 // social_media
 @use "../component/logo";
 // logo
+@use "../component/search";
+
+@use "../component/navbar_header";
 
 
 // --- header ---
