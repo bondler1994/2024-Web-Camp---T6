@@ -1,8 +1,9 @@
+@use"../base" as*;
 
 
 .navbar_search{
   margin-top: 20px;
-  @media(min-width:768px){
+  @include breakpoint($md){
     display: flex;
   justify-content: space-between;
   }
@@ -10,7 +11,7 @@
 }
 
 .nav_box{
-  @media(min-width:768px){
+  @include breakpoint($md){
     flex-grow: 1;
     margin-right: 10px;
   }
@@ -30,13 +31,13 @@
   .navbar-collapse{
     .nav-item,.dropdown-item{
       padding: 8px 10px;
-      outline: 1px solid #e8e8e8;
+      outline: 1px solid $gray-1;
       &:hover{
-        background-color: #7fb503;
+        background-color: $green;
       }
       a{
         &:hover{
-          color:#fff;
+          color:$white;
         }
       }
     }

@@ -1,3 +1,6 @@
+
+@use"../base" as*;
+
 // <!-- GET IN TOUCH! -->
 .input_box input{
   margin-bottom: 10px;
@@ -6,20 +9,20 @@ textarea{
   margin-bottom: 20px;
 }
 .button_reset{
-  background-color: #000;
-  color: #fff;
+  background-color: $black;
+  color: $white;
   padding: 10px;
   border: none;
   &:hover{
-    color:#eb5611;
+    color:$green;
   }
 }
 .button_send{
-  background-color: #7fb400;
-  color: #fff;
+  background-color: $green;
+  color: $white;
   padding: 10px;
   border: none;
   &:hover{
-    color:#eb5611;
+    color:$gray-3;
   }
 }

@@ -1,10 +1,10 @@
-
+@use"../base" as*;
 
 // <!-- 公司介紹 -->
 // welcome
 
 .introduce{
-  border-bottom: 1px solid #cfcfcf;
+  border-bottom: 1px solid $gray-3;
 }
 .introduce_welcome{
  width: 100%;

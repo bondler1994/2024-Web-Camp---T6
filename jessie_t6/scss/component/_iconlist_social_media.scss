@@ -1,4 +1,28 @@
-  // social_media icon
+@use"../base" as*;
+
+
+// social_media icon
+
+  .header_contact{
+    display: none;
+  
+    @include breakpoint($md) {
+     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    }
+    p{
+      font-size: 14px;
+      a{
+        text-decoration: none;
+        color: $black;
+        &:hover{
+          color: $green;
+        }
+      }
+    } 
+    }
+
   .contact_social_media{
     a{
     display: inline-block;
@@ -6,33 +30,36 @@
 	  height: 27px;
   }
     a:nth-child(1){
-    background: url(../images/social.png) no-repeat 0 0;
+    background:$media_icon no-repeat 0 0;
       &:hover{
-      background: url(../images/social.png) no-repeat 0 -27px;
+      background:$media_icon no-repeat 0 -27px;
     }
   }
     a:nth-child(2){
-    background: url(../images/social.png) no-repeat -37px 0;
+    background:$media_icon no-repeat -37px 0;
     &:hover{
-      background: url(../images/social.png) no-repeat -37px -27px;
+      background:$media_icon no-repeat -37px -27px;
     }
   }
     a:nth-child(3){
-    background: url(../images/social.png) no-repeat -74px 0;
+    background:$media_icon no-repeat -74px 0;
     &:hover{   
-      background: url(../images/social.png) no-repeat -74px -27px;
+      background: $media_icon no-repeat -74px -27px;
     }
   }
     a:nth-child(4){
-    background: url(../images/social.png) no-repeat -111px 0;
+    background: $media_icon no-repeat -111px 0;
     &:hover{
-      background: url(../images/social.png) no-repeat -111px -27px;
+      background: $media_icon no-repeat -111px -27px;
     }
   }
     a:nth-child(5){
-    background: url(../images/social.png) no-repeat -150px 0;
+    background: $media_icon no-repeat -150px 0;
     &:hover{
-      background: url(../images/social.png) no-repeat -150px -27px;
+      background: $media_icon no-repeat -150px -27px;
     }
   }
 }
+
+
+// url(../images/social.png)

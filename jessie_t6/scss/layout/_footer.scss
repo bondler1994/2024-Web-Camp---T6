@@ -1,3 +1,4 @@
+@use"../base" as*;
 
 
 @use "../component/testimonial";
@@ -6,7 +7,6 @@
 // 表單
 @use "../component/gallery_flickr";
 // 圖片集
-
 @use "../component/navbar_footer";
 @use "../component/copy_right";
 
@@ -16,10 +16,10 @@ footer{
 }
 
 .footer_box{
-  background: url(../images/subbg.gif);
+  background: $bg_paper;
   display: flex;
   flex-direction: column;
-  @media (min-width:768px) {
+  @include breakpoint($md) {
     display: flex;
     flex-direction: row;
   }

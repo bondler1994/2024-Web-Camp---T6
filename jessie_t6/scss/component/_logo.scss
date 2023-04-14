@@ -1,0 +1,10 @@
+@use"../base" as*;
+
+
+.header_logo{
+  width: 300px;
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
+}

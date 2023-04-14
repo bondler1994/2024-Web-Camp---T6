@@ -1,3 +1,5 @@
+@use"../base" as*;
+
 //  <!-- 輪播圖 -->
 .carousel{
   .carousel-control-prev,
@@ -7,9 +9,9 @@
     margin: auto;;
     display: flex;
     align-items: center;
-    background-color: #343333;
+    background-color: $gray-5;
     &:hover{
-      background-color:#7fb503;
+      background-color:$green;
     }
    }
 }

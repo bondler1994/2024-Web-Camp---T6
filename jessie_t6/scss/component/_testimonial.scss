@@ -1,3 +1,4 @@
+@use"../base" as*;
 
 // <!-- TESTIMONIALS -->
 
@@ -5,7 +6,7 @@
 .quote{
   padding: 30px 20px 30px 30px;
   border-radius: 4px;
-  background-color: #e7e7e7;
+  background-color: $gray-3;
   clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 20% 90%, 0 100%);
   margin-bottom: 10px;
   p{
@@ -18,7 +19,7 @@
   .people_info{
     a{
       text-decoration: none;
-      color: #8BC34A;
+      color: $green;
       font-weight: 700;
     }
   }

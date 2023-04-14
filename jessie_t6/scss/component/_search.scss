@@ -1,11 +1,13 @@
 
+@use"../base" as*;
+
 // 做個搜尋框
 .search_box{
-  outline: 1px solid #cbc2c2;
+  outline: 1px solid $gray-2;
   display: flex;
   width: 300px;
   height: 35px;
-  background-color: #e8e8e8;
+  background-color: $gray-1;
   padding: 5px 10px;
 }
 
@@ -13,21 +15,21 @@
   display: flex;
   padding: 10px;
   .search_box{
-  outline: 1px solid #cbc2c2;
+  outline: 1px solid $gray-2;
   display: flex;
   width: 150px;
   height: 38px;
-  background-color: #e8e8e8;
+  background-color: $gray-1;
   padding: 5px 10px;
   }
   input{
-  background-color: #e8e8e8;
+  background-color: $gray-1;
   border: none;
   width: 80%;
   }
   button{
   background: url(../images/search.png) no-repeat 0 5px;
-  background-color: #e8e8e8;
+  background-color: $gray-1;
   border: none;
   width: 20%;
   }
@@ -41,25 +43,25 @@
   @media(min-width:992px) {
     display: flex;
     padding: 10px 20px;
-    background-color: #fff;
+    background-color: $white;
   }
   .search_box{
-    outline: 1px solid #cbc2c2;
+    outline: 1px solid $gray-2;
     display: flex;
     width: 200px;
     height: 35px;
-    background-color: #e8e8e8;
+    background-color: $gray-1;
     padding: 5px 10px;
   }
   input{
-    background-color:#e8e8e8;
+    background-color:$gray-1;
     border: none;
     width: 90%;
     outline: 0;
   }
     button{
     background: url(../images/search.png) no-repeat 0 5px;
-    background-color: #e8e8e8;
+    background-color: $gray-1;
   
     border: none;
     width: 10%;

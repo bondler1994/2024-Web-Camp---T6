@@ -1,10 +1,12 @@
+@use"../base" as*;
+
 // <!-- copyright footer_nav -->
 .footer_nav{
   display: flex;
   flex-direction: column-reverse; 
-  background-color: #000;
+  background-color: $black;
   padding: 10px 0;
-  @media (min-width:992px) {
+  @include breakpoint($md) {
     justify-content: space-between;
     flex-direction: row;
   };
@@ -15,13 +17,13 @@
   justify-content: space-around;
   align-items: center;
   p{
-    color: #cbc2c2;
+    color: $gray-3;
     text-align: center;
     a{
-      color: #7fb503;
+      color: $green;
       text-decoration: none;
       &:hover{
-        color:#fff;
+        color:$white;
       }
     }
   }

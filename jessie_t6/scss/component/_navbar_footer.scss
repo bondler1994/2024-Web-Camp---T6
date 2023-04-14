@@ -1,12 +1,13 @@
-// <!-- footer_nav清單 -->
+@use"../base" as*;
 
+// <!-- footer_nav清單 -->
 
 .footer_navbar{
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  @media (min-width:576px) {
+  @include breakpoint($sm){
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -15,10 +16,10 @@
 >li{
   margin: 0 10px;
   a{
-    color:#cbc2c2;
+    color:$gray-3;
     // margin: 0 10px;
     &:hover{
-      color: #7fb400;
+      color: $green;
     }
   }
 

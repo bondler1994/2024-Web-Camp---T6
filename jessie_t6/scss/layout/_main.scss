@@ -1,3 +1,5 @@
+@use"../base" as*;
+ 
 
 @use "../component/carousel_bootstrap"; 
 // 輪播圖
@@ -12,18 +14,20 @@
 @use "../component/carousel_swiper";
 // <!-- 未來工作圖片輪播 -->
 
+
+
 // ----main----
 main{
-  background:url(../images/subbg.gif);
+  background:$bg_paper;
 }
 
 //more
 .text_more{
   text-decoration: none;
-  color: #000;
+  color: $black;
   font-weight: 700;
   &:hover{
-    color:#eb5611;
+    color:$green;
   }
 }
 
