@@ -40,7 +40,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css"
+    />
     <!-- my CSS -->
     <link href="css/input.css" rel="stylesheet" />
     <title>business_planet</title>
@@ -48,7 +51,7 @@
   <body>
     <div class="mt-2 container my_container p-0 px-md-4 px-lg-5 px-xl-0">
       <header>
-        <div class=" header">
+        <div class="header">
           <a href="##">
             <h1>
               <img
@@ -67,9 +70,10 @@
               <a href="##"></a>
             </div>
             <div class="header_info_tel">
-            <span>Call Us Now:</span>
+              <span>Call Us Now:</span>
               <a class="tel_info" href="tel:+1 (777) 784-25-43">
-                +1 (777) 784-25-43</a>
+                +1 (777) 784-25-43</a
+              >
             </div>
           </div>
         </div>
@@ -200,11 +204,7 @@
               placeholder="Search the Site..."
               value=""
             />
-            <button
-              class="search_Submit"
-              type="submit"
-              name="search_Submit"
-            >
+            <button class="search_Submit" type="submit" name="search_Submit">
               <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
                 <path
                   fill="#666666"
@@ -217,7 +217,8 @@
       </nav>
 
       <main class="main p-0">
-        <div id="carouselExampleControls"
+        <div
+          id="carouselExampleControls"
           class="carousel slide"
           data-bs-ride="carousel"
         >
@@ -405,7 +406,8 @@
                               Aliquam ac diam in lorem vulputate auctor. Aliquam
                               rhoncus nunc et justo imperdiet blandit...<a
                                 href="##"
-                                >More</a>
+                                >More</a
+                              >
                             </p>
                             <a href="##" class="more_button">More</a>
                           </div>
@@ -440,7 +442,7 @@
             </div>
           </section>
 
-          <hr/>
+          <hr />
 
           <div class="pt-5 swiper-container">
             <div class="feature_title">
@@ -457,16 +459,84 @@
             <div class="swiper-wrapper py-5">
               <!-- Slides -->
               <div class="swiper-slide">
-                  <img src="/images/g1.jpg">
+                <!-- portfolio item -->
+                <div
+                  class="portfolio-item portfolio-effect__item portfolio-item--eff1"
+                >
+                  <img
+                    class="portfolio-item__image"
+                    src="./images/g1.jpg"
+                    alt="Portfolio Item"
+                  />
+
+                  <div class="portfolio-item__info">
+                    <span class="portfolio-item__header">Ipsum Doler</span>
+
+                    <div class="portfolio-item__links">
+                      <div class="portfolio-item__link-block">
+                        <a
+                          class="portfolio-item__link"
+                          href="##"
+                          title="Link Title"
+                        >
+                        <i class="fa-solid fa-magnifying-glass""></i>
+                        </a>
+                      </div>
+
+                      <div class="portfolio-item__link-block">
+                        <a
+                          class="portfolio-item__link"
+                          href="##"
+                          title="Link Title"
+                        >
+                        <i class="fa-solid fa-link"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="swiper-slide">
-                <img src="/images/g2.jpg" alt="slide_runing" />
+                <figure class="hover-img">
+                  <img src="./images/g2.jpg" />
+                  <figcaption>
+                    <span>Lorem Ipsum</span>
+                    <a href="##" class="hover-img-button"
+                      ><img
+                        src="./images/icon1.png"
+                        alt="hover-img-button"
+                        class="d-block mw-100"
+                    /></a>
+                  </figcaption>
+                </figure>
               </div>
               <div class="swiper-slide">
-                <img src="/images/g3.jpg" alt="slide_runing" />
+                <figure class="hover-img">
+                  <img src="./images/g3.jpg" />
+                  <figcaption>
+                    <span>Lorem Ipsum</span>
+                    <a href="##" class="hover-img-button"
+                      ><img
+                        src="./images/icon1.png"
+                        alt="hover-img-button"
+                        class="d-block mw-100"
+                    /></a>
+                  </figcaption>
+                </figure>
               </div>
               <div class="swiper-slide">
-                <img src="/images/g4.jpg" alt="slide_runing" />
+                <figure class="hover-img">
+                  <img src="./images/g4.jpg" />
+                  <figcaption>
+                    <span>Lorem Ipsum</span>
+                    <a href="##" class="hover-img-button"
+                      ><img
+                        src="./images/icon1.png"
+                        alt="hover-img-button"
+                        class="d-block mw-100"
+                    /></a>
+                  </figcaption>
+                </figure>
               </div>
             </div>
             <!-- If we need navigation buttons -->
@@ -534,7 +604,9 @@
                     rows="5"
                   ></textarea>
                   <div class="buttons">
-                    <button type="reset" class="buttons_form">clear form</button>
+                    <button type="reset" class="buttons_form">
+                      clear form
+                    </button>
                     <button class="buttons_send">send!</button>
                   </div>
                 </form>
@@ -658,7 +730,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script>
-
     var mySwiper = new Swiper(".swiper-container", {
       slidesPerView: 4,
       loop: true,
