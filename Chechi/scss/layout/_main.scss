@@ -8,15 +8,16 @@
   background-image: url("/images/subbg.gif");
   box-shadow: 0 0 5px $color-dark-gray;
   &_content {
-    margin-top: -50px;
     padding: 0 38px;
 
-    @include breakpoint($xl) {
-      margin-top: 0;
+    .product {
+      margin-top: -25px;
+      @include breakpoint($xl) {
+        margin-top: 0;
+      }
     }
   }
 }
-
 
 .welcome {
   display: flex;
