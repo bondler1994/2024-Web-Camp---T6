@@ -598,6 +598,13 @@ header {
   height: 45px;
   flex-shrink: 0;
 }
+.reason_symbol:hover {
+  background-color: #80B600;
+}
+.reason_symbol:hover i {
+  transition: translate 0.5s ease-out;
+  translate: 5px;
+}
 .reason_symbol i {
   color: white;
   position: absolute;
