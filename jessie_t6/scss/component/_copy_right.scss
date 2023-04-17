@@ -1,7 +1,7 @@
 @use"../base" as *;
 
 // <!-- copyright footer_nav -->
-.footer_nav{
+.copy_right{
   display: flex;
   flex-direction: column-reverse; 
   background-color: $black;
@@ -12,7 +12,7 @@
   };
 }
 
-.copyright{
+.copy_right_box{
   display: flex;
   justify-content: space-around;
   align-items: center;

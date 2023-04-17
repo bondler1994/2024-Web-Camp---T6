@@ -34,11 +34,12 @@
     <div class="container-lg">
       <!-- header -->
       <header>
-        <h1 class="header_logo">
+        <h1 class="logo">
           <a href="##"><img src="./images/logo.png" alt="business planet" /></a>
         </h1>
+        <!-- social_media icon -->
         <div class="header_contact">
-          <div class="contact_social_media">
+          <div class="iconlist_social_media">
             <a href="##"></a>
             <a href="##"></a>
             <a href="##"></a>
@@ -53,11 +54,11 @@
       <!-- 導覽列與搜尋 -->
       <div class="navbar_search">
         <!-- 導覽列 -->
-        <div class="nav_box">
+        <div class="navbar_header">
           <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <div class="nav_box_list">
+            <div class="navbar_header_list">
               <!-- 小搜尋框 -->
-              <form class="little_form">
+              <form>
                 <div class="search_box">
                   <input type="search" name="text" placeholder="search" />
                   <button type="submit" name="submit"></button>
@@ -150,7 +151,7 @@
           </nav>
         </div>
         <!-- 大搜尋框 -->
-        <form class="big_form">
+        <form class="search">
           <div class="search_box">
             <input
               type="search"
@@ -224,12 +225,12 @@
           </div>
         </section>
         <!-- 服務項目 四個卡片-->
-        <section class="service m-4">
+        <section class="card_service m-4">
           <div class="row">
             <div class="col-12 col-sm-6 col-lg-3">
-              <div class="card_item">
+              <div class="card_service_item">
                 <h2>GROWTH STRATEGY</h2>
-                <div class="card_item_img">
+                <div class="card_service_item_img">
                   <img src="./images/growth strategies.png" alt="" />
                 </div>
                 <p>
@@ -241,9 +242,9 @@
               </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3">
-              <div class="card_item">
+              <div class="card_service_item">
                 <h2>PERFECT SUPPORT</h2>
-                <div class="card_item_img">
+                <div class="card_service_item_img">
                   <img
                     src="./images/perfect support.png"
                     alt="perfect support"
@@ -259,9 +260,9 @@
             </div>
 
             <div class="col-12 col-sm-6 col-lg-3">
-              <div class="card_item">
+              <div class="card_service_item">
                 <h2>PARTNERS PROGRAMS</h2>
-                <div class="card_item_img">
+                <div class="card_service_item_img">
                   <img
                     src="./images/partners program.png"
                     alt="partners program"
@@ -275,9 +276,9 @@
               </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3">
-              <div class="card_item">
+              <div class="card_service_item">
                 <h2>PREMIUM SERVICES</h2>
-                <div class="card_item_img">
+                <div class="card_service_item_img">
                   <img
                     src="./images/premium service.png"
                     alt="premium service"
@@ -293,14 +294,12 @@
           </div>
         </section>
         <!-- 公司介紹 -->
-        <section class="introduce row m-4">
+        <section class="company row m-4">
           <!-- welcome -->
           <div class="col-12 col-lg-4 p-4">
             <h3>welcome</h3>
-            <div class="introduce_welcome">
-              <div class="introduce_welcome_img">
-                <img src="./images/welcome.jpg" alt="welcome" />
-              </div>
+            <div class="card_introduce">
+              <img src="./images/welcome.jpg" alt="welcome" />
               <p>
                 Curabitur velit nisl, porttitor viverra molestie quis, lacinia
                 eget purus. Suspendisse ipsum massa, rutrum in hendrerit
@@ -313,45 +312,44 @@
           <!-- why choose us? -->
           <div class="col-12 col-lg-4 p-4">
             <h3>WHY CHOOSE US?</h3>
-            <div>
-              <div class="reason">
-                <div class="reason_icon">
-                  <i class="fa-solid fa-angle-right"></i>
-                </div>
-                <p>Etiam rutrum venenatis dui, non</p>
+
+            <div class="accordion_reason">
+              <div class="reason_icon">
+                <i class="fa-solid fa-angle-right"></i>
               </div>
-              <div class="reason">
-                <div class="reason_icon">
-                  <i class="fa-solid fa-angle-right"></i>
-                </div>
-                <p>Aliquam ac diam in lorem vulputate auctor.</p>
+              <p>Etiam rutrum venenatis dui, non</p>
+            </div>
+            <div class="accordion_reason">
+              <div class="reason_icon">
+                <i class="fa-solid fa-angle-right"></i>
               </div>
-              <div class="reason">
-                <div class="reason_icon">
-                  <i class="fa-solid fa-angle-right"></i>
-                </div>
-                <p>Vestibulum vitae urma quis eros convallis</p>
+              <p>Aliquam ac diam in lorem vulputate auctor.</p>
+            </div>
+            <div class="accordion_reason">
+              <div class="reason_icon">
+                <i class="fa-solid fa-angle-right"></i>
               </div>
-              <div class="reason">
-                <div class="reason_icon">
-                  <i class="fa-solid fa-angle-right"></i>
-                </div>
-                <p>Sed magna magna, congue</p>
+              <p>Vestibulum vitae urma quis eros convallis</p>
+            </div>
+            <div class="accordion_reason">
+              <div class="reason_icon">
+                <i class="fa-solid fa-angle-right"></i>
               </div>
+              <p>Sed magna magna, congue</p>
             </div>
           </div>
           <!-- news&event -->
-          <div class="col-12 col-lg-4 p-4 news_event">
+          <div class="col-12 col-lg-4 p-4 card_news">
             <h3>news & events</h3>
-            <div class="event_box">
-              <div class="event_box_img">
+            <div class="card_news_box">
+              <div class="card_news_box_img">
                 <img
                   src="./images/news1.jpg"
                   alt="news1
                   "
                 />
               </div>
-              <div class="event_box_text">
+              <div class="card_news_box_text">
                 <div class="date">12.12.12</div>
                 <p class="text">
                   Aliquam ac diam in lorem vulputate auctor. Aliquam rhoncus
@@ -364,15 +362,15 @@
               </div>
               <div></div>
             </div>
-            <div class="event_box">
-              <div class="event_box_img">
+            <div class="card_news_box">
+              <div class="card_news_box_img">
                 <img
                   src="./images/news2.jpg"
                   alt="news1
                 "
                 />
               </div>
-              <div class="event_box_text">
+              <div class="card_news_box_text">
                 <div class="date">12.12.12</div>
                 <p class="text">
                   Sed auctor laoreet augue, id pulvinar lacus mattis non. In hac
@@ -387,9 +385,9 @@
           </div>
         </section>
         <!-- 未來工作圖片輪播 -->
-        <section class="featured_works m-4">
+        <section class="carousel_swiper m-4">
           <!-- Swiper -->
-          <div class="featured_works_box">
+          <div class="carousel_swiper_box">
             <h3>FEATURED WORKS</h3>
             <div>
               <button class="swiper_button_prev">
@@ -456,14 +454,14 @@
           <!-- TESTIMONIALS -->
           <div class="col-12 col-md-6 col-lg-3 p-4">
             <h3>TESTIMONIALS</h3>
-            <div class="quote">
+            <div class="testimonial_text">
               <p>
                 "Sed dapibus molestie interdum. Fusce nec est ante, sit amet
                 lacinia lorem. Maecenas nec eros ut mauris pulvinar suscipit.
                 Aliquam erat
               </p>
             </div>
-            <div class="people">
+            <div class="testimonial_person">
               <div><img src="./images/Stephen.jpg" alt="Stephen" /></div>
               <div class="people_info">
                 <p>Stephen Bingham</p>
@@ -474,7 +472,7 @@
           <!-- GET IN TOUCH! -->
           <div class="col-12 col-md-6 col-lg-3 p-4">
             <h3>GET IN TOUCH!</h3>
-            <form class="input_box">
+            <form class="get_it_touch">
               <input
                 type="text"
                 class="form-control"
@@ -491,7 +489,7 @@
               />
               <textarea
                 rows="5"
-                class="form-control w-100"
+                class="form-control"
                 placeholder="Message"
                 required="required"
               ></textarea>
@@ -504,56 +502,56 @@
           <!-- FLICKR -->
           <div class="col-12 col-md-6 col-lg-3 p-4">
             <h3>FLICKR</h3>
-            <div class="flickr_box">
-              <div class="flickr_img">
+            <div class="gallery_flickr">
+              <div class="flickr_box">
                 <a href="##"><img src="../images/f1.jpg" alt="" /></a>
               </div>
-              <div class="flickr_img">
+              <div class="flickr_box">
                 <a href="##"><img src="../images/f2.jpg" alt="" /></a>
               </div>
-              <div class="flickr_img">
+              <div class="flickr_box">
                 <a href="##"><img src="../images/f3.jpg" alt="" /></a>
               </div>
-              <div class="flickr_img">
+              <div class="flickr_box">
                 <a href="##"><img src="../images/f4.jpg" alt="" /></a>
               </div>
-              <div class="flickr_img">
+              <div class="flickr_box">
                 <a href="##"><img src="../images/f5.jpg" alt="" /></a>
               </div>
-              <div class="flickr_img">
+              <div class="flickr_box">
                 <a href="##"><img src="../images/f6.jpg" alt="" /></a>
               </div>
-              <div class="flickr_img">
+              <div class="flickr_box">
                 <a href="##"><img src="../images/f7.jpg" alt="" /></a>
               </div>
-              <div class="flickr_img">
+              <div class="flickr_box">
                 <a href="##"><img src="../images/f8.jpg" alt="" /></a>
               </div>
-              <div class="flickr_img">
+              <div class="flickr_box">
                 <a href="##"><img src="../images/f9.jpg" alt="" /></a>
               </div>
-              <div class="flickr_img">
+              <div class="flickr_box">
                 <a href="##"><img src="../images/f10.jpg" alt="" /></a>
               </div>
-              <div class="flickr_img">
+              <div class="flickr_box">
                 <a href="##"><img src="../images/f11.jpg" alt="" /></a>
               </div>
-              <div class="flickr_img">
+              <div class="flickr_box">
                 <a href="##"><img src="../images/f12.jpg" alt="" /></a>
               </div>
             </div>
           </div>
         </section>
         <!-- copyright footer_nav -->
-        <div class="footer_nav">
-          <div class="copyright">
+        <div class="copy_right">
+          <div class="copy_right_box">
             <p class="">
               BUSINESS PLANET ＆copy 2020 |
               <a class="" href="##">Privacy Policy</a>
             </p>
           </div>
           <!-- footer_nav的清單 -->
-          <ul class="footer_navbar navbar-nav">
+          <ul class="navbar_footer navbar-nav">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">HOME</a>
             </li>

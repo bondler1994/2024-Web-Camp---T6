@@ -1,6 +1,9 @@
 @use"../base" as *;
 
 
+// 使用bootstrap元件navbar+部分修改與增加搜尋框
+
+//navbar_header+ search
 .navbar_search{
   margin-top: 20px;
   @include breakpoint($md){
@@ -10,20 +13,48 @@
   
 }
 
-.nav_box{
+.navbar_header{
   @include breakpoint($md){
     flex-grow: 1;
     margin-right: 10px;
   }
  
 }
-
-.nav_box_list{
+.navbar_header_list{
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 200%;
+
+  // <!-- 小搜尋框  收起來的時候-->
+form{
+  display: flex;
+  padding: 10px;
+  .search_box{
+  outline: 1px solid $gray-2;
+  display: flex;
+  width: 150px;
+  height: 38px;
+  background-color: $gray-1;
+  padding: 5px 10px;
+  }
+  input{
+  background-color: $gray-1;
+  border: none;
+  width: 80%;
+  }
+  button{
+  background: url(../images/search.png) no-repeat 0 5px;
+  background-color: $gray-1;
+  border: none;
+  width: 20%;
+  }
+  @media(min-width:768px){
+    display: none;
+  }
+}
+
 }
 
 .navbar{

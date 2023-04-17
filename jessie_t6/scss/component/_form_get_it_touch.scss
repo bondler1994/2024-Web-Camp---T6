@@ -2,12 +2,16 @@
 @use"../base" as *;
 
 // <!-- GET IN TOUCH! -->
-.input_box input{
-  margin-bottom: 10px;
+.get_it_touch {
+  input{
+    margin-bottom: 10px;
+  }
+  textarea{
+    margin-bottom: 20px;
+    resize: none;
+  }
 }
-textarea{
-  margin-bottom: 20px;
-}
+
 .button_reset{
   background-color: $black;
   color: $white;

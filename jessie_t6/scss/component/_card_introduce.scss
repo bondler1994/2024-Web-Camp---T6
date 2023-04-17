@@ -3,19 +3,13 @@
 // <!-- 公司介紹 -->
 // welcome
 
-.introduce{
-  border-bottom: 1px solid $gray-3;
-}
-.introduce_welcome{
+.card_introduce{
  width: 100%;
  p{
  margin-top: 30px;
  }
- .introduce_welcome_img{
-  width: 100%;
-  img{
+img{
     width: 100%;
   object-fit: cover;
   }
  }
-}

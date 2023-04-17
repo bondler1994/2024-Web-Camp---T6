@@ -1,10 +1,10 @@
 @use"../base" as *;
 
 // <!-- 未來工作圖片輪播 -->
-.featured_works{
+.carousel_swiper{
   padding-bottom: 50px;
 
-  .featured_works_box{
+  .carousel_swiper_box{
   display: flex; 
   justify-content: space-between;
 }

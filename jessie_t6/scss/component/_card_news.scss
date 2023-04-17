@@ -1,22 +1,22 @@
 @use"../base" as *;
 
 // news&event
-.news_event{
+.card_news{
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.event_box{
+.card_news_box{
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
   @include breakpoint($sm) {
     display: flex;
     flex-wrap: nowrap;
   }
   
 }
-.event_box_img{
+.card_news_box_img{
   width: 100%;
   @include breakpoint($sm) {
     width: 40%;
@@ -28,8 +28,8 @@
   object-fit: cover;
   }
 }
-.event_box_text{
-  margin-left: 20px;
+.card_news_box_text{
+  
   flex-basis: 0;
   flex-grow: 1;
 }

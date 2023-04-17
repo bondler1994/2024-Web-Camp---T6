@@ -1,7 +1,7 @@
 @use"../base" as *;
 
 //  <!-- 服務項目 四個卡片-->
-.service{
+.card_service{
   position: relative;
   top: 0px;
   @include breakpoint($sm){
@@ -19,7 +19,7 @@ display: -webkit-box;
 -webkit-line-clamp: 4; 
   }
 }
-.card_item{
+.card_service_item{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,10 +28,10 @@ display: -webkit-box;
   outline: 1px solid $gray-3;
   // height: 100%;
   &:hover{
-    background-color: rgba($color: $gray-4, $alpha: 0.8);
+    background-color: rgba($color: $gray-5, $alpha: 0.8);
     color:$white;
   }
-  .card_item_img{
+  .card_service_item_img{
     // margin-top: 20px;
     width: 70px;
     height: 70px;
@@ -47,7 +47,7 @@ display: -webkit-box;
   h2,
   p{
     text-align: center;
-    margin-top: 20px;
+    // margin-top: 20px;
   }
   a{
     text-decoration: none;

@@ -1,7 +1,7 @@
 @use "../base/" as * ;
 
 // why choose us?
-.reason{
+.accordion_reason{
   display: flex;
   border-bottom: 1px solid $gray-3;
   gap:10px;

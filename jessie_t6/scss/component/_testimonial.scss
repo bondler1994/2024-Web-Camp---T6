@@ -3,7 +3,7 @@
 // <!-- TESTIMONIALS -->
 
 
-.quote{
+.testimonial_text{
   padding: 30px 20px 30px 30px;
   border-radius: 4px;
   background-color: $gray-3;
@@ -13,7 +13,7 @@
     padding-bottom:40px ;
   }
 }
-.people{
+.testimonial_person{
   display: flex;
   gap: 20px;
   .people_info{
