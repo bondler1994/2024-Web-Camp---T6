@@ -1,0 +1,37 @@
+@use "../utilities/breakpoints";
+@use "../utilities/color";
+
+.news-card {
+    display: flex;
+    gap:1rem;
+
+    .date {
+        background: color.$theme-primary;
+        color:color.$theme-secondary;
+        padding: 0.25rem;
+    }
+
+    p {
+        color: color.$theme-tertiary-400;
+        a {
+            color:#000000;
+            font-weight: 500;
+            &:hover {
+                opacity: .6;
+            }
+        }
+    }
+
+ 
+    .picture {
+        flex:1 1 0;
+        img {
+            width: 100%;
+        }
+    }
+
+    .text {
+        flex:2 0 0;
+    }
+
+}

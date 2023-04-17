@@ -1,0 +1,21 @@
+@use "../utilities/breakpoints";
+@use "../utilities/color";
+
+
+.article-card {
+    img {
+        width: 100%;
+    }
+
+    span {
+        display: inline-block;
+
+        a {
+            color:#000000;
+            font-weight: 500;
+        &:hover {
+            opacity: .6;
+        }
+        }
+    }
+}

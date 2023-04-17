@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yuhan_t6</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- css-->
+    <link rel="stylesheet" href="/style/style.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="business-planet navbar navbar-expand-sm">
+            <div class="navbar-container">
+                <a href="##">
+                    <h1><img src="/img/logo.png" alt="Business Planet's logo"></h1>
+                </a>
+                <div class="phone-number">
+                    <div class="icons">
+                        <ul>
+                            <li><a class="facebook" href="##"></a></li>
+                            <li><a class="twitter" href="##"></a></li>
+                            <li><a class="circle" href="##"></a></li>
+                            <li><a class="web" href="##"></a></li>
+                            <li><a class="feed" href="##"></a></li>
+                        </ul>
+                    </div>
+                    <p class="number">Call Us Now:
+                        <a href="tel:+1 (777) 784-25-43"> +1 (777) 784-25-43</a>
+                    </p>
+                </div>
+                <!-- hamburger -->
+                <button class="d-sm-none navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="navlinks-container">
+                <!-- offcanvas' page -->
+                <div class="offcanvas-custom offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <!-- offcanvas-header -->
+                    <div class="offcanvas-header">
+                        <a href="##">
+                            <h1><img src="/img/logo.png" alt="Business Planet's logo"></h1>
+                        </a>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <!-- !! flex-grow class has been taken from ul! -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">about</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    features
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    portfolio
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    blog
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">contacts</a>
+                            </li>
+                            <li class="nav-item">
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control" type="search" placeholder="Search the Site..."
+                                aria-label="Search the Site...">
+                            <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+                        </form>
+                        <div class="icons mt-2">
+                            <ul>
+                                <li><a class="facebook" href="##"></a></li>
+                                <li><a class="twitter" href="##"></a></li>
+                                <li><a class="circle" href="##"></a></li>
+                                <li><a class="web" href="##"></a></li>
+                                <li><a class="feed" href="##"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="visual">
+            <div id="carouselExample" class="carousel slide visual-carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/banner1.jpg" class="d-block w-100" alt="banner-1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/banner2.jpg" class="d-block w-100" alt="banner-2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/banner3.jpg" class="d-block w-100" alt="banner-3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section class="services p-4">
+            <div class="row g-0 g-md-3 g-lg-3">
+                <div class="col-6 col-lg-3">
+                    <div class="icon-card">
+                        <h5>growth strategies</h5>
+                        <div class="icon">
+                            <img src="/img/p1.png" alt="growth strategies">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vel dolor placeat esse
+                            minus
+                            dicta cumque dolores excepturi quos distinctio, dolorem laudantium impedit nostrum amet odit
+                            recusandae voluptates, voluptate corrupti.
+                        </p>
+                        <a href="" class="my-button">more</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+
+                    <div class="icon-card">
+                        <h5>perfect support</h5>
+                        <div class="icon">
+                            <img src="/img/p2.png" alt="perfect support">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vel dolor placeat esse
+                            minus
+                            dicta cumque dolores excepturi quos distinctio, dolorem laudantium impedit nostrum amet odit
+                            recusandae voluptates, voluptate corrupti.
+                        </p>
+                        <a href=##" class="my-button">more</a>
+                    </div>
+
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="icon-card">
+                        <h5>partners program</h5>
+                        <div class="icon">
+                            <img src="/img/p3.png" alt="partners program">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vel dolor placeat esse
+                            minus
+                            dicta cumque dolores excepturi quos distinctio, dolorem laudantium impedit nostrum amet odit
+                            recusandae voluptates, voluptate corrupti.
+                        </p>
+                        <a href="##" class="my-button">more</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="icon-card">
+                        <h5>premium services</h5>
+                        <div class="icon">
+                            <img src="/img/p4.png" alt="premium services">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vel dolor placeat esse
+                            minus
+                            dicta cumque dolores excepturi quos distinctio, dolorem laudantium impedit nostrum amet odit
+                            recusandae voluptates, voluptate corrupti.
+                        </p>
+                        <a href="##" class="my-button">more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="information p-4">
+            <div class="row">
+                <div class="item col-md-4">
+                    <h3>welcome</h3>
+                    <div class="article-card mt-3">
+                        <div class="icon">
+                            <img src="/img/welcome.jpg" alt="company's welcome picture">
+                        </div>
+                        <span class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis rem eius,
+                            voluptas tenetur
+                            laborum
+                            ex placeat officia dolores sed ...<a href="##">More</a>
+                        </span>
+
+                    </div>
+                </div>
+                <div class="item col-md-4">
+                    <h3>why choose us?</h3>
+                    <div class="custom-accordion mt-3" id="accordionExample">
+                        <div class="">
+                            <h2 class="" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Reason #1 erwrjij jijojLorem ips jijojLorem ips
+
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cum repudiandae
+                                    suscipit quaerat at ut magni iure quo earum non id deserunt ipsam necessitatibus
+                                    repellendus molestias, dolore hic, harum magnam?
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Reason #2
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto illo optio, at
+                                    delectus consequatur molestiae, illum aut, harum veritatis voluptatibus quo
+                                    quibusdam doloribus excepturi consequuntur praesentium tempore nulla!
+                                    Exercitationem, odit.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Reason #3
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt porro,
+                                    temporibus vitae sint totam odit. Eum pariatur minus, temporibus tempore laborum
+                                    nostrum, saepe necessitatibus nam, soluta illo ut eos.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                    Reason #4
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti dicta id sunt
+                                    voluptatibus ullam culpa, ipsam, earum fugiat temporibus impedit cupiditate odit
+                                    ratione ad. Suscipit odio laudantium dicta nulla tempora.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="item col-md-4">
+                    <h3>news & events</h3>
+                    <div class="news-card mt-3">
+                        <div class="picture">
+                            <img src="img/news1.jpg" alt="news photo">
+                        </div>
+                        <div class="text">
+                            <span class="date">12.12.12</span>
+                            <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sed
+                                accusantium ex
+                                corrupti
+                                qui
+                                eveniet...<a href="##">More</a></p>
+                        </div>
+                    </div>
+                    <div class="news-card mt-2">
+                        <div class="picture">
+                            <img src="img/news2.jpg" alt="news photo">
+                        </div>
+                        <div class="text">
+                            <span class="date">12.12.12</span>
+                            <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sed
+                                accusantium ex
+                                corrupti
+                                qui
+                                evenie...<a href="##">More</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="featured px-4">
+            <h3>featured works</h3>
+            <div class="swiper mySwiper custom-carousel mt-3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./img/g1.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href="##"><img src="./img/icon1.png" alt="search"></a>
+                            <a href="##"><img src="./img/icon2.png" alt="link"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/g2.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href="##"><img src="./img/icon1.png" alt="search"></a>
+                            <a href="##"><img src="./img/icon2.png" alt="link"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/g3.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href="##"><img src="./img/icon1.png" alt="search"></a>
+                            <a href="##"><img src="./img/icon2.png" alt="link"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/g4.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href="##"><img src="./img/icon1.png" alt="search"></a>
+                            <a href="##"><img src="./img/icon2.png" alt="link"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/g3.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href="##"><img src="./img/icon1.png" alt="search"></a>
+                            <a href="##"><img src="./img/icon2.png" alt="link"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/g2.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href="##"><img src="./img/icon1.png" alt="search"></a>
+                            <a href="##"><img src="./img/icon2.png" alt="link"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/g1.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href="##"><img src="./img/icon1.png" alt="search"></a>
+                            <a href="##"><img src="./img/icon2.png" alt="link"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/g4.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href="##"><img src="./img/icon1.png" alt="search"></a>
+                            <a href="##"><img src="./img/icon2.png" alt="link"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/g1.jpg" alt="featured works1">
+                        <div class="mask">
+                            <a href="##"><img src="./img/icon1.png" alt="search"></a>
+                            <a href="##"><img src="./img/icon2.png" alt="link"></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-button-next next-custom"></div>
+                <div class="swiper-button-prev prev-custom"></div>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <section class="socialmedia p-4">
+            <div class="row g-4">
+                <div class="item col-lg-3 col-md-6">
+                    <h4>latest tweets</h4>
+                    <p class="mt-3">loading tweets...</p>
+                </div>
+                <div class="item col-lg-3 col-md-6">
+                    <h4>testimonals</h4>
+                    <div class="speech-bubble mt-3">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia in sint eos optio excepturi
+                            qui
+                        </p>
+                    </div>
+                    <div class="picture-card mt-5">
+                        <div class="profilepicture">
+                            <img src="./img/men.jpg" alt="profile picture">
+                        </div>
+                        <div>
+                            <span>
+                                Stephem Bigham
+                            </span>
+                            <a href="##">demolink.org</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item col-lg-3 col-md-6">
+                    <h4>get in touch</h4>
+                    <div class="message">
+                        <form class="mt-3" action="/action_page.php">
+                            <div>
+                                <input class="mt-1" type="text" name="name" placeholder="Name" required>
+                                <input class="mt-1" type="email" name="email" placeholder="Email" required>
+                                <textarea class="blank mt-1" rows="5" class="form-control w-100" placeholder="Message"
+                                    required></textarea>
+                            </div>
+                            <div class="buttons">
+                                <input type="reset" value="CLEAR FORM">
+                                <input type="submit" value="SEND">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="item col-lg-3 col-md-6">
+                    <h4>flickr</h4>
+                    <div class="grid-album mt-3">
+                        <img src="./img/f1.jpg" alt="photo1">
+                        <img src="./img/f2.jpg" alt="photo2">
+                        <img src="./img/f3.jpg" alt="photo3">
+                        <img src="./img/f4.jpg" alt="photo4">
+                        <img src="./img/f5.jpg" alt="photo5">
+                        <img src="./img/f6.jpg" alt="photo6">
+                        <img src="./img/f7.jpg" alt="photo7">
+                        <img src="./img/f8.jpg" alt="photo8">
+                        <img src="./img/f9.jpg" alt="photo9">
+                        <img src="./img/f10.jpg" alt="photo10">
+                        <img src="./img/f11.jpg" alt="photo11">
+                        <img src="./img/f12.jpg" alt="photo12">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="copyrights mt-3">
+            <div>
+                <span>business planet 2020</span>
+                <span>privacy policy</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="##">home</a></li>
+                    <li><a href="##">about</a></li>
+                    <li><a href="##">features</a></li>
+                    <li><a href="##">portfolio</a></li>
+                    <li><a href="##">blog</a></li>
+                    <li><a href="##">contacts</a></li>
+
+                </ul>
+            </nav>
+
+        </section>
+    </footer>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            slidesPerGroup: 1,
+            breakpoints: {
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 24,
+                }
+            },
+            loop: true,
+            loopFillGroupWithBlank: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+    </script>
+</body>
+
+
+</html>

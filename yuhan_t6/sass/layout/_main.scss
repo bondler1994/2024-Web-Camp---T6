@@ -1,0 +1,28 @@
+@use "../utilities/breakpoints";
+
+body {
+    @include breakpoints.xl {
+        padding: 0 4rem;
+    }
+    @include breakpoints.xxl {
+        padding:0 6rem;
+    }
+
+}
+
+
+
+.featured {
+    @include breakpoints.md {
+        padding:3rem 0 4rem;
+    }
+}
+
+// 手機版間距
+.information {
+    h3 {
+        margin-top: 1rem;
+    }
+}
+
+

@@ -1,0 +1,36 @@
+@use "../../utilities/breakpoints";
+@use "../../utilities/color";
+
+.visual-carousel {
+    .carousel-item {
+        height: 350px;
+        img {
+            min-height: 100%;
+            object-fit: cover;
+        }
+    }
+    @include breakpoints.sm {
+    .carousel-item{
+        height: 100%;
+    }
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        height: 50px;
+        width: 16px;
+        position: absolute;
+        top: 50%; 
+        transform: translateY(-50%);
+        background-color: #333;
+        border: none;
+        color: #fff;
+        @include breakpoints.sm{
+          width: 38px;
+          height: 112px;
+        }
+      }
+
+      .carousel-control-prev:hover, .carousel-control-next:hover {
+        background-color:color.$theme-primary;
+      }
+}
