@@ -1,7 +1,7 @@
 @use '../abstracts/breakpoint' as *;
 
     .container.my_container {
-    @include breakpoint($lg-web){ 
+    @include breakpoint($lg){ 
       max-width: 1250px;
     }
     }

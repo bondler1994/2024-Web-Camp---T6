@@ -4,7 +4,7 @@ body {
   background: no-repeat linear-gradient(black 0 95px, transparent 95px 90%, black 90% 100%), url("../../images/bg.jpg");
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 991px) {
   .container.my_container {
     max-width: 1250px;
   }
