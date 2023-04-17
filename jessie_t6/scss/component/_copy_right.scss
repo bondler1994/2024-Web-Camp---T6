@@ -6,7 +6,7 @@
   flex-direction: column-reverse; 
   background-color: $black;
   padding: 10px 0;
-  @include breakpoint($md) {
+  @include breakpoint($lg) {
     justify-content: space-between;
     flex-direction: row;
   };

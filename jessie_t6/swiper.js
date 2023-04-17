@@ -8,14 +8,14 @@ var swiper = new Swiper(".swiper", {
     nextEl: ".swiper_button_next",
     prevEl: ".swiper_button_prev",
   },
-  on: {
-    resize: function () {
-      swiper.changeDirection(getDirection());
-    },
-  },
+  // on: {
+  //   resize: function () {
+  //     swiper.changeDirection(getDirection());
+  //   },
+  // },
   breakpoints: {
     320: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 10,
         slidesPerGroup: 2,
     },
@@ -32,4 +32,3 @@ var swiper = new Swiper(".swiper", {
 },
 });
 
-// 還在摸索中ＱＱ...js

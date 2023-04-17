@@ -1,21 +1,15 @@
 
-
-
 // body
 body{
   background-image:url(../images/background.jpg);
   box-shadow: inset 0 92px #161616, inset 0 -220px #161616;
 
 }
-
-
-
 h1,h2,h3,p,ul,li{
   // outline: 1px solid red;
   padding: 0;
   margin: 0;
 }
-
 // 共用
 
 h1,h2,h3{
@@ -25,8 +19,6 @@ text-transform: uppercase;
 h3{
 margin-bottom: 30px; 
 }
-
-
 // --- header ---
 header{
   background: url(../images/subbg.gif);
@@ -48,7 +40,6 @@ header{
     }
   }
 }
-
 .header_contact{
   display: none;
   @media(min-width:768px) {
@@ -65,10 +56,8 @@ header{
         color:orange;
       }
     }
-    
   } 
   }
-
   // social_media icon
 .contact_social_media{
     a{
@@ -117,7 +106,6 @@ header{
   }
   
 }
-
 .nav_box{
   @media(min-width:768px){
     flex-grow: 1;
@@ -125,7 +113,6 @@ header{
   }
  
 }
-
 .nav_box_list{
   display: flex;
   flex-direction: row-reverse;
@@ -133,7 +120,6 @@ header{
   flex-wrap: wrap;
   width: 200%;
 }
-
 .navbar{
   padding: 0;
   .navbar-collapse{
@@ -157,7 +143,6 @@ header{
   padding: 0;
 }
 }
-
 // 做個搜尋框
 .search_box{
   outline: 1px solid #cbc2c2;
@@ -167,7 +152,6 @@ header{
   background-color: #e8e8e8;
   padding: 5px 10px;
 }
-
 .little_form{
   display: flex;
   padding: 10px;
@@ -194,7 +178,6 @@ header{
     display: none;
   }
 }
-
 .big_form{
   display: none;
   @media(min-width:992px) {
@@ -224,9 +207,6 @@ header{
     width: 10%;
   }
 }
-
-
-
 // ----main----
 main{
   background:url(../images/subbg.gif);
@@ -309,10 +289,8 @@ display: -webkit-box;
     }
   }
 }
-
 // <!-- 公司介紹 -->
 // welcome
-
 .introduce{
   border-bottom: 1px solid #cfcfcf;
 }
@@ -339,8 +317,6 @@ display: -webkit-box;
   }
 }
 // why choose us?
-
-
 .reason{
   display: flex;
   border-bottom: 1px solid #e7e7e7;
@@ -367,9 +343,6 @@ display: -webkit-box;
     color:#fff;
   }
 }}
-
-
-
 // news&event
 .news_event{
   display: flex;
@@ -384,14 +357,12 @@ display: -webkit-box;
     display: flex;
     flex-wrap: nowrap;
   }
-  
 }
 .event_box_img{
   width: 100%;
   @media (min-width:576px){
     width: 40%;
   }
-  
   img{
     width: 100%;
   height: 100%;
@@ -403,7 +374,6 @@ display: -webkit-box;
   flex-basis: 0;
   flex-grow: 1;
 }
-
 .date{
   background: #81b700;
   color: #fff;
@@ -483,10 +453,6 @@ footer{
     flex-direction: row;
   }
 }
-
-// <!-- LATEST TWEETS -->
-
-
 // <!-- TESTIMONIALS -->
 
 .quote{
@@ -537,12 +503,7 @@ textarea{
     color:#eb5611;
   }
 }
-
-
-
-
 // <!-- FLICKR -->
-
 .flickr_box{
   display: flex;
   flex-wrap: wrap;
@@ -556,8 +517,6 @@ img{
   object-fit: cover;
 }
 }
-
-
 // <!-- copyright footer_nav -->
 .footer_nav{
   display: flex;
@@ -586,10 +545,7 @@ img{
     }
   }
 }
-
 // <!-- footer_nav清單 -->
-
-
 .footer_navbar{
   display: flex;
   flex-direction: column;
@@ -610,10 +566,7 @@ img{
       color: #7fb400;
     }
   }
-
 }
-  
-  
 }
 
 

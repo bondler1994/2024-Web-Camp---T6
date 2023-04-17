@@ -5,7 +5,7 @@
   "main": "swiper.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch scss/main.scss:css/main.css"
+    "sass": "sass --watch scss/all.scss:css/all.css"
   },
   "author": "",
   "license": "ISC",
@@ -13,3 +13,5 @@
     "sass": "^1.62.0"
   }
 }
+
+

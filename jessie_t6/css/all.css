@@ -107,7 +107,7 @@ textarea {
   background-color: #000000;
   padding: 10px 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .footer_nav {
     justify-content: space-between;
     flex-direction: row;
@@ -382,14 +382,12 @@ header {
   background-color: #e8e8e8;
   padding: 30px;
   outline: 1px solid #cdcdcd;
-  height: 100%;
 }
 .card_item:hover {
   background-color: rgba(131, 131, 131, 0.8);
   color: #ffffff;
 }
 .card_item .card_item_img {
-  margin-top: 20px;
   width: 70px;
   height: 70px;
 }
@@ -568,4 +566,4 @@ main {
   color: #81b700;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=all.css.map */
