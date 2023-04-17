@@ -11,7 +11,7 @@
     padding: 0 38px;
 
     .product {
-      margin-top: -25px;
+      margin-top: -30px;
       @include breakpoint($xl) {
         margin-top: 0;
       }
@@ -44,7 +44,7 @@
     &:hover {
       background-color: $color-green;
       i {
-        transition:translate  0.5s ease-out;
+        transition: translate 0.5s ease-out;
         translate: 5px;
       }
     }
