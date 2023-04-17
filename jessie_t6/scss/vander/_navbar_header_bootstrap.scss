@@ -65,11 +65,10 @@ form{
       outline: 1px solid $gray-1;
       &:hover{
         background-color: $green;
-      }
-      a{
-        &:hover{
+        a{
           color:$white;
         }
+       
       }
     }
 }

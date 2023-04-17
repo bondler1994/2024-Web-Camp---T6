@@ -19,6 +19,7 @@ footer{
   background: $bg_paper;
   display: flex;
   flex-direction: column;
+  margin: 0;
   @include breakpoint($md) {
     display: flex;
     flex-direction: row;

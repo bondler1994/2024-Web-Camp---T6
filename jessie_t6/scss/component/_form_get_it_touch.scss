@@ -5,10 +5,20 @@
 .get_it_touch {
   input{
     margin-bottom: 10px;
+    width: 100%;
+    &:focus-visible{
+      outline-color: $green;
+    }
   }
   textarea{
     margin-bottom: 20px;
     resize: none;
+    width: 100%;
+    height: 100px;
+    width: 100%;
+    &:focus-visible{
+      outline-color: $green;
+    }
   }
 }
 

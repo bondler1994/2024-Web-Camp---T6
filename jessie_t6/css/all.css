@@ -39,10 +39,20 @@ body {
 
 .get_it_touch input {
   margin-bottom: 10px;
+  width: 100%;
+}
+.get_it_touch input:focus-visible {
+  outline-color: #81b700;
 }
 .get_it_touch textarea {
   margin-bottom: 20px;
   resize: none;
+  width: 100%;
+  height: 100px;
+  width: 100%;
+}
+.get_it_touch textarea:focus-visible {
+  outline-color: #81b700;
 }
 
 .button_reset {
@@ -142,6 +152,7 @@ footer {
   background: url(../../images/subbg.gif);
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 @media (min-width: 768px) {
   .footer_box {
@@ -309,7 +320,7 @@ footer {
 .navbar .navbar-collapse .nav-item:hover, .navbar .navbar-collapse .dropdown-item:hover {
   background-color: #81b700;
 }
-.navbar .navbar-collapse .nav-item a:hover, .navbar .navbar-collapse .dropdown-item a:hover {
+.navbar .navbar-collapse .nav-item:hover a, .navbar .navbar-collapse .dropdown-item:hover a {
   color: #ffffff;
 }
 
@@ -365,7 +376,7 @@ header {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 5;
 }
 
 .card_service_item {
@@ -375,6 +386,8 @@ header {
   background-color: #e8e8e8;
   padding: 30px;
   outline: 1px solid #cdcdcd;
+  height: 100%;
+  gap: 25px;
 }
 .card_service_item:hover {
   background-color: rgba(92, 92, 92, 0.8);
@@ -390,7 +403,6 @@ header {
 }
 .card_service_item h2 {
   font-size: 20px;
-  flex: 1 1 0;
 }
 .card_service_item h2,
 .card_service_item p {
@@ -402,7 +414,7 @@ header {
   background-color: #cdcdcd;
   display: inline-block;
   padding: 5px 10px;
-  margin-top: 20px;
+  margin-top: auto;
 }
 .card_service_item a:hover {
   background-color: #81b700;
@@ -476,7 +488,6 @@ header {
 }
 .card_news_box_img img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 

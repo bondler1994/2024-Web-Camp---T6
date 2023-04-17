@@ -16,7 +16,7 @@
     overflow: hidden;
 display: -webkit-box;
 -webkit-box-orient: vertical;
--webkit-line-clamp: 4; 
+-webkit-line-clamp: 5; 
   }
 }
 .card_service_item{
@@ -26,13 +26,14 @@ display: -webkit-box;
   background-color:$gray-2;
   padding: 30px;
   outline: 1px solid $gray-3;
-  // height: 100%;
+  height: 100%;
+  gap: 25px;
   &:hover{
     background-color: rgba($color: $gray-5, $alpha: 0.8);
     color:$white;
   }
   .card_service_item_img{
-    // margin-top: 20px;
+    
     width: 70px;
     height: 70px;
     img{
@@ -42,7 +43,7 @@ display: -webkit-box;
   }
   h2{
     font-size: 20px;
-    flex:1 1 0;
+    // flex:1 1 0;
   }
   h2,
   p{
@@ -55,7 +56,7 @@ display: -webkit-box;
     background-color: $gray-3;
     display: inline-block;
     padding: 5px 10px;
-    margin-top: 20px;
+    margin-top: auto;
     
     &:hover{
       background-color: $green;
