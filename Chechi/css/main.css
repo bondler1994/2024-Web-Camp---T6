@@ -310,10 +310,8 @@ textarea:focus {
 }
 .carousel .carousel-inner img {
   min-height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: right center;
-     object-position: right center;
+  object-fit: cover;
+  object-position: right center;
 }
 @media (max-width: lg) {
   .carousel .carousel-inner {
@@ -407,11 +405,7 @@ textarea:focus {
   bottom: -10px;
   left: auto;
   right: 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
 }
 .swiper-container .swiper-button-next::after {
@@ -429,11 +423,7 @@ textarea:focus {
   bottom: -10px;
   left: auto;
   right: 20px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
 }
 .swiper-container .swiper-button-prev::after {
@@ -493,8 +483,7 @@ textarea:focus {
   width: 100%;
   height: 100%;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .main {
@@ -581,8 +570,6 @@ textarea:focus {
 }
 .news_list_item_content_date {
   padding: 3px 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   background-color: #80B600;
   color: #FFFFFF;
@@ -779,4 +766,6 @@ hr {
   .container {
     max-width: 1250px;
   }
-}/*# sourceMappingURL=input.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
