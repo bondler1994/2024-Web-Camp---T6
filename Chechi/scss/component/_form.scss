@@ -12,6 +12,9 @@
       background-color: $color-light-gray;
       border: 1px solid $color-gray;
     }
+    .no-resize {
+      resize: none; /* 禁用垂直和水平拉伸 */
+    }
     .buttons {
       margin-top: 15px;
       display: flex;
@@ -28,7 +31,7 @@
       &_send {
         display: block;
         padding: 3px 8px;
-        background-color: $color-green;
+        background-color: $color-primary;
         color: $color-white;
         text-transform: uppercase;
         border: none;

@@ -36,7 +36,7 @@
     color: $color-dark-gray;
   }
   a {
-    color: $color-green;
+    color: $color-primary;
   }
 }
 
@@ -51,53 +51,10 @@
     text-transform: uppercase;
     color: $color-dark-gray;
     &:hover {
-      color: $color-green;
+      color: $color-primary;
     }
     &:not(:last-child) {
       border-right: 1px solid $color-dark-gray;
     }
   }
 }
-
-/* .testimonials_block {
-    //三角形區域
-    position: relative;
-    background-color: $color-light-gray;
-    border: 1px solid $color-gray;
-    .arrow {
-      width: 0;
-      height: 0;
-      border-top: 22px solid $color-gray;
-      border-bottom: 22px solid transparent;
-      border-right: 23px solid transparent;
-      position: absolute;
-      left: -1px;
-      &:after {
-        content: "";
-        width: 0;
-        height: 0;
-        border-top: 21px solid $color-light-gray;
-        border-bottom: 21px solid transparent;
-        border-right: 21px solid transparent;
-        position: absolute;
-        top: -24px;
-        left: 1px;
-      }
-    }
-  }
-  
-  .man {
-    padding-top: 40px;
-    display: flex;
-    gap: 15px;
-    &_content {
-      a {
-        font-style: italic;
-        color: $color-green;
-        &:hover {
-          color: $color-black;
-        }
-      }
-    }
-  }
- */

@@ -15,11 +15,11 @@
     border-right: 1px $color-light-gray solid;
     &:hover {
       color:$color-white;
-      background-color: rgb(129, 184, 0);
+      background-color: $color-primary;
     }
     &.active {
       color:$color-white;
-      background-color: rgb(129, 184, 0);
+      background-color: $color-primary;
     }
   }
 
@@ -46,15 +46,6 @@
   @include breakpoint($lg) {
     order:3;
     box-shadow: none;
-  }
-}
-
-.search {
-  & .inside {
-    display: none;
-    @include breakpoint($lg) {
-      display: block;
-    }
   }
 }
 
@@ -92,7 +83,7 @@
 
 input:focus,
 textarea:focus {
-  outline: 1px solid $color-green;
+  outline: 1px solid $color-primary;
 }
 
 .search_Input {

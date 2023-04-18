@@ -1,5 +1,6 @@
 @use "../abstracts/breakpoint" as *;
 @use "../base/color" as *;
+@use '../component/navigation';
 @use "../component/carousel";
 @use "../component/card";
 @use "../component/swiper";
@@ -26,7 +27,7 @@
   a {
     color: $color-black;
     &:hover {
-      color: $color-green;
+      color: $color-primary;
     }
   }
 }
@@ -42,7 +43,7 @@
     height: 45px;
     flex-shrink: 0;
     &:hover {
-      background-color: $color-green;
+      background-color: $color-primary;
       i {
         transition: translate 0.5s ease-out;
         translate: 5px;
@@ -88,7 +89,7 @@
       &_date {
         padding: 3px 10px;
         width: fit-content;
-        background-color: $color-green;
+        background-color: $color-primary;
         color: $color-white;
       }
 
@@ -109,7 +110,7 @@
         margin-top: -20px;
         font-size: 14px;
         &:hover {
-          color: $color-green;
+          color: $color-primary;
         }
         @include breakpoint($iphone) {
           display: none;
