@@ -3,9 +3,10 @@
 //  <!-- 輪播圖 -->
 .carousel{
   img{
-    @include breakpoint($md){
-      width: 100%;
-    }
+    width: 100%;
+    // @include breakpoint($md){
+    //   width: 100%;
+    // }
   }
   .carousel-control-prev,
   .carousel-control-next{
