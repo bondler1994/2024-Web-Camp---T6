@@ -344,6 +344,11 @@ header {
   }
 }
 
+@media (min-width: 768px) {
+  .carousel img {
+    width: 100%;
+  }
+}
 .carousel .carousel-control-prev,
 .carousel .carousel-control-next {
   width: 40px;
@@ -460,26 +465,20 @@ header {
   color: #ffffff;
 }
 
-.card_news {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .card_news_box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  margin-bottom: 20px;
 }
 @media (min-width: 576px) {
   .card_news_box {
     display: flex;
     flex-wrap: nowrap;
+    gap: 20px;
   }
 }
 
 .card_news_box_img {
   width: 100%;
+  margin-bottom: 20px;
 }
 @media (min-width: 576px) {
   .card_news_box_img {
