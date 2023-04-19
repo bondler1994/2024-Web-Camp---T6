@@ -61,13 +61,15 @@ form{
   padding: 0;
   .navbar-collapse{
     .nav-item,.dropdown-item{
-      padding: 8px 10px;
+     
       outline: 1px solid $gray-1;
+    a{
+      padding: 16px 18px;
       &:hover{
         background-color: $green;
-        a{
-          color:$white;
-        }
+        color:$white;
+    }
+       
        
       }
     }

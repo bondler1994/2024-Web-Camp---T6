@@ -314,13 +314,13 @@ footer {
   padding: 0;
 }
 .navbar .navbar-collapse .nav-item, .navbar .navbar-collapse .dropdown-item {
-  padding: 8px 10px;
   outline: 1px solid #eeeeee;
 }
-.navbar .navbar-collapse .nav-item:hover, .navbar .navbar-collapse .dropdown-item:hover {
-  background-color: #81b700;
+.navbar .navbar-collapse .nav-item a, .navbar .navbar-collapse .dropdown-item a {
+  padding: 16px 18px;
 }
-.navbar .navbar-collapse .nav-item:hover a, .navbar .navbar-collapse .dropdown-item:hover a {
+.navbar .navbar-collapse .nav-item a:hover, .navbar .navbar-collapse .dropdown-item a:hover {
+  background-color: #81b700;
   color: #ffffff;
 }
 
@@ -521,7 +521,7 @@ header {
 .swiper_button_next {
   background-color: transparent;
   font-size: 30px;
-  color: #838383;
+  color: #cdcdcd;
   border: transparent;
 }
 
@@ -543,8 +543,18 @@ header {
   width: 100%;
 }
 
-.swiper-slide img:hover {
-  background-color: #5c5c5c;
+.img_hover {
+  position: relative;
+}
+.img_hover:hover .hover_link {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(150deg, rgba(0, 0, 0, 0.5) 0 20%, rgba(255, 255, 255, 0) 20% 30%, rgba(0, 0, 0, 0.5) 30% 80%, rgb(110, 180, 0) 82% 82%, rgba(255, 255, 255, 0) 80% 100%);
 }
 
 main {
