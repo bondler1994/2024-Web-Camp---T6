@@ -97,6 +97,9 @@ a {
 .header_info .tel_info {
   color: #1c1c1c;
 }
+.header_info .tel_info:hover {
+  color: #80B600;
+}
 @media (max-width: 768px) {
   .header_info {
     display: none;
