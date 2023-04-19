@@ -14,6 +14,7 @@ h3 {
 body {
   background-image: url(../../images/background.jpg);
   box-shadow: inset 0 92px #000000, inset 0 -220px #000000;
+  min-width: 320px;
 }
 
 .testimonial_text {
@@ -82,7 +83,7 @@ body {
 }
 
 .flickr_box {
-  width: 22%;
+  width: calc((100% - 30px) / 4);
 }
 .flickr_box img {
   width: 100%;
@@ -274,35 +275,40 @@ footer {
   }
 }
 
+.navbar {
+  flex-wrap: wrap;
+}
+
 .navbar_header_list {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: 200%;
 }
 .navbar_header_list form {
   display: flex;
   padding: 10px;
+  width: 85%;
 }
 .navbar_header_list form .search_box {
   outline: 1px solid #e8e8e8;
   display: flex;
-  width: 150px;
-  height: 38px;
+  width: 100%;
+  height: 100%;
   background-color: #eeeeee;
   padding: 5px 10px;
 }
 .navbar_header_list form input {
   background-color: #eeeeee;
   border: none;
-  width: 80%;
+  width: 100%;
 }
 .navbar_header_list form button {
   background: url(../images/search.png) no-repeat 0 5px;
   background-color: #eeeeee;
   border: none;
-  width: 20%;
+  width: 10%;
 }
 @media (min-width: 768px) {
   .navbar_header_list form {
@@ -439,11 +445,10 @@ header {
   display: flex;
   border-bottom: 1px solid #cdcdcd;
   gap: 10px;
-  margin: 10px 10px;
-  padding-bottom: 20px;
+  padding: 20px 0 25px 0;
 }
 .accordion_reason p {
-  margin: auto 0;
+  padding: auto 0;
 }
 .accordion_reason .reason_icon {
   display: flex;
@@ -463,8 +468,8 @@ header {
   color: #ffffff;
 }
 
-.card_news_box {
-  margin-bottom: 20px;
+.card_news_box + .card_news_box {
+  margin-top: 20px;
 }
 @media (min-width: 576px) {
   .card_news_box {
@@ -559,8 +564,6 @@ header {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  width: 100%;
-  height: 100%;
 }
 
 main {

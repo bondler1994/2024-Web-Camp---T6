@@ -5,7 +5,7 @@
 // <!-- 大搜尋框 -->
 .search{
   display: none;
-  @media(min-width:768px) {
+  @media(min-width:$md) {
     display: flex;
     padding: 10px 20px;
     background-color: $white;

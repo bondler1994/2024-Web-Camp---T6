@@ -9,7 +9,8 @@
 }
 
 .flickr_box{
-width: 22%;
+width:calc((100% - 3*10px) /4);
+
 img{
   width: 100%;
   object-fit: cover;

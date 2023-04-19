@@ -3,7 +3,10 @@
 // news&event
 
 .card_news_box{
-  margin-bottom: 20px;
+  
+  &+.card_news_box{
+    margin-top: 20px;
+  }
   @include breakpoint($sm) {
     display: flex;
     flex-wrap: nowrap;
