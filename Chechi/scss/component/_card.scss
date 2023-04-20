@@ -3,12 +3,11 @@
 
 .card {
   border-radius: 0;
-  h2 {
-    font-size: 16px;
-    text-transform: uppercase;
-  }
+
   &-title {
     margin-bottom: 0;
+    font-size: 16px;
+    text-transform: uppercase;
   }
   &-body {
     background-color: $color-light-gray;

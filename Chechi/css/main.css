@@ -12,7 +12,6 @@ body {
 
 * {
   font-family: "Open Sans", sans-serif;
-  outline: 1px solid red;
 }
 
 /* 文字標籤下面有預設margin、需要手動歸零  */
@@ -128,76 +127,6 @@ header {
   }
 }
 
-.header_info .header_info_media {
-  text-align: end;
-}
-.header_info .header_info_media a:first-child {
-  width: 28px;
-  height: 28px;
-  display: inline-block;
-  background-image: url("../../images/social.png");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-.header_info .header_info_media a:first-child:hover {
-  background-position: 0 104%;
-}
-.header_info .header_info_media a:nth-child(2) {
-  width: 28px;
-  height: 28px;
-  display: inline-block;
-  background-image: url("../../images/social.png");
-  background-position: 25% 0;
-  background-repeat: no-repeat;
-}
-.header_info .header_info_media a:nth-child(2):hover {
-  background-position: 25% 104%;
-}
-.header_info .header_info_media a:nth-child(3) {
-  width: 28px;
-  height: 28px;
-  display: inline-block;
-  background-image: url("../../images/social.png");
-  background-position: 50% 0;
-  background-repeat: no-repeat;
-}
-.header_info .header_info_media a:nth-child(3):hover {
-  background-position: 50% 104%;
-}
-.header_info .header_info_media a:nth-child(4) {
-  width: 28px;
-  height: 28px;
-  display: inline-block;
-  background-image: url("../../images/social.png");
-  background-position: 75% 0;
-  background-repeat: no-repeat;
-}
-.header_info .header_info_media a:nth-child(4):hover {
-  background-position: 75% 104%;
-}
-.header_info .header_info_media a:nth-child(5) {
-  width: 28px;
-  height: 28px;
-  display: inline-block;
-  background-image: url("../../images/social.png");
-  background-position: 100% 0;
-  background-repeat: no-repeat;
-}
-.header_info .header_info_media a:nth-child(5):hover {
-  background-position: 100% 104%;
-}
-.header_info .header_info_media a + a {
-  margin-left: 5px;
-}
-.header_info .tel_info {
-  color: #1c1c1c;
-}
-@media (max-width: 768px) {
-  .header_info {
-    display: none;
-  }
-}
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -259,9 +188,9 @@ header {
 }
 
 .search_wrapper {
+  background-image: url("/images/subbg.gif");
   display: block;
   box-shadow: 0 0 5px #646464;
-  background-image: url("/images/subbg.gif");
   max-width: 31.25rem;
   padding: 10px 18px;
 }
@@ -345,12 +274,10 @@ textarea:focus {
 .card {
   border-radius: 0;
 }
-.card h2 {
-  font-size: 16px;
-  text-transform: uppercase;
-}
 .card-title {
   margin-bottom: 0;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 .card-body {
   background-color: #E7E7E7;
