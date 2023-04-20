@@ -1,13 +1,45 @@
 @use"../base" as *;
 
 //  <!-- 輪播圖 -->
-.carousel{
-  img{
-    width: 100%;
-    // @include breakpoint($md){
-    //   width: 100%;
-    // }
+
+    .carousel-item{
+    &:nth-child(1){
+      img{
+
+        object-position: -200px -10px;
+      }
+    }
+       &:nth-child(2){
+      img{
+        object-position: -450px -10px;
+      }
+    }
+       &:nth-child(3){
+      img{
+        object-position: -50px -10px;
+      }
+       }
+       
   }
+
+  // 得蓋過上面的，加重權重
+.carousel-inner{
+  .carousel-item{
+    img{
+      object-fit: cover;
+      @include breakpoint($md){
+        object-position: initial;
+        width: 100%;
+      }
+    }
+
+  } 
+ 
+}
+ 
+   
+
+  
   .carousel-control-prev,
   .carousel-control-next{
     width: 40px;
@@ -20,4 +52,3 @@
       background-color:$green;
     }
    }
-}
