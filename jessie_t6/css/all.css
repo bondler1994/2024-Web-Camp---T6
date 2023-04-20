@@ -1,9 +1,9 @@
-h1, h2, h3, p, ul, li {
+li, ul, p, h3, h2, h1 {
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3 {
+h3, h2, h1 {
   text-transform: uppercase;
 }
 
