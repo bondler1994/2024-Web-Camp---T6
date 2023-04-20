@@ -43,7 +43,7 @@
   background-image: url("/images/subbg.gif");
   box-shadow: 0 0 5px $color-dark-gray;
   @include breakpoint($lg) {
-    order: 3;
+    order: 2;
     box-shadow: none;
   }
 }
@@ -70,7 +70,7 @@
   @include breakpoint($lg) {
     padding: 0;
     box-shadow: none;
-    order: 2;
+    order: 1;
   }
 }
 

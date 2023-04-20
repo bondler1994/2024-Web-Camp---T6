@@ -2,9 +2,9 @@
 $iphone: 393px; //iPhone 14 pro  393px
 $sm: 576px;
 $ipad: 768px; //平板，畫面比例同手機
-$lg: 992px;
+$lg: 991px;
 $xl: 1200px;
-$web: 1440px; 
+$web: 1440px;
 
 @mixin breakpoint($max_width) {
   @media (max-width: $max_width) {
