@@ -1,8 +1,8 @@
 @use "../abstracts/breakpoint" as *;
 @use "../base/color" as *;
-@use '../component/flickr';
-@use '../component/form';
-@use '../component/testimonials';
+@use "../component/flickr";
+@use "../component/form";
+@use "../component/testimonials";
 
 .footer_block {
   background-image: url("/images/subbg.gif");
@@ -31,7 +31,9 @@
 .footer_copyright {
   display: flex;
   justify-content: center;
-  order: 1;
+  @include breakpoint($ipad) {
+    order: 1;
+  }
   p {
     color: $color-dark-gray;
   }

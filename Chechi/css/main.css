@@ -653,7 +653,11 @@ textarea:focus {
 .footer_copyright {
   display: flex;
   justify-content: center;
-  order: 1;
+}
+@media (max-width: 768px) {
+  .footer_copyright {
+    order: 1;
+  }
 }
 .footer_copyright p {
   color: #646464;
