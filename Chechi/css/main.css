@@ -108,21 +108,20 @@ a {
 header {
   background-image: url("/images/subbg.gif");
 }
-
-.header {
+header .header {
   padding: 40px;
   display: flex;
   justify-content: space-between;
   box-shadow: 0 0 10px #646464;
 }
 @media (max-width: 768px) {
-  .header {
+  header .header {
     justify-content: center;
     padding: 25px;
   }
 }
 @media (max-width: 576px) {
-  .header h1 img {
+  header .header h1 img {
     max-width: 60%;
   }
 }

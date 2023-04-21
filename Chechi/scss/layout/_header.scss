@@ -1,25 +1,24 @@
 @use "../abstracts/breakpoint" as *;
 @use "../base/color" as *;
 @use "../base" as *;
-@use '../component/media-icon' as *;
+@use "../component/media-icon" as *;
 
 header {
   background-image: url("/images/subbg.gif");
-}
 
-.header {
-  padding: 40px;
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 0 0 10px $color-dark-gray;
-  @include breakpoint($ipad) {
-    justify-content: center;
-    padding: 25px;
-  }
-  h1 img {
-    @include breakpoint($sm) {
-      max-width: 60%;
+  .header {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 10px $color-dark-gray;
+    @include breakpoint($ipad) {
+      justify-content: center;
+      padding: 25px;
+    }
+    h1 img {
+      @include breakpoint($sm) {
+        max-width: 60%;
+      }
     }
   }
 }
-

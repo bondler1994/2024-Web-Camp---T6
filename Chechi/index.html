@@ -40,10 +40,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css"
-    />
     <!-- my CSS -->
     <link href="css/main.css" rel="stylesheet" />
     <title>business_planet</title>
@@ -669,45 +665,46 @@
         </div>
       </footer>
     </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      const mySwiper = new Swiper(".swiper-container", {
+        slidesPerView: 4,
+        loop: true,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          1440: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          500: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          200: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+        },
+      });
+    </script>
   </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"
-  ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script>
-    var mySwiper = new Swiper(".swiper-container", {
-      slidesPerView: 4,
-      loop: true,
-      spaceBetween: 30,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        1440: {
-          slidesPerView: 4,
-          spaceBetween: 30,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-        500: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        200: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-        },
-      },
-    });
-  </script>
 </html>
