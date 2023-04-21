@@ -1,16 +1,5 @@
 @use "../base" as *;
 
-@use "../venders/carousel_bootstrap";
-// 輪播圖
-@use "../component/card_servic";
-// 四張卡片
-@use "../component/accordion_reason";
-// why choose us
-@use "../component/card_news";
-// news&event
-@use "../venders/carousel_swiper";
-// <!-- 未來工作圖片輪播 -->
-
 // ----main----
 main {
   background: $bg_paper;

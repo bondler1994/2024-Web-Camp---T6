@@ -1,13 +1,5 @@
 @use "../base" as *;
 
-@use "../component/iconlist_social_media";
-// social_media
-@use "../component/logo";
-// logo
-@use "../component/search";
-
-@use "../venders/navbar_header_bootstrap";
-
 // --- header ---
 header {
   background: $bg_paper;

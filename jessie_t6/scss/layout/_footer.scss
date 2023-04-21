@@ -1,14 +1,5 @@
 @use "../base" as *;
 
-@use "../component/testimonial";
-// 感言
-@use "../component/form_get_it_touch";
-// 表單
-@use "../component/gallery_flickr";
-// 圖片集
-@use "../venders/navbar_footer_bootstrap";
-@use "../component/copy_right";
-
 // ---footer---
 footer {
   margin-top: 50px;

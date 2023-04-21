@@ -23,6 +23,8 @@
 }
 
 .iconlist_social_media {
+  font-size: 0;
+
   a {
     display: inline-block;
     width: 27px;
@@ -61,3 +63,4 @@
 }
 
 // url(../images/social.png)
+// background: $media_icon no-repeat
