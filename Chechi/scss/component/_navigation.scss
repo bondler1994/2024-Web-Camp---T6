@@ -74,7 +74,7 @@
   }
 }
 
-.searchBar {
+.search_Bar {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -86,7 +86,7 @@ textarea:focus {
 }
 
 .search_Input {
-  padding: 5px 10px;
+  padding: 5px 40px 5px 10px;
   background-color: $color-light-gray;
   border: 1px solid $color-gray;
   font-size: 14px;
@@ -97,8 +97,8 @@ textarea:focus {
 }
 
 .search_Submit {
-  width: 50px;
-  margin-left: -50px;
+  width: 40px;
+  margin-left: -40px;
   background: none;
   border: none;
   outline: none;

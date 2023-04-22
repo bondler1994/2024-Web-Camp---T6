@@ -108,22 +108,21 @@ a {
 header {
   background-image: url("/images/subbg.gif");
 }
-header .header {
+header .header_content {
   padding: 40px;
   display: flex;
   justify-content: space-between;
   box-shadow: 0 0 10px #646464;
 }
 @media (max-width: 768px) {
-  header .header {
+  header .header_content {
     justify-content: center;
     padding: 25px;
   }
 }
-@media (max-width: 576px) {
-  header .header h1 img {
-    max-width: 60%;
-  }
+header .header_content h1 a {
+  max-width: 350px;
+  display: block;
 }
 
 .nav {
@@ -201,7 +200,7 @@ header .header {
   }
 }
 
-.searchBar {
+.search_Bar {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -213,7 +212,7 @@ textarea:focus {
 }
 
 .search_Input {
-  padding: 5px 10px;
+  padding: 5px 40px 5px 10px;
   background-color: #E7E7E7;
   border: 1px solid #CDCDCD;
   font-size: 14px;
@@ -226,8 +225,8 @@ textarea:focus {
 }
 
 .search_Submit {
-  width: 50px;
-  margin-left: -50px;
+  width: 40px;
+  margin-left: -40px;
   background: none;
   border: none;
   outline: none;
@@ -430,80 +429,74 @@ textarea:focus {
     margin-top: 0;
   }
 }
-
-.welcome {
+.main .introduction .welcome {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.welcome a {
+.main .introduction .welcome a {
   color: #1c1c1c;
 }
-.welcome a:hover {
+.main .introduction .welcome a:hover {
   color: #80B600;
 }
-
-.reason {
+.main .introduction .reason {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.reason_symbol {
+.main .introduction .reason_symbol {
   background-color: #E7E7E7;
   position: relative;
   width: 45px;
   height: 45px;
   flex-shrink: 0;
 }
-.reason_symbol:hover {
+.main .introduction .reason_symbol:hover {
   background-color: #80B600;
 }
-.reason_symbol:hover i {
-  transition: translate 0.5s ease-out;
-  translate: 5px;
+.main .introduction .reason_symbol:hover i {
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(90deg);
 }
-.reason_symbol i {
+.main .introduction .reason_symbol i {
   color: white;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 40%;
+  top: 35%;
 }
-.reason_list_item {
+.main .introduction .reason_list_item {
   color: #646464;
   display: flex;
   gap: 15px;
   padding: 0 20px 20px;
   border-bottom: 1px solid #CDCDCD;
 }
-.reason_list_item p {
+.main .introduction .reason_list_item p {
   margin: auto 0;
 }
-
-.news {
+.main .introduction .news {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.news_list_item {
+.main .introduction .news_list_item {
   display: flex;
   gap: 20px;
 }
-.news_list_item_image {
-  flex-shrink: 0;
-}
-.news_list_item_content {
+.main .introduction .news_list_item_content {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  flex: 1;
 }
-.news_list_item_content_date {
+.main .introduction .news_list_item_content_date {
   padding: 3px 10px;
   width: fit-content;
   background-color: #80B600;
   color: #FFFFFF;
 }
-.news_list_item_content p {
+.main .introduction .news_list_item_content p {
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
@@ -513,25 +506,25 @@ textarea:focus {
   font-size: 13px;
   line-height: 1.4;
 }
-.news_list_item_content a {
+.main .introduction .news_list_item_content a {
   display: inline;
   color: #1c1c1c;
   margin-top: -20px;
   font-size: 14px;
 }
-.news_list_item_content a:hover {
+.main .introduction .news_list_item_content a:hover {
   color: #80B600;
 }
 @media (max-width: 393px) {
-  .news_list_item_content a {
+  .main .introduction .news_list_item_content a {
     display: none;
   }
 }
-.news_list_item_content .more_button {
+.main .introduction .news_list_item_content .more_button {
   display: none;
 }
 @media (max-width: 393px) {
-  .news_list_item_content .more_button {
+  .main .introduction .news_list_item_content .more_button {
     display: block;
   }
 }
@@ -591,99 +584,89 @@ textarea:focus {
   border: 1px solid #CDCDCD;
 }
 .testimonials_block .arrow {
-  width: 0;
-  height: 0;
   border-top: 22px solid #CDCDCD;
-  border-bottom: 22px solid transparent;
   border-right: 23px solid transparent;
   position: absolute;
   left: -1px;
 }
 .testimonials_block .arrow:after {
   content: "";
-  width: 0;
-  height: 0;
-  border-top: 21px solid #E7E7E7;
-  border-bottom: 21px solid transparent;
-  border-right: 21px solid transparent;
+  border-top: 22px solid #E7E7E7;
+  border-right: 22px solid transparent;
   position: absolute;
   top: -24px;
   left: 1px;
 }
-
-.man {
+.testimonials_block .man {
   padding-top: 40px;
   display: flex;
   gap: 15px;
 }
-.man_content a {
+.testimonials_block .man_content a {
   font-style: italic;
   color: #80B600;
 }
-.man_content a:hover {
+.testimonials_block .man_content a:hover {
   color: #1c1c1c;
 }
 
-.footer_block {
+.footer .footer_block {
   background-image: url("/images/subbg.gif");
   padding: 38px;
   box-shadow: 0 0 10px #646464;
 }
-.footer_block h3 {
+.footer .footer_block h3 {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 900;
   margin-bottom: 25px;
 }
-
-.footer_link {
+.footer .footer_link {
   font-size: 14px;
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
 }
 @media (max-width: 768px) {
-  .footer_link {
+  .footer .footer_link {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
   }
 }
-
-.footer_copyright {
+.footer .footer_link .footer_copyright {
   display: flex;
   justify-content: center;
 }
 @media (max-width: 768px) {
-  .footer_copyright {
+  .footer .footer_link .footer_copyright {
     order: 1;
   }
 }
-.footer_copyright p {
+.footer .footer_link .footer_copyright p {
   color: #646464;
 }
-.footer_copyright a {
+.footer .footer_link .footer_copyright a {
   color: #80B600;
 }
-
-.footer_nav {
+.footer .footer_link .footer_nav {
   display: flex;
   justify-content: center;
 }
 @media (max-width: 576px) {
-  .footer_nav {
+  .footer .footer_link .footer_nav {
     display: none;
   }
 }
-.footer_nav_item {
+.footer .footer_link .footer_nav_item {
   padding: 0 8px;
   text-transform: uppercase;
   color: #646464;
 }
-.footer_nav_item:hover {
+.footer .footer_link .footer_nav_item:hover {
   color: #80B600;
 }
-.footer_nav_item:not(:last-child) {
+.footer .footer_link .footer_nav_item:not(:last-child) {
   border-right: 1px solid #646464;
 }
 
@@ -701,4 +684,4 @@ hr {
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=all.css.map */

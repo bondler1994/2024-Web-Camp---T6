@@ -1,6 +1,6 @@
 @use "../abstracts/breakpoint" as *;
 @use "../base/color" as *;
-@use '../component/navigation';
+@use "../component/navigation";
 @use "../component/carousel";
 @use "../component/card";
 @use "../component/swiper";
@@ -18,109 +18,109 @@
       }
     }
   }
-}
 
-.welcome {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  a {
-    color: $color-black;
-    &:hover {
-      color: $color-primary;
-    }
-  }
-}
-
-.reason {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  &_symbol {
-    background-color: $color-light-gray;
-    position: relative;
-    width: 45px;
-    height: 45px;
-    flex-shrink: 0;
-    &:hover {
-      background-color: $color-primary;
-      i {
-        transition: translate 0.5s ease-out;
-        translate: 5px;
+  .introduction {
+    .welcome {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      a {
+        color: $color-black;
+        &:hover {
+          color: $color-primary;
+        }
       }
     }
-    i {
-      color: white;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-  &_list_item {
-    color: $color-dark-gray;
-    display: flex;
-    gap: 15px;
-    padding: 0 20px 20px;
-    border-bottom: 1px solid $color-gray;
-    p {
-      margin: auto 0;
-    }
-  }
-}
 
-.news {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    .reason {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      &_symbol {
+        background-color: $color-light-gray;
+        position: relative;
+        width: 45px;
+        height: 45px;
+        flex-shrink: 0;
 
-  &_list_item {
-    display: flex;
-    gap: 20px;
-    &_image {
-      flex-shrink: 0;
+        &:hover {
+          background-color: $color-primary;
+          i {
+            transition: transform 0.5s ease-in-out;
+            transform: rotate(90deg);
+          }
+        }
+        i {
+          color: white;
+          position: absolute;
+          left: 40%;
+          top: 35%;
+        }
+      }
+      &_list_item {
+        color: $color-dark-gray;
+        display: flex;
+        gap: 15px;
+        padding: 0 20px 20px;
+        border-bottom: 1px solid $color-gray;
+        p {
+          margin: auto 0;
+        }
+      }
     }
 
-    &_content {
+    .news {
       display: flex;
       flex-direction: column;
       gap: 20px;
 
-      &_date {
-        padding: 3px 10px;
-        width: fit-content;
-        background-color: $color-primary;
-        color: $color-white;
-      }
+      &_list_item {
+        display: flex;
+        gap: 20px;
 
-      p {
-        display: -webkit-box;
-        -webkit-line-clamp: 5;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        color: $color-dark-gray;
-        font-size: 13px;
-        line-height: 1.4;
-      }
+        &_content {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          flex: 1;
 
-      a {
-        display: inline;
-        color: $color-black;
-        margin-top: -20px;
-        font-size: 14px;
-        &:hover {
-          color: $color-primary;
-        }
-        @include breakpoint($iphone) {
-          display: none;
-        }
-      }
+          &_date {
+            padding: 3px 10px;
+            width: fit-content;
+            background-color: $color-primary;
+            color: $color-white;
+          }
 
-      .more_button {
-        display: none;
-        @include breakpoint($iphone) {
-          display: block;
+          p {
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: $color-dark-gray;
+            font-size: 13px;
+            line-height: 1.4;
+          }
+
+          a {
+            display: inline;
+            color: $color-black;
+            margin-top: -20px;
+            font-size: 14px;
+            &:hover {
+              color: $color-primary;
+            }
+            @include breakpoint($iphone) {
+              display: none;
+            }
+          }
+
+          .more_button {
+            display: none;
+            @include breakpoint($iphone) {
+              display: block;
+            }
+          }
         }
       }
     }
