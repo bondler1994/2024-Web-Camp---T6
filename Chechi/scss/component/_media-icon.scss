@@ -37,13 +37,4 @@
       }
     }
   }
-  .tel_info {
-    color: $color-black;
-    &:hover {
-      color: $color-primary;
-    }
-  }
-  @include breakpoint($ipad) {
-    display: none;
-  }
 }

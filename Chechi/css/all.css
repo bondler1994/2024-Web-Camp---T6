@@ -93,17 +93,6 @@ a {
 .header_info .header_info_media a + a {
   margin-left: 5px;
 }
-.header_info .tel_info {
-  color: #1c1c1c;
-}
-.header_info .tel_info:hover {
-  color: #80B600;
-}
-@media (max-width: 768px) {
-  .header_info {
-    display: none;
-  }
-}
 
 header {
   background-image: url("/images/subbg.gif");
@@ -124,6 +113,20 @@ header .header_content h1 a {
   max-width: 350px;
   display: block;
 }
+header .header_content span {
+  text-transform: capitalize;
+}
+header .header_content .tel_info {
+  color: #1c1c1c;
+}
+header .header_content .tel_info:hover {
+  color: #80B600;
+}
+@media (max-width: 768px) {
+  header .header_content {
+    display: none;
+  }
+}
 
 .nav {
   display: flex;
@@ -136,6 +139,7 @@ header .header_content h1 a {
 .my_navbar .nav-link {
   color: #1c1c1c;
   border-right: 1px #E7E7E7 solid;
+  text-transform: uppercase;
 }
 .my_navbar .nav-link:hover {
   color: #FFFFFF;
@@ -578,18 +582,18 @@ textarea:focus {
   border: none;
 }
 
-.testimonials_block {
+.testimonials .testimonials_block {
   position: relative;
   background-color: #E7E7E7;
   border: 1px solid #CDCDCD;
 }
-.testimonials_block .arrow {
+.testimonials .testimonials_block .arrow {
   border-top: 22px solid #CDCDCD;
   border-right: 23px solid transparent;
   position: absolute;
   left: -1px;
 }
-.testimonials_block .arrow:after {
+.testimonials .testimonials_block .arrow:after {
   content: "";
   border-top: 22px solid #E7E7E7;
   border-right: 22px solid transparent;
@@ -597,16 +601,16 @@ textarea:focus {
   top: -24px;
   left: 1px;
 }
-.testimonials_block .man {
+.testimonials .man {
   padding-top: 40px;
   display: flex;
   gap: 15px;
 }
-.testimonials_block .man_content a {
+.testimonials .man_content a {
   font-style: italic;
   color: #80B600;
 }
-.testimonials_block .man_content a:hover {
+.testimonials .man_content a:hover {
   color: #1c1c1c;
 }
 

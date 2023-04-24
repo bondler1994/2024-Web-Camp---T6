@@ -19,5 +19,17 @@ header {
       max-width: 350px;
       display: block;
     }
+    span {
+      text-transform: capitalize;
+    }
+    .tel_info {
+      color: $color-black;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+    @include breakpoint($ipad) {
+      display: none;
+    }
   }
 }

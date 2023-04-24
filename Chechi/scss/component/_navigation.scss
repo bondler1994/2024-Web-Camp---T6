@@ -12,6 +12,7 @@
   .nav-link {
     color: $color-black;
     border-right: 1px $color-light-gray solid;
+    text-transform: uppercase;
     &:hover {
       color: $color-white;
       background-color: $color-primary;
