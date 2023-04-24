@@ -1,17 +1,14 @@
 // sass --watch scss/main.scss:css/main.css
-
 //建議順序：不把元件包在layout裡，這樣比較能控制順序、權重問題。
 //------reset----
 @use "./base/reset";
 //--------venders--------
 @use "./venders/navbar_header_bootstrap";
-
 @use "./venders/carousel_bootstrap";
 // 輪播圖
 @use "./venders/carousel_swiper";
-@use "./venders/navbar_footer_bootstrap";
-//
 // 未來工作圖片輪播
+@use "./venders/navbar_footer_bootstrap";
 
 //--------component-----------
 @use "./component/iconlist_social_media";
