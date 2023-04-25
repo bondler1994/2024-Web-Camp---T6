@@ -2,11 +2,12 @@
 
 // <!-- 大搜尋框 -->
 .search {
+  padding: 10px 20px;
+  background-color: $white;
+
   display: none;
   @media (min-width: $md) {
     display: flex;
-    padding: 10px 20px;
-    background-color: $white;
   }
   .search_box {
     outline: 1px solid $gray-2;
