@@ -1,6 +1,11 @@
-@use '../base/color';
+@use "../base/color" as *;
 
 body {
-    background:no-repeat linear-gradient(black 0 90px, transparent 90px 90%,black 90% 100%), url('../../images/bg.jpg');
+  background: no-repeat
+      linear-gradient(
+        $color-black 0 90px,
+        transparent 90px 90%,
+        $color-black 90% 100%
+      ),
+    url("../../images/bg.jpg");
 }
-

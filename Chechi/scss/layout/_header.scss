@@ -23,6 +23,7 @@
       text-transform: capitalize;
     }
   }
+
   &_info {
     @include breakpoint($ipad) {
       display: none;
