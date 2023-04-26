@@ -3,10 +3,10 @@
 @use "../base" as *;
 @use "../component/media-icon" as *;
 
-.header {
+header {
   background-image: url("/images/subbg.gif");
 
-  &_content {
+  .header_content {
     padding: 40px;
     display: flex;
     justify-content: space-between;
@@ -22,17 +22,14 @@
     span {
       text-transform: capitalize;
     }
-  }
-  &_info {
-    @include breakpoint($ipad) {
-      display: none;
-    }
-
     .tel_info {
       color: $color-black;
       &:hover {
         color: $color-primary;
       }
+    }
+    @include breakpoint($ipad) {
+      display: none;
     }
   }
 }

@@ -39,9 +39,8 @@
       &_symbol {
         background-color: $color-light-gray;
         position: relative;
-
-        width: 56px;
-        height: 56px;
+        width: 45px;
+        height: 45px;
         flex-shrink: 0;
 
         &:hover {
@@ -100,14 +99,26 @@
             text-overflow: ellipsis;
             color: $color-dark-gray;
             font-size: 13px;
+            line-height: 1.4;
           }
 
           a {
+            display: inline;
             color: $color-black;
             margin-top: -20px;
             font-size: 14px;
             &:hover {
               color: $color-primary;
+            }
+            @include breakpoint($iphone) {
+              display: none;
+            }
+          }
+
+          .more_button {
+            display: none;
+            @include breakpoint($iphone) {
+              display: block;
             }
           }
         }

@@ -91,7 +91,10 @@ textarea:focus {
   background-color: $color-light-gray;
   border: 1px solid $color-gray;
   font-size: 14px;
-  min-width: 200px;
+  min-width: 280px;
+  @include breakpoint($xl) {
+    min-width: 200px;
+  }
 }
 
 .search_Submit {

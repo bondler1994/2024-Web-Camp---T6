@@ -1,0 +1,14 @@
+@use "../abstracts/breakpoint" as *;
+@use "../base/color" as *;
+
+.flickr_album {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  img {
+    transition: 0.5s ease all;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

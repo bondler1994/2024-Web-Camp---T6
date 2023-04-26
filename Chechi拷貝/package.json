@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch scss/all.scss  css/all.css"
+    "sass": "sass scss/all.scss css/all.css",
+    "sass:watch": "sass --watch scss/all.scss  css/all.css"
   },
   "type": "module",
   "author": "",
