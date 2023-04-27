@@ -8,11 +8,7 @@ var swiper = new Swiper(".swiper", {
     nextEl: ".swiper_button_next",
     prevEl: ".swiper_button_prev",
   },
-  // on: {
-  //   resize: function () {
-  //     swiper.changeDirection(getDirection());
-  //   },
-  // },
+  loop:true,
   breakpoints: {
     320: {
         slidesPerView: 1,
@@ -20,7 +16,7 @@ var swiper = new Swiper(".swiper", {
         slidesPerGroup: 2,
     },
     576: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 20,
         slidesPerGroup: 3,
     },

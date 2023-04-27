@@ -1,16 +1,15 @@
-
-@use"../base" as *;
-
+@use "../base" as *;
 
 // <!-- 大搜尋框 -->
-.search{
+.search {
+  padding: 10px 20px;
+  background-color: $white;
+
   display: none;
-  @media(min-width:768px) {
+  @media (min-width: $md) {
     display: flex;
-    padding: 10px 20px;
-    background-color: $white;
   }
-  .search_box{
+  .search_box {
     outline: 1px solid $gray-2;
     display: flex;
     width: 100%;
@@ -18,16 +17,16 @@
     background-color: $gray-1;
     padding: 5px 10px;
   }
-  input{
-    background-color:$gray-1;
+  input {
+    background-color: $gray-1;
     border: none;
     width: 90%;
     outline: 0;
   }
-    button{
+  button {
     background: url(../images/search.png) no-repeat 0 5px;
     background-color: $gray-1;
     border: none;
-    width: 10%;
+    width: 30px;
   }
 }

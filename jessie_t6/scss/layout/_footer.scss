@@ -1,24 +1,15 @@
-@use"../base" as*;
-
-
-@use "../component/testimonial";
-// 感言
-@use "../component/form_get_it_touch";
-// 表單
-@use "../component/gallery_flickr";
-// 圖片集
-@use "../vander/navbar_footer_bootstrap";
-@use "../component/copy_right";
+@use "../base" as *;
 
 // ---footer---
-footer{
+footer {
   margin-top: 50px;
 }
 
-.footer_box{
+.footer_box {
   background: $bg_paper;
   display: flex;
   flex-direction: column;
+  margin: 0;
   @include breakpoint($md) {
     display: flex;
     flex-direction: row;

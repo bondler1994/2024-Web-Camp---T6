@@ -1,38 +1,36 @@
-@use"../base" as *;
- 
-
-@use "../vander/carousel_bootstrap"; 
-// 輪播圖
-@use "../component/card_servic";
-// 四張卡片
-@use "../component/card_introduce";
-// 公司介紹
-@use "../component/accordion_reason";
-// why choose us
-@use "../component/card_news";
-// news&event
-@use "../vander/carousel_swiper";
-// <!-- 未來工作圖片輪播 -->
-
-
+@use "../base" as *;
 
 // ----main----
-main{
-  background:$bg_paper;
+main {
+  background: $bg_paper;
+  outline: 2px solid $gray-3;
 }
 
 //區塊分割線
-.company{
+.company {
   border-bottom: 1px solid $gray-3;
 }
 
 //more
-.text_more{
+.text_more {
   text-decoration: none;
   color: $black;
   font-weight: 700;
-  &:hover{
-    color:$green;
+  &:hover {
+    color: $green;
   }
 }
 
+// <!-- 公司介紹 -->
+// welcome
+
+.card_introduce {
+  width: 100%;
+  p {
+    margin-top: 30px;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

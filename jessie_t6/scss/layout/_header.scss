@@ -1,29 +1,16 @@
-@use"../base" as *;
-
-@use "../component/iconlist_social_media";
-// social_media
-@use "../component/logo";
-// logo
-@use "../component/search";
-
-@use "../vander/navbar_header_bootstrap";
-
+@use "../base" as *;
 
 // --- header ---
-header{
+header {
   background: $bg_paper;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 35px;
-  outline: 1px solid $gray-3;
+  outline: 2px solid $gray-3;
   @include breakpoint($md) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
- 
 }
-
-
-
