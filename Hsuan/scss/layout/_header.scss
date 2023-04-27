@@ -1,0 +1,36 @@
+@use "../utilities/breakpoint";
+@use "../utilities/variable";
+
+header {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  text-align: center;
+  background-image: url(../images/subbg.gif);
+  @include breakpoint.lg {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+h1 {
+  margin: 0;
+  a {
+    display: inline-block;
+  }
+  img {
+    width: 100%;
+  }
+}
+.connection {
+  p {
+    margin: 0;
+    text-transform: capitalize;
+    a {
+      text-decoration: none;
+      color: black;
+      &:hover {
+        color: variable.$green;
+      }
+    }
+  }
+}

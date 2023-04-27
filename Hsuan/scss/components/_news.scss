@@ -1,0 +1,26 @@
+@use "../utilities/variable";
+
+.news {
+  display: flex;
+  gap: 30px;
+  span {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 5px 15px;
+    background-color: variable.$green;
+    color: variable.$white;
+  }
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: variable.$gray;
+    a {
+      text-transform: capitalize;
+      text-decoration: none;
+      color: black;
+      &:hover {
+        color: variable.$green;
+      }
+    }
+  }
+}

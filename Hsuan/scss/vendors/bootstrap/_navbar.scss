@@ -1,0 +1,77 @@
+@use "../../utilities/breakpoint";
+@use "../../utilities/variable";
+
+//main navbar
+.navbar-expand-lg {
+  gap: 10px;
+  background-color: variable.$white;
+  box-shadow: -2px -2px 5px rgba(0,0,0,0.2);
+  @include breakpoint.lg {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .navbar-toggler {
+    border: none;
+    box-shadow: none;
+  }
+  .navbar-nav {
+    flex-grow: 1;
+    background-color: variable.$white;
+    box-shadow: none;
+    @include breakpoint.lg {
+      box-shadow: 2px -2px 5px rgba(0,0,0,0.2);
+    }
+    .nav-link {
+      padding: 20px 25px;
+      text-transform: uppercase;
+      border-right: 1px solid #eaeaea;
+      color: black;
+      &:hover {
+        background-color: variable.$green;
+        color: variable.$white;
+      }
+    }
+    .nav-link.active {
+      background-color: variable.$green;
+      color: variable.$white;
+    }
+  }
+  .dropdown-menu {
+    .dropdown-item {
+      &:hover {
+        color: variable.$white;
+        background-color: variable.$green;
+      }
+    }
+  }
+}
+
+//footer navbar
+.footer_nav {
+  text-transform: uppercase;
+  .nav {
+    flex-direction: column;
+    text-align: center;
+    @include breakpoint.sm {
+      flex-direction: row;
+    }
+    .nav-item {
+      border: none;
+      @include breakpoint.sm {
+        &:not(:last-child) {
+          border-right: 1px solid #939292;
+        }
+      }
+      .nav-link {
+        padding: 0 10px;
+        color: #606060;
+        &:hover {
+          color: variable.$white;
+        }
+      }
+      .active {
+        color: variable.$green;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.photo_wall {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  a {
+    overflow: hidden;
+    img {
+      width: 100%;
+      transition: 1s ease-in-out;
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+}

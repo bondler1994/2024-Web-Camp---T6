@@ -1,0 +1,45 @@
+@use "../utilities/breakpoint";
+
+.social_media {
+  text-align: center;
+  @include breakpoint.lg {
+    text-align: right;
+  }
+  a {
+    display: inline-block;
+    width: 32px;
+    height: 27px;
+    background-image: url(../images/social.png);
+    background-repeat: no-repeat;
+    &:first-child{
+      background-position: top left 3px;
+      &:hover {
+        background-position: bottom left 3px;
+      }
+    }
+    &:nth-child(2) {
+      background-position: top left -35px;
+      &:hover {
+        background-position: bottom left -35px;
+      } 
+    }
+    &:nth-child(3) {
+      background-position: top center;
+      &:hover {
+        background-position: bottom center;
+      }
+    }
+    &:nth-child(4) {
+      background-position: top right -36px;
+      &:hover {
+        background-position: bottom right -36px;
+      }
+    }
+    &:nth-child(5) {
+      background-position: top right 3px;
+      &:hover {
+        background-position: bottom right 3px;
+      }
+    }
+  }
+}

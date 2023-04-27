@@ -1,0 +1,35 @@
+@use "../utilities/variable";
+
+.dialogue {
+  &_speech {
+    padding: 20px 20px 40px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    background-color: variable.$light-gray;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 10% 90%, 0 100%, 0 90%, 0% 90%);
+  }
+  .speaker_img {
+    display: inline-block;
+    margin-right: 20px;
+    width: 60px;
+    vertical-align: middle;
+    img {
+      width: 100%;
+    }
+  }
+  &_speaker {
+    display: inline-block;
+    vertical-align: middle;
+    p {
+      margin: 0;
+    }
+    a {
+      font-style: italic;
+      text-decoration: none;
+      color: variable.$green;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
