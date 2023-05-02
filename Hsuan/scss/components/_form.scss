@@ -1,5 +1,5 @@
-@use "../utilities/breakpoint";
-@use "../utilities/variable";
+@use "../base/breakpoint" as *;
+@use "../base/color";
 
 //main form
 .navbar-expand-lg {
@@ -7,9 +7,9 @@
     padding: 10px 15px 5px;
     flex-grow: 1;
     align-self: stretch;
-    background-color: variable.$white;
+    background-color: color.$white;
     box-shadow: none;
-    @include breakpoint.lg {
+    @include breakpoint($lg) {
       box-shadow: -2px -2px 5px rgba(0,0,0,0.2);
     }
     input {
@@ -19,7 +19,7 @@
       text-transform: capitalize;
       border: 1px solid #e5e5e5;
       border-right: none;
-      outline-color: variable.$green;
+      outline-color: color.$green;
       background-color: #f3f3f3;
       background-position: right 10px top 10px;
       color: #9a9a9a;
@@ -45,8 +45,8 @@
     padding: 5px;
     border: 1px solid #d9d9d9;
     border-radius: 3px;
-    outline-color: variable.$green;
-    background-color: variable.$light-gray;
+    outline-color: color.$green;
+    background-color: color.$light-gray;
   }
   textarea {
     margin-bottom: 20px;
@@ -54,21 +54,21 @@
     padding: 5px;
     border: 1px solid #d9d9d9;
     border-radius: 3px;
-    outline-color: variable.$green;
+    outline-color: color.$green;
     resize: none;
-    background-color: variable.$light-gray;
+    background-color: color.$light-gray;
   }
   button {
     padding: 5px 10px;
     font-weight: 600;
     text-transform: uppercase;
     border: none;
-    color: variable.$white;
+    color: color.$white;
   }
   .reset {
     background-color: #1c1c1c;
   }
   .submit {
-    background-color: variable.$green;
+    background-color: color.$green;
   }
 }

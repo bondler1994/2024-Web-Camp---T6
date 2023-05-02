@@ -1,8 +1,14 @@
-@use "../utilities/breakpoint";
+@use "../base/breakpoint" as *;
+@mixin background-position($normal-position, $hover-position) {
+  background-position: $normal-position;
+  &:hover {
+    background-position: $hover-position;
+  }
+}
 
 .social_media {
   text-align: center;
-  @include breakpoint.lg {
+  @include breakpoint($lg) {
     text-align: right;
   }
   a {
@@ -12,34 +18,19 @@
     background-image: url(../images/social.png);
     background-repeat: no-repeat;
     &:first-child{
-      background-position: top left 3px;
-      &:hover {
-        background-position: bottom left 3px;
-      }
+      @include background-position(top left 3px, bottom left 3px);
     }
     &:nth-child(2) {
-      background-position: top left -35px;
-      &:hover {
-        background-position: bottom left -35px;
-      } 
+      @include background-position(top left -35px, bottom left -35px);
     }
     &:nth-child(3) {
-      background-position: top center;
-      &:hover {
-        background-position: bottom center;
-      }
+      @include background-position(top center, bottom center);
     }
     &:nth-child(4) {
-      background-position: top right -36px;
-      &:hover {
-        background-position: bottom right -36px;
-      }
+      @include background-position(top right -36px, bottom right -36px);
     }
     &:nth-child(5) {
-      background-position: top right 3px;
-      &:hover {
-        background-position: bottom right 3px;
-      }
+      @include background-position(top right 3px, bottom right 3px);
     }
   }
 }

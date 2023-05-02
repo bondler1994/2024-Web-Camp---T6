@@ -1,5 +1,5 @@
-@use "../utilities/breakpoint";
-@use "../utilities/variable";
+@use "../base/breakpoint" as *;
+@use "../base/color";
 
 header {
   display: flex;
@@ -7,29 +7,30 @@ header {
   flex-direction: column;
   text-align: center;
   background-image: url(../images/subbg.gif);
-  @include breakpoint.lg {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  @include breakpoint($lg) {
     flex-direction: row;
     justify-content: space-between;
   }
-}
-h1 {
-  margin: 0;
-  a {
-    display: inline-block;
-  }
-  img {
-    width: 100%;
-  }
-}
-.connection {
-  p {
+  h1 {
     margin: 0;
-    text-transform: capitalize;
     a {
-      text-decoration: none;
-      color: black;
-      &:hover {
-        color: variable.$green;
+      display: inline-block;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .connection {
+    p {
+      margin: 0;
+      text-transform: capitalize;
+      a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+          color: color.$green;
+        }
       }
     }
   }

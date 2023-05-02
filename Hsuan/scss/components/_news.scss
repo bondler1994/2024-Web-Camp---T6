@@ -1,4 +1,4 @@
-@use "../utilities/variable";
+@use "../base/color";
 
 .news {
   display: flex;
@@ -7,19 +7,19 @@
     display: inline-block;
     margin-bottom: 20px;
     padding: 5px 15px;
-    background-color: variable.$green;
-    color: variable.$white;
+    background-color: color.$green;
+    color: color.$white;
   }
   p {
     margin: 0;
     font-size: 14px;
-    color: variable.$gray;
+    color: color.$gray;
     a {
       text-transform: capitalize;
       text-decoration: none;
       color: black;
       &:hover {
-        color: variable.$green;
+        color: color.$green;
       }
     }
   }

@@ -1,24 +1,23 @@
-@use "../../utilities/breakpoint";
-@use "../../utilities/variable";
+@use "../../base/breakpoint" as *;
+@use "../../base/color";
 
 .swiper_container {
   display: flex;
   margin-bottom: 20px;
-  flex-direction: column;
-  @include breakpoint.sm {
+  justify-content: space-between;
+  @include breakpoint($sm) {
     flex-direction: row;
-    justify-content: space-between;
   }
-  h3 {
+  h4 {
     margin: 0;
-    font-size: 30px;
+    font-size: 24px;
     text-transform: uppercase;
   }
   .swiper_control {
-    font-size: 30px;
-    color: variable.$light-gray;
+    font-size: 24px;
+    color: color.$light-gray;
     i:hover {
-      color: variable.$black;
+      color: color.$black;
     }
   }
 }
@@ -61,8 +60,8 @@
     p {
       font-size: 20px;
       text-transform: uppercase;
-      border-bottom: 2px solid variable.$white;
-      color: variable.$white;
+      border-bottom: 2px solid color.$white;
+      color: color.$white;
     }
     a {
       display: inline-block;

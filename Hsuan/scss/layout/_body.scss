@@ -1,0 +1,8 @@
+@use "../base/color";
+
+body {
+  min-width: 375px;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(color.$black 5%, transparent 5% 90%, color.$black 90%), url(../images/bg.jpg);
+  background-position: center;
+}

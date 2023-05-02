@@ -16,15 +16,15 @@
     top: 50%;
     transform: translateY(-50%);
     opacity: 1;
-    .carousel-control-prev-icon {
-      @include carousel_button(url(../images/slider_prev.gif));
-    }
+  }
+  .carousel-control-prev-icon {
+    @include carousel_button(url(../images/slider_prev.gif));
   }
   .carousel-control-next {
     @extend .carousel-control-prev;
-    .carousel-control-next-icon {
-      @include carousel_button(url(../images/slider_next.gif));
-    }
+  }
+  .carousel-control-next-icon {
+    @include carousel_button(url(../images/slider_next.gif));
   }
   img {
     min-height: 250px;

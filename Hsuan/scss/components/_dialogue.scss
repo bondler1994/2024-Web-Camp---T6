@@ -1,12 +1,22 @@
-@use "../utilities/variable";
+@use "../base/color";
 
 .dialogue {
   &_speech {
-    padding: 20px 20px 40px;
+    position: relative;
+    margin-bottom: 30px;
+    padding: 20px 20px;
     font-size: 14px;
-    border: 1px solid #cccccc;
-    background-color: variable.$light-gray;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 10% 90%, 0 100%, 0 90%, 0% 90%);
+    background-color: color.$light-gray;
+    filter: drop-shadow(1px 1px 0px #cccccc) drop-shadow(-1px -1px 0px #cccccc);
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      border-style: solid;
+      border-width: 20px 20px 0 0;
+      border-color: color.$light-gray transparent transparent transparent;
+    }
   }
   .speaker_img {
     display: inline-block;
@@ -26,7 +36,7 @@
     a {
       font-style: italic;
       text-decoration: none;
-      color: variable.$green;
+      color: color.$green;
       &:hover {
         text-decoration: underline;
       }
