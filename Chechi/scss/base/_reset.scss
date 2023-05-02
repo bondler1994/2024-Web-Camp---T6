@@ -1,28 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 * {
-    font-family: 'Open Sans', sans-serif;
-      
-     
-  }
-  
-  /* 文字標籤下面有預設margin、需要手動歸零  */
-  
-  html,
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  p,
-  ul,
-  li {
-    margin: 0;
-    padding: 0;
-  }
-  
-  a {
-      text-decoration: none;
-  }
+  font-family: "Open Sans", sans-serif;
+}
 
-  
+/* 文字標籤下面有預設margin、需要手動歸零  */
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}

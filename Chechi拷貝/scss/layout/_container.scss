@@ -1,9 +1,0 @@
-@use '../abstracts/breakpoint' as *;
-
-     .container.my_container {
-    @include breakpoint($lg){ 
-      max-width: none;
-    }
-    }
- 
-
