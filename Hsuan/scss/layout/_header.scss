@@ -3,9 +3,11 @@
 
 header {
   display: flex;
+  margin-bottom: 40px;
   gap: 10px;
   flex-direction: column;
   text-align: center;
+  font-size: 0;
   background-image: url(../images/subbg.gif);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   @include breakpoint($lg) {
@@ -14,23 +16,24 @@ header {
   }
   h1 {
     margin: 0;
+    height: 54px;
     a {
       display: inline-block;
+      height: 100%;
     }
     img {
-      width: 100%;
+      height: 100%;
     }
   }
-  .connection {
-    p {
-      margin: 0;
-      text-transform: capitalize;
-      a {
-        text-decoration: none;
-        color: black;
-        &:hover {
-          color: color.$green;
-        }
+  .connection_number {
+    margin: 0;
+    font-size: 16px;
+    text-transform: capitalize;
+    a {
+      text-decoration: none;
+      color: black;
+      &:hover {
+        color: color.$green;
       }
     }
   }

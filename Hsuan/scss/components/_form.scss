@@ -1,6 +1,15 @@
 @use "../base/breakpoint" as *;
 @use "../base/color";
 
+%footer_form_style {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  outline-color: color.$green;
+  background-color: color.$light-gray;
+}
+
 //main form
 .navbar-expand-lg {
   form {
@@ -14,19 +23,17 @@
     }
     input {
       padding: 10px;
-      width: 80%;
-      height: 100%;
+      width: 85%;
       text-transform: capitalize;
       border: 1px solid #e5e5e5;
       border-right: none;
       outline-color: color.$green;
       background-color: #f3f3f3;
-      background-position: right 10px top 10px;
       color: #9a9a9a;
     }
     button {
       padding: 0;
-      width: 20%;
+      width: 15%;
       border: 1px solid #e5e5e5;
       border-left: none;
       background-color: #f3f3f3;
@@ -37,26 +44,16 @@
   }
 }
 
-//footer foem
+//footer form
 .contact_form {
   input {
-    width: 100%;
+    @extend %footer_form_style;
     margin-bottom: 5px;
-    padding: 5px;
-    border: 1px solid #d9d9d9;
-    border-radius: 3px;
-    outline-color: color.$green;
-    background-color: color.$light-gray;
   }
   textarea {
+    @extend %footer_form_style;
     margin-bottom: 20px;
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #d9d9d9;
-    border-radius: 3px;
-    outline-color: color.$green;
     resize: none;
-    background-color: color.$light-gray;
   }
   button {
     padding: 5px 10px;

@@ -1,6 +1,11 @@
 @use "../../base/breakpoint" as *;
 @use "../../base/color";
 
+%main_navbar_link {
+  background-color: color.$green;
+  color: color.$white;
+}
+
 //main navbar
 .navbar {
   gap: 10px;
@@ -36,21 +41,16 @@
       border-right: 1px solid #eaeaea;
       color: black;
       &:hover {
-        background-color: color.$green;
-        color: color.$white;
+        @extend %main_navbar_link;
       }
     }
     .nav-link.active {
-      background-color: color.$green;
-      color: color.$white;
+      @extend %main_navbar_link;
     }
   }
-  .dropdown-menu {
-    .dropdown-item {
-      &:hover {
-        color: color.$white;
-        background-color: color.$green;
-      }
+  .dropdown-item {
+    &:hover {
+      @extend %main_navbar_link;
     }
   }
 }

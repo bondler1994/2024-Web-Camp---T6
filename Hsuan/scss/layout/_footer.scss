@@ -5,12 +5,18 @@ footer {
   box-shadow: -2px -2px 5px rgba(0,0,0,0.2);
 }
 .footer_container {
+  margin-bottom: 12px;
   padding: 40px;
   background-image: url(../images/subbg.gif);
   h5 {
     font-size: 24px;
     margin-bottom: 20px;
     text-transform: uppercase;
+  }
+  .tweets {
+    p {
+      margin-bottom: 0;
+    }
   }
 }
 .footer_menu {
@@ -27,13 +33,13 @@ footer {
       margin-bottom: 0;
       text-transform: uppercase;
       color: #606060;
-      a {
-        text-decoration: none;
-        text-transform: capitalize;
-        color: color.$green;
-        &:hover {
-          text-decoration: underline;
-        }
+    }
+    a {
+      text-decoration: none;
+      text-transform: capitalize;
+      color: color.$green;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }

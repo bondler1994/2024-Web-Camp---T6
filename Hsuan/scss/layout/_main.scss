@@ -1,8 +1,16 @@
 @use "../base/breakpoint";
 @use "../base/color";
 
+@mixin a_style($basis_color, $hover_color) {
+  text-decoration: none;
+  color: $basis_color;
+  &:hover {
+    color: $hover_color;
+  }
+}
+
 main {
-  margin: 40px 0 80px;
+  margin-bottom: 80px;
   section {
     padding: 20px 40px 60px;
     background-image: url(../images/subbg.gif);
@@ -29,11 +37,7 @@ main {
     color: color.$gray;
     a {
       text-transform: capitalize;
-      text-decoration: none;
-      color: black;
-      &:hover {
-        color: color.$green;
-      }
+      @include a_style(#000000, color.$green);
     }
   }
 }
@@ -52,10 +56,6 @@ main {
   }
   a {
     font-size: 18px;
-    text-decoration: none;
-    color: color.$gray;
-    &:hover {
-      color: color.$green;
-    }
+    @include a_style(color.$gray, color.$green);
   }
 }
