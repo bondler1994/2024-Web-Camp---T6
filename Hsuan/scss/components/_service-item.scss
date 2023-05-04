@@ -1,20 +1,6 @@
 @use "../base/breakpoint" as *;
 @use "../base/color";
 
-.service {
-  display: grid;
-  position: static;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 24px;    
-  @include breakpoint($md) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @include breakpoint($xl) {
-    position: relative;
-    bottom: 50px;
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 .service_item {
   display: flex;
   padding: 25px;

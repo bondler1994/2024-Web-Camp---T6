@@ -3,6 +3,13 @@
 .news {
   display: flex;
   gap: 30px;
+  .news_img {
+    width: 145px;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+    }
+  }
   span {
     display: inline-block;
     margin-bottom: 20px;
