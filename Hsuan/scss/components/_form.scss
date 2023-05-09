@@ -9,6 +9,14 @@
   outline-color: color.$green;
   background-color: color.$light-gray;
 }
+@mixin footer_form_button($button-background) {
+  padding: 5px 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  color: color.$white;
+  background-color: $button-background;
+}
 
 //main form
 .navbar-expand-lg {
@@ -55,17 +63,10 @@
     margin-bottom: 20px;
     resize: none;
   }
-  button {
-    padding: 5px 10px;
-    font-weight: 600;
-    text-transform: uppercase;
-    border: none;
-    color: color.$white;
-  }
   .reset {
-    background-color: #1c1c1c;
+    @include footer_form_button(#1c1c1c);
   }
   .submit {
-    background-color: color.$green;
+    @include footer_form_button(color.$green);
   }
 }
