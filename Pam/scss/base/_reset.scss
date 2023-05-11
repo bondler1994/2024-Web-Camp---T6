@@ -1,0 +1,45 @@
+@use "../abstracts/" as *;
+* {
+  // outline: 1px red solid;
+}
+
+body {
+  background: url(../images/bg.jpg);
+  @include device_md() {
+    background: linear-gradient($dark 120px, transparent 120px 90%, $dark 90%),
+      url(../images/bg.jpg);
+  }
+  @include device_lg() {
+    background: linear-gradient($dark 70px, transparent 70px 90%, $dark 90%),
+      url(../images/bg.jpg);
+  }
+  > .container {
+    padding: 0;
+    @media (min-width: 1440px) {
+      max-width: 1251px;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: "Noto Sans", sans-serif;
+  margin: 0;
+  color: $dark;
+}
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+p {
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  font-size: 14px;
+  color: $dark;
+}

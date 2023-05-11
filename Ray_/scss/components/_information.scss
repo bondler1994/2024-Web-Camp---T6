@@ -1,0 +1,22 @@
+@use "../utils" as *;
+
+.information {
+  @include display_flex(column, $gap_m);
+  background-image: url("./images/subbg.gif");
+  padding: 1rem;
+  @include breakpoint($tablet) {
+    padding: 2.6rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $gap_l;
+  }
+
+  &_item {
+    @include breakpoint($tablet) {
+      flex: 1 1 40%;
+    }
+    @include breakpoint($PC) {
+      flex: 1;
+    }
+  }
+}

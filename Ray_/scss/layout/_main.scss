@@ -1,42 +1,23 @@
-@use "../utils/breakpoint" as *;
-@use "../utils/color" as *;
-@use "../utils/extend" as *;
-@use "../utils/gutter" as *;
+@use "../base" as *;
+@use "../utils" as *;
+
+@use "../components/introduce" as *;
+@use "../components/welcome" as *;
+@use "../components/chooseUslist" as *;
+@use "../components/news" as *;
 
 main {
-  background-image: url("/Ray_/images/subbg.gif");
+  background-image: url("./images/subbg.gif");
+  box-shadow: 0 1px 3px 0 $gray-400;
+  padding-bottom: 1.5rem;
+  margin-bottom: 20px;
   @include breakpoint($tablet) {
     padding: 1.2rem 0 2.5rem;
+    margin-top: -20px;
   }
   @include breakpoint($PC) {
     max-width: 1440px;
-    margin: 0 auto;
-    box-shadow: 0 1px 3px 0 $gray-400;
-  }
-}
-
-.introduce {
-  @extend %phone_block_gutter;
-  padding: 0 1rem 1rem;
-  position: relative;
-  @include breakpoint($tablet) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: $gutter_l;
-  }
-  @include breakpoint($PC) {
-    padding: 2rem 2.6rem 6rem;
-  }
-
-  &_item {
-    @extend %phone_article_gutter;
-    @include breakpoint($tablet) {
-      flex: 1;
-      gap: $gutter_l;
-    }
-  }
-
-  &_title {
-    text-transform: uppercase;
+    margin: -20px auto 4.5rem;
+    padding: 1.2rem 0 6rem;
   }
 }

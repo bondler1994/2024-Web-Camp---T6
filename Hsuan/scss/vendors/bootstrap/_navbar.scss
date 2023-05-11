@@ -1,0 +1,86 @@
+@use "../../base/breakpoint" as *;
+@use "../../base/color";
+
+%main_navbar_link {
+  background-color: color.$green;
+  color: color.$white;
+}
+
+//main navbar
+.navbar {
+  gap: 10px;
+  background-color: color.$white;
+  box-shadow: -2px -2px 5px rgba(0,0,0,0.2);
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+    z-index: -1;
+    background-color: #f3f3f3;
+  }
+  @include breakpoint($lg) {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .navbar-toggler {
+    border: none;
+    box-shadow: none;
+  }
+  .navbar-nav {
+    flex-grow: 1;
+    background-color: color.$white;
+    box-shadow: none;
+    @include breakpoint($lg) {
+      box-shadow: 2px -2px 5px rgba(0,0,0,0.2);
+    }
+    .nav-link {
+      padding: 20px 25px;
+      text-transform: uppercase;
+      border-right: 1px solid #eaeaea;
+      color: black;
+      &:hover {
+        @extend %main_navbar_link;
+      }
+    }
+    .nav-link.active {
+      @extend %main_navbar_link;
+    }
+  }
+  .dropdown-item {
+    &:hover {
+      @extend %main_navbar_link;
+    }
+  }
+}
+
+//footer navbar
+.footer_nav {
+  text-transform: uppercase;
+  .nav {
+    flex-direction: column;
+    text-align: center;
+    @include breakpoint($sm) {
+      flex-direction: row;
+    }
+    .nav-item {
+      border: none;
+      @include breakpoint($sm) {
+        &:not(:last-child) {
+          border-right: 1px solid #939292;
+        }
+      }
+      .nav-link {
+        padding: 0 10px;
+        color: #606060;
+        &:hover {
+          color: color.$white;
+        }
+      }
+      .active {
+        color: color.$green;
+      }
+    }
+  }
+}

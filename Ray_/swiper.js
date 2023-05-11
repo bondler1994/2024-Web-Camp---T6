@@ -1,7 +1,6 @@
 var swiper = new Swiper(".swiper", {
 
   slidesPerView: 'auto',
-
   breakpoints: { 
     375: {  
       slidesPerView: 1,
@@ -20,6 +19,8 @@ var swiper = new Swiper(".swiper", {
       spaceBetween: 32
     }
   },
+
+  loop:"true",
 
   direction: "horizontal",
   navigation: {

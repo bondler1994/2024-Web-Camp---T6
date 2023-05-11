@@ -1,0 +1,46 @@
+@use "../utilities/breakpoints";
+@use "../utilities/color";
+@use "../utilities/mixin";
+
+main {
+    @include breakpoints.sm {
+        box-shadow: 0px 0px 5px -1px;
+    }
+
+    .services {
+        @include breakpoints.sm {
+            @include mixin.sub-background;
+            .row {
+                margin-top: -76px;
+                position: relative;
+              }        
+        }
+    }
+
+    .information {
+        @include mixin.sub-background; 
+        h3 {
+            @include mixin.capitalized;
+        }
+    }
+
+    .featured {
+        @include mixin.sub-background;
+        
+        h3 {
+            @include mixin.capitalized;
+        }
+        // 分隔線
+        @include breakpoints.sm {
+            &::before {
+                content: "";
+                top:0;
+                position: absolute;
+                display: block;
+                width: calc(100% - 3rem); 
+                height: 1.5px;
+                background-color: color.$theme-tertiary-300; 
+            }
+        }
+    }
+}

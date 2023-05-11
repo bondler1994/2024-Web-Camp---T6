@@ -1,0 +1,48 @@
+@use "../base/breakpoint" as *;
+@use "../base/color";
+
+.service_item {
+  display: flex;
+  padding: 25px;
+  gap: 30px;
+  flex-direction: column;
+  text-align: center;
+  background-color: color.$light-gray;
+  color: color.$dark-gray;
+  &:hover {
+    background-color: rgba(0,0,0,0.6);
+    color: color.$white;
+  }
+  h3 {
+    margin: 0;
+    height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  div {
+    height: 60px;
+    img {
+      height: 100%;
+    }
+  }
+  p {
+    display: -webkit-box;
+    margin: 0;
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+  a {
+    margin-top: auto;
+    padding: 5px 15px;
+    align-self: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: color.$dark-gray;
+    background-color: #cdcdcd;
+    &:hover {
+      background-color: color.$green;
+      color: color.$white;
+    }
+  }
+}

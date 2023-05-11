@@ -1,0 +1,16 @@
+@use "../base" as *;
+
+.contact_method {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+
+  &_phone {
+    color: $black;
+
+    &:hover {
+      text-decoration: underline;
+      color: $black;
+    }
+  }
+}

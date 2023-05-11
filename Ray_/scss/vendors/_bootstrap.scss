@@ -1,0 +1,345 @@
+@use "../base/color" as *;
+@use "../base/font" as *;
+@use "../utils/breakpoint" as *;
+@use "../utils/layout" as *;
+
+%card_title {
+  @include breakpoint($tablet) {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: $font_size_xs;
+    color: $gray-600;
+    font-weight: 500;
+  }
+  @include breakpoint(1440px) {
+    font-size: $font_size_s;
+  }
+}
+
+%card_text {
+  color: $gray-600;
+  font-weight: 500;
+}
+
+.navbar_container {
+  padding: 1rem;
+  @include breakpoint($tablet) {
+    flex-direction: row-reverse;
+    gap: 0.7rem;
+    padding: 0;
+  }
+
+  .navbar_item {
+    display: flex;
+    justify-content: space-between;
+    gap: $gap_m;
+    flex-grow: 1; //手機板的時候搜尋要延伸
+    @include breakpoint($tablet) {
+      justify-content: initial;
+      gap: 0;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+
+    &:focus {
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  .navbar_search {
+    @include display_flex(row, $gap_s);
+    position: relative;
+    width: auto;
+    background-color: #fff;
+    flex-grow: 1;
+
+    @include breakpoint($tablet) {
+      height: 53px; //強制跟旁邊的nav一樣高
+      padding: 0.6rem 0.8rem 0.3rem 1rem;
+      box-shadow: -3px -1px 3px 0 $gray-400;
+    }
+
+    .input-group > .form-control:focus {       //要蓋掉bootstrap的樣式，防止打字輸入時按鈕跑到下層
+      z-index: 1;
+    }
+
+    &_input {
+      margin: 0;
+      border-radius: 0;
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &::-webkit-search-cancel-button {
+        //會跟搜尋按鈕重疊，因此先關掉清除按鈕
+        display: none;
+      }
+    }
+
+    &_submit {
+      position: absolute;
+      top: 1px;
+      right: 10px;
+      width: 20px;
+      height: 32px;
+      background: no-repeat 0/20px url(./images/search.png);
+    }
+  }
+
+  .navbar_link_container {
+    @include breakpoint($tablet) {
+      justify-content: space-between;
+      flex-grow: 4;
+      border: 0;
+    }
+  }
+
+  .navbar-nav {
+    background-color: #fff;
+    @include breakpoint($tablet) {
+      flex-grow: 1;
+      box-shadow: 3px -1px 3px 0 $gray-400;
+    }
+
+    .nav-item {
+      @include breakpoint($tablet) {
+        border-right: 0.1rem solid $gray-100;
+      }
+
+      .nav-link {
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        @include breakpoint($tablet) {
+          padding: 1rem 0.5rem;
+          font-size: 0.9rem;
+        }
+        @include breakpoint($PC) {
+          padding: 1rem 1.5rem;
+        }
+        &:hover {
+          background-color: $primary_color;
+          color: $white;
+        }
+      }
+    }
+  }
+  .dropdown-menu {
+    border-radius: 0;
+    padding: 1rem;
+
+    .dropdown-item:hover {
+      background-color: $primary_color;
+    }
+  }
+}
+
+// carousel
+
+.carousel_container {
+  .carousel_img {
+    height: 40vh;
+    object-fit: cover;
+    object-position: 80% 0;
+
+    @include breakpoint($tablet) {
+      object-position: 0;
+      height: initial;
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 119px;
+  }
+
+  .carousel-control-prev {
+    background: no-repeat url("./images/slider_prev.gif");
+    &:hover {
+      background: no-repeat 0 -120px / auto url("./images/slider_prev.gif");
+    }
+  }
+
+  .carousel-control-next {
+    background: no-repeat url("./images/slider_next.gif");
+    &:hover {
+      background: no-repeat 0 -120px / auto url("./images/slider_next.gif");
+    }
+  }
+}
+
+.card_group {
+  @include display_flex(column, $gap_m);
+  padding: 0 1rem 1.5rem;
+  margin-top: -30px;
+  @include breakpoint($tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $gap_l;
+    padding: 1.5rem 1rem;
+  }
+  @include breakpoint($tablet) {
+    padding: 0 2.6rem 1.5rem;
+  }
+
+  .card {
+    background-color: $gray;
+    border-radius: 0;
+    @include breakpoint($tablet) {
+      flex:1 1 40%;
+    }
+    @include breakpoint($PC) {
+      flex: 1;
+    }
+
+    &-body {
+      @include display_flex(column, $gap-m);
+      padding: 2rem;
+      align-items: center;
+      @include breakpoint($tablet) {
+        gap: $gap_l;
+      }
+      @include breakpoint(1440px) {
+        padding: 2.6rem 3rem 2rem;
+      }
+    }
+
+    &-title {
+      @extend %card_title;
+    }
+
+    &_img_container {
+      width: 20%;
+      @include breakpoint($PC) {
+        width: 30%;
+      }
+    }
+
+    &-text {
+      @extend %card_text;
+      text-align: center;
+      @include breakpoint($tablet) {
+        line-height: 1.2;
+        font-size: 0.9rem;
+      }
+    }
+
+    &_link {
+      padding: 0.3rem 1rem;
+      background-color: $gray-200;
+      @extend %card_text;
+      margin-top: auto;//把按鈕固定在下方
+
+      &:hover {
+        background-color: $primary_color;
+        color: $white;
+      }
+    }
+    &:hover {
+      background-color: rgba(#ffffff, 0.05);
+      .card {
+        &-body {
+          border: 1px solid $black;
+          background-color: rgba(50, 50, 50, 0.8);
+        }
+        &-title,
+        &-text {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.touch {
+  @include display_flex(column, $gap_s);
+  @include breakpoint($tablet) {
+    gap: $gap_l;
+  }
+
+  &_title {
+    @extend %information_title;
+  }
+
+  &_write {
+    @include display_flex(column, 0.3rem);
+  }
+
+  input,
+  textarea {
+    padding: 0.2rem;
+    border-radius: 2px;
+    background-color: $gray;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: $gray-100;
+    box-shadow: none;
+  }
+
+  &_button_container {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    @include breakpoint($PC) {
+      justify-content: initial;
+    }
+
+    .btn {
+      padding: 0.3rem 1rem;
+      border: none;
+      border-radius: 0;
+      background-color: $black;
+      text-transform: uppercase;
+      color: $white;
+      &:hover {
+        background-color: $primary_color;
+      }
+    }
+  }
+}
+
+.nav_container {
+  @include display_flex(column, 0);
+  list-style-type: none;
+  @include breakpoint($tablet) {
+    flex-direction: row;
+  }
+  @include breakpoint($PC) {
+    margin-bottom: 0;
+  }
+
+  .nav-item {
+    + .nav-item {
+      @include breakpoint($tablet) {
+        border-left: 0.2rem solid $gray-400;
+      }
+    }
+  }
+
+  .nav-link {
+    @extend %text_style_1;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    @include breakpoint($tablet) {
+      padding: 0 1rem;
+      line-height: 1;
+    }
+    &:hover {
+      color: $primary_color;
+    }
+  }
+}

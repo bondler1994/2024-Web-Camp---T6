@@ -1,0 +1,83 @@
+@use "../base" as *;
+@use "../utils" as *;
+
+.choose_us {
+  &_title {
+    margin-bottom: 2rem;
+  }
+
+  &_list {
+    @include display_flex(row, $gap_m);
+    align-items: center;
+    padding: 1rem 0;
+
+    @include breakpoint($tablet) {
+      border-bottom: 0.1rem solid $gray-100;
+    
+      &:nth-child(3),
+      &:nth-child(4) {
+        .choose_us_text {
+          align-self: flex-end;
+        }
+      }
+    }
+
+    &:hover {
+      .choose_us_icon {
+        transform: translateX(5%);
+      }
+
+      .choose_us_icon_img {
+        background-color: $primary_color;
+      }
+
+      .choose_us_text {
+        color: $primary_color;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &_icon {
+    transition: 0.5s transform;
+
+    &_img {
+      position: relative;
+      border-radius: 100%;
+      background-color: $gray-100;
+      width: 3rem;
+      height: 3rem;
+      @include breakpoint($PC) {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+      &::after {
+        content: "\F285";
+        position: absolute;
+        top: 35%;
+        left: 40%;
+        width: 100%;
+        height: 100%;
+        font-weight: 900;
+        color: white;
+        font-size: $font_size_xxs;
+        font-family: "Bootstrap-icons"; //要加上這個才能顯示
+        @include breakpoint($PC) {
+          top: 30%;
+          left: 35%;
+          font-size: $font_size_s;
+        }
+      }
+    }
+  }
+
+  &_text {
+    color: $gray-400;
+    @include breakpoint($tablet) {
+      line-height: 1.2;
+    }
+    @include breakpoint($PC) {
+      width: 70%;
+    }
+  }
+}

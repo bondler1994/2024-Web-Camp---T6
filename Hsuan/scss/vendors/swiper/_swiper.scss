@@ -1,0 +1,66 @@
+@use "../../base/breakpoint" as *;
+@use "../../base/color";
+
+.swiper_container {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  h4 {
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  .swiper_control {
+    font-size: 24px;
+    color: color.$light-gray;
+    i:hover {
+      color: color.$black;
+    }
+  }
+}
+.swiper-slide {
+  position: relative;
+  &:hover .link {
+    transform: translate(0,0);
+  }
+  img {
+    width: 100%;
+  }
+}
+.link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  overflow: hidden;
+  transform: translateY(100%);
+  transition: 0.8s ease-in-out;
+}
+.link_hover {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -40%;
+  left: -25%;
+  transform: rotate(-30deg);
+  background: linear-gradient(rgba(0,0,0,0.6) 30%, transparent 30% 40%, rgba(0, 0, 0, 0.6) 40% 80%, #80b601 80% 81%, transparent 81%);
+  .link_hover_text {
+    position: absolute;
+    width: 200px;
+    top: 45%;
+    left: 20%;
+    text-align: center;
+    p {
+      font-size: 20px;
+      text-transform: uppercase;
+      border-bottom: 2px solid color.$white;
+      color: color.$white;
+    }
+    a {
+      display: inline-block;
+      + a {
+        margin-left: 10px;                    
+      }
+    }
+  }
+}

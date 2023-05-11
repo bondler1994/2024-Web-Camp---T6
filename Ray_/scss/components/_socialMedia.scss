@@ -1,0 +1,95 @@
+@use "../utils" as *;
+
+// @mixin social_media_pc($x,$y) {
+//   background-position:$x,$y;
+//   background-size: 210px;
+// }
+
+
+.social_media_links {
+  @include display_flex(row, 1.2rem);
+  justify-content: center;
+  @include breakpoint($tablet) {
+    justify-content: right;
+  }
+  @include breakpoint($PC) {
+    gap: 0.5rem;
+  }
+
+  a {
+    padding: 0.7rem;
+    @include breakpoint($PC) {
+      padding: 1rem;
+    }
+  }
+
+  .facebook {
+    background: 0 0/150px url("./images/social.png");
+    @include breakpoint($PC) {
+      background-size: 210px;
+    }
+    &:hover {
+      background: 0px 23px/150px url("./images/social.png");
+      @include breakpoint($PC) {
+        background-position: 0 32px;
+        background-size: 210px;
+      }
+    }
+  }
+  .twitter {
+    background: 118px 0px/150px url("./images/social.png");
+    @include breakpoint($PC) {
+      background-position: -44px 0;
+      background-size: 210px;
+    }
+    &:hover {
+      background: 118px 23px/150px url("./images/social.png");
+      @include breakpoint($PC) {
+        background-position: -44px 32px;
+        background-size: 210px;
+      }
+    }
+  }
+  .fliker {
+    background: 87px 0/150px url("./images/social.png");
+    @include breakpoint($PC) {
+      background-position: -88px 0;
+      background-size: 210px;
+    }
+    &:hover {
+      background: 87px 23px/150px url("./images/social.png");
+      @include breakpoint($PC) {
+        background-position: -88px 32px;
+        background-size: 210px;
+      }
+    }
+  }
+  .dribbble {
+    background: 56px 0px/150px url("./images/social.png");
+    @include breakpoint($PC) {
+      background-position: 32px 0;
+      background-size: 210px;
+    }
+    &:hover {
+      background: 56px 23px/150px url("./images/social.png");
+      @include breakpoint($PC) {
+        background-position: 32px 32px;
+        background-size: 210px;
+      }
+    }
+  }
+  .RSS {
+    background: 23px 0px/150px url("./images/social.png");
+    @include breakpoint($PC) {
+      background-position: 78px 0;
+      background-size: 210px;
+    }
+    &:hover {
+      background: 23px 23px/150px url("./images/social.png");
+      @include breakpoint($PC) {
+        background-position: 78px 32px;
+        background-size: 210px;
+      }
+    }
+  }
+}

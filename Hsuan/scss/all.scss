@@ -1,0 +1,18 @@
+//vendors
+@use "vendors/bootstrap/navbar";
+@use "vendors/bootstrap/carousel";
+@use "vendors/swiper/swiper";
+
+//components
+@use "components/social-media";
+@use "components/form";
+@use "components/service-item";
+@use "components/news";
+@use "components/dialogue";
+@use "components/filckr";
+
+//layout
+@use "layout/body";
+@use "layout/header";
+@use "layout/main";
+@use "layout/footer";

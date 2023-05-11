@@ -1,0 +1,8 @@
+@use "../utils" as *;
+
+.connection{
+  @include display_flex(column-reverse,.5rem);
+  @include breakpoint($tablet) {
+    flex-direction: column;
+  }
+}

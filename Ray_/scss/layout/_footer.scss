@@ -1,38 +1,30 @@
-@use "../utils/breakpoint" as *;
-@use "../utils/color" as *;
-@use "../utils/extend" as *;
-@use "../utils/gutter" as *;
+@use "../base" as *;
+@use "../utils" as *;
 
-footer {
-  background-image: url("/Ray_/images/subbg.gif");
-  padding: 0.7rem 1rem;
+@use "../components/information" as *;
+@use "../components/tweet" as *;
+@use "../components/testimonials" as *;
+@use "../components/flickr" as *;
+@use "../components/copyright" as *;
+
+.footer {
+  margin: 0 auto;
+  box-shadow: 0 -1px 3px 0 $gray-400;
   @include breakpoint($PC) {
-    padding: 2.6rem;
     max-width: 1440px;
-    margin: 4.5rem auto 0;
-    box-shadow: 0 -1px 3px 0 $gray-400;
   }
 
-  .information {
-    @extend %phone_block_gutter;
+  &_bottom {
+    @include display_flex(column, 0);
+    padding: 1rem 0;
     @include breakpoint($tablet) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: $gutter_l;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
     }
-
-    &_item {
-      @extend %phone_article_gutter;
-      @include breakpoint($tablet) {
-        flex: 1 1 calc(50% - (2rem / 2));
-        gap: $gutter_l;
-      }
-      @include breakpoint($PC) {
-        flex: 1;
-      }
-    }
-    &_title{
-      text-transform: uppercase;
+    @include breakpoint($PC) {
+      max-width: 1440px;
+      flex-direction: row-reverse;
     }
   }
 }

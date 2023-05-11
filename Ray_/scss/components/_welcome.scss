@@ -1,0 +1,37 @@
+@use "../base" as *;
+@use "../utils" as *;
+
+.welcome {
+  @include display_flex(column, $gap_s);
+  @include breakpoint($tablet) {
+    gap: $gap_l;
+  }
+
+  &_title {
+    @extend %introduce_title;
+  }
+
+  &_text {
+    p {
+      color: $gray-400;
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      @include breakpoint($tablet) {
+        font-size: 1rem;
+        line-height: 1.2;
+      }
+    }
+    span {
+      @extend %more;
+    }
+
+    &:hover {
+      .welcome_text,
+      .welcome_more {
+        @extend %text_hover;
+      }
+    }
+  }
+}

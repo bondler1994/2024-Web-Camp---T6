@@ -1,0 +1,72 @@
+@use "../base/breakpoint" as *;
+@use "../base/color";
+
+%footer_form_style {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  outline-color: color.$green;
+  background-color: color.$light-gray;
+}
+@mixin footer_form_button($button-background) {
+  padding: 5px 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  color: color.$white;
+  background-color: $button-background;
+}
+
+//main form
+.navbar-expand-lg {
+  form {
+    padding: 10px 15px 5px;
+    flex-grow: 1;
+    align-self: stretch;
+    background-color: color.$white;
+    box-shadow: none;
+    @include breakpoint($lg) {
+      box-shadow: -2px -2px 5px rgba(0,0,0,0.2);
+    }
+    input {
+      padding: 10px;
+      width: 85%;
+      text-transform: capitalize;
+      border: 1px solid #e5e5e5;
+      border-right: none;
+      outline-color: color.$green;
+      background-color: #f3f3f3;
+      color: #9a9a9a;
+    }
+    button {
+      padding: 0;
+      width: 15%;
+      border: 1px solid #e5e5e5;
+      border-left: none;
+      background-color: #f3f3f3;
+      background-image: url(../images/search.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+//footer form
+.contact_form {
+  input {
+    @extend %footer_form_style;
+    margin-bottom: 5px;
+  }
+  textarea {
+    @extend %footer_form_style;
+    margin-bottom: 20px;
+    resize: none;
+  }
+  .reset {
+    @include footer_form_button(#1c1c1c);
+  }
+  .submit {
+    @include footer_form_button(color.$green);
+  }
+}

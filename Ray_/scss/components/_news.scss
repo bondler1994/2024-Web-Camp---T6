@@ -1,0 +1,85 @@
+@use "../base" as *;
+@use "../utils" as *;
+
+.news {
+  @include display_flex(column, $gap_m);
+  @include breakpoint($tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $gap_l;
+
+    @include breakpoint($PC) {
+      flex-direction: column;
+    }
+  }
+
+  &_title {
+    flex-basis: 100%;
+    @include breakpoint($PC) {
+      flex-basis: auto;
+    }
+  }
+
+  &_post {
+    @include display_flex(row, $gap_m);
+    @include breakpoint($tablet) {
+      gap: $gap_l;
+      flex:1 1 0;
+    }
+
+    img {
+      width: 7rem;
+      @include breakpoint($PC) {
+        width: 10rem;
+      }
+    }
+  }
+  &_text {
+    @include display_flex(column, $gap_s);
+    @include breakpoint($tablet) {
+      gap: $gap_l;
+    }
+
+    &_date {
+      width: fit-content;
+      padding: .3rem 1rem .5rem;
+      background-color: $primary_color;
+      font-weight: 500;
+      color: $white;
+      @include breakpoint($tablet) {
+        font-size: 0.5rem;
+      }
+      @include breakpoint($PC) {
+        font-size: 1rem;
+      }
+    }
+
+    &_link {
+      display: block;
+    }
+
+    p {
+      color: $gray-400;
+      font-size: 0.8rem;
+      @include breakpoint($tablet) {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        font-size: 1rem;
+        line-height: 1.2;
+      }
+    }
+
+    span {
+      @extend %more;
+    }
+  }
+
+  &_text:hover {
+    p,
+    span {
+      @extend %text_hover;
+    }
+  }
+}

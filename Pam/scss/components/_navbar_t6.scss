@@ -1,0 +1,104 @@
+@use "../abstracts" as *;
+
+.navbar.theme_t6 {
+  padding: 0;
+  column-gap: 0;
+  @include device_lg() {
+    column-gap: 1rem;
+  }
+
+  align-items: stretch;
+
+  box-shadow: 0px 0px 5px 1px $secondary;
+  @include device_lg() {
+    box-shadow: initial;
+  }
+}
+
+.hambergur_wrapper {
+  flex: 1 1 auto;
+  padding: 0.5rem;
+  background-color: $white;
+  @include device_lg() {
+    display: none;
+  }
+}
+.search_wrapper {
+  flex: 0 1 auto;
+  padding: 0.5rem;
+
+  width: 230px;
+  @include device_lg() {
+    width: 25%;
+  }
+  background-color: $white;
+  box-shadow: none;
+  @include device_lg() {
+    box-shadow: 0px 0px 5px 1px $secondary;
+  }
+
+  form {
+    height: 100%;
+
+    background-color: $deco_light;
+    border: 1px $primary solid;
+  }
+  input {
+    background-color: $deco_light;
+    border: none;
+    &:focus {
+      box-shadow: 0 0 0 0.15rem $highlight;
+    }
+  }
+  button {
+    background: url(../images/search.png) no-repeat center;
+    &:focus {
+      box-shadow: 0 0 0 0.15rem $highlight;
+    }
+  }
+}
+
+.navbar-expand-lg.theme_t6 .navbar-collapse {
+  background-color: $white;
+  box-shadow: none;
+  @include device_lg() {
+    box-shadow: 0px 0px 5px 1px $secondary;
+  }
+
+  order: 0;
+  @include device_lg() {
+    order: -1;
+  }
+}
+
+.navbar-light.theme_t6 .navbar-nav .nav-link {
+  text-align: center;
+  color: $dark;
+  &:hover,
+  &:focus {
+    background-color: $primary;
+  }
+  &.active {
+    background-color: $highlight;
+    color: $white;
+  }
+}
+.theme_t6 .navbar-nav .nav-link {
+  padding: 1rem 0;
+}
+.theme_t6.navbar-expand-lg .navbar-nav .nav-link {
+  @include device_lg() {
+    padding: 1rem;
+  }
+}
+.theme_t6 .dropdown-item {
+  &:hover,
+  &:focus {
+    background-color: $primary;
+  }
+}
+.theme_t6 .navbar-toggler {
+  &:focus {
+    box-shadow: 0 0 0 0.15rem $highlight;
+  }
+}

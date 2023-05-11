@@ -1,0 +1,38 @@
+@use "../base/color" as *;
+@use "../utils/breakpoint" as *;
+
+
+$font_size_xxs: .9rem;
+$font_size_xs: 1rem;
+$font_size_s: 1.2rem;
+$font_size_m: 1.5rem;
+$font_size_l: 2rem;
+
+%introduce_title {
+  font-size: $font_size_m;
+  @include breakpoint($PC) {
+    font-size: $font_size_l;
+  }
+}
+
+%information_title {
+  font-size: $font_size_s;
+  @include breakpoint($PC-l) {
+    font-size: $font_size_m;
+  }
+}
+
+%text_hover {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+%text_style_1 {
+  color: $gray-600;
+  text-align: center;
+}
+
+%more {
+  text-transform: capitalize;
+  color: $black;
+}

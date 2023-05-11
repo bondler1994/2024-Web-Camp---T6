@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>business planet</title>
-
     <!--bootstrap-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -23,71 +22,85 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <!--font awesome-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-md navbar_container">
-        <div class="logo_socialmedia">
-          <div class="logo_navbarbutton">
-            <h1>
-              <a class="navbar-brand" href="#">
-                <img src="./images/logo.png" alt="" />
-              </a>
-            </h1>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+    <header class="header">
+      <div class="header_item">
+        <h1 class="logo">
+          <a href="##">
+            <img src="./images/logo.png" alt="" />
+          </a>
+        </h1>
+        <div class="connection">
+          <div class="social_media_links">
+            <a
+              href="https://www.facebook.com/"
+              class="facebook"
+              target="_blank"
+            ></a
+            ><a
+              href="https://twitter.com/?lang=en"
+              class="twitter"
+              target="_blank"
+            ></a
+            ><a
+              href="https://www.flickr.com/"
+              class="fliker"
+              target="_blank"
+            ></a
+            ><a
+              href="https://dribbble.com/"
+              class="dribbble"
+              target="_blank"
+            ></a
+            ><a
+              href="https://business_planet/rss.html"
+              class="RSS"
+              target="_blank"
+            ></a>
+          </div>
+          <address class="contact_method">
+            <span>Call Us Now:</span>
+            <a href="tel:+1777784-25-43" class="contact_method_phone"
+              >+1 (777) 784-25-43</a
             >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-          <div class="social_media">
-            <div class="social_media_links">
-              <a
-                href="https://www.facebook.com/"
-                class="facebook"
-                target="_blank"
-              ></a
-              ><a
-                href="https://twitter.com/?lang=en"
-                class="twitter"
-                target="_blank"
-              ></a
-              ><a
-                href="https://www.flickr.com/"
-                class="fliker"
-                target="_blank"
-              ></a
-              ><a
-                href="https://dribbble.com/"
-                class="dribbble"
-                target="_blank"
-              ></a
-              ><a
-                href="https://business_planet/rss.html"
-                class="RSS"
-                target="_blank"
-              ></a>
+          </address>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-md navbar_container">
+        <div class="navbar_item">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form class="navbar_search" role="search">
+            <div class="input-group">
+              <input
+                class="form-control navbar_search_input"
+                type="search"
+                placeholder="Search the Site"
+                aria-label="Search"
+                name="search"
+              />
+              <button
+                class="btn navbar_search_submit"
+                type="submit"
+                id="button-addon2"
+              >
+              </button>
             </div>
-            <address class="contact_method">
-              <span>Call Us Now:</span>
-              <a href="tel:+1777784-25-43" class="phone">+1 (777) 784-25-43</a>
-            </address>
-          </div>
+          </form>
         </div>
         <div
-          class="collapse navbar-collapse nav_link_container"
+          class="collapse navbar-collapse navbar_link_container"
           id="navbarSupportedContent"
         >
           <ul class="navbar-nav">
@@ -146,17 +159,6 @@
               <a class="nav-link">Contacts</a>
             </li>
           </ul>
-          <form class="search_container" role="search">
-            <input
-              class="form-control"
-              type="search"
-              placeholder="Search the Site"
-              aria-label="Search"
-            />
-            <a class="search_button" href="##"
-              ><img src="./images/search.png" alt="" class="search_img"
-            /></a>
-          </form>
         </div>
       </nav>
     </header>
@@ -208,11 +210,11 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <div class="card_articles_container">
+      <div class="card_group">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Growth Strategies</h5>
-            <div class="card_img_container">
+            <h4 class="card-title">Growth Strategies</h4>
+            <div class="card_img">
               <img src="./images/p1.png" alt="" class="card_img" />
             </div>
             <p class="card-text">
@@ -225,8 +227,8 @@
         </div>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Perfect Support</h5>
-            <div class="card_img_container">
+            <h4 class="card-title">Perfect Support</h4>
+            <div class="card_img">
               <img src="./images/p2.png" alt="" class="card_img" />
             </div>
             <p class="card-text">
@@ -239,8 +241,8 @@
         </div>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Partners Programs</h5>
-            <div class="card_img_container">
+            <h4 class="card-title">Partners Programs</h4>
+            <div class="card_img">
               <img src="./images/p3.png" alt="" class="card_img" />
             </div>
             <p class="card-text">
@@ -252,8 +254,8 @@
         </div>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Premium Service</h5>
-            <div class="card_img_container">
+            <h4 class="card-title">Premium Service</h4>
+            <div class="card_img">
               <img src="./images/p4.png" alt="" class="card_img" />
             </div>
             <p class="card-text">
@@ -266,70 +268,87 @@
       </div>
       <div class="introduce">
         <div class="introduce_item">
-          <h2 class="introduce_title">Welcome</h2>
           <div class="welcome">
-            <div class="img_container">
+            <h2 class="welcome_title">Welcome</h2>
+            <div class="welcome_img">
               <img src="./images/welcome.jpg" alt="" />
             </div>
-            <div class="text_container">
-              <p class="text">
-                Curabitur velit nisl, porttitor viverra molesite quis, Iacinia
-                eget purus. Suspendisse ipsum massa, rutrum in hendrerit
-                malesuada, fermentum id erat...<a href="##" class="more"
-                  >more</a
-                >
+            <div class="welcome_text">
+              <a class="welcome_link" href="##"
+                ><p>
+                  Curabitur velit nisl, porttitor viverra molesite quis, Iacinia
+                  eget purus. Suspendisse ipsum massa, rutrum in hendrerit
+                  malesuada, fermentum id erat...<span>more</span>
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="introduce_item">
+          <div class="choose_us">
+            <h2 class="choose_us_title">Why choose us?</h2>
+            <div class="choose_us_list">
+              <div class="choose_us_icon">
+                <!--防止icon因為gap變形-->
+                <div class="choose_us_icon_img"></div>
+              </div>
+              <p class="choose_us_text">Etiam rutrum venenatis dui, non</p>
+            </div>
+            <div class="choose_us_list">
+              <div class="choose_us_icon">
+                <div class="choose_us_icon_img"></div>
+              </div>
+              <p class="choose_us_text">
+                Aliquam ac diam in lorem vulputate auctor.
               </p>
             </div>
-          </div>
-        </div>
-        <div class="introduce_item">
-          <h2 class="introduce_title">Why choose us?</h2>
-          <div class="choose_list">
-            <div class="list">
-              <div class="icon_container"><div class="icon"></div></div>
-              <p class="text">Etiam rutrum venenatis dui, non</p>
+            <div class="choose_us_list">
+              <div class="choose_us_icon">
+                <div class="choose_us_icon_img"></div>
+              </div>
+              <p class="choose_us_text">
+                Vestibulum vitae urna quis eros convallis
+              </p>
             </div>
-            <div class="list">
-              <div class="icon_container"><div class="icon"></div></div>
-              <p class="text">Aliquam ac diam in lorem vulputate auctor.</p>
-            </div>
-            <div class="list">
-              <div class="icon_container"><div class="icon"></div></div>
-              <p class="text">Vestibulum vitae urna quis eros convallis</p>
-            </div>
-            <div class="list">
-              <div class="icon_container"><div class="icon"></div></div>
-              <p class="text">Sed magna magna, congue</p>
+            <div class="choose_us_list">
+              <div class="choose_us_icon">
+                <div class="choose_us_icon_img"></div>
+              </div>
+              <p class="choose_us_text">Sed magna magna, congue</p>
             </div>
           </div>
         </div>
         <div class="introduce_item">
-          <h2 class="introduce_title">News & Events</h2>
           <div class="news">
+            <h2 class="news_title">News & Events</h2>
             <div class="news_post">
-              <div class="img_container">
+              <div class="news_img">
                 <img src="./images/news1.jpg" alt="" />
               </div>
-              <div class="text_container">
-                <time class="date">12.12.12</time>
-                <p class="text">
-                  Aliquam ac diam in lorem vulputate auctor. Aliquam rhoncus
-                  nunc et justo imperdiet blandit...<a class="more">more</a>
-                </p>
+              <div class="news_text">
+                <time class="news_text_date">12.12.12</time>
+                <a class="news_text_link" href="##"
+                  ><p>
+                    Aliquam ac diam in lorem vulputate auctor. Aliquam rhoncus
+                    nunc et justo imperdiet blandit...<span>more</span>
+                  </p></a
+                >
               </div>
             </div>
             <div class="news_post">
-              <div class="img_container">
+              <div class="news_img">
                 <img src="./images/news2.jpg" alt="" />
               </div>
-              <div class="text_container">
-                <time class="date">12.12.12</time>
-                <p class="text">
-                  Sed auctor laoreet augue, is pulvinar lacus mattis non. In hac
-                  habitassw platea dictumst. Proin et lorem...<a class="more"
-                    >more</a
-                  >
-                </p>
+              <div class="news_text">
+                <time class="news_text_date">12.12.12</time>
+                <a class="news_text_link" href="##"
+                  ><p>
+                    Sed auctor laoreet augue, is pulvinar lacus mattis non. In
+                    hac habitassw platea dictumst. Proin et lorem...<span
+                      >more</span
+                    >
+                  </p>
+                </a>
               </div>
             </div>
           </div>
@@ -337,9 +356,9 @@
       </div>
       <div class="swiper_container">
         <div class="swiper">
-          <div class="title_button_container">
+          <div class="swiper_title_container">
             <h2 class="swiper_title">Features Work</h2>
-            <div class="button_container">
+            <div class="swiper_button">
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
             </div>
@@ -348,12 +367,12 @@
             <div class="swiper-slide">
               <div class="swiper-slide_click_container">
                 <div class="swiper-slide_click">
-                  <span>ecenas enim</span>
-                  <div class="icon_container">
-                    <a class="icon" href="##"
+                  <span class="swiper-slide_click_title">ecenas enim</span>
+                  <div class="swiper-slide_icon_container">
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon1.png" alt=""
                     /></a>
-                    <a class="icon" href="##"
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon2.png" alt=""
                     /></a>
                   </div>
@@ -366,12 +385,12 @@
             <div class="swiper-slide">
               <div class="swiper-slide_click_container">
                 <div class="swiper-slide_click">
-                  <span>ecenas enim</span>
-                  <div class="icon_container">
-                    <a class="icon" href="##"
+                  <span class="swiper-slide_click_title">ecenas enim</span>
+                  <div class="swiper-slide_icon_container">
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon1.png" alt=""
                     /></a>
-                    <a class="icon" href="##"
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon2.png" alt=""
                     /></a>
                   </div>
@@ -382,12 +401,12 @@
             <div class="swiper-slide">
               <div class="swiper-slide_click_container">
                 <div class="swiper-slide_click">
-                  <span>ecenas enim</span>
-                  <div class="icon_container">
-                    <a class="icon" href="##"
+                  <span class="swiper-slide_click_title">ecenas enim</span>
+                  <div class="swiper-slide_icon_container">
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon1.png" alt=""
                     /></a>
-                    <a class="icon" href="##"
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon2.png" alt=""
                     /></a>
                   </div>
@@ -397,17 +416,13 @@
             </div>
             <div class="swiper-slide">
               <div class="swiper-slide_click_container">
-                <div class="shape_container">
-                  <div class="triangle"></div>
-                  <div class="hexagon"></div>
-                </div>
                 <div class="swiper-slide_click">
-                  <span>ecenas enim</span>
-                  <div class="icon_container">
-                    <a class="icon" href="##"
+                  <span class="swiper-slide_click_title">ecenas enim</span>
+                  <div class="swiper-slide_icon_container">
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon1.png" alt=""
                     /></a>
-                    <a class="icon" href="##"
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon2.png" alt=""
                     /></a>
                   </div>
@@ -420,12 +435,12 @@
             <div class="swiper-slide">
               <div class="swiper-slide_click_container">
                 <div class="swiper-slide_click">
-                  <span>ecenas enim</span>
-                  <div class="icon_container">
-                    <a class="icon" href="##"
+                  <span class="swiper-slide_click_title">ecenas enim</span>
+                  <div class="swiper-slide_icon_container">
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon1.png" alt=""
                     /></a>
-                    <a class="icon" href="##"
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon2.png" alt=""
                     /></a>
                   </div>
@@ -436,12 +451,12 @@
             <div class="swiper-slide">
               <div class="swiper-slide_click_container">
                 <div class="swiper-slide_click">
-                  <span>ecenas enim</span>
-                  <div class="icon_container">
-                    <a class="icon" href="##"
+                  <span class="swiper-slide_click_title">ecenas enim</span>
+                  <div class="swiper-slide_icon_container">
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon1.png" alt=""
                     /></a>
-                    <a class="icon" href="##"
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon2.png" alt=""
                     /></a>
                   </div>
@@ -452,12 +467,12 @@
             <div class="swiper-slide">
               <div class="swiper-slide_click_container">
                 <div class="swiper-slide_click">
-                  <span>ecenas enim</span>
-                  <div class="icon_container">
-                    <a class="icon" href="##"
+                  <span class="swiper-slide_click_title">ecenas enim</span>
+                  <div class="swiper-slide_icon_container">
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon1.png" alt=""
                     /></a>
-                    <a class="icon" href="##"
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon2.png" alt=""
                     /></a>
                   </div>
@@ -468,12 +483,12 @@
             <div class="swiper-slide">
               <div class="swiper-slide_click_container">
                 <div class="swiper-slide_click">
-                  <span>ecenas enim</span>
-                  <div class="icon_container">
-                    <a class="icon" href="##"
+                  <span class="swiper-slide_click_title">ecenas enim</span>
+                  <div class="swiper-slide_icon_container">
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon1.png" alt=""
                     /></a>
-                    <a class="icon" href="##"
+                    <a class="swiper-slide_icon" href="##"
                       ><img src="./images/icon2.png" alt=""
                     /></a>
                   </div>
@@ -481,174 +496,158 @@
               </div>
               <img src="./images/g4.jpg" alt="" />
             </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide_click_container">
-                <div class="swiper-slide_click">
-                  <span>ecenas enim</span>
-                  <div class="icon_container">
-                    <a class="icon" href="##"
-                      ><img src="./images/icon1.png" alt=""
-                    /></a>
-                    <a class="icon" href="##"
-                      ><img src="./images/icon2.png" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-              <img src="./images/g1.jpg" alt="" />
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide_click_container">
-                <div class="swiper-slide_click">
-                  <span>ecenas enim</span>
-                  <div class="icon_container">
-                    <a class="icon" href="##"
-                      ><img src="./images/icon1.png" alt=""
-                    /></a>
-                    <a class="icon" href="##"
-                      ><img src="./images/icon2.png" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </div>
-              <img src="./images/g2.jpg" alt="" />
-            </div>
           </div>
         </div>
       </div>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="information">
         <div class="information_item">
-          <h4 class="information_title">Latest Tweets</h4>
           <div class="tweet">
-            <p>loading tweets...</p>
+            <h3 class="tweet_title">Latest Tweets</h3>
+            <div class="tweet_text">
+              <p>loading tweets...</p>
+            </div>
           </div>
         </div>
         <div class="information_item">
-          <h4 class="information_title">Testimonials</h4>
           <div class="testimonials">
-            <div class="testimonials_dialog">
-              <p class="testimonials_dialog_content">
-                "Sed dapibus molesite interdum. Fusce nec est ante, sit amet
-                lacinia lorem. Maecenas nec eros ut mauris pulvinar suscipit.
-                Aliquam erat"
-              </p>
-            </div>
-            <div class="testimonials_people">
-              <div class="testimonials_people_img_container">
-                <img class="people_img" src="./images/men.jpg" alt="" />
+            <h3 class="testimonials_title">Testimonials</h3>
+            <div class="testimonials_content">
+              <div class="testimonials_dialog">
+                <p class="testimonials_dialog_text">
+                  "Sed dapibus molesite interdum. Fusce nec est ante, sit amet
+                  lacinia lorem. Maecenas nec eros ut mauris pulvinar suscipit.
+                  Aliquam erat"
+                </p>
               </div>
-              <div class="testimonials_people_identity">
-                <span class="information_people_name">Stephen Bingham</span>
-                <a
-                  class="testimonials_people_link"
-                  href="http://www.demolink.org/"
-                  >demolink.org</a
-                >
+              <div class="testimonials_people">
+                <div class="testimonials_people_img_container">
+                  <img
+                    class="testimonials_people_img"
+                    src="./images/men.jpg"
+                    alt="發言人"
+                  />
+                </div>
+                <div class="testimonials_people_identity">
+                  <span class="testimonials_people_name">Stephen Bingham</span>
+                  <a
+                    class="testimonials_people_link"
+                    href="http://www.demolink.org/"
+                    >demolink.org</a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="information_item">
-          <h4 class="information_title">Get in touch!</h4>
           <form class="touch">
+            <h3 class="touch_title">Get in touch!</h3>
             <div class="touch_write">
               <input
                 type="text"
                 class="form-control"
                 id="floatingInput"
                 placeholder="Name"
+                name="Name"
               />
               <input
                 type="email"
                 class="form-control"
                 id="floatingInput"
                 placeholder="Email"
+                name="Email"
               />
               <textarea
                 class="form-control"
                 id="exampleFormControlTextarea1"
                 rows="5"
                 placeholder="Massage"
-                value="Massage"
+                name="Massage"
               ></textarea>
             </div>
-            <div class="button_container">
-              <button type="submit" class="btn btn-primary">clear from</button>
+            <div class="touch_button_container">
+              <button type="reset" class="btn btn-primary">clear from</button>
               <button type="submit" class="btn btn-primary">send!</button>
             </div>
           </form>
         </div>
         <div class="information_item">
-          <h4 class="information_title">Flickr</h4>
           <div class="flickr">
-            <a class="flickr_img_container" href="##"
-              ><img src="./images/f1.jpg" alt=""
-            /></a>
-            <a class="flickr_img_container" href="##"
-              ><img src="./images/f2.jpg" alt=""
-            /></a>
-            <a class="flickr_img_container" href="##"
-              ><img src="./images/f3.jpg" alt=""
-            /></a>
-            <a class="flickr_img_container" href="##"
-              ><img src="./images/f4.jpg" alt=""
-            /></a>
-            <a class="flickr_img_container" href="##"
-              ><img src="./images/f5.jpg" alt=""
-            /></a>
-            <a class="flickr_img_container" href="##"
-              ><img src="./images/f6.jpg" alt=""
-            /></a>
-            <a class="flickr_img_container" href="##"
-              ><img src="./images/f7.jpg" alt=""
-            /></a>
-            <a class="flickr_img_container" href="##"
-              ><img src="./images/f8.jpg" alt=""
-            /></a>
-            <a class="flickr_img_container" href="##"
-              ><img src="./images/f9.jpg" alt=""
-            /></a>
-            <a class="flickr_img_container" href="##"
-              ><img src="./images/f10.jpg" alt=""
-            /></a>
-            <a class="flickr_img_container" href="##"
-              ><img src="./images/f11.jpg" alt=""
-            /></a>
-            <a class="flickr_img_container" href="##"
-              ><img src="./images/f12.jpg" alt=""
-            /></a>
+            <h3 class="flickr_title">Flickr</h3>
+            <div class="flickr_img_group">
+              <a class="flickr_img" href="##"
+                ><img src="./images/f1.jpg" alt=""
+              /></a>
+              <a class="flickr_img" href="##"
+                ><img src="./images/f2.jpg" alt=""
+              /></a>
+              <a class="flickr_img" href="##"
+                ><img src="./images/f3.jpg" alt=""
+              /></a>
+              <a class="flickr_img" href="##"
+                ><img src="./images/f4.jpg" alt=""
+              /></a>
+              <a class="flickr_img" href="##"
+                ><img src="./images/f5.jpg" alt=""
+              /></a>
+              <a class="flickr_img" href="##"
+                ><img src="./images/f6.jpg" alt=""
+              /></a>
+              <a class="flickr_img" href="##"
+                ><img src="./images/f7.jpg" alt=""
+              /></a>
+              <a class="flickr_img" href="##"
+                ><img src="./images/f8.jpg" alt=""
+              /></a>
+              <a class="flickr_img" href="##"
+                ><img src="./images/f9.jpg" alt=""
+              /></a>
+              <a class="flickr_img" href="##"
+                ><img src="./images/f10.jpg" alt=""
+              /></a>
+              <a class="flickr_img" href="##"
+                ><img src="./images/f11.jpg" alt=""
+              /></a>
+              <a class="flickr_img" href="##"
+                ><img src="./images/f12.jpg" alt=""
+              /></a>
+            </div>
           </div>
         </div>
       </div>
+      <div class="footer_bottom">
+        <div class="footer_bottom_item">
+          <ul class="nav_container">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="##">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="##">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="##">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="##">Protfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="##">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="##">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer_bottom_item">
+          <p class="copyright">
+            BUSINESS PLANET &copy; 2020 |
+            <a href="##" class="privacy">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
     </footer>
-    <div class="copyright_nav">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Protfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contacts</a>
-        </li>
-      </ul>
-      <p class="copyright">
-        BUSINESS PLANET &copy; 2020 |
-        <a href="##" class="privacy">Privacy Policy</a>
-      </p>
-    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

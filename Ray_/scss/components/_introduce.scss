@@ -1,0 +1,22 @@
+@use "../utils" as *;
+
+.introduce {
+  @include display_flex(column, $gap_m);
+  padding: 1.5rem 1rem;
+  position: relative;
+  @include breakpoint($tablet) {
+    padding: 1.5rem 2.6rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $gap_l;
+  }
+  @include breakpoint($PC) {
+    padding: 2rem 2.6rem 6rem;
+  }
+
+  &_item {
+    @include breakpoint($tablet) {
+      flex: 1 1 30%;
+    }
+  }
+}

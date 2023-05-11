@@ -1,0 +1,22 @@
+@use "../base" as *;
+@use "../utils" as *;
+
+.flickr {
+  @include display_flex(column, $gap_s);
+  @include breakpoint($tablet) {
+    gap: $gap_l;
+  }
+  
+  &_title {
+    @extend %information_title;
+  }
+  
+  &_img_group {
+    @include display_flex(row, .3rem);
+    flex-wrap: wrap;
+  }
+
+  &_img {
+    flex: 1 1 20%;
+  }
+}

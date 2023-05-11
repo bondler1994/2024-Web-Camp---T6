@@ -1,0 +1,23 @@
+//breakpoint
+@mixin device_md() {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+@mixin device_lg() {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin element_sizing($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin btn_theme($bg_color, $font_color, $paddings...) {
+  background-color: $bg_color;
+  color: $font_color;
+  border: none;
+  padding: $paddings;
+}
