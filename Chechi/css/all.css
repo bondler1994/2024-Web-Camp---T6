@@ -22,6 +22,10 @@ a {
   text-decoration: none;
 }
 
+hr {
+  margin: 0;
+}
+
 body {
   background: no-repeat linear-gradient(#1c1c1c 0 90px, transparent 90px 90%, #1c1c1c 90% 100%), url("../../images/bg.jpg");
 }
@@ -122,9 +126,25 @@ body {
   color: #80B600;
 }
 
+/* .container.my_container {
+  @include breakpoint($lg) {
+    max-width: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1250px;
+  }
+} */
 @media (max-width: 991px) {
   .container.my_container {
     max-width: none;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1250px;
   }
 }
 
@@ -233,8 +253,10 @@ body {
 }
 .carousel .carousel-inner img {
   min-height: 300px;
-  object-fit: cover;
-  object-position: right center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right center;
+     object-position: right center;
 }
 @media (max-width: lg) {
   .carousel .carousel-inner {
@@ -326,7 +348,9 @@ body {
   bottom: -10px;
   left: auto;
   right: 0;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 .swiper-container .swiper-button-next::after {
@@ -344,7 +368,9 @@ body {
   bottom: -10px;
   left: auto;
   right: 20px;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 .swiper-container .swiper-button-prev::after {
@@ -369,6 +395,7 @@ body {
   justify-content: center;
 }
 .swiper-slide .image-container {
+  /*  */
   position: relative;
   width: 100%;
   height: 100%;
@@ -377,21 +404,22 @@ body {
 .swiper-slide .overlay {
   color: #FFFFFF;
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
   display: flex;
   gap: 15px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.swiper-slide .image-container {
+  position: relative;
+}
+.swiper-slide .image-container .overlay {
+  position: absolute;
   bottom: -100%;
   left: 0;
   right: 0;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s ease-in-out;
-}
-.swiper-slide .image-container:hover .overlay {
-  transform: translateY(-100%);
 }
 .swiper-slide .overlay i {
   color: #FFFFFF;
@@ -404,7 +432,16 @@ body {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-slide .image-container .overlay {
+  transform: translateY(0);
+  transition: transform 0.6s ease-in-out;
+}
+.swiper-slide .image-container:hover .overlay {
+  transform: translateY(-100%);
 }
 
 .main {
@@ -485,6 +522,7 @@ body {
 }
 .main .introduction .news_list_item_content_date {
   padding: 3px 10px;
+  width: -moz-fit-content;
   width: fit-content;
   background-color: #80B600;
   color: #FFFFFF;
@@ -664,10 +702,8 @@ hr {
   margin: 0;
 }
 
-@media (min-width: 1400px) {
+/* @media (min-width: 1400px) {
   .container {
     max-width: 1250px;
   }
-}
-
-/*# sourceMappingURL=all.css.map */
+} *//*# sourceMappingURL=all.css.map */

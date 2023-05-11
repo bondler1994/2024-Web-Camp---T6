@@ -1,7 +1,25 @@
 @use "../abstracts/breakpoint" as *;
 
-.container.my_container {
+/* .container.my_container {
   @include breakpoint($lg) {
     max-width: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1250px;
+  }
+} */
+
+.container {
+  &.my_container {
+    @include breakpoint($lg) {
+      max-width: none;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1250px;
   }
 }
