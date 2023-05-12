@@ -1,0 +1,40 @@
+@use "../abstracts/breakpoint" as *;
+@use "../base/color" as *;
+
+.testimonials {
+  .testimonials_block {
+    //三角形區域
+    position: relative;
+    background-color: $color-light-gray;
+    border: 1px solid $color-gray;
+    .arrow {
+      border-top: 22px solid $color-gray;
+      border-right: 23px solid transparent;
+      position: absolute;
+      left: -1px;
+      &:after {
+        content: "";
+        border-top: 22px solid $color-light-gray;
+        border-right: 22px solid transparent;
+        position: absolute;
+        top: -24px;
+        left: 1px;
+      }
+    }
+  }
+
+  .man {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+    &_content {
+      a {
+        font-style: italic;
+        color: $color-primary;
+        &:hover {
+          color: $color-black;
+        }
+      }
+    }
+  }
+}

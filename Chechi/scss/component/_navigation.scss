@@ -1,0 +1,107 @@
+@use "../abstracts/breakpoint" as *;
+@use "../base/color" as *;
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  .my_navbar {
+    flex-grow: 1;
+
+    .nav-link {
+      padding: 15px 15px;
+      color: $color-black;
+      border-right: 1px $color-light-gray solid;
+      text-transform: uppercase;
+      &:hover {
+        color: $color-white;
+        background-color: $color-primary;
+      }
+      &.active {
+        color: $color-white;
+        background-color: $color-primary;
+      }
+    }
+
+    .container-fluid {
+      @include breakpoint($lg) {
+        background-color: $color-white;
+      }
+    }
+
+    .navbar-nav {
+      @include breakpoint($lg) {
+        padding: 10px 0;
+      }
+    }
+  }
+
+  .navbar-collapse {
+    background-image: url("/images/subbg.gif");
+    box-shadow: 0 0 5px $color-dark-gray;
+    @include breakpoint($lg) {
+      order: 2;
+      box-shadow: none;
+    }
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+}
+
+.block {
+  // navbar上面多的區塊
+  background-color: #f5f5f5;
+  display: block;
+  width: 10px;
+  height: 30px;
+  align-self: end;
+  z-index: -1;
+  @include breakpoint($lg) {
+    display: none;
+  }
+}
+
+.search_wrapper {
+  background-image: url("/images/subbg.gif");
+  display: block;
+  box-shadow: 0 0 5px $color-dark-gray;
+  max-width: 31.25rem;
+  padding: 10px 18px;
+  @include breakpoint($lg) {
+    padding: 0;
+    box-shadow: none;
+    order: 1;
+  }
+
+  .search_Bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: 1px solid $color-primary;
+  }
+
+  .search_Input {
+    padding: 5px 40px 5px 10px;
+    background-color: $color-light-gray;
+    border: 1px solid $color-gray;
+    font-size: 14px;
+    min-width: 200px;
+  }
+
+  .search_Submit {
+    width: 40px;
+    margin-left: -40px;
+    background: none;
+    border: none;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
