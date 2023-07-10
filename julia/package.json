@@ -1,0 +1,16 @@
+{
+  "name": "julia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "swiper.js",
+  "scripts": {
+    "sass": "sass --watch sass/all.scss:css/all.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.56.2"
+  }
+}
