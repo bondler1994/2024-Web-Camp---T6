@@ -1,0 +1,7 @@
+@use '../utils/' as u;
+
+.about_item {
+  h2 {
+    margin-bottom: u.rem(30);
+  }
+}

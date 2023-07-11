@@ -1,0 +1,24 @@
+@use '../utils/' as u;
+
+.perspective {  
+  text-align: center;
+  background-color: var(--perspective-bg-color);
+  padding: u.rem(34) u.rem(36) u.rem(22) u.rem(36);
+
+  h4 {
+    font-size: u.rem(16);
+  }
+  
+  div {
+    margin: u.rem(22) u.rem(66);
+  }
+
+  a {
+    display: block;
+    margin: auto auto 0;
+    color: var(--text-color);
+    background-color: var(--perspective-a-bg-color);
+    width: u.rem(63);
+    height:u.rem(30);
+  }
+}

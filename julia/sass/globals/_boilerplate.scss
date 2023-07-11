@@ -1,0 +1,28 @@
+@use '../utils/' as u;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: u.rem(375);
+  background: linear-gradient(#000 0% .5%, transparent .5% 90%, #000 90% 100%),
+    url('../image/bg.jpg');
+
+  @include u.breakpoint (PC) {
+    background: linear-gradient(#000 0% 4%, transparent 4% 91%, #000 91% 100%),
+      url('../image/bg.jpg');
+  }  
+}
+
+.container-fluid {
+  max-width: u.rem(1256);
+}

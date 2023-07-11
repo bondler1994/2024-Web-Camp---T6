@@ -1,0 +1,8 @@
+@use '../utils/' as u;
+
+footer {
+  .social_interactions {
+    background: url(../../image/subbg.gif);
+    @include u.grid(4, 30);
+  }
+}

@@ -1,0 +1,22 @@
+@use '../utils/' as u;
+@use '../components/social_media';
+
+.header {  
+  margin: u.rem(10) auto 0;   
+
+  &_box {
+    background: url(../../image/subbg.gif);
+    @include u.padding4(38, 26, 26, 34);    
+    margin-bottom: u.rem(30);
+    box-shadow: 0 0 u.rem(5) 0;
+  }
+  .phone a {
+    color: var(--text-color);
+  }  
+}
+
+.navbar {
+  .nav-link {
+    text-transform: uppercase;
+  }
+}

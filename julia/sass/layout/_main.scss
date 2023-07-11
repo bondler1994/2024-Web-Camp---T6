@@ -1,0 +1,19 @@
+@use '../components/perspective';
+@use '../components/about_item';
+@use '../utils/' as u;
+
+.main {
+  &_info {
+    background: url(../../image/subbg.gif);
+    margin-top: -(u.rem(30));
+  }
+  .business_perspectives {
+    position: relative;
+    @include u.margin2(0, 30);
+    @include u.grid(4, 30);    
+  }
+  .about_items {
+    @include u.padding3(50, 50, 80);
+    @include u.grid(3, 30);    
+  }
+}
