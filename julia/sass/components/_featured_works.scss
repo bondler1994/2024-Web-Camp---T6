@@ -1,0 +1,12 @@
+@use '../utils/' as u;
+
+.swiper-slide {
+  position: relative;
+  width: u.rem(270);
+  img {
+    width: 100%;
+  }
+  .hover_cover {
+    position: absolute;
+  }
+}

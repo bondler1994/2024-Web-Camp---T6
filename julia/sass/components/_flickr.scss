@@ -1,0 +1,5 @@
+@use '../utils/' as u;
+
+.flickr_thumbnail {
+@include u.grid(4, 5);
+}

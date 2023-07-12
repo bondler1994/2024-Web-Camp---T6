@@ -1,0 +1,9 @@
+@use '../utils/' as u;
+
+.bottom_nav {
+  a {
+    text-transform: uppercase;
+    color: var(--gray4);
+    @include u.margin2(0, 12);    
+  }  
+}

@@ -1,0 +1,32 @@
+@use '../utils/' as u;
+
+input,
+textarea {
+  width: 100%;
+  font-size: u.rem(14);
+  background-color: var(--gray1);
+  border: 1px solid var(--gray3);
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn_box {
+  button {
+    text-transform: uppercase;
+    color: var(--white);
+    border: none;
+    @include u.padding2(10, 15);
+
+    &:nth-child(1) {
+      background-color: var(--text-color);
+    }
+
+    &:nth-child(2) {
+      background-color: var(--green);
+    }
+  }
+}

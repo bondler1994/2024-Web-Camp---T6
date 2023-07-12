@@ -1,0 +1,23 @@
+@use '../utils/' as u;
+
+.testimonials_text {
+  background-color: var(--gray1);
+  @include u.padding4(18, 12, 18, 26);
+  font-size: u.rem(14);
+  margin-bottom: u.rem(20);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;  
+}
+
+// 三角形還沒做
+
+.commenter {
+  gap: u.rem(14);
+  a {
+    color: var(--green);
+  }
+  p {
+    margin-bottom: 0;
+  }
+}

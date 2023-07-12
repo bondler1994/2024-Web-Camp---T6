@@ -1,5 +1,6 @@
 @use '../components/perspective';
 @use '../components/about_item';
+@use '../components/featured_works';
 @use '../utils/' as u;
 
 .main {
@@ -9,11 +10,14 @@
   }
   .business_perspectives {
     position: relative;
-    @include u.margin2(0, 30);
+    @include u.margin2(0, 40);
     @include u.grid(4, 30);    
   }
   .about_items {
-    @include u.padding3(50, 50, 80);
+    @include u.padding3(50, 40, 80);
     @include u.grid(3, 30);    
+  }
+  .featured_works {
+    @include u.margin3(50, 40, 76);
   }
 }

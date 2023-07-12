@@ -4,6 +4,6 @@
   display: grid;
   grid-template-columns: repeat($col, 1fr);
   grid-template-rows: auto;
-  column-gap: f.rem($gap);
+  gap: f.rem($gap);
 }
 

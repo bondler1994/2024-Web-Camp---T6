@@ -2,23 +2,21 @@
 
 .perspective {  
   text-align: center;
-  background-color: var(--perspective-bg-color);
-  padding: u.rem(34) u.rem(36) u.rem(22) u.rem(36);
+  background-color: var(--gray1);
+  @include u.padding4(34, 36, 22, 36);
 
   h4 {
     font-size: u.rem(16);
   }
   
   div {
-    margin: u.rem(22) u.rem(66);
+    @include u.margin3 (0, 66, 22);
   }
 
   a {
-    display: block;
+    @include u.a_size(block, 30, 63);
     margin: auto auto 0;
     color: var(--text-color);
-    background-color: var(--perspective-a-bg-color);
-    width: u.rem(63);
-    height:u.rem(30);
+    background-color: var(--gray2);
   }
 }

@@ -1,0 +1,7 @@
+@use './functions' as f;
+
+@mixin a_size ($display, $height, $width){
+  display: $display;
+  width: f.rem($width);
+  height: f.rem($height);
+}

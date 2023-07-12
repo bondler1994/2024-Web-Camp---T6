@@ -1,7 +1,55 @@
 @use '../utils/' as u;
 
-.about_item {
-  h2 {
-    margin-bottom: u.rem(30);
+.about_item { 
+
+  p {
+    color: var(--gray4);
+
+    a {
+      color: var(--text-color);
+    }
+  }
+
+  &:nth-child(1)>div {
+    margin-bottom: u.rem(27);
+  }
+
+  &:nth-child(2)>div {
+    div {
+      @include u.padding3(13,0,20);
+      border-bottom: 2px solid var(--gray0);
+      gap: 10px;
+      align-items: baseline;
+    }
+
+    a {      
+      @include u.a_size(block, 48, 48);
+      text-align: center;
+      line-height: 48px;
+      background-color: var(--gray3);
+      border-radius: 50%;
+    }
+
+    i {
+      color: var(--white);
+    }
+  }
+
+  &:nth-child(3)>div {
+    gap: u.rem(30);
+    margin-bottom: u.rem(36);
+
+    div:nth-child(1) {
+      max-width: u.rem(144);      
+    }
+    time {
+      background-color: var(--green);
+      color: var(--white);
+      display: inline-block;
+      @include u.padding2(7, 14);
+      font-weight: 700;
+      margin-bottom: u.rem(30);
+    }
+
   }
 }

@@ -1,8 +1,24 @@
 @use '../utils/' as u;
+@use '../components/testimonials';
+@use '../components/get_in_touch';
+@use '../components/flickr';
+@use '../components/bottom_nav';
 
 footer {
   .social_interactions {
     background: url(../../image/subbg.gif);
     @include u.grid(4, 30);
+    @include u.padding1(40);
+  }
+
+  .copyright_box {
+    justify-content: space-between;
+    @include u.padding3(16, 0, 10);
+    .copyright {
+      color: var(--gray4);
+      a {
+        color: var(--green);
+      }
+    }    
   }
 }
