@@ -1,5 +1,15 @@
 @use '../utils/' as u;
 
+
+.featured_works::before {
+  content:"";
+  display: block;
+  width: 100%;
+  height: u.rem(2);
+  background-color: var(--gray3);
+  transform: translateY(-(u.rem(50)));
+}
+
 .swiper-slide {
   position: relative;
   width: u.rem(270);

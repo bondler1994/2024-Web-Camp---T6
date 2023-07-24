@@ -9,6 +9,7 @@ footer {
     background: url(../../image/subbg.gif);
     @include u.grid(4, 30);
     @include u.padding1(40);
+    box-shadow: 0 0 u.rem(5) 0;
   }
 
   .copyright_box {

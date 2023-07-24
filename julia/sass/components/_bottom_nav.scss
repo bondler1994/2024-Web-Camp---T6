@@ -4,6 +4,14 @@
   a {
     text-transform: uppercase;
     color: var(--gray4);
-    @include u.margin2(0, 12);    
-  }  
+    @include u.padding2(0, 12);
+
+    &:hover {
+      color: var(--green);
+    }
+
+    &+a {
+      border-left: 1px solid var(--gray4);
+    }
+  }
 }

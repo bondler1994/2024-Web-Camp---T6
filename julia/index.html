@@ -31,21 +31,8 @@
         </div>
       </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <div class="nav_item">
-          <!-- 漢堡排 -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- 搜尋列 -->
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit"></button>
-          </form>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+      <div class="container-fluid p-0">
         <!-- 清單 -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -53,11 +40,68 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="##">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="##">Features</a></li>
-            <li class="nav-item"><a class="nav-link" href="##">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="##">Blog</a></li>
+            <!-- dropdown沒反應待修 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="##" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Features
+                <i class="fa-solid fa-chevron-down fa-2xs"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="##">Action</a></li>
+                <li><a class="dropdown-item" href="##">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="##">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="##" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Portfolio
+                <i class="fa-solid fa-chevron-down fa-2xs"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="##">Action</a></li>
+                <li><a class="dropdown-item" href="##">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="##">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="##" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Blog
+                <i class="fa-solid fa-chevron-down fa-2xs"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="##">Action</a></li>
+                <li><a class="dropdown-item" href="##">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="##">Something else here</a></li>
+              </ul>
+            </li>
+
             <li class="nav-item"><a class="nav-link" href="##">Contacts</a></li>
           </ul>
+        </div>
+        <div class="search_container">
+          <!-- 漢堡排 -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- 搜尋列 -->
+          <form class="search_form d-flex">
+            <input class="form-control" type="search" placeholder="Search the Sites..." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"></button>
+          </form>
         </div>
       </div>
     </nav>
@@ -136,7 +180,8 @@
           <h2>welcome</h2>
           <div><img src="./image/welcome.jpg" alt="company photo"></div>
           <p>
-            Curabitur velit nisl,porttitor viverra molestie quis, lacinia eget purus. Suspendisse ipsum massa, rutrum in hendrerit malesuada, fermentum id erat...
+            Curabitur velit nisl,porttitor viverra molestie quis, lacinia eget purus. Suspendisse ipsum massa, rutrum in
+            hendrerit malesuada, fermentum id erat...
             <a href="##">More</a>
           </p>
         </div>
@@ -274,23 +319,24 @@
       </section>
     </div>
   </main>
-  <footer class="container-fluid">    
+  <footer class="container-fluid">
     <div class="social_interactions">
       <div class="social_interaction">
         <h3>latest news</h3>
         <p>loading tweets...</p>
       </div>
       <div class="social_interaction">
-        <h3>testimonials</h3>        
+        <h3>testimonials</h3>
         <div>
           <p class="testimonials_text">
-            Sed dapibus molestie interdum. Fusce nec est ante, sit amet lacinia lorem. ecenas nex eros ut mauris pulvinar suscipit. Aliquam erat
+            Sed dapibus molestie interdum. Fusce nec est ante, sit amet lacinia lorem. ecenas nex eros ut mauris
+            pulvinar suscipit. Aliquam erat
           </p>
           <div class="triangle_element"></div>
           <div class="commenter d-flex">
             <div>
               <img src="./image/men.jpg" alt="man-avatar for testimonials">
-            </div>            
+            </div>
             <div>
               <p>Steven Bingham</p>
               <a href="##"><i>demolink.org</i></a>

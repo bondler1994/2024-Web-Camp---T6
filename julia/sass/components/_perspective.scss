@@ -4,6 +4,8 @@
   text-align: center;
   background-color: var(--gray1);
   @include u.padding4(34, 36, 22, 36);
+  display: flex;
+  flex-direction: column;
 
   h4 {
     font-size: u.rem(16);

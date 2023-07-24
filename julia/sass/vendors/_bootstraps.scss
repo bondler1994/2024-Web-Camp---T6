@@ -1,0 +1,31 @@
+@use '../utils/' as u;
+
+// nav
+.navbar {  
+  > div {
+    gap: u.rem(9);
+  }
+  .navbar-collapse {
+    background-color: var(--white);
+    box-shadow: 3px -1px 3px 0 var(--gray4);
+  }   
+  .navbar-nav {
+    .nav-link {
+      position: relative;
+      text-transform: uppercase;
+      @include u.padding2(20, 30);
+      border-right: 1px solid var(--gray0);
+      color: var(--text-color);
+      &:hover {
+        background-color: var(--green);
+        color: var(--white);
+      }
+      i {
+        position: absolute;
+        top: 50%;
+        margin-left: 5px;
+      }
+    }
+  }  
+}
+

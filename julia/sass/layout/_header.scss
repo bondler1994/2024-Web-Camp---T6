@@ -1,13 +1,16 @@
 @use '../utils/' as u;
 @use '../components/social_media';
+@use '../vendors/bootstraps';
+@use '../components/seaarch_container';
+
 
 .header {  
   margin: u.rem(10) auto 0;   
 
   &_box {
     background: url(../../image/subbg.gif);
-    @include u.padding4(38, 26, 26, 34);    
-    margin-bottom: u.rem(30);
+    @include u.padding3(38, 42, 0); 
+    margin-bottom: u.rem(30);   
     box-shadow: 0 0 u.rem(5) 0;
   }
   .phone a {
@@ -15,8 +18,3 @@
   }  
 }
 
-.navbar {
-  .nav-link {
-    text-transform: uppercase;
-  }
-}

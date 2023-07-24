@@ -6,18 +6,23 @@
 .main {
   &_info {
     background: url(../../image/subbg.gif);
-    margin-top: -(u.rem(30));
+    @include u.margin3(-34,0,70);
+    box-shadow: 0 0 u.rem(5) 0;
+    // margin-bottom: u.rem(70);
   }
+
   .business_perspectives {
     position: relative;
     @include u.margin2(0, 40);
-    @include u.grid(4, 30);    
+    @include u.grid(4, 30);
   }
+
   .about_items {
     @include u.padding3(50, 40, 80);
-    @include u.grid(3, 30);    
+    @include u.grid(3, 30);
   }
+
   .featured_works {
-    @include u.margin3(50, 40, 76);
+    @include u.padding3(50, 40, 76);
   }
 }

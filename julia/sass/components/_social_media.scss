@@ -11,9 +11,9 @@ $sprites_x: (
 @mixin position ($size) {
   background-position: map-get($sprites_x, $size) 0;
   // hover沒反應待修
-  &:hover {
-    background-position: map-get($sprites_x, $size) 100;
-  }
+    &:hover {
+      background-position: map-get($sprites_x, $size) 100;
+    }
 }
 
 .social_media {
@@ -23,7 +23,7 @@ $sprites_x: (
     display: block;
     width: u.rem(28);
     height: u.rem(28);
-    background: url(../../image/social.png) no-repeat;
+    background: url(../../image/social.png) no-repeat;   
 
     & + a {
       margin-left: u.rem(7);
@@ -36,3 +36,4 @@ $sprites_x: (
     }
   }
 }
+

@@ -1,0 +1,26 @@
+@use '../utils/' as u;
+
+
+.search_container {
+  background-color: var(--white);
+  box-shadow: -3px -1px 3px 0 var(--gray4);
+  .search_form {
+    position: relative;
+    background-color: var(--gray0);
+    border: 1px solid var(--gray3);
+    @include u.margin2(11, 17);    
+    input {
+      border: none;
+      background-color: var(--gray0);
+    }
+    button {
+      position: absolute;
+      top: u.rem(10);
+      right: u.rem(10);
+      background: url(../../image/search.png) no-repeat;
+      width: u.rem(20);
+      height: u.rem(20);
+      border: none;      
+    }
+  }
+}
