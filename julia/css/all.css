@@ -32,6 +32,7 @@ body {
   --gray2:#cdcdcd;
   --gray3:#d9d9d9;
   --gray4:#818181;
+  --gray5:#636363;
 }
 
 h1, h2, h3, h4 {
@@ -59,41 +60,41 @@ a, a:visited, a:checked {
 .social_media a {
   display: block;
   width: 1.75rem;
-  height: 1.75rem;
+  height: 1.6875rem;
   background: url(../../image/social.png) no-repeat;
 }
 .social_media a + a {
   margin-left: 0.4375rem;
 }
 .social_media a:nth-child(1) {
-  background-position: 0 0;
+  background-position: 0% 0%;
 }
 .social_media a:nth-child(1):hover {
-  background-position: 0 100;
+  background-position: 0% 100%;
 }
 .social_media a:nth-child(2) {
-  background-position: 25% 0;
+  background-position: 25% 0%;
 }
 .social_media a:nth-child(2):hover {
-  background-position: 25% 100;
+  background-position: 25% 100%;
 }
 .social_media a:nth-child(3) {
-  background-position: 50% 0;
+  background-position: 50% 0%;
 }
 .social_media a:nth-child(3):hover {
-  background-position: 50% 100;
+  background-position: 50% 100%;
 }
 .social_media a:nth-child(4) {
-  background-position: 75% 0;
+  background-position: 75% 0%;
 }
 .social_media a:nth-child(4):hover {
-  background-position: 75% 100;
+  background-position: 75% 100%;
 }
 .social_media a:nth-child(5) {
-  background-position: 100% 0;
+  background-position: 100% 0%;
 }
 .social_media a:nth-child(5):hover {
-  background-position: 100% 100;
+  background-position: 100% 100%;
 }
 
 .navbar > div {
@@ -131,19 +132,20 @@ a, a:visited, a:checked {
   position: relative;
   background-color: var(--gray0);
   border: 1px solid var(--gray3);
-  margin-top: 0.6875rem;
+  margin-top: 0.875rem;
   margin-right: 1.0625rem;
-  margin-bottom: 0.6875rem;
+  margin-bottom: 0.75rem;
   margin-left: 1.0625rem;
 }
 .search_container .search_form input {
   border: none;
   background-color: var(--gray0);
+  width: 85%;
 }
 .search_container .search_form button {
   position: absolute;
   top: 0.625rem;
-  right: 0.625rem;
+  right: 0.3125rem;
   background: url(../../image/search.png) no-repeat;
   width: 1.25rem;
   height: 1.25rem;
@@ -165,6 +167,9 @@ a, a:visited, a:checked {
 .header .phone a {
   color: var(--text-color);
 }
+.header .phone a:hover {
+  color: var(--green);
+}
 
 .perspective {
   text-align: center;
@@ -175,6 +180,10 @@ a, a:visited, a:checked {
   padding-left: 2.25rem;
   display: flex;
   flex-direction: column;
+}
+.perspective:hover {
+  background-color: var(--gray5);
+  color: var(--white);
 }
 .perspective h4 {
   font-size: 1rem;
@@ -193,12 +202,19 @@ a, a:visited, a:checked {
   color: var(--text-color);
   background-color: var(--gray2);
 }
+.perspective a:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
 
 .about_item p {
   color: var(--gray4);
 }
 .about_item p a {
   color: var(--text-color);
+}
+.about_item p a:hover {
+  color: var(--green);
 }
 .about_item:nth-child(1) > div {
   margin-bottom: 1.6875rem;
@@ -260,6 +276,19 @@ a, a:visited, a:checked {
 }
 .swiper-slide .hover_cover {
   position: absolute;
+}
+
+.swiper-button {
+  gap: 0.5rem;
+}
+.swiper-button-prev, .swiper-button-next {
+  position: initial;
+  width: fit-content;
+  margin-top: 0;
+  color: var(--gray4);
+}
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 1.125rem;
 }
 
 .main_info {
@@ -356,6 +385,9 @@ textarea {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   gap: 0.3125rem;
+}
+.flickr_thumbnail a:hover {
+  transform: scale(1.1);
 }
 
 .bottom_nav a {

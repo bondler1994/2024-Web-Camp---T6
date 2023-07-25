@@ -1,7 +1,7 @@
 @use '../utils/' as u;
 
 $sprites_x: (
-  '1': 0,
+  '1': 0%,
   '2': 25%,
   '3': 50%,
   '4': 75%,
@@ -9,10 +9,9 @@ $sprites_x: (
 );
 
 @mixin position ($size) {
-  background-position: map-get($sprites_x, $size) 0;
-  // hover沒反應待修
+  background-position: map-get($sprites_x, $size) 0%;
     &:hover {
-      background-position: map-get($sprites_x, $size) 100;
+      background-position: map-get($sprites_x, $size) 100%;
     }
 }
 
@@ -22,7 +21,7 @@ $sprites_x: (
   a {
     display: block;
     width: u.rem(28);
-    height: u.rem(28);
+    height: u.rem(27);
     background: url(../../image/social.png) no-repeat;   
 
     & + a {

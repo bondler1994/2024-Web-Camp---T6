@@ -1,0 +1,18 @@
+@use '../utils/' as u;
+
+.swiper-button {
+  gap: u.rem(8);
+
+  &-prev,
+  &-next {
+    position: initial;
+    width: fit-content;
+    margin-top: 0;
+    color: var(--gray4);
+  }
+
+  &-prev::after,
+  &-next::after {
+    font-size: u.rem(18);
+  }
+}

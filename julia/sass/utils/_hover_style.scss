@@ -1,0 +1,18 @@
+@mixin hover ($background-color, $color) {
+  &:hover {
+    background-color: $background-color;
+    color: $color;
+  }
+}
+
+@mixin hover_color ($color) {
+  &:hover {
+    color: $color;
+  }
+}
+
+@mixin hover_scale($ratio) {
+  &:hover {
+    transform: scale($ratio);
+  }
+}

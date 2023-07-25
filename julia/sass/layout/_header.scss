@@ -15,6 +15,7 @@
   }
   .phone a {
     color: var(--text-color);
+    @include u.hover_color (var(--green));
   }  
 }
 

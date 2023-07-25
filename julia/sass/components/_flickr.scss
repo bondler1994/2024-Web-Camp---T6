@@ -2,4 +2,7 @@
 
 .flickr_thumbnail {
 @include u.grid(4, 5);
+a {
+  @include u.hover_scale(1.1);
+}
 }

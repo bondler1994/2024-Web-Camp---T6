@@ -16,10 +16,7 @@
       @include u.padding2(20, 30);
       border-right: 1px solid var(--gray0);
       color: var(--text-color);
-      &:hover {
-        background-color: var(--green);
-        color: var(--white);
-      }
+      @include u.hover(var(--green), var(--white));      
       i {
         position: absolute;
         top: 50%;

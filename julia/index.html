@@ -99,7 +99,8 @@
           </button>
           <!-- 搜尋列 -->
           <form class="search_form d-flex">
-            <input class="form-control" type="search" placeholder="Search the Sites..." aria-label="Search">
+            <input class="form-control m-0" type="search" placeholder="Search the Sites..." aria-label="Search"
+              required="required">
             <button class="btn btn-outline-success" type="submit"></button>
           </form>
         </div>
@@ -233,7 +234,13 @@
         </div>
       </section>
       <section class="featured_works">
-        <h2>featured works</h2>
+        <div class="featured_works--title d-flex justify-content-between">
+          <h2>featured works</h2>
+          <div class="swiper-button d-flex">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
         <!-- Slider main container -->
         <div class="swiper">
           <!-- Additional required wrapper -->
@@ -313,8 +320,10 @@
             </div>
           </div>
           <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <!-- <div class="swiper_control">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div> -->
         </div>
       </section>
     </div>

@@ -8,15 +8,16 @@
     position: relative;
     background-color: var(--gray0);
     border: 1px solid var(--gray3);
-    @include u.margin2(11, 17);    
+    @include u.margin3(14, 17, 12);    
     input {
       border: none;
       background-color: var(--gray0);
+      width: 85%;
     }
     button {
       position: absolute;
       top: u.rem(10);
-      right: u.rem(10);
+      right: u.rem(5);
       background: url(../../image/search.png) no-repeat;
       width: u.rem(20);
       height: u.rem(20);
