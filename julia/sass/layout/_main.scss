@@ -11,18 +11,21 @@
     box-shadow: 0 0 u.rem(5) 0;
     // margin-bottom: u.rem(70);
   }
-// grid跑版問題待修
+
   .business_perspectives {
     position: relative;
     @include u.margin2(0, 40);
     @include u.grid(1, 30);
 
     @include u.breakpoint(mobile){
-      @include u.grid(2, 30);
+      // @include u.grid(2, 30);
+      // 為跑版而改
+      grid-template-columns: repeat(2, minmax(0,1fr));
     }
     @include u.breakpoint(PC){
-      // @include u.grid2(4);
-      @include u.grid(4, 30);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      // 為跑版而改
+      // @include u.grid(4, 30);
     }
   }
 

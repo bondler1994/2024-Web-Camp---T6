@@ -6,7 +6,10 @@
   @include u.padding3(34, 36, 22);
   display: flex;
   flex-direction: column;
-  @include u.hover(var(--gray5), var(--white));
+  justify-content: center;
+  align-items: center;
+  @include u.hover(rgba(0, 0, 0, 0.6), var(--white));
+  
   
   h4 {
     font-size: u.rem(16);
