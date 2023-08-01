@@ -3,7 +3,7 @@
 .perspective {  
   text-align: center;
   background-color: var(--gray1);
-  @include u.padding4(34, 36, 22, 36);
+  @include u.padding3(34, 36, 22);
   display: flex;
   flex-direction: column;
   @include u.hover(var(--gray5), var(--white));

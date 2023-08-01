@@ -8,31 +8,82 @@ $sprites_x: (
   '5': 100%,
 );
 
-@mixin position ($size) {
+@mixin position1 ($size) {
   background-position: map-get($sprites_x, $size) 0%;
-    &:hover {
-      background-position: map-get($sprites_x, $size) 100%;
-    }
+
+  &:hover {
+    background-position: map-get($sprites_x, $size) 100%;
+  }
 }
 
-.social_media {
+@mixin position2 ($size) {
+  background-position: map-get($sprites_x, $size) 100%;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+
+@mixin social_media_a_style {
+  display: block;
+  width: u.rem(28);
+  height: u.rem(27);
+  background: url(../../image/social.png) no-repeat;
+}
+
+// @mixin social_media ($position) {
+//   margin-bottom: u.rem(12);
+//   a {
+//     display: block;
+//       width: u.rem(28);
+//       height: u.rem(27);
+//       background: url(../../image/social.png) no-repeat;
+//       @for $i from 1 through 5 {
+//           &:nth-child(#{$i}) {
+//             @include position1(#{$i});
+//           }
+//         }
+      
+//         &+a {
+//           margin-left: u.rem(7);
+//         }
+//   }
+// }
+
+
+.social_media {  
   margin-bottom: u.rem(12);
-  
+
   a {
-    display: block;
-    width: u.rem(28);
-    height: u.rem(27);
-    background: url(../../image/social.png) no-repeat;   
-
-    & + a {
-      margin-left: u.rem(7);
-    }    
-
+    @include social_media_a_style;  
+    
     @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
-        @include position(#{$i});
-      }      
+        @include position1(#{$i});
+      }
+    }
+    &+a {
+      margin-left: u.rem(7);
     }
   }
 }
 
+.bottom_social_media {
+  margin-bottom: u.rem(12);
+  
+    a {
+      @include social_media_a_style;
+  
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          @include position2(#{$i});
+        }
+      }
+  
+      &+a {
+        margin-left: u.rem(7);
+      }
+    }
+}

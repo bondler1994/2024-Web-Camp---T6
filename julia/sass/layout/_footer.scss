@@ -7,19 +7,59 @@
 footer {
   .social_interactions {
     background: url(../../image/subbg.gif);
-    @include u.grid(4, 30);
+    @include u.grid(1, 30);
+
+    @include u.breakpoint(mobile) {
+      @include u.grid(2, 30);
+    }
+
+    @include u.breakpoint(PC) {
+      @include u.grid(4, 30);
+    }
+
     @include u.padding1(40);
     box-shadow: 0 0 u.rem(5) 0;
   }
 
   .copyright_box {
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     @include u.padding3(16, 0, 10);
+
+    @include u.breakpoint(PC) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
     .copyright {
+      order: 2;
+      @include u.breakpoint(PC){
+        order: unset;
+      }
       color: var(--gray4);
+
       a {
         color: var(--green);
       }
-    }    
+    }
+
+    .bottom_contact {
+      margin: u.rem(3);
+
+      @include u.breakpoint(tablet) {
+        display: none;
+      }
+
+      .phone{
+        span {
+          color:var(--gray4);
+        }
+        a {
+            color: var(--gray4);
+            @include u.hover_color (var(--green));
+          }
+      } 
+        
+    }
   }
 }

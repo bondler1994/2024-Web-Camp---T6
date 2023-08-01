@@ -1,8 +1,14 @@
 @use '../utils/' as u;
 
 .flickr_thumbnail {
-@include u.grid(4, 5);
+@include u.grid(6, 5);
+@include u.breakpoint(mobile){
+  @include u.grid(4, 5);
+}
 a {
   @include u.hover_scale(1.1);
+  img {
+    width: 100%;
+  }
 }
 }

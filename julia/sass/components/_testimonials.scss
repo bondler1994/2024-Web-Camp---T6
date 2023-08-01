@@ -2,15 +2,15 @@
 
 .testimonials_text {
   background-color: var(--gray1);
-  @include u.padding4(18, 12, 18, 26);
+  @include u.padding4(18, 12, 38, 26);
   font-size: u.rem(14);
-  margin-bottom: u.rem(20);
+  // margin-bottom: u.rem(20);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;  
+  border-bottom-right-radius: 3px; 
+  clip-path: polygon(0% 0%, 100% 0, 100% 85%, 10% 85%, 0 100%) 
 }
 
-// 三角形還沒做
 
 .commenter {
   gap: u.rem(14);

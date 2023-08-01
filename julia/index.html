@@ -15,7 +15,7 @@
 
 <body>
   <header class="header container-fluid">
-    <div class="header_box d-flex justify-content-between">
+    <div class="header_box d-flex">
       <h1><img src="./image/logo.png" alt=""></h1>
       <div class="contact">
         <div class="social_media d-flex justify-content-end">
@@ -34,63 +34,62 @@
     <nav class="navbar navbar-expand-lg navbar-light p-0">
       <div class="container-fluid p-0">
         <!-- 清單 -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse order-2 order-lg-1" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="##">About</a></li>
-            <!-- dropdown沒反應待修 -->
             <li class="nav-item dropdown">
-              <a class="nav-link" href="##" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Features
                 <i class="fa-solid fa-chevron-down fa-2xs"></i>
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="##">Action</a></li>
-                <li><a class="dropdown-item" href="##">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="##">Something else here</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="##" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Portfolio
                 <i class="fa-solid fa-chevron-down fa-2xs"></i>
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="##">Action</a></li>
-                <li><a class="dropdown-item" href="##">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="##">Something else here</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="##" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Blog
                 <i class="fa-solid fa-chevron-down fa-2xs"></i>
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="##">Action</a></li>
-                <li><a class="dropdown-item" href="##">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="##">Something else here</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </li>
 
             <li class="nav-item"><a class="nav-link" href="##">Contacts</a></li>
           </ul>
         </div>
-        <div class="search_container">
+        <div class="search_container d-flex order-lg-2">
           <!-- 漢堡排 -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -179,12 +178,15 @@
       <section class="about_items">
         <div class="about_item">
           <h2>welcome</h2>
-          <div><img src="./image/welcome.jpg" alt="company photo"></div>
-          <p>
-            Curabitur velit nisl,porttitor viverra molestie quis, lacinia eget purus. Suspendisse ipsum massa, rutrum in
-            hendrerit malesuada, fermentum id erat...
-            <a href="##">More</a>
-          </p>
+          <div>
+            <div><img src="./image/welcome.jpg" alt="company photo"></div>
+            <p>
+              Curabitur velit nisl,porttitor viverra molestie quis, lacinia eget purus. Suspendisse ipsum massa, rutrum
+              in
+              hendrerit malesuada, fermentum id erat...
+              <a href="##">More</a>
+            </p>
+          </div>
         </div>
         <div class="about_item">
           <h2>why choose us?</h2>
@@ -213,7 +215,7 @@
             <div><img src="./image/news1.jpg" alt="news image1"></div>
             <div class="text">
               <time>12.12.12</time>
-              <p>
+              <p class="m-0">
                 Aliquam ac diam in lorem vulputate auctor. Aliquam
                 rhoncus nunc et justo imperdiet blandit ...
                 <a href="##">More</a>
@@ -224,7 +226,7 @@
             <div><img src="./image/news2.jpg" alt="news image2"></div>
             <div class="text">
               <time>12.12.12</time>
-              <p>
+              <p class="m-0">
                 Sed auctor laoreet augue, id pulvinar lacus mattis non.
                 In hac habitasse platea dictumst Proin et lorem ...
                 <a href="##">More</a>
@@ -248,8 +250,8 @@
             <!-- Slides -->
             <div class="swiper-slide">
               <img src="./image/g1.jpg" alt="img of featured work">
-              <div class="hover_cover">
-                <div class="hover_icon_links">
+              <div class="swiper-slide_click">
+                <div class="click_icon_links">
                   <a href="##"><img src="./image/icon1.png" alt="icon for more detail"></a>
                   <a href="##"><img src="./image/icon2.png" alt="icon for the link of featured work"></a>
                 </div>
@@ -257,8 +259,8 @@
             </div>
             <div class="swiper-slide">
               <img src="./image/g2.jpg" alt="img of featured work">
-              <div class="hover_cover">
-                <div class="hover_icon_links">
+              <div class="swiper-slide_click">
+                <div class="click_icon_links">
                   <a href="##"><img src="./image/icon1.png" alt="icon for more detail"></a>
                   <a href="##"><img src="./image/icon2.png" alt="icon for the link of featured work"></a>
                 </div>
@@ -266,8 +268,8 @@
             </div>
             <div class="swiper-slide">
               <img src="./image/g3.jpg" alt="img of featured work">
-              <div class="hover_cover">
-                <div class="hover_icon_links">
+              <div class="swiper-slide_click">
+                <div class="click_icon_links">
                   <a href="##"><img src="./image/icon1.png" alt="icon for more detail"></a>
                   <a href="##"><img src="./image/icon2.png" alt="icon for the link of featured work"></a>
                 </div>
@@ -275,8 +277,8 @@
             </div>
             <div class="swiper-slide">
               <img src="./image/g4.jpg" alt="img of featured work">
-              <div class="hover_cover">
-                <div class="hover_icon_links">
+              <div class="swiper-slide_click">
+                <div class="click_icon_links">
                   <a href="##"><img src="./image/icon1.png" alt="icon for more detail"></a>
                   <a href="##"><img src="./image/icon2.png" alt="icon for the link of featured work"></a>
                 </div>
@@ -284,8 +286,8 @@
             </div>
             <div class="swiper-slide">
               <img src="./image/g1.jpg" alt="img of featured work">
-              <div class="hover_cover">
-                <div class="hover_icon_links">
+              <div class="swiper-slide_click">
+                <div class="click_icon_links">
                   <a href="##"><img src="./image/icon1.png" alt="icon for more detail"></a>
                   <a href="##"><img src="./image/icon2.png" alt="icon for the link of featured work"></a>
                 </div>
@@ -293,8 +295,8 @@
             </div>
             <div class="swiper-slide">
               <img src="./image/g2.jpg" alt="img of featured work">
-              <div class="hover_cover">
-                <div class="hover_icon_links">
+              <div class="swiper-slide_click">
+                <div class="click_icon_links">
                   <a href="##"><img src="./image/icon1.png" alt="icon for more detail"></a>
                   <a href="##"><img src="./image/icon2.png" alt="icon for the link of featured work"></a>
                 </div>
@@ -302,8 +304,8 @@
             </div>
             <div class="swiper-slide">
               <img src="./image/g3.jpg" alt="img of featured work">
-              <div class="hover_cover">
-                <div class="hover_icon_links">
+              <div class="swiper-slide_click">
+                <div class="click_icon_links">
                   <a href="##"><img src="./image/icon1.png" alt="icon for more detail"></a>
                   <a href="##"><img src="./image/icon2.png" alt="icon for the link of featured work"></a>
                 </div>
@@ -311,19 +313,14 @@
             </div>
             <div class="swiper-slide">
               <img src="./image/g4.jpg" alt="img of featured work">
-              <div class="hover_cover">
-                <div class="hover_icon_links">
+              <div class="swiper-slide_click">
+                <div class="click_icon_links">
                   <a href="##"><img src="./image/icon1.png" alt="icon for more detail"></a>
                   <a href="##"><img src="./image/icon2.png" alt="icon for the link of featured work"></a>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- If we need navigation buttons -->
-          <!-- <div class="swiper_control">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div> -->
+          </div>          
         </div>
       </section>
     </div>
@@ -341,7 +338,6 @@
             Sed dapibus molestie interdum. Fusce nec est ante, sit amet lacinia lorem. ecenas nex eros ut mauris
             pulvinar suscipit. Aliquam erat
           </p>
-          <div class="triangle_element"></div>
           <div class="commenter d-flex">
             <div>
               <img src="./image/men.jpg" alt="man-avatar for testimonials">
@@ -387,6 +383,19 @@
       <div class="copyright">
         <span>BUSINESS PLANET &copy; 2020 </span>
         <a href="##">Privacy Policy</a>
+      </div>
+      <div class="bottom_contact">
+        <div class="bottom_social_media d-flex justify-content-center">
+          <a href="https://www.facebook.com/" target="_blank"></a>
+          <a href="https://twitter.com/?lang=en" target="_blank"></a>
+          <a href="https://www.flickr.com/" target="_blank"></a>
+          <a href="https://dribbble.com/" target="_blank"></a>
+          <a href="https://business_planet/rss.html" target="_blank"></a>
+        </div>
+        <div class="phone">
+          <span>Call Us Now:</span>
+          <a href="tel:+1 ( 777)784-25-43">+1 ( 777)784-25-43</a>
+        </div>
       </div>
       <div class="bottom_nav">
         <a href="##" class="active">HOME</a>

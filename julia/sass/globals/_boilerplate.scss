@@ -9,18 +9,14 @@ html {
   box-sizing: inherit;
 }
 
-
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   min-width: u.rem(375);
+  // 加上max-width才能用margin0auto置中
+  max-width: u.rem(1400);
   background: linear-gradient(#000 0% .5%, transparent .5% 90%, #000 90% 100%),
-    url('../image/bg.jpg');
-
-  @include u.breakpoint (PC) {
-    background: linear-gradient(#000 0% 4%, transparent 4% 91%, #000 91% 100%),
-      url('../image/bg.jpg');
-  }  
+    url('../image/bg.jpg');  
 }
 
 .container-fluid {

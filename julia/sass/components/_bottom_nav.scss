@@ -4,14 +4,20 @@
   a {
     text-transform: uppercase;
     color: var(--gray4);
-    @include u.padding2(0, 12);
+    
+    @include u.hover_color(var(--green));
+    display: block;
+    text-align: center;
 
-    &:hover {
-      color: var(--green);
+    @include u.breakpoint(tablet) {
+      display: inline;
+      @include u.padding2(0, 12);
     }
 
     &+a {
-      border-left: 1px solid var(--gray4);
+      @include u.breakpoint(tablet){
+        border-left: 1px solid var(--gray4);
+      }
     }
   }
 }

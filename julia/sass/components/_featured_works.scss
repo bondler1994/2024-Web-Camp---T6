@@ -10,13 +10,3 @@
   transform: translateY(-(u.rem(50)));
 }
 
-.swiper-slide {
-  position: relative;
-  width: u.rem(270);
-  img {
-    width: 100%;
-  }
-  .hover_cover {
-    position: absolute;
-  }
-}

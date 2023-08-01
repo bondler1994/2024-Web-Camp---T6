@@ -1,6 +1,6 @@
 @use '../utils/' as u;
 
-.about_item { 
+.about_item {
 
   p {
     color: var(--gray4);
@@ -12,18 +12,34 @@
   }
 
   &:nth-child(1)>div {
-    margin-bottom: u.rem(27);
+    display: block;
+    @include u.breakpoint(mobile){
+      display: flex;    
+    }
+    @include u.breakpoint(PC) {
+      display: block;      
+    }
+
+    div {
+      margin-bottom: u.rem(27);
+      @include u.breakpoint(mobile){
+        margin-right: u.rem(27);
+      }
+      @include u.breakpoint(PC) {
+        margin-bottom: u.rem(27);
+      }      
+    }
   }
 
   &:nth-child(2)>div {
     div {
-      @include u.padding3(13,0,20);
+      @include u.padding3(13, 0, 20);
       border-bottom: 2px solid var(--gray0);
       gap: 10px;
       align-items: baseline;
     }
 
-    a {      
+    a {
       @include u.a_size(block, 48, 48);
       text-align: center;
       line-height: 48px;
@@ -38,11 +54,12 @@
 
   &:nth-child(3)>div {
     gap: u.rem(30);
-    // margin-bottom: u.rem(36);
+    margin-bottom: u.rem(36);
 
     div:nth-child(1) {
-      max-width: u.rem(144);      
+      max-width: u.rem(144);
     }
+
     time {
       background-color: var(--green);
       color: var(--white);

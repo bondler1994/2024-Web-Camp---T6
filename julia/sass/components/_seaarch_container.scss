@@ -2,10 +2,12 @@
 
 
 .search_container {
+  flex-grow: 1;
   background-color: var(--white);
   box-shadow: -3px -1px 3px 0 var(--gray4);
   .search_form {
     position: relative;
+    flex-grow: 1;
     background-color: var(--gray0);
     border: 1px solid var(--gray3);
     @include u.margin3(14, 17, 12);    
@@ -24,4 +26,19 @@
       border: none;      
     }
   }
+}
+
+// carousel
+.carousel-item {
+  img {
+    height: u.rem(300);
+    object-fit: cover;
+    @include u.breakpoint(mobile) {
+      height: u.rem(400);
+    }
+    @include u.breakpoint(tablet) {
+      height: unset;
+    }
+  }
+  
 }

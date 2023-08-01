@@ -4,18 +4,33 @@
 @use '../components/seaarch_container';
 
 
-.header {  
-  margin: u.rem(10) auto 0;   
+.header {
+  margin: u.rem(10) auto 0;
 
-  &_box {
+  &_box {    
     background: url(../../image/subbg.gif);
-    @include u.padding3(38, 42, 0); 
-    margin-bottom: u.rem(30);   
+    @include u.padding3(38, 42, 0);
+    margin-bottom: u.rem(30);    
     box-shadow: 0 0 u.rem(5) 0;
+    justify-content: center;
+    @include u.breakpoint(tablet){
+      justify-content: space-between;
+    }
+    img {
+      width: 100%;
+    }    
   }
+
+  .contact {
+    display: none;
+
+    @include u.breakpoint(tablet) {
+      display: block;
+    }
+  }
+
   .phone a {
     color: var(--text-color);
     @include u.hover_color (var(--green));
-  }  
+  }
 }
-
