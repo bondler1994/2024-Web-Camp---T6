@@ -2,7 +2,7 @@
 
 .testimonials_text {
   background-color: var(--gray1);
-  @include u.padding4(18, 12, 38, 26);
+  padding: u.rem(18) u.rem(12) u.rem(38) u.rem(26);
   font-size: u.rem(14);
   // margin-bottom: u.rem(20);
   border-top-left-radius: 3px;

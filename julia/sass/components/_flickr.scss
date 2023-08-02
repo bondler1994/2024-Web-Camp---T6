@@ -6,7 +6,9 @@
   @include u.grid(4, 5);
 }
 a {
-  @include u.hover_scale(1.1);
+  &:hover {
+    transform: scale(1.1);
+  }
   img {
     width: 100%;
   }

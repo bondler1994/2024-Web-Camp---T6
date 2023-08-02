@@ -5,13 +5,15 @@
     text-transform: uppercase;
     color: var(--gray4);
     
-    @include u.hover_color(var(--green));
+    &:hover {
+      color: var(--green)
+    }
     display: block;
     text-align: center;
 
     @include u.breakpoint(tablet) {
       display: inline;
-      @include u.padding2(0, 12);
+      padding: 0 u.rem(12);
     }
 
     &+a {

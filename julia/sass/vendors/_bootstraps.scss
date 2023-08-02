@@ -13,10 +13,13 @@
     .nav-link {
       position: relative;
       text-transform: uppercase;
-      @include u.padding2(20, 30);
+      padding: u.rem(20) u.rem(30);
       border-right: 1px solid var(--gray0);
       color: var(--text-color);
-      @include u.hover(var(--green), var(--white));      
+      &:hover {
+        background-color: var(--green);
+        color: var(--white);
+      }
       i {
         position: absolute;
         top: 50%;

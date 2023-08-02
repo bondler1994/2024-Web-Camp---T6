@@ -7,14 +7,14 @@
 .main {
   &_info {
     background: url(../../image/subbg.gif);
-    @include u.margin3(-34,0,70);
+    margin: u.rem(-34) 0 u.rem(70);
     box-shadow: 0 0 u.rem(5) 0;
     // margin-bottom: u.rem(70);
   }
 
   .business_perspectives {
     position: relative;
-    @include u.margin2(0, 40);
+    margin: 0 u.rem(40);
     @include u.grid(1, 30);
 
     @include u.breakpoint(mobile){
@@ -30,7 +30,7 @@
   }
 
   .about_items {
-    @include u.padding3(50, 40, 80);    
+    padding: u.rem(50) u.rem(40) u.rem(80);
     @include u.grid(1, 30);
     @include u.breakpoint(PC){
       @include u.grid(3, 30);
@@ -38,6 +38,6 @@
   }
 
   .featured_works {
-    @include u.padding3(50, 40, 76);
+    padding: u.rem(50) u.rem(40) u.rem(76);
   }
 }

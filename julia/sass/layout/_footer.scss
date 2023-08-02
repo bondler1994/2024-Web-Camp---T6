@@ -17,14 +17,14 @@ footer {
       @include u.grid(4, 30);
     }
 
-    @include u.padding1(40);
+    padding: u.rem(40);
     box-shadow: 0 0 u.rem(5) 0;
   }
 
   .copyright_box {
     flex-direction: column;
     align-items: center;
-    @include u.padding3(16, 0, 10);
+    padding: u.rem(16) 0 u.rem(10);
 
     @include u.breakpoint(PC) {
       flex-direction: row;
@@ -56,7 +56,9 @@ footer {
         }
         a {
             color: var(--gray4);
-            @include u.hover_color (var(--green));
+            &:hover {
+              color: var(--green)
+            }
           }
       } 
         

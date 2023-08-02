@@ -9,7 +9,7 @@
 
   &_box {    
     background: url(../../image/subbg.gif);
-    @include u.padding3(38, 42, 0);
+    padding: u.rem(38) u.rem(43) 0;
     margin-bottom: u.rem(30);    
     box-shadow: 0 0 u.rem(5) 0;
     justify-content: center;
@@ -31,6 +31,8 @@
 
   .phone a {
     color: var(--text-color);
-    @include u.hover_color (var(--green));
+    &:hover {
+      color: var(--green)
+    }
   }
 }

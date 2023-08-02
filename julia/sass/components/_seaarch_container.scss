@@ -10,7 +10,7 @@
     flex-grow: 1;
     background-color: var(--gray0);
     border: 1px solid var(--gray3);
-    @include u.margin3(14, 17, 12);    
+    margin: u.rem(14) u.rem(17) u.rem(12);
     input {
       border: none;
       background-color: var(--gray0);

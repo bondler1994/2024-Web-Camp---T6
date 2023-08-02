@@ -19,7 +19,7 @@ textarea {
     text-transform: uppercase;
     color: var(--white);
     border: none;
-    @include u.padding2(10, 15);
+    padding: u.rem(10) u.rem(15);
 
     &:nth-child(1) {
       background-color: var(--text-color);
