@@ -33,11 +33,13 @@
 
       @include u.breakpoint(mobile) {
         margin-right: u.rem(27);
+        margin-bottom: unset;
         flex: 1 0 40%;
       }
 
       @include u.breakpoint(PC) {
         margin-bottom: u.rem(27);
+        margin-right: unset;
       }
     }
   }
@@ -51,11 +53,16 @@
     }
 
     a {
-      @include u.a_size(block, 48, 48);
+      display: block;
+      width: u.rem(48);
+      height: u.rem(48);
       text-align: center;
       line-height: 48px;
-      background-color: var(--gray3);
       border-radius: 50%;
+      background-color: var(--gray3);
+      &:hover {
+        background-color: var(--green);
+      }      
     }
 
     i {

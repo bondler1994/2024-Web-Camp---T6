@@ -50,7 +50,7 @@ img {
 }
 .social_media a {
   display: block;
-  width: 1.6875rem;
+  width: 1.8125rem;
   height: 1.6875rem;
   background: url(../../image/social.png) no-repeat;
 }
@@ -93,7 +93,7 @@ img {
 }
 .bottom_social_media a {
   display: block;
-  width: 1.6875rem;
+  width: 1.8125rem;
   height: 1.6875rem;
   background: url(../../image/social.png) no-repeat;
 }
@@ -290,12 +290,14 @@ img {
 @media (min-width: 36rem) {
   .about_item:nth-child(1) > div div {
     margin-right: 1.6875rem;
+    margin-bottom: unset;
     flex: 1 0 40%;
   }
 }
 @media (min-width: 75rem) {
   .about_item:nth-child(1) > div div {
     margin-bottom: 1.6875rem;
+    margin-right: unset;
   }
 }
 .about_item:nth-child(2) > div div {
@@ -310,8 +312,11 @@ img {
   height: 3rem;
   text-align: center;
   line-height: 48px;
-  background-color: var(--gray3);
   border-radius: 50%;
+  background-color: var(--gray3);
+}
+.about_item:nth-child(2) > div a:hover {
+  background-color: var(--green);
 }
 .about_item:nth-child(2) > div i {
   color: var(--white);
@@ -434,30 +439,26 @@ img {
   position: relative;
   margin: 0 2.5rem;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
   gap: 1.875rem;
 }
 @media (min-width: 36rem) {
   .main .business_perspectives {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 75rem) {
   .main .business_perspectives {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 .main .about_items {
   padding: 3.125rem 2.5rem 5rem;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
   gap: 1.875rem;
 }
 @media (min-width: 75rem) {
   .main .about_items {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.875rem;
   }
 }
 .main .featured_works {
@@ -518,9 +519,7 @@ textarea {
 }
 @media (min-width: 36rem) {
   .flickr_thumbnail {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.3125rem;
   }
 }
 .flickr_thumbnail a:hover {
@@ -558,23 +557,18 @@ textarea {
 footer .social_interactions {
   background: url(../../image/subbg.gif);
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
   gap: 1.875rem;
   padding: 2.5rem;
   box-shadow: 0 0 0.3125rem 0;
 }
 @media (min-width: 36rem) {
   footer .social_interactions {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.875rem;
   }
 }
 @media (min-width: 75rem) {
   footer .social_interactions {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.875rem;
   }
 }
 footer .copyright_box {

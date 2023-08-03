@@ -21,25 +21,32 @@
   .business_perspectives {
     position: relative;
     margin: 0 u.rem(40);
-    @include u.grid(1, 30);
+    display: grid;
+    gap: u.rem(30);
+    // @include u.grid(1, 30);
 
     @include u.breakpoint(mobile){
+      grid-template-columns: repeat(2, 1fr);
       // @include u.grid(2, 30);
       // 為跑版而改
-      grid-template-columns: repeat(2, minmax(0,1fr));
+      // grid-template-columns: repeat(2, minmax(0,1fr));
     }
     @include u.breakpoint(PC){
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      // grid-template-columns: repeat(4, minmax(0, 1fr));
       // 為跑版而改
+      grid-template-columns: repeat(4,1fr);
       // @include u.grid(4, 30);
     }
   }
 
   .about_items {
     padding: u.rem(50) u.rem(40) u.rem(80);
-    @include u.grid(1, 30);
+    display: grid;
+    gap: u.rem(30);
+    // @include u.grid(1, 30);
     @include u.breakpoint(PC){
-      @include u.grid(3, 30);
+      grid-template-columns: repeat(3, 1fr);
+      // @include u.grid(3, 30);
     }
   }
 

@@ -7,14 +7,18 @@
 footer {
   .social_interactions {
     background: url(../../image/subbg.gif);
-    @include u.grid(1, 30);
+    display: grid;
+    gap: u.rem(30);
+    // @include u.grid(1, 30);
 
     @include u.breakpoint(mobile) {
-      @include u.grid(2, 30);
+      grid-template-columns: repeat(2, 1fr);
+      // @include u.grid(2, 30);
     }
 
     @include u.breakpoint(PC) {
-      @include u.grid(4, 30);
+      grid-template-columns: repeat(4, 1fr);
+      // @include u.grid(4, 30);
     }
 
     padding: u.rem(40);

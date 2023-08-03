@@ -1,9 +1,11 @@
 @use '../utils/' as u;
 
 .flickr_thumbnail {
-@include u.grid(6, 5);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: u.rem(5);
 @include u.breakpoint(mobile){
-  @include u.grid(4, 5);
+  grid-template-columns: repeat((4, 1fr));
 }
 a {
   &:hover {

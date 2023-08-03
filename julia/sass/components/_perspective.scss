@@ -23,7 +23,9 @@
   }
 
   a {
-    @include u.a_size(block, 30, 63);
+    display: block;
+    width: u.rem(63);
+    height: u.rem(30);
     margin: auto auto 0;
     color: var(--text-color);
     background-color: var(--gray2);
