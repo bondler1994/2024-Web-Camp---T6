@@ -32,9 +32,8 @@ footer {
     }
 
     .copyright {
-      order: 2;
       @include u.breakpoint(PC){
-        order: unset;
+        order: -1;
       }
       color: var(--gray4);
 

@@ -15,10 +15,11 @@
     justify-content: center;
     @include u.breakpoint(tablet){
       justify-content: space-between;
-    }
-    img {
+    } 
+    h1 {
       width: 100%;
-    }    
+      max-width: 330px;
+    }     
   }
 
   .contact {

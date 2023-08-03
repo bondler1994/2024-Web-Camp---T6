@@ -4,9 +4,11 @@
 
   p {
     color: var(--gray4);
+    margin: 0;
 
     a {
       color: var(--text-color);
+
       &:hover {
         color: var(--green)
       }
@@ -14,22 +16,29 @@
   }
 
   &:nth-child(1)>div {
-    display: block;
-    @include u.breakpoint(mobile){
-      display: flex;    
+    display: flex;
+    flex-direction: column;
+
+    @include u.breakpoint(mobile) {
+      flex-direction: row;
     }
+
     @include u.breakpoint(PC) {
-      display: block;      
+      flex-direction: column;
     }
+
 
     div {
       margin-bottom: u.rem(27);
-      @include u.breakpoint(mobile){
+
+      @include u.breakpoint(mobile) {
         margin-right: u.rem(27);
+        flex: 1 0 40%;
       }
+
       @include u.breakpoint(PC) {
         margin-bottom: u.rem(27);
-      }      
+      }
     }
   }
 
@@ -56,10 +65,14 @@
 
   &:nth-child(3)>div {
     gap: u.rem(30);
-    margin-bottom: u.rem(36);
+
+    &+div {
+      margin-top: u.rem(36);
+    }
 
     div:nth-child(1) {
       max-width: u.rem(144);
+      flex: 1 0 30%;
     }
 
     time {

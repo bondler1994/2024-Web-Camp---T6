@@ -1,14 +1,5 @@
 @use '../utils/' as u;
 
-html {
-  box-sizing: border-box;
-  font-size: 100%;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
 body {
   margin: 0 auto;
   padding: 0;
