@@ -161,7 +161,6 @@ img {
   box-shadow: -3px -1px 3px 0 var(--gray4);
 }
 .search_container .search_form {
-  position: relative;
   flex-grow: 1;
   background-color: var(--gray0);
   border: 1px solid var(--gray3);
@@ -485,14 +484,16 @@ img {
   margin-bottom: 0;
 }
 
-input,
-textarea {
+.form_input {
+  gap: 0.3125rem;
+  margin-bottom: 1.25rem;
+}
+.form_input input, .form_input textarea {
   width: 100%;
   font-size: 0.875rem;
   background-color: var(--gray1);
   border: 1px solid var(--gray3);
   border-radius: 3px;
-  margin-bottom: 5px;
 }
 
 textarea {
