@@ -52,7 +52,7 @@ img {
   display: block;
   width: 1.8125rem;
   height: 1.6875rem;
-  background: url(../../image/social.png) no-repeat;
+  background: url(../image/social.png) no-repeat;
 }
 .social_media a:nth-child(1) {
   background-position: 0% 0%;
@@ -95,7 +95,7 @@ img {
   display: block;
   width: 1.8125rem;
   height: 1.6875rem;
-  background: url(../../image/social.png) no-repeat;
+  background: url(../image/social.png) no-repeat;
 }
 .bottom_social_media a:nth-child(1) {
   background-position: 0% 100%;
@@ -171,7 +171,7 @@ img {
   background-color: var(--gray0);
 }
 .search_container .search_form button {
-  background: url(../../image/search.png) no-repeat;
+  background: url(../image/search.png) no-repeat;
   background-position: center;
   width: 2.25rem;
   height: 100%;
@@ -197,7 +197,7 @@ img {
   margin: 0.625rem auto 0;
 }
 .header_box {
-  background: url(../../image/subbg.gif);
+  background: url(../image/subbg.gif);
   padding: 2.375rem 2.6875rem 0;
   margin-bottom: 1.875rem;
   box-shadow: 0 0 0.3125rem 0;
@@ -425,12 +425,12 @@ img {
 }
 
 .main .banner_wrapper {
-  background: url(../../image/subbg.gif);
+  background: url(../image/subbg.gif);
   margin-top: -1.4375rem;
   padding-top: 1.4375rem;
 }
 .main_info {
-  background: url(../../image/subbg.gif);
+  background: url(../image/subbg.gif);
   margin: -2.125rem 0 4.375rem;
   box-shadow: 0 0 0.3125rem 0;
 }
@@ -556,7 +556,7 @@ textarea {
 }
 
 footer .social_interactions {
-  background: url(../../image/subbg.gif);
+  background: url(../image/subbg.gif);
   display: grid;
   gap: 1.875rem;
   padding: 2.5rem;

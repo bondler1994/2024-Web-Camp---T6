@@ -30,7 +30,7 @@ $sprites_x: (
   display: block;
   width: u.rem(29);
   height: u.rem(27);
-  background: url(../../image/social.png) no-repeat;
+  background: url(../image/social.png) no-repeat;
 }
 
 // @mixin social_media ($position) {
@@ -39,7 +39,7 @@ $sprites_x: (
 //     display: block;
 //       width: u.rem(28);
 //       height: u.rem(27);
-//       background: url(../../image/social.png) no-repeat;
+//       background: url(../image/social.png) no-repeat;
 //       @for $i from 1 through 5 {
 //           &:nth-child(#{$i}) {
 //             @include position1(#{$i});

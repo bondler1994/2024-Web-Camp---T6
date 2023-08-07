@@ -6,13 +6,13 @@
 
 .main {  
   .banner_wrapper {
-    background: url(../../image/subbg.gif);
+    background: url(../image/subbg.gif);
     margin-top: u.rem(-23);
     padding-top: u.rem(23);
   }           
 
   &_info {
-    background: url(../../image/subbg.gif);
+    background: url(../image/subbg.gif);
     margin: u.rem(-34) 0 u.rem(70);
     box-shadow: 0 0 u.rem(5) 0;
     // margin-bottom: u.rem(70);
