@@ -1,0 +1,42 @@
+@use '../utils/' as u;
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  min-width: u.rem(375);
+  background: linear-gradient(#000 0% .5%, transparent .5% 90%, #000 90% 100%),
+    url('../image/bg.jpg');
+}
+
+.container-fluid {
+  max-width: u.rem(1256);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: u.rem(30);
+}
+
+h2 {
+  font-size: u.rem(28);
+}
+
+h3 {
+  font-size: u.rem(20);
+}
+
+
+a,
+a:visited,
+a:checked {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}

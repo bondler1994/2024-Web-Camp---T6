@@ -8,7 +8,7 @@ $sprites_x: (
   '5': 100%,
 );
 
-@mixin position1 ($size) {
+@mixin background_position_for_social_media_icon ($size) {
   background-position: map-get($sprites_x, $size) 0%;
 
   &:hover {
@@ -16,7 +16,7 @@ $sprites_x: (
   }
 }
 
-@mixin position2 ($size) {
+@mixin background_position_for_bottom_social_media_icon ($size) {
   background-position: map-get($sprites_x, $size) 100%;
 
   &:hover {
@@ -26,7 +26,14 @@ $sprites_x: (
 
 
 
-@mixin social_media_a_style {
+// @mixin social_media_a_style {
+//   display: block;
+//   width: u.rem(29);
+//   height: u.rem(27);
+//   background: url(../image/social.png) no-repeat;
+// }
+
+%social_media_a_style {
   display: block;
   width: u.rem(29);
   height: u.rem(27);
@@ -57,11 +64,12 @@ $sprites_x: (
   margin-bottom: u.rem(12);
 
   a {
-    @include social_media_a_style;  
+    // @include social_media_a_style;  
+    @extend %social_media_a_style;
     
     @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
-        @include position1(#{$i});
+        @include background_position_for_social_media_icon(#{$i});                
       }
     }
     &+a {
@@ -74,11 +82,12 @@ $sprites_x: (
   margin-bottom: u.rem(12);
   
     a {
-      @include social_media_a_style;
+      // @include social_media_a_style;
+      @extend %social_media_a_style;
   
       @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
-          @include position2(#{$i});
+          @include background_position_for_bottom_social_media_icon(#{$i});
         }
       }
   
