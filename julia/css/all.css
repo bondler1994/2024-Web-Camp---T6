@@ -2,7 +2,6 @@ body {
   margin: 0 auto;
   padding: 0;
   min-width: 23.4375rem;
-  max-width: 87.5rem;
   background: linear-gradient(#000 0% 0.5%, transparent 0.5% 90%, #000 90% 100%), url("../image/bg.jpg");
 }
 
@@ -328,7 +327,7 @@ img {
 }
 .about_item:nth-child(3) > div div:nth-child(1) {
   max-width: 9rem;
-  flex: 1 0 30%;
+  flex: 1 0 40%;
 }
 .about_item:nth-child(3) > div time {
   background-color: var(--green);
@@ -440,7 +439,7 @@ img {
   display: grid;
   gap: 1.875rem;
 }
-@media (min-width: 36rem) {
+@media (min-width: 48rem) {
   .main .business_perspectives {
     grid-template-columns: repeat(2, 1fr);
   }
