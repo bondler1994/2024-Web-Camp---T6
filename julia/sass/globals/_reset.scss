@@ -3,13 +3,13 @@
 body {
   margin: 0 auto;
   padding: 0;
-  min-width: u.rem(375);
+  min-width: u.px_to_rem(375);
   background: linear-gradient(#000 0% .5%, transparent .5% 90%, #000 90% 100%),
     url('../image/bg.jpg');
 }
 
 .container-fluid {
-  max-width: u.rem(1256);
+  max-width: u.px_to_rem(1256);
 }
 
 h1,
@@ -19,15 +19,15 @@ h4 {
   text-transform: uppercase;
   line-height: 1.1;
   margin-top: 0;
-  margin-bottom: u.rem(30);
+  margin-bottom: u.px_to_rem(30);
 }
 
 h2 {
-  font-size: u.rem(28);
+  font-size: u.px_to_rem(28);
 }
 
 h3 {
-  font-size: u.rem(20);
+  font-size: u.px_to_rem(20);
 }
 
 

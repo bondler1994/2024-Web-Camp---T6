@@ -1,7 +1,7 @@
 @use '../utils/' as u;
 
 .swiper-button {
-  gap: u.rem(8);
+  gap: u.px_to_rem(8);
 
   &-prev,
   &-next {
@@ -13,13 +13,13 @@
 
   &-prev::after,
   &-next::after {
-    font-size: u.rem(18);
+    font-size: u.px_to_rem(18);
   }
 }
 
 .swiper-slide {
   position: relative;
-  width: u.rem(270);
+  width: u.px_to_rem(270);
   display: flex;
   justify-content: center;
 
@@ -75,23 +75,24 @@
     // transition: 1s all ease-in-out;
     // transition無法用在display:none,如要用則須改為visibility或opacity
 
-    p { 
-      padding: u.rem(8) u.rem(40);     
+    p {
+      padding: u.px_to_rem(8) u.px_to_rem(40);
       text-transform: uppercase;
       color: var(--white);
       border-bottom: 2px solid var(--white);
-      font-size: u.rem(20);
+      font-size: u.px_to_rem(20);
+
       @include u.breakpoint(mobile) {
-          font-size: u.rem(14);
-        }      
+        font-size: u.px_to_rem(14);
+      }
     }
 
     .click_icon_links {
       text-align: center;
 
       a {
-        display: inline-block;        
-        padding: 0 u.rem(5);
+        display: inline-block;
+        padding: 0 u.px_to_rem(5);
 
         &:hover {
           transform: scale(1.1);

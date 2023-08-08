@@ -3,16 +3,19 @@
 .flickr_thumbnail {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: u.rem(5);
-@include u.breakpoint(mobile){
-  grid-template-columns: repeat((4, 1fr));
-}
-a {
-  &:hover {
-    transform: scale(1.1);
+  gap: u.px_to_rem(5);
+
+  @include u.breakpoint(mobile) {
+    grid-template-columns: repeat((4, 1fr));
   }
-  img {
-    width: 100%;
+
+  a {
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    img {
+      width: 100%;
+    }
   }
-}
 }

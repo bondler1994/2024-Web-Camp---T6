@@ -2,21 +2,23 @@
 
 .testimonials_text {
   background-color: var(--gray1);
-  padding: u.rem(18) u.rem(12) u.rem(38) u.rem(26);
-  font-size: u.rem(14);
-  // margin-bottom: u.rem(20);
+  padding: u.px_to_rem(18) u.px_to_rem(12) u.px_to_rem(38) u.px_to_rem(26);
+  font-size: u.px_to_rem(14);
+  // margin-bottom: u.px_to_rem(20);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px; 
-  clip-path: polygon(0% 0%, 100% 0, 100% 85%, 10% 85%, 0 100%) 
+  border-bottom-right-radius: 3px;
+  clip-path: polygon(0% 0%, 100% 0, 100% 85%, 10% 85%, 0 100%)
 }
 
 
 .commenter {
-  gap: u.rem(14);
+  gap: u.px_to_rem(14);
+
   a {
-    color: var(--green);    
+    color: var(--green);
   }
+
   p {
     margin-bottom: 0;
   }

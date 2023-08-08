@@ -4,53 +4,55 @@
 @use '../vendors/swiper';
 @use '../utils/' as u;
 
-.main {  
+.main {
   .banner_wrapper {
     background: url(../image/subbg.gif);
-    margin-top: u.rem(-23);
-    padding-top: u.rem(23);
-  }           
+    margin-top: u.px_to_rem(-23);
+    padding-top: u.px_to_rem(23);
+  }
 
   &_info {
     background: url(../image/subbg.gif);
-    margin: u.rem(-34) 0 u.rem(70);
-    box-shadow: 0 0 u.rem(5) 0;
-    // margin-bottom: u.rem(70);
+    margin: u.px_to_rem(-34) 0 u.px_to_rem(70);
+    box-shadow: 0 0 u.px_to_rem(5) 0;
+    // margin-bottom: u.px_to_rem(70);
   }
 
   .business_perspectives {
     position: relative;
-    margin: 0 u.rem(40);
+    margin: 0 u.px_to_rem(40);
     display: grid;
-    gap: u.rem(30);
+    gap: u.px_to_rem(30);
     // @include u.grid(1, 30);
 
-    @include u.breakpoint(tablet){
+    @include u.breakpoint(tablet) {
       grid-template-columns: repeat(2, 1fr);
       // @include u.grid(2, 30);
       // 為跑版而改
       // grid-template-columns: repeat(2, minmax(0,1fr));
     }
-    @include u.breakpoint(PC){
+
+    @include u.breakpoint(PC) {
       // grid-template-columns: repeat(4, minmax(0, 1fr));
       // 為跑版而改
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
       // @include u.grid(4, 30);
     }
   }
 
   .about_items {
-    padding: u.rem(50) u.rem(40) u.rem(80);
+    padding: u.px_to_rem(50) u.px_to_rem(40) u.px_to_rem(80);
     display: grid;
-    gap: u.rem(30);
+    gap: u.px_to_rem(30);
+
     // @include u.grid(1, 30);
-    @include u.breakpoint(PC){
+    @include u.breakpoint(PC) {
       grid-template-columns: repeat(3, 1fr);
       // @include u.grid(3, 30);
     }
   }
 
   .featured_works {
-    padding: u.rem(50) u.rem(40) u.rem(76);
+    padding: u.px_to_rem(50) u.px_to_rem(40) u.px_to_rem(76);
   }
 }

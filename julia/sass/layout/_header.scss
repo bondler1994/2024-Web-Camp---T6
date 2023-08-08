@@ -5,21 +5,23 @@
 
 
 .header {
-  margin: u.rem(10) auto 0;
+  margin: u.px_to_rem(10) auto 0;
 
-  &_box {    
+  &_box {
     background: url(../image/subbg.gif);
-    padding: u.rem(38) u.rem(43) 0;
-    margin-bottom: u.rem(30);    
-    box-shadow: 0 0 u.rem(5) 0;
+    padding: u.px_to_rem(38) u.px_to_rem(43) 0;
+    margin-bottom: u.px_to_rem(30);
+    box-shadow: 0 0 u.px_to_rem(5) 0;
     justify-content: center;
-    @include u.breakpoint(tablet){
+
+    @include u.breakpoint(tablet) {
       justify-content: space-between;
-    } 
+    }
+
     h1 {
       width: 100%;
       max-width: 330px;
-    }     
+    }
   }
 
   .contact {
@@ -32,6 +34,7 @@
 
   .phone a {
     color: var(--text-color);
+
     &:hover {
       color: var(--green)
     }

@@ -1,35 +1,37 @@
 @use '../utils/' as u;
 
-.perspective {  
+.perspective {
   text-align: center;
   background-color: var(--gray1);
-  padding: u.rem(34) u.rem(36) u.rem(22);
+  padding: u.px_to_rem(34) u.px_to_rem(36) u.px_to_rem(22);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   &:hover {
-    background-color:rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     color: var(--white);
   }
-  
-  
+
+
   h4 {
-    font-size: u.rem(16);
+    font-size: u.px_to_rem(16);
   }
-  
+
   div {
-    margin: 0 u.rem(66) u.rem(22);
+    margin: 0 u.px_to_rem(66) u.px_to_rem(22);
   }
 
   a {
     display: block;
-    width: u.rem(63);
-    height: u.rem(30);
-    line-height: u.rem(30);
+    width: u.px_to_rem(63);
+    height: u.px_to_rem(30);
+    line-height: u.px_to_rem(30);
     margin: auto auto 0;
     color: var(--text-color);
     background-color: var(--gray2);
+
     &:hover {
       background-color: var(--green);
       color: var(--white);

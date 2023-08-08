@@ -8,7 +8,7 @@ footer {
   .social_interactions {
     background: url(../image/subbg.gif);
     display: grid;
-    gap: u.rem(30);
+    gap: u.px_to_rem(30);
     // @include u.grid(1, 30);
 
     @include u.breakpoint(mobile) {
@@ -21,14 +21,14 @@ footer {
       // @include u.grid(4, 30);
     }
 
-    padding: u.rem(40);
-    box-shadow: 0 0 u.rem(5) 0;
+    padding: u.px_to_rem(40);
+    box-shadow: 0 0 u.px_to_rem(5) 0;
   }
 
   .copyright_box {
     flex-direction: column;
     align-items: center;
-    padding: u.rem(16) 0 u.rem(10);
+    padding: u.px_to_rem(16) 0 u.px_to_rem(10);
 
     @include u.breakpoint(PC) {
       flex-direction: row;
@@ -36,9 +36,10 @@ footer {
     }
 
     .copyright {
-      @include u.breakpoint(PC){
+      @include u.breakpoint(PC) {
         order: -1;
       }
+
       color: var(--gray4);
 
       a {
@@ -47,24 +48,26 @@ footer {
     }
 
     .bottom_contact {
-      margin: u.rem(3);
+      margin: u.px_to_rem(3);
 
       @include u.breakpoint(tablet) {
         display: none;
       }
 
-      .phone{
+      .phone {
         span {
-          color:var(--gray4);
+          color: var(--gray4);
         }
+
         a {
-            color: var(--gray4);
-            &:hover {
-              color: var(--green)
-            }
+          color: var(--gray4);
+
+          &:hover {
+            color: var(--green)
           }
-      } 
-        
+        }
+      }
+
     }
   }
 }

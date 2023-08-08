@@ -28,71 +28,72 @@ $sprites_x: (
 
 // @mixin social_media_a_style {
 //   display: block;
-//   width: u.rem(29);
-//   height: u.rem(27);
+//   width: u.px_to_rem(29);
+//   height: u.px_to_rem(27);
 //   background: url(../image/social.png) no-repeat;
 // }
 
 %social_media_a_style {
   display: block;
-  width: u.rem(29);
-  height: u.rem(27);
+  width: u.px_to_rem(29);
+  height: u.px_to_rem(27);
   background: url(../image/social.png) no-repeat;
 }
 
 // @mixin social_media ($position) {
-//   margin-bottom: u.rem(12);
+//   margin-bottom: u.px_to_rem(12);
 //   a {
 //     display: block;
-//       width: u.rem(28);
-//       height: u.rem(27);
+//       width: u.px_to_rem(28);
+//       height: u.px_to_rem(27);
 //       background: url(../image/social.png) no-repeat;
 //       @for $i from 1 through 5 {
 //           &:nth-child(#{$i}) {
 //             @include position1(#{$i});
 //           }
 //         }
-      
+
 //         &+a {
-//           margin-left: u.rem(7);
+//           margin-left: u.px_to_rem(7);
 //         }
 //   }
 // }
 
 
-.social_media {  
-  margin-bottom: u.rem(12);
+.social_media {
+  margin-bottom: u.px_to_rem(12);
 
   a {
     // @include social_media_a_style;  
     @extend %social_media_a_style;
-    
+
     @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
-        @include background_position_for_social_media_icon(#{$i});                
+        @include background_position_for_social_media_icon(#{$i});
       }
     }
+
     &+a {
-      margin-left: u.rem(7);
+      margin-left: u.px_to_rem(7);
     }
   }
 }
 
 .bottom_social_media {
-  margin-bottom: u.rem(12);
-  
-    a {
-      // @include social_media_a_style;
-      @extend %social_media_a_style;
-  
-      @for $i from 1 through 5 {
-        &:nth-child(#{$i}) {
-          @include background_position_for_bottom_social_media_icon(#{$i});
-        }
-      }
-  
-      &+a {
-        margin-left: u.rem(7);
+  margin-bottom: u.px_to_rem(12);
+
+  a {
+    // @include social_media_a_style;
+    @extend %social_media_a_style;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        @include background_position_for_bottom_social_media_icon(#{$i});
       }
     }
+
+    &+a {
+      margin-left: u.px_to_rem(7);
+    }
+  }
 }

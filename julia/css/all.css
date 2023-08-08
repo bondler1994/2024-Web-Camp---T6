@@ -488,7 +488,8 @@ img {
   gap: 0.3125rem;
   margin-bottom: 1.25rem;
 }
-.form_input input, .form_input textarea {
+.form_input input,
+.form_input textarea {
   width: 100%;
   font-size: 0.875rem;
   background-color: var(--gray1);
