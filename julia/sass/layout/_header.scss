@@ -1,8 +1,4 @@
 @use '../utils/' as u;
-@use '../components/social_media';
-@use '../vendors/bootstraps';
-@use '../components/seaarch_container';
-
 
 .header {
   margin: u.px_to_rem(10) auto 0;
