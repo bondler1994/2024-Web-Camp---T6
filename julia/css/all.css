@@ -380,7 +380,6 @@ footer .copyright_box .bottom_contact .phone a:hover {
   font-size: 0.875rem;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
   clip-path: polygon(0% 0%, 100% 0, 100% 85%, 10% 85%, 0 100%);
 }
 
@@ -501,15 +500,11 @@ textarea {
 .carousel-item img {
   height: 18.75rem;
   object-fit: cover;
-}
-@media (min-width: 36rem) {
-  .carousel-item img {
-    height: 25rem;
-  }
+  object-position: center right;
 }
 @media (min-width: 48rem) {
   .carousel-item img {
-    height: unset;
+    height: auto;
   }
 }
 

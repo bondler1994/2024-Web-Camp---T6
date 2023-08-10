@@ -31,15 +31,11 @@
 .carousel-item {
   img {
     height: u.px_to_rem(300);
-    object-fit: cover;
-
-    @include u.breakpoint(mobile) {
-      height: u.px_to_rem(400);
-    }
+    object-fit: cover;    
+    object-position: center right;
 
     @include u.breakpoint(tablet) {
-      height: unset;
+      height: auto;
     }
   }
-
 }

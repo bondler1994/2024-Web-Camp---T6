@@ -5,16 +5,13 @@ footer {
     background: url(../image/subbg.gif);
     display: grid;
     gap: u.px_to_rem(30);
-    // @include u.grid(1, 30);
 
     @include u.breakpoint(mobile) {
       grid-template-columns: repeat(2, 1fr);
-      // @include u.grid(2, 30);
     }
 
     @include u.breakpoint(PC) {
       grid-template-columns: repeat(4, 1fr);
-      // @include u.grid(4, 30);
     }
 
     padding: u.px_to_rem(40);

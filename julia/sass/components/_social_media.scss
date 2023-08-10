@@ -26,13 +26,6 @@ $sprites_x: (
 
 
 
-// @mixin social_media_a_style {
-//   display: block;
-//   width: u.px_to_rem(29);
-//   height: u.px_to_rem(27);
-//   background: url(../image/social.png) no-repeat;
-// }
-
 %social_media_a_style {
   display: block;
   width: u.px_to_rem(29);
@@ -64,7 +57,6 @@ $sprites_x: (
   margin-bottom: u.px_to_rem(12);
 
   a {
-    // @include social_media_a_style;  
     @extend %social_media_a_style;
 
     @for $i from 1 through 5 {
@@ -83,7 +75,6 @@ $sprites_x: (
   margin-bottom: u.px_to_rem(12);
 
   a {
-    // @include social_media_a_style;
     @extend %social_media_a_style;
 
     @for $i from 1 through 5 {

@@ -4,10 +4,8 @@
   background-color: var(--gray1);
   padding: u.px_to_rem(18) u.px_to_rem(12) u.px_to_rem(38) u.px_to_rem(26);
   font-size: u.px_to_rem(14);
-  // margin-bottom: u.px_to_rem(20);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
   clip-path: polygon(0% 0%, 100% 0, 100% 85%, 10% 85%, 0 100%)
 }
 
