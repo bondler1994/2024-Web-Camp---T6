@@ -1,4 +1,5 @@
-@use '../utils/' as u;
+@use '../utils/' as utils;
+@use '../globals/boilerplate' as boilerplate;
 
 .about_item {
 
@@ -19,26 +20,26 @@
     display: flex;
     flex-direction: column;
 
-    @include u.breakpoint(mobile) {
+    @include boilerplate.breakpoint(mobile) {
       flex-direction: row;
     }
 
-    @include u.breakpoint(PC) {
+    @include boilerplate.breakpoint(PC) {
       flex-direction: column;
     }
 
 
     div {
-      margin-bottom: u.px_to_rem(27);
+      margin-bottom: utils.px2rem(27);
 
-      @include u.breakpoint(mobile) {
-        margin-right: u.px_to_rem(27);
+      @include boilerplate.breakpoint(mobile) {
+        margin-right: utils.px2rem(27);
         margin-bottom: unset;
         flex: 1 0 40%;
       }
 
-      @include u.breakpoint(PC) {
-        margin-bottom: u.px_to_rem(27);
+      @include boilerplate.breakpoint(PC) {
+        margin-bottom: utils.px2rem(27);
         margin-right: unset;
       }
     }
@@ -46,7 +47,7 @@
 
   &:nth-child(2)>div {
     div {
-      padding: u.px_to_rem(13) 0 u.px_to_rem(20);
+      padding: utils.px2rem(13) 0 utils.px2rem(20);
       border-bottom: 2px solid var(--gray0);
       gap: 10px;
       align-items: baseline;
@@ -54,10 +55,10 @@
 
     a {
       display: block;
-      width: u.px_to_rem(48);
-      height: u.px_to_rem(48);
+      width: utils.px2rem(48);
+      height: utils.px2rem(48);
       text-align: center;
-      line-height: u.px_to_rem(48);
+      line-height: utils.px2rem(48);
       border-radius: 50%;
       background-color: var(--gray3);
 
@@ -72,14 +73,14 @@
   }
 
   &:nth-child(3)>div {
-    gap: u.px_to_rem(30);
+    gap: utils.px2rem(30);
 
     &+div {
-      margin-top: u.px_to_rem(36);
+      margin-top: utils.px2rem(36);
     }
 
     div:nth-child(1) {
-      max-width: u.px_to_rem(144);
+      max-width: utils.px2rem(144);
       flex: 1 0 40%;
     }
 
@@ -87,9 +88,9 @@
       background-color: var(--green);
       color: var(--white);
       display: inline-block;
-      padding: u.px_to_rem(7) u.px_to_rem(14);
+      padding: utils.px2rem(7) utils.px2rem(14);
       font-weight: 700;
-      margin-bottom: u.px_to_rem(30);
+      margin-bottom: utils.px2rem(30);
     }
 
   }

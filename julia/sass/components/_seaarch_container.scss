@@ -1,4 +1,5 @@
-@use '../utils/' as u;
+@use '../utils/' as utils;
+@use '../globals/boilerplate' as boilerplate;
 
 
 .search_container {
@@ -10,7 +11,7 @@
     flex-grow: 1;
     background-color: var(--gray0);
     border: 1px solid var(--gray3);
-    margin: u.px_to_rem(14) u.px_to_rem(17) u.px_to_rem(12);
+    margin: utils.px2rem(14) utils.px2rem(17) utils.px2rem(12);
 
     input {
       border: none;
@@ -20,7 +21,7 @@
     button {
       background: url(../image/search.png) no-repeat;
       background-position: center;
-      width: u.px_to_rem(36);
+      width: utils.px2rem(36);
       height: 100%;
       border: none;
     }
@@ -30,11 +31,11 @@
 // carousel
 .carousel-item {
   img {
-    height: u.px_to_rem(300);
-    object-fit: cover;    
+    height: utils.px2rem(300);
+    object-fit: cover;
     object-position: center right;
 
-    @include u.breakpoint(tablet) {
+    @include boilerplate.breakpoint(tablet) {
       height: auto;
     }
   }

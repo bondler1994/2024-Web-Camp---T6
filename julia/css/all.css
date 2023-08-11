@@ -2,12 +2,12 @@
   --white: white;
   --green: #80b600;
   --text-color: black;
-  --gray0:#eeeeee;
-  --gray1:#e6e6e6;
-  --gray2:#cdcdcd;
-  --gray3:#d9d9d9;
-  --gray4:#818181;
-  --gray5:#636363;
+  --gray0: #eeeeee;
+  --gray1: #e6e6e6;
+  --gray2: #cdcdcd;
+  --gray3: #d9d9d9;
+  --gray4: #818181;
+  --gray5: #636363;
 }
 
 body {
@@ -84,7 +84,7 @@ img {
 }
 
 .main .banner_wrapper {
-  background: url(../image/subbg.gif);
+  background: url(../image/);
   margin-top: -1.4375rem;
   padding-top: 1.4375rem;
 }
@@ -121,6 +121,14 @@ img {
 }
 .main .featured_works {
   padding: 3.125rem 2.5rem 4.75rem;
+}
+.main .featured_works::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.125rem;
+  background-color: var(--gray3);
+  transform: translateY(-3.125rem);
 }
 
 footer .social_interactions {
@@ -191,34 +199,34 @@ footer .copyright_box .bottom_contact .phone a:hover {
   margin-bottom: 0.75rem;
 }
 .social_media a:nth-child(1) {
-  background-position: 0% 0%;
+  background-position: calc(0 * 25%) 0%;
 }
 .social_media a:nth-child(1):hover {
-  background-position: 0% 100%;
+  background-position: calc(0 * 25%) 100%;
 }
 .social_media a:nth-child(2) {
-  background-position: 25% 0%;
+  background-position: calc(1 * 25%) 0%;
 }
 .social_media a:nth-child(2):hover {
-  background-position: 25% 100%;
+  background-position: calc(1 * 25%) 100%;
 }
 .social_media a:nth-child(3) {
-  background-position: 50% 0%;
+  background-position: calc(2 * 25%) 0%;
 }
 .social_media a:nth-child(3):hover {
-  background-position: 50% 100%;
+  background-position: calc(2 * 25%) 100%;
 }
 .social_media a:nth-child(4) {
-  background-position: 75% 0%;
+  background-position: calc(3 * 25%) 0%;
 }
 .social_media a:nth-child(4):hover {
-  background-position: 75% 100%;
+  background-position: calc(3 * 25%) 100%;
 }
 .social_media a:nth-child(5) {
-  background-position: 100% 0%;
+  background-position: calc(4 * 25%) 0%;
 }
 .social_media a:nth-child(5):hover {
-  background-position: 100% 100%;
+  background-position: calc(4 * 25%) 100%;
 }
 .social_media a + a {
   margin-left: 0.4375rem;
@@ -228,31 +236,31 @@ footer .copyright_box .bottom_contact .phone a:hover {
   margin-bottom: 0.75rem;
 }
 .bottom_social_media a:nth-child(1) {
-  background-position: 0% 100%;
+  background-position: calc(0 * 25%) 100%;
 }
 .bottom_social_media a:nth-child(1):hover {
   transform: scale(1.1);
 }
 .bottom_social_media a:nth-child(2) {
-  background-position: 25% 100%;
+  background-position: calc(1 * 25%) 100%;
 }
 .bottom_social_media a:nth-child(2):hover {
   transform: scale(1.1);
 }
 .bottom_social_media a:nth-child(3) {
-  background-position: 50% 100%;
+  background-position: calc(2 * 25%) 100%;
 }
 .bottom_social_media a:nth-child(3):hover {
   transform: scale(1.1);
 }
 .bottom_social_media a:nth-child(4) {
-  background-position: 75% 100%;
+  background-position: calc(3 * 25%) 100%;
 }
 .bottom_social_media a:nth-child(4):hover {
   transform: scale(1.1);
 }
 .bottom_social_media a:nth-child(5) {
-  background-position: 100% 100%;
+  background-position: calc(4 * 25%) 100%;
 }
 .bottom_social_media a:nth-child(5):hover {
   transform: scale(1.1);
@@ -281,13 +289,15 @@ footer .copyright_box .bottom_contact .phone a:hover {
   margin: 0 4.125rem 1.375rem;
 }
 .perspective a {
+  margin: auto auto 0;
+}
+.perspective a {
   display: block;
   width: 3.9375rem;
   height: 1.875rem;
   line-height: 1.875rem;
-  margin: auto auto 0;
-  color: var(--text-color);
   background-color: var(--gray2);
+  color: var(--text-color);
 }
 .perspective a:hover {
   background-color: var(--green);
@@ -425,28 +435,22 @@ textarea {
 
 .flickr_thumbnail {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
   gap: 0.3125rem;
+  grid-template-columns: repeat(6, 1fr);
 }
 @media (min-width: 36rem) {
   .flickr_thumbnail {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+.flickr_thumbnail a {
+  transform: scale(1);
+}
 .flickr_thumbnail a:hover {
   transform: scale(1.1);
 }
 .flickr_thumbnail a img {
   width: 100%;
-}
-
-.featured_works::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 0.125rem;
-  background-color: var(--gray3);
-  transform: translateY(-3.125rem);
 }
 
 .bottom_nav {

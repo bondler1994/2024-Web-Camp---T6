@@ -1,35 +1,36 @@
-@use '../utils/' as u;
+@use '../utils/' as utils;
+@use '../globals/boilerplate' as boilerplate;
 
 footer {
   .social_interactions {
     background: url(../image/subbg.gif);
     display: grid;
-    gap: u.px_to_rem(30);
+    gap: utils.px2rem(30);
 
-    @include u.breakpoint(mobile) {
+    @include boilerplate.breakpoint(mobile) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include u.breakpoint(PC) {
+    @include boilerplate.breakpoint(PC) {
       grid-template-columns: repeat(4, 1fr);
     }
 
-    padding: u.px_to_rem(40);
-    box-shadow: 0 0 u.px_to_rem(5) 0;
+    padding: utils.px2rem(40);
+    box-shadow: 0 0 utils.px2rem(5) 0;
   }
 
   .copyright_box {
     flex-direction: column;
     align-items: center;
-    padding: u.px_to_rem(16) 0 u.px_to_rem(10);
+    padding: utils.px2rem(16) 0 utils.px2rem(10);
 
-    @include u.breakpoint(PC) {
+    @include boilerplate.breakpoint(PC) {
       flex-direction: row;
       justify-content: space-between;
     }
 
     .copyright {
-      @include u.breakpoint(PC) {
+      @include boilerplate.breakpoint(PC) {
         order: -1;
       }
 
@@ -41,9 +42,9 @@ footer {
     }
 
     .bottom_contact {
-      margin: u.px_to_rem(3);
+      margin: utils.px2rem(3);
 
-      @include u.breakpoint(tablet) {
+      @include boilerplate.breakpoint(tablet) {
         display: none;
       }
 

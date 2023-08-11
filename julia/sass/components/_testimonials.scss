@@ -1,9 +1,9 @@
-@use '../utils/' as u;
+@use '../utils/' as utils;
 
 .testimonials_text {
   background-color: var(--gray1);
-  padding: u.px_to_rem(18) u.px_to_rem(12) u.px_to_rem(38) u.px_to_rem(26);
-  font-size: u.px_to_rem(14);
+  padding: utils.px2rem(18) utils.px2rem(12) utils.px2rem(38) utils.px2rem(26);
+  font-size: utils.px2rem(14);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   clip-path: polygon(0% 0%, 100% 0, 100% 85%, 10% 85%, 0 100%)
@@ -11,7 +11,7 @@
 
 
 .commenter {
-  gap: u.px_to_rem(14);
+  gap: utils.px2rem(14);
 
   a {
     color: var(--green);

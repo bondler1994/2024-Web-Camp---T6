@@ -1,16 +1,17 @@
-@use '../utils/' as u;
+@use '../utils/' as utils;
+@use '../globals/boilerplate' as boilerplate;
 
 .header {
-  margin: u.px_to_rem(10) auto 0;
+  margin: utils.px2rem(10) auto 0;
 
   &_box {
     background: url(../image/subbg.gif);
-    padding: u.px_to_rem(38) u.px_to_rem(43) 0;
-    margin-bottom: u.px_to_rem(30);
-    box-shadow: 0 0 u.px_to_rem(5) 0;
+    padding: utils.px2rem(38) utils.px2rem(43) 0;
+    margin-bottom: utils.px2rem(30);
+    box-shadow: 0 0 utils.px2rem(5) 0;
     justify-content: center;
 
-    @include u.breakpoint(tablet) {
+    @include boilerplate.breakpoint(tablet) {
       justify-content: space-between;
     }
 
@@ -23,7 +24,7 @@
   .contact {
     display: none;
 
-    @include u.breakpoint(tablet) {
+    @include boilerplate.breakpoint(tablet) {
       display: block;
     }
   }

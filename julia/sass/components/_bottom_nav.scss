@@ -1,11 +1,12 @@
-@use '../utils/' as u;
+@use '../utils/' as utils;
+@use '../globals/boilerplate' as boilerplate;
 
 .bottom_nav {
   // 處理a tag自然留白
   font-size: 0;
 
   a {
-    font-size: u.px_to_rem(16);
+    font-size: utils.px2rem(16);
     text-transform: uppercase;
     color: var(--gray4);
 
@@ -16,13 +17,13 @@
     display: block;
     text-align: center;
 
-    @include u.breakpoint(tablet) {
+    @include boilerplate.breakpoint(tablet) {
       display: inline;
-      padding: 0 u.px_to_rem(12);
+      padding: 0 utils.px2rem(12);
     }
 
     &+a {
-      @include u.breakpoint(tablet) {
+      @include boilerplate.breakpoint(tablet) {
         border-left: 1px solid var(--gray4);
       }
     }

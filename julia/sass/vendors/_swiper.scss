@@ -1,7 +1,8 @@
-@use '../utils/' as u;
+@use '../utils/' as utils;
+@use '../globals/boilerplate' as boilerplate;
 
 .swiper-button {
-  gap: u.px_to_rem(8);
+  gap: utils.px2rem(8);
 
   &-prev,
   &-next {
@@ -13,13 +14,13 @@
 
   &-prev::after,
   &-next::after {
-    font-size: u.px_to_rem(18);
+    font-size: utils.px2rem(18);
   }
 }
 
 .swiper-slide {
   position: relative;
-  width: u.px_to_rem(270);
+  width: utils.px2rem(270);
   display: flex;
   justify-content: center;
 
@@ -76,14 +77,14 @@
     // transition無法用在display:none,如要用則須改為visibility或opacity
 
     p {
-      padding: u.px_to_rem(8) u.px_to_rem(40);
+      padding: utils.px2rem(8) utils.px2rem(40);
       text-transform: uppercase;
       color: var(--white);
       border-bottom: 2px solid var(--white);
-      font-size: u.px_to_rem(20);
+      font-size: utils.px2rem(20);
 
-      @include u.breakpoint(mobile) {
-        font-size: u.px_to_rem(14);
+      @include boilerplate.breakpoint(mobile) {
+        font-size: utils.px2rem(14);
       }
     }
 
@@ -92,7 +93,7 @@
 
       a {
         display: inline-block;
-        padding: 0 u.px_to_rem(5);
+        padding: 0 utils.px2rem(5);
 
         &:hover {
           transform: scale(1.1);

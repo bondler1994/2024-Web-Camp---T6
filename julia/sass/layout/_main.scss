@@ -1,31 +1,32 @@
-@use '../utils/' as u;
+@use '../utils/' as utils;
+@use '../globals/boilerplate' as boilerplate;
 
 .main {
   .banner_wrapper {
-    background: url(../image/subbg.gif);
-    margin-top: u.px_to_rem(-23);
-    padding-top: u.px_to_rem(23);
+    background: url(../image/);
+    margin-top: utils.px2rem(-23);
+    padding-top: utils.px2rem(23);
   }
 
   &_info {
     background: url(../image/subbg.gif);
-    margin: u.px_to_rem(-34) 0 u.px_to_rem(70);
-    box-shadow: 0 0 u.px_to_rem(5) 0;
+    margin: utils.px2rem(-34) 0 utils.px2rem(70);
+    box-shadow: 0 0 utils.px2rem(5) 0;
   }
 
   .business_perspectives {
     position: relative;
-    margin: 0 u.px_to_rem(40);
+    margin: 0 utils.px2rem(40);
     display: grid;
-    gap: u.px_to_rem(30);
+    gap: utils.px2rem(30);
 
-    @include u.breakpoint(tablet) {
+    @include boilerplate.breakpoint(tablet) {
       grid-template-columns: repeat(2, 1fr);
       // 為跑版而改
       // grid-template-columns: repeat(2, minmax(0,1fr));
     }
 
-    @include u.breakpoint(PC) {
+    @include boilerplate.breakpoint(PC) {
       // grid-template-columns: repeat(4, minmax(0, 1fr));
       // 為跑版而改
       grid-template-columns: repeat(4, 1fr);
@@ -33,16 +34,27 @@
   }
 
   .about_items {
-    padding: u.px_to_rem(50) u.px_to_rem(40) u.px_to_rem(80);
+    padding: utils.px2rem(50) utils.px2rem(40) utils.px2rem(80);
     display: grid;
-    gap: u.px_to_rem(30);
+    gap: utils.px2rem(30);
 
-    @include u.breakpoint(PC) {
+    @include boilerplate.breakpoint(PC) {
       grid-template-columns: repeat(3, 1fr);
     }
   }
 
   .featured_works {
-    padding: u.px_to_rem(50) u.px_to_rem(40) u.px_to_rem(76);
+    padding: utils.px2rem(50) utils.px2rem(40) utils.px2rem(76);
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: utils.px2rem(2);
+      background-color: var(--gray3);
+      transform: translateY(-(utils.px2rem(50)));
+    }
   }
+
+
 }

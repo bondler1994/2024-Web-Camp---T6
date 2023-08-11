@@ -1,15 +1,41 @@
-@use '../utils/' as u;
+@use '../utils/' as utils;
+
+:root {
+  --white: white;
+  --green: #80b600;
+  --text-color: black;
+  --gray0: #eeeeee;
+  --gray1: #e6e6e6;
+  --gray2: #cdcdcd;
+  --gray3: #d9d9d9;
+  --gray4: #818181;
+  --gray5: #636363;
+}
+
+// mobile 576px, tablet 768px, PC 1200px
+$breakpoints-up: (
+  'mobile':utils.px2rem(576),
+  'tablet':utils.px2rem(768),
+  'PC':utils.px2rem(1200),
+);
+
+@mixin breakpoint ($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
 
 body {
   margin: 0 auto;
   padding: 0;
-  min-width: u.px_to_rem(375);
+  min-width: utils.px2rem(375);
   background: linear-gradient(#000 0% .5%, transparent .5% 90%, #000 90% 100%),
     url('../image/bg.jpg');
 }
 
 .container-fluid {
-  max-width: u.px_to_rem(1256);
+  max-width: utils.px2rem(1256);
 }
 
 h1,
@@ -19,15 +45,15 @@ h4 {
   text-transform: uppercase;
   line-height: 1.1;
   margin-top: 0;
-  margin-bottom: u.px_to_rem(30);
+  margin-bottom: utils.px2rem(30);
 }
 
 h2 {
-  font-size: u.px_to_rem(28);
+  font-size: utils.px2rem(28);
 }
 
 h3 {
-  font-size: u.px_to_rem(20);
+  font-size: utils.px2rem(20);
 }
 
 

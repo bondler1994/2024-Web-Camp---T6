@@ -1,9 +1,9 @@
-@use '../utils/' as u;
+@use '../utils/' as utils;
 
 // nav
 .navbar {
   >div {
-    gap: u.px_to_rem(9);
+    gap: utils.px2rem(9);
   }
 
   .navbar-collapse {
@@ -15,7 +15,7 @@
     .nav-link {
       position: relative;
       text-transform: uppercase;
-      padding: u.px_to_rem(20) u.px_to_rem(30);
+      padding: utils.px2rem(20) utils.px2rem(30);
       border-right: 1px solid var(--gray0);
       color: var(--text-color);
 

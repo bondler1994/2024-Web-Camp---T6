@@ -1,23 +1,24 @@
-@use '../utils/' as u;
+@use '../utils/' as utils;
 
-$sprites_x: (
-  '1': 0%,
-  '2': 25%,
-  '3': 50%,
-  '4': 75%,
-  '5': 100%,
+// 設參數將facebook等icon考慮進去,不要是虛設的1.2.3.4.5,以後如果要變動可一目了然,一眼看出icon位置及順序
+$sprites_x2: (
+  'facebook': 0,
+  'twitter': 1,
+  'flickr': 2,
+  'dribbble': 3,
+  'rss': 4,
 );
 
 @mixin background_position_for_social_media_icon ($size) {
-  background-position: map-get($sprites_x, $size) 0%;
+  background-position: calc($size * 25%) 0%;
 
   &:hover {
-    background-position: map-get($sprites_x, $size) 100%;
+    background-position: calc($size * 25%) 100%;
   }
 }
 
 @mixin background_position_for_bottom_social_media_icon ($size) {
-  background-position: map-get($sprites_x, $size) 100%;
+  background-position: calc($size * 25%) 100%;
 
   &:hover {
     transform: scale(1.1);
@@ -28,17 +29,17 @@ $sprites_x: (
 
 %social_media_a_style {
   display: block;
-  width: u.px_to_rem(29);
-  height: u.px_to_rem(27);
+  width: utils.px2rem(29);
+  height: utils.px2rem(27);
   background: url(../image/social.png) no-repeat;
 }
 
 // @mixin social_media ($position) {
-//   margin-bottom: u.px_to_rem(12);
+//   margin-bottom: utils.px2rem(12);
 //   a {
 //     display: block;
-//       width: u.px_to_rem(28);
-//       height: u.px_to_rem(27);
+//       width: utils.px2rem(28);
+//       height: utils.px2rem(27);
 //       background: url(../image/social.png) no-repeat;
 //       @for $i from 1 through 5 {
 //           &:nth-child(#{$i}) {
@@ -47,44 +48,67 @@ $sprites_x: (
 //         }
 
 //         &+a {
-//           margin-left: u.px_to_rem(7);
+//           margin-left: utils.px2rem(7);
 //         }
 //   }
 // }
 
 
 .social_media {
-  margin-bottom: u.px_to_rem(12);
+  margin-bottom: utils.px2rem(12);
 
   a {
     @extend %social_media_a_style;
 
-    @for $i from 1 through 5 {
-      &:nth-child(#{$i}) {
-        @include background_position_for_social_media_icon(#{$i});
+    @each $social_type,
+    $index in $sprites_x2 {
+      &:nth-child(#{$index+1}) {
+        @include background_position_for_social_media_icon(#{$index});
       }
     }
 
+    // @for $i from 1 through 5 {
+    //   &:nth-child(#{$i}) {
+    //     @include background_position_for_social_media_icon(#{$i});
+    //   }
+    // }
+
     &+a {
-      margin-left: u.px_to_rem(7);
+      margin-left: utils.px2rem(7);
     }
   }
 }
 
 .bottom_social_media {
-  margin-bottom: u.px_to_rem(12);
+  margin-bottom: utils.px2rem(12);
 
   a {
     @extend %social_media_a_style;
 
-    @for $i from 1 through 5 {
-      &:nth-child(#{$i}) {
-        @include background_position_for_bottom_social_media_icon(#{$i});
+
+    @each $social_type,
+    $index in $sprites_x2 {
+      &:nth-child(#{$index+1}) {
+        @include background_position_for_bottom_social_media_icon((#{$index}))
       }
     }
 
+    // @for $i from 1 through 5 {
+    //   &:nth-child(#{$i}) {
+    //     @include background_position_for_bottom_social_media_icon(#{$i});
+    //   }
+    // }
+
+
+    //  @each $social_type,
+    //  $index in $sprites_x2 {
+    //    &:nth-child(#{$index+1}) {
+    //      @include background_position_for_social_media_icon(#{$index});
+    //    }
+    //  }
+
     &+a {
-      margin-left: u.px_to_rem(7);
+      margin-left: utils.px2rem(7);
     }
   }
 }

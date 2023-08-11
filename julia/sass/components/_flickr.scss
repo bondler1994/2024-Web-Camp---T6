@@ -1,15 +1,20 @@
-@use '../utils/' as u;
+@use '../utils/' as utils;
+@use '../globals/boilerplate' as boilerplate;
 
 .flickr_thumbnail {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: u.px_to_rem(5);
+  gap: utils.px2rem(5);
 
-  @include u.breakpoint(mobile) {
+  grid-template-columns: repeat(6, 1fr);
+
+  @include boilerplate.breakpoint(mobile) {
     grid-template-columns: repeat((4, 1fr));
   }
 
   a {
+    // 加上hover前的transform增加可讀性
+    transform: scale(1);
+
     &:hover {
       transform: scale(1.1);
     }
