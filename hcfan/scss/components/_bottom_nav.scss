@@ -1,0 +1,36 @@
+@use '../abstracts/' as *;
+
+.bottom_nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  text-transform: uppercase;
+
+  a {
+    display: block;
+    text-align: center;
+
+    padding-inline: 0.6rem;
+
+    font-size: px2rem(16);
+    line-height: 2ex;
+
+    &:hover,
+    &.active {
+      font-weight: bolder;
+      color: $green;
+    }
+
+    &+a {
+      @include breakpoint(tablet) {
+        border-left: 1px solid $gray-200;
+      }
+    }
+  }
+}

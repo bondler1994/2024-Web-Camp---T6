@@ -1,0 +1,16 @@
+@use '../abstracts/' as *;
+
+@use '../components/logo';
+@use '../components/contacts';
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 36px 40px;
+  margin-block: 8px 20px;
+  background: $bg-notes;
+
+  @include breakpoint(tablet) {
+    justify-content: space-between;
+  }
+}

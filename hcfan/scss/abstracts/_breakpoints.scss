@@ -1,0 +1,22 @@
+@use 'utils' as utils;
+
+$breakpoints-up: (
+  'iphoneSE': 375px,
+  'mobile': 576px,
+  'tablet': 768px,
+  'lg': 992px,
+  'PC': 1200px,
+);
+
+@function device ($device) {
+  @return map-get($breakpoints-up, $device);
+}
+
+// ex:
+// @include breakpoint(tablet) {
+// }
+@mixin breakpoint ($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}

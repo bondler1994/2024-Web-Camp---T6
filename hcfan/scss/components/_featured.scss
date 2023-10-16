@@ -1,0 +1,11 @@
+@use '../abstracts/' as *;
+
+.featured {
+  padding-bottom: 4rem;
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+}

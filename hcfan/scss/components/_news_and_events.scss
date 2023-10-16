@@ -1,0 +1,31 @@
+@use '../abstracts/' as *;
+
+.news_and_events {
+    article {
+      &:not(first-child) {
+        margin-top: $gap-inner;
+      }
+
+      display: flex;
+      gap: $gap-inner;
+
+      .details {
+        font-size: 0.9rem;
+
+        time {
+          margin-bottom: 16px;
+
+          display: block;
+
+          width: fit-content;
+          padding: 6px 12px;
+
+          background-color: $green;
+          color: white;
+          font-weight: 600;
+        }
+
+        flex: 1 0 50%;
+      }
+    }
+}
