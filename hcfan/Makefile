@@ -2,7 +2,7 @@
 .ONESHELL:
 
 sass:
-	sass --watch sass:css/all.css
+	sass --watch scss:css
 
 clean:
 	rm -rf css/*

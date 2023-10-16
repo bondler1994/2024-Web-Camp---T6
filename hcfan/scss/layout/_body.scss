@@ -1,27 +1,30 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
+// 背景上下的黑邊框
 %body-pseudo-element {
   position: absolute;
   z-index: -1;
-  content: "";
+
   width: 100%;
   background: $black;
+
+  content: "";
 }
 
 body {
   position: relative;
+  min-width: map-get($map: $breakpoints-up, $key: iphoneSE);
+
   background: $bg-wood;
+
   &::before {
     @extend %body-pseudo-element;
-    height: 95px;
     top: 0;
+    height: px2rem(120);
   }
   &::after {
     @extend %body-pseudo-element;
-    height: 220px;
     bottom: 0;
+    height: px2rem(270);
   }
-}
-.body_container {
-  max-width: 1200px;
 }

@@ -8,21 +8,247 @@
 
   <title>Business Planet</title>
 
-  <link rel="stylesheet" href="./style.css">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- helper script for develop-->
   <script defer src="index.js"></script>
 </head>
 
 <body>
-  <div class="top-black"></div>
-  <div class="bottom-black"></div>
-  <div></div>
-  <header></header>
-  <main>
-    <h1></h1>
-  </main>
-  <footer></footer>
+  <div class="container-sm pt-1 px-0">
+    <header>
+      <h1 class="logo">
+        <img src="./image/logo.png" alt="logo">
+      </h1>
+      <div class="contacts primary">
+        <ul class="sns">
+          <li><a href="##" target="_blank" class="facebook"></a></li>
+          <li><a href="##" target="_blank" class="twitter"></a></li>
+          <li><a href="##" target="_blank" class="reddit"></a></li>
+          <li><a href="##" target="_blank" class="network"></a></li>
+          <li><a href="##" target="_blank" class="rss"></a></li>
+        </ul>
+        <div class="phone">
+          call us now: <a href="tel:+1784-25-43">+1(777)784-25-43</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">about</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  feature
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  portfolio
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  blog
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">contacts</a>
+              </li>
+            </ul>
+          </div>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="" type="submit">Search</button>
+            </form>
+        </div>
+      </nav>
+      <div id="m-banner" class="carousel slide">
+        <div class="m-banner__carousel">
+          <div class="carousel-item active">
+            <img src="./image/banner1.jpg" class="d-block w-100" alt="banner1">
+          </div>
+          <div class="carousel-item">
+            <img src="./image/banner2.jpg" class="d-block w-100" alt="banner2">
+          </div>
+          <div class="carousel-item">
+            <img src="./image/banner3.jpg" class="d-block w-100" alt="banner3">
+          </div>
+        </div>
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target=".m-banner" data-bs-slide="prev">
+        <img src="./image/slider_prev.gif" class="d-block w-100" alt="banner3">
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target=".m-banner" data-bs-slide="next">
+        <img src="./image/slider_next.gif" class="d-block w-100" alt="banner3">
+      </button> -->
+      </div>
+      <div class="m-services">
+        <section class="">
+          <h2>growth strategy</h2>
+          <img src="" alt="">
+          <p></p>
+          <button></button>
+        </section>
+        <section class="">
+          <h2>perfect support</h2>
+          <img src="" alt="">
+          <p></p>
+          <button></button>
+        </section>
+        <section class="">
+          <h2>partners programs</h2>
+          <img src="" alt="">
+          <p></p>
+          <button></button>
+        </section>
+        <section class="">
+          <h2>premium services</h2>
+          <img src="" alt="">
+          <p></p>
+          <button></button>
+        </section>
+      </div>
+      <div class="m-more">
+        <section class="m-welcome">
+          <h2>welcome</h2>
+          <img>
+          <p></p>
+        </section>
+        <section class="m-choose-us">
+          <h2>why choose us?</h2>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </section>
+        <section class="m-news">
+          <h2>news & events</h2>
+          <article>
+            <img>
+            <time></time>
+            <p></p>
+          </article>
+          <article>
+            <img>
+            <time></time>
+            <p></p>
+          </article>
+      </div>
+
+      <hr>
+
+      <section class="m-featured">
+        <div>
+          <h2>featured works</h2>
+          <button class="prev"></button>
+          <button class="next"></button>
+        </div>
+        <div class="m-featured__carousel">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="f-social">
+        <section class="f-tweets">
+          <h2>latest tweets</h2>
+        </section>
+        <section class="f-testimonials">
+          <h2>testimonial</h2>
+          <p></p>
+          <div class="user"></div>
+        </section>
+        <section class="f-get-in-touch">
+          <h2>get in touch!</h2>
+          <form action="">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+          </form>
+          <div class="button-set">
+            <button></button>
+            <button></button>
+          </div>
+        </section>
+        <section class="f-flickr">
+          <h2>flickr</h2>
+          <div class="gallery"></div>
+        </section>
+      </div>
+      <div class="f-more">
+        <div class="contacts secondary">
+          <ul class="sns">
+            <li><a href="##" target="_blank" class="facebook"></a></li>
+            <li><a href="##" target="_blank" class="twitter"></a></li>
+            <li><a href="##" target="_blank" class="reddit"></a></li>
+            <li><a href="##" target="_blank" class="network"></a></li>
+            <li><a href="##" target="_blank" class="rss"></a></li>
+          </ul>
+          <div class="phone">
+            call us now: <a href="tel:+1784-25-43">+1(777)784-25-43</a>
+          </div>
+        </div>
+        <div class="f-copyright"></div>
+        <div class="f-navbar">
+          <a href="##" class="link">home</a> |
+          <a href="##" class="link">about</a> |
+          <a href="##" class="link">features</a> |
+          <a href="##" class="link">portfolio</a> |
+          <a href="##" class="link">blog</a> |
+          <a href="##" class="link">contacts</a>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
 
 </html>
