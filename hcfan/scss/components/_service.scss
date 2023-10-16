@@ -1,0 +1,32 @@
+@use '../abstracts' as *;
+
+.service {
+  display: flex;
+  flex-direction: column;
+
+  background-color: $gray-100;
+
+  text-align: center;
+
+  h4 {
+    margin-top: 35px;
+    font-size: 20px;
+  }
+
+  img {
+    margin-block: 20px;
+
+    width: 60px;
+  }
+
+  p {
+    margin: 3rem;
+  }
+
+  a {
+    display: inline-block;
+    background-color: $gray-200;
+
+    padding: 8px 16px;
+  }
+}

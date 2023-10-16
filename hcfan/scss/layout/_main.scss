@@ -1,0 +1,29 @@
+@use '../abstracts/' as *;
+
+@use '../components/service';
+
+main {
+  .main_content {
+    background-color: $white;
+
+    position: relative;
+
+    .service_list {
+      display: grid;
+      gap: 28px;
+
+      position: relative;
+      top: -28px;
+
+      padding-inline: 36px;
+
+      @include breakpoint(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include breakpoint(PC) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}
