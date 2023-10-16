@@ -39,7 +39,7 @@
     text-transform: capitalize;
   }
 
-  &.primary {
+  &.header {
 
     display: none;
 
@@ -70,7 +70,7 @@
     }
   }
 
-  &.secondary {
+  &.footer {
     display: block;
 
     @include breakpoint(tablet) {

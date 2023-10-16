@@ -1,2 +1,6 @@
 $bg-wood: url('../image/bg.jpg');
 $bg-notes: url('../image/subbg.gif');
+
+@mixin topShadow {
+    box-shadow: 0px -2px 4px #8e8e8e, 0px 2px 4px #8e8e8e;
+}

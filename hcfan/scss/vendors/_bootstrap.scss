@@ -1,0 +1,90 @@
+@use '../abstracts/' as *;
+
+.navbar {
+  padding: 0;
+
+  // Wrapper for navbar-nav and search_container
+  .container-fluid {
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .navbar-nav {
+    flex-grow: 1;
+    background-color: $white;
+
+    @include topShadow;
+
+    .nav-link {
+      padding: 20px;
+
+      color: black;
+
+      text-transform: uppercase;
+
+      &.active,
+      &:hover {
+        color: $white;
+        background-color: $green;
+      }
+    }
+
+    .dropdown-menu {
+      .dropdown-item {
+        &:hover {
+          background-color: $gray-200;
+        }
+      }
+    }
+  }
+
+
+  .navbar-toggler {
+    padding: 1px 6px;
+    margin: 10px;
+  }
+
+  .search_container {
+    padding: 10px 15px;
+    margin: 0;
+
+    background-color: $white;
+
+    @include topShadow;
+
+    form {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+
+      padding-inline: 15px;
+
+      @include breakpoint(lg) {
+        min-width: 180px;
+      }
+
+      outline: 1px solid $gray-200;
+      background-color: #f3f3f3;
+
+      input {
+        flex-grow: 1;
+        padding-inline: 0;
+
+        border: none;
+        background-color: #f3f3f3;
+
+        &:focus {
+          outline: 0;
+          box-shadow: 0 0 0 0.1rem $green;
+        }
+      }
+
+      button {
+        width: 20px;
+        height: 20px;
+        border: none;
+        background: url(../image/search.png);
+      }
+    }
+  }
+}

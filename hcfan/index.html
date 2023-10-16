@@ -27,7 +27,7 @@
       <h1 class="logo">
         <img src="./image/logo.png" alt="logo">
       </h1>
-      <div class="contacts primary">
+      <div class="contacts header">
         <ul class="sns">
           <li><a href="##" target="_blank" class="facebook"></a></li>
           <li><a href="##" target="_blank" class="twitter"></a></li>
@@ -41,13 +41,19 @@
       </div>
     </header>
     <main>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-0">
+          <div class="search_container flex-grow-1 flex-grow-lg-0 order-lg-1 d-flex flex-nowrap ">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="" role="search">
+              <input class="me-2" type="search" placeholder="Search the Site..." aria-label="Search">
+              <button type="submit"></button>
+            </form>
+          </div>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -103,12 +109,9 @@
               </li>
             </ul>
           </div>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="" type="submit">Search</button>
-            </form>
         </div>
       </nav>
+
       <div id="m-banner" class="carousel slide">
         <div class="m-banner__carousel">
           <div class="carousel-item active">
@@ -225,7 +228,7 @@
         </section>
       </div>
       <div class="f-more">
-        <div class="contacts secondary">
+        <div class="contacts footer">
           <ul class="sns">
             <li><a href="##" target="_blank" class="facebook"></a></li>
             <li><a href="##" target="_blank" class="twitter"></a></li>
