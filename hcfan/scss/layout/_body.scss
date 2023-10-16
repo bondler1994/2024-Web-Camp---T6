@@ -16,6 +16,8 @@ body {
 
   background: $bg-wood;
 
+  font-family: $font-family;
+
   &::before {
     @extend %body-pseudo-element;
     top: 0;

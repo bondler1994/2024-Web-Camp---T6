@@ -79,11 +79,11 @@ $inline_rotate: $cover_rotate - 180deg;
     transform: rotate($inline_rotate);
 
     .cover_title {
-      padding: px2rem(8) px2rem(40);
+      padding: 8px 40px;
       text-transform: uppercase;
       color: $white;
       border-bottom: 2px solid $white;
-      font-size: px2rem(20);
+      font-size: 1.25rem;
 
       @include breakpoint(mobile) {
         font-size: px2rem(14);
@@ -92,11 +92,11 @@ $inline_rotate: $cover_rotate - 180deg;
 
     .click_icon_links {
       text-align: center;
-      padding-block: px2rem(8);
+      padding-block: 8px;
 
       a {
         display: inline-block;
-        padding: 0 px2rem(5);
+        padding: 0 5px;
 
         &:hover {
           transform: scale(1.1);
