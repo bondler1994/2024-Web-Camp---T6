@@ -1,3 +1,43 @@
-@use '../vendors/bootstrap';
+@use '../abstracts' as *;
 
-@use '../components/contacts';
+@use '../components/testimonials';
+@use '../components/get_in_touch';
+@use '../components/flickr';
+
+footer {
+  margin-top: 5rem;
+  height: 500px;
+
+  .social {
+    display: grid;
+    padding: $gap-outer;
+    gap: 2rem;
+
+    box-shadow: 0 0 3px;
+    background: $bg-notes;
+
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(PC) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    background-color: $white;
+
+    >* {
+      .heading {
+        margin-bottom: $gap-inner;
+
+        text-transform: uppercase;
+      }
+    }
+
+    .bg_gray {
+      background-color: #e7e7e7;
+    }
+
+  }
+}

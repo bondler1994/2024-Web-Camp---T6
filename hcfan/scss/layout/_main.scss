@@ -10,12 +10,14 @@ main {
   .main_content {
     position: relative;
 
-    padding-inline: 36px;
+    padding-inline: $gap-outer;
 
     background: $bg-notes;
 
+    box-shadow: 0 0 3px;
+
     .service_list {
-      $shift: $gap_general;
+      $shift: $gap_inner;
       $bottom-space: 50px;
 
       display: grid;
@@ -42,7 +44,7 @@ main {
 
     .more_info {
       display: grid;
-      gap: $gap-general;
+      gap: $gap-inner;
 
       @include breakpoint(PC) {
         grid-template-columns: repeat(3, 1fr);
@@ -50,13 +52,11 @@ main {
     }
 
     .component {
-      h2 {
+      .heading {
+        margin-bottom: $gap-inner;
+
         font-size: 2rem;
         text-transform: uppercase;
-      }
-
-      .heading {
-        margin-bottom: $gap-general;
       }
 
       p {

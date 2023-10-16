@@ -3,11 +3,11 @@
 .news_and_events {
     article {
       &:not(first-child) {
-        margin-top: $gap-general;
+        margin-top: $gap-inner;
       }
 
       display: flex;
-      gap: $gap-general;
+      gap: $gap-inner;
 
       .details {
         font-size: 0.9rem;

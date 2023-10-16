@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+.flickr {
+
+  .gallery {
+    display: grid;
+    gap: 6px;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
