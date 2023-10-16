@@ -1,5 +1,6 @@
 @use '../abstracts/' as *;
 
+// 依螢幕大小，出現在 header 和 footer 的元件
 .contacts {
 
   .sns {
@@ -39,6 +40,7 @@
     text-transform: capitalize;
   }
 
+  // 在平板以上才出現在 header
   &.header {
 
     display: none;
@@ -70,6 +72,7 @@
     }
   }
 
+  // 在平板以下才出現在 footer
   &.footer {
     display: block;
 

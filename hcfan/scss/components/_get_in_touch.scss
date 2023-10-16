@@ -4,15 +4,17 @@
   form {
     display: flex;
     flex-direction: column;
-    margin-bottom: $gap-inner;
-
     gap: 10px;
+
+    margin-bottom: $gap-inner;
 
     .input {
       border: 2px solid $gray-200;
       border-radius: 2px;
 
-      padding: 6px;
+      padding: 4px;
+
+      font-size: 0.8rem;
 
       &:focus {
         outline: 0;

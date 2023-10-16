@@ -3,10 +3,10 @@
 @use '../components/testimonials';
 @use '../components/get_in_touch';
 @use '../components/flickr';
+@use '../components/bottom_nav';
 
 footer {
   margin-top: 5rem;
-  height: 500px;
 
   .social {
     display: grid;
@@ -39,5 +39,49 @@ footer {
       background-color: #e7e7e7;
     }
 
+  }
+
+  .contacts {
+    margin-top: px2rem(16);
+  }
+
+  .bottom_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    @include breakpoint(PC) {
+      flex-direction: row;
+      gap: 0;
+    }
+
+    padding-block: $gap-inner;
+
+    color: $gray-500;
+
+    .contacts {
+      order: -2;
+    }
+
+    .bottom_nav {
+      order: -1;
+
+      @include breakpoint(PC) {
+        order: 1;
+      }
+    }
+
+    .copyright {
+
+      span {
+        text-transform: uppercase;
+      }
+
+      a {
+        color: $green;
+      }
+    }
   }
 }

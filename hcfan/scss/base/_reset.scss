@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 body {
-  min-width: map-get($breakpoints-up, iphoneSE);
+  min-width: device(iphoneSE);
 }
 
 html {
