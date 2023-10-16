@@ -1,32 +1,75 @@
 @use '../abstracts' as *;
 
+@mixin more_hover {
+  background-color: $green;
+  color: $white;
+}
+
 .service {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
-  background-color: $gray-100;
+  padding-inline: 28px;
+
+  background-color: #e8e8e8;
+
+  border: 1px solid $gray-200;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: $white;
+
+    border: 1px solid black;
+
+    a {
+      @include more_hover()
+    }
+  }
 
   text-align: center;
 
+  cursor: pointer;
+
+  >* {
+    $space: 35px;
+
+    margin-bottom: $space;
+
+    &:first-child {
+      margin-top: $space;
+    }
+  }
+
   h4 {
-    margin-top: 35px;
     font-size: 20px;
   }
 
   img {
-    margin-block: 20px;
+    display: block;
 
     width: 60px;
   }
 
   p {
-    margin: 3rem;
+    flex-grow: 1;
+
+    line-height: 1.2rem;
   }
 
   a {
-    display: inline-block;
+    display: block;
+
+    width: 63px;
+    height: 30px;
+    line-height: 30px;
+
     background-color: $gray-200;
 
-    padding: 8px 16px;
+    color: $black;
+
+    &:hover {
+      @include more_hover;
+    }
   }
-}
+} 

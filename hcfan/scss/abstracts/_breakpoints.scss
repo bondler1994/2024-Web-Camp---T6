@@ -8,6 +8,10 @@ $breakpoints-up: (
   'PC': 1200px,
 );
 
+@function device ($device) {
+  @return map-get($breakpoints-up, $device);
+}
+
 // ex:
 // @include breakpoint(tablet) {
 // }

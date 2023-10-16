@@ -1,29 +1,81 @@
 @use '../abstracts/' as *;
 
 @use '../components/service';
+@use '../components/welcome';
+@use '../components/choose_us';
+@use '../components/news_and_events';
+@use '../components/featured';
 
 main {
   .main_content {
-    background-color: $white;
-
     position: relative;
 
+    padding-inline: 36px;
+
+    background: $bg-notes;
+
     .service_list {
+      $shift: $gap_general;
+      $bottom-space: 50px;
+
       display: grid;
-      gap: 28px;
+      gap: $shift;
 
       position: relative;
-      top: -28px;
 
-      padding-inline: 36px;
+      // 在小螢幕時，向跑馬燈突出
+      margin-bottom: calc($bottom-space + $shift);
+      top: $shift;
 
       @include breakpoint(tablet) {
         grid-template-columns: repeat(2, 1fr);
+
+        // 在小螢幕時，遠離跑馬燈
+        top: -$shift;
+        margin-bottom: calc($bottom-space - $shift);
       }
 
       @include breakpoint(PC) {
         grid-template-columns: repeat(4, 1fr);
       }
+    }
+
+    .more_info {
+      display: grid;
+      gap: $gap-general;
+
+      @include breakpoint(PC) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .component {
+      h2 {
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+
+      .heading {
+        margin-bottom: $gap-general;
+      }
+
+      p {
+        color: $gray-400;
+
+        font-weight: 500;
+      }
+
+      .more_link {
+        color: $black;
+        &:hover {
+          color: $white;
+          background-color: $green;
+        }
+      }
+    }
+    
+    .block_separator {
+      margin-block: 4rem;
     }
   }
 }
