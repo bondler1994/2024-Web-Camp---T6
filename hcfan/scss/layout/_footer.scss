@@ -13,8 +13,8 @@ footer {
     padding: $gap-outer;
     gap: 2rem;
 
-    box-shadow: 0 0 3px;
     background: $bg-notes;
+    @include normalShadow;
 
 
     @include breakpoint(tablet) {

@@ -12,10 +12,11 @@
   .navbar-nav {
     flex-grow: 1;
 
-    @include topShadow;
+    @include normalShadow;
     background-color: $white;
 
     .nav-link {
+      border-right: 0.2px solid $gray-100;
       padding: 20px;
 
       color: black;
@@ -50,13 +51,15 @@
 
     background-color: $white;
 
-    @include topShadow;
+    @include normalShadow;
 
     gap: 12px;
 
     form {
-      display: flex;
+      // 隨畫面長大，左側的 button(navbar-toggler) 維持原樣
       flex-grow: 1;
+
+      display: flex;
       align-items: center;
 
       padding-inline: 15px;
@@ -91,13 +94,14 @@
   }
 }
 
+// 定義左右控制滑動的按鈕
 %control-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+
   width: 40px;
   height: 115px;
-  border: none;
 
   &:hover {
     background-position: 0 -120px;

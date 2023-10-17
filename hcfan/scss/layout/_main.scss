@@ -14,7 +14,8 @@ main {
 
     background: $bg-notes;
 
-    box-shadow: 0 0 3px;
+    @include normalShadow;
+
 
     .service_list {
       $shift: $gap_inner;
@@ -67,13 +68,14 @@ main {
 
       .more_link {
         color: $black;
+
         &:hover {
           color: $white;
           background-color: $green;
         }
       }
     }
-    
+
     .block_separator {
       margin-block: 4rem;
     }

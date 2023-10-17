@@ -5,6 +5,7 @@
 header {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   padding: 36px 40px;
   margin-block: 8px 20px;
@@ -13,5 +14,9 @@ header {
 
   @include breakpoint(tablet) {
     justify-content: space-between;
+  }
+
+  h1 {
+    line-height: 0;
   }
 }
