@@ -30,7 +30,7 @@
 </head>
 
 <body>
-  <div class="container-sm pt-1">
+  <div class="container-xl pt-1">
     <header>
       <h1 class="logo">
         <img src="./image/logo.png" alt="Site Logo">
@@ -51,7 +51,7 @@
     <main>
       <nav class="navbar navbar-expand-xl">
         <div class="container-fluid px-0">
-          <div class="search_container flex-grow-1 flex-grow-lg-0 order-lg-1 d-flex flex-nowrap">
+          <div class="search_container flex-grow-1 flex-grow-lg-0 order-xl-1 d-flex flex-nowrap">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -123,13 +123,13 @@
       <div id="banner" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./image/banner1.jpg" class="d-block w-100 h-100" alt="banner1">
+            <img style="object-position: 45% 5%" src="./image/banner1.jpg" alt="banner1">
           </div>
           <div class="carousel-item">
-            <img src="./image/banner2.jpg" class="d-block w-100 h-100" alt="banner2">
+            <img style="object-position: 70% 0%" src="./image/banner2.jpg" alt="banner2">
           </div>
           <div class="carousel-item">
-            <img src="./image/banner3.jpg" class="d-block w-100 h-100" alt="banner3">
+            <img style="object-position: 100% 0%" src="./image/banner3.jpg" alt="banner3">
           </div>
         </div>
         <button class="control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev">
@@ -382,7 +382,7 @@
         <section class="component get_in_touch">
           <h3 class="heading">get in touch!</h3>
           <form action="">
-            <input class="bg_gray input" type="text" name="text" placeholder="Name">
+            <input class="bg_gray input" type="text" name="text" placeholder="Name" required>
             <input class="bg_gray input" type="mail" name="mail" placeholder="Email" required>
             <textArea class="bg_gray input" name="message" rows=5 placeholder="Message"></textArea>
             <div class="button_set">

@@ -6,7 +6,11 @@
 @use '../components/bottom_nav';
 
 footer {
-  margin-top: 5rem;
+  margin-top: 1rem;
+
+  @include breakpoint(mobile) {
+    margin-top: 5rem;
+  }
 
   .social {
     display: grid;

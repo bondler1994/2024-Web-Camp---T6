@@ -1,7 +1,11 @@
 @use '../abstracts/' as *;
 
 .swiper-button {
-  display: flex;
+  display: none;
+
+  @include breakpoint(mobile) {
+    display: flex;
+  }
 
   &-prev,
   &-next {

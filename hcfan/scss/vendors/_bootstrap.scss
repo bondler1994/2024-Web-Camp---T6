@@ -1,4 +1,5 @@
 @use '../abstracts/' as *;
+@use '../components/control_button' as *;
 
 .navbar {
   padding: 0;
@@ -46,14 +47,21 @@
   }
 
   .search_container {
-    padding: 10px 15px;
+    padding-block: 10px;
+    padding-inline: 5px;
+
     margin: 0;
 
     background-color: $white;
 
     @include normalShadow;
 
-    gap: 12px;
+    @include breakpoint(mobile) {
+      justify-content: space-between;
+      gap: 12px;
+
+      padding-inline: 15px;
+    }
 
     form {
       // 隨畫面長大，左側的 button(navbar-toggler) 維持原樣
@@ -73,6 +81,7 @@
 
       input {
         flex-grow: 1;
+        flex-shrink: 1;
         padding-inline: 0;
 
         border: none;
@@ -94,32 +103,32 @@
   }
 }
 
-// 定義左右控制滑動的按鈕
-%control-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-
-  width: 40px;
-  height: 115px;
-
-  &:hover {
-    background-position: 0 -120px;
-  }
-}
-
 .carousel {
   position: relative;
 
   .control-prev {
     @extend %control-button;
     left: 0;
+    top: 50%;
     background: url('../image/slider_prev.gif');
   }
 
   .control-next {
     @extend %control-button;
     right: 0;
+    top: 50%;
     background: url('../image/slider_next.gif');
+  }
+
+  &-item {
+    img {
+      height: 40vh;
+      object-fit: cover;
+
+      @include breakpoint(mobile) {
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
 }
