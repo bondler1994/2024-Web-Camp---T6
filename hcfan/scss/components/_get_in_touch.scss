@@ -6,8 +6,6 @@
     flex-direction: column;
     gap: 10px;
 
-    margin-bottom: $gap-inner;
-
     .input {
       border: 2px solid $gray-200;
       border-radius: 2px;
@@ -28,6 +26,8 @@
   }
 
   .button_set {
+
+    margin-top: $gap-inner;
 
     button {
       padding: 8px 15px;

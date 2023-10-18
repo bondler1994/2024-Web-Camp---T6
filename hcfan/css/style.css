@@ -161,8 +161,8 @@ header {
     justify-content: space-between;
   }
 }
-header h1 {
-  line-height: 0;
+header h1 img {
+  vertical-align: bottom;
 }
 
 .service {
@@ -233,9 +233,6 @@ header h1 {
     flex-direction: column;
   }
 }
-.welcome .content .img_container {
-  width: 100%;
-}
 @media (min-width: 576px) {
   .welcome .content .img_container {
     flex: 1 0 40%;
@@ -285,6 +282,13 @@ header h1 {
 .news_and_events article:not(first-child) {
   margin-top: 1.8rem;
 }
+.news_and_events article .img_container {
+  width: 145px;
+  height: 142px;
+}
+.news_and_events article .img_container img {
+  object-fit: cover;
+}
 .news_and_events article .details {
   font-size: 0.9rem;
   flex: 1 0 50%;
@@ -302,10 +306,10 @@ header h1 {
 .featured {
   padding-bottom: 4rem;
 }
-.featured .head {
+.featured .swiper_head {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
 }
 
 main .main_content {
@@ -385,6 +389,9 @@ main .main_content .block_separator {
   flex-grow: 0;
   width: 4rem;
 }
+.testimonials .user .img_container img {
+  object-fit: cover;
+}
 .testimonials .user .user_text a {
   color: #80b701;
   font-style: italic;
@@ -395,7 +402,6 @@ main .main_content .block_separator {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 1.8rem;
 }
 .get_in_touch form .input {
   border: 2px solid #d9d9d9;
@@ -409,6 +415,9 @@ main .main_content .block_separator {
 }
 .get_in_touch form textArea {
   resize: none;
+}
+.get_in_touch .button_set {
+  margin-top: 1.8rem;
 }
 .get_in_touch .button_set button {
   padding: 8px 15px;

@@ -9,6 +9,14 @@
       display: flex;
       gap: $gap-inner;
 
+      .img_container {
+        width: 145px;
+        height: 142px;
+          img {
+            object-fit: cover;
+          }
+      }
+
       .details {
         font-size: 0.9rem;
 

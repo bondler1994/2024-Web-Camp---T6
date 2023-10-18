@@ -19,8 +19,6 @@
     }
 
     .img_container {
-      width: 100%;
-
       @include breakpoint(mobile) {
         flex: 1 0 40%; 
       }

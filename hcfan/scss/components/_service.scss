@@ -23,7 +23,7 @@
     border: 1px solid black;
 
     a {
-      @include more_hover()
+      @include more_hover;
     }
   }
 

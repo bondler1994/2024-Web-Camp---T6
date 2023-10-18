@@ -18,9 +18,6 @@
   }
 }
 
-$cover_rotate: 150deg;
-$inline_rotate: $cover_rotate - 180deg;
-
 .swiper-slide {
 
   display: flex;
@@ -45,6 +42,9 @@ $inline_rotate: $cover_rotate - 180deg;
       }
     }
   }
+
+  $cover_rotate: 150deg;
+  $inline_rotate: $cover_rotate - 180deg;
 
   // 鏤空背景
   &::before {

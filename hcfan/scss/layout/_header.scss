@@ -11,12 +11,15 @@ header {
   margin-block: 8px 20px;
 
   background: $bg-notes;
+  @include normalShadow;
 
   @include breakpoint(tablet) {
     justify-content: space-between;
   }
 
   h1 {
-    line-height: 0;
+    img {
+      vertical-align: bottom;
+    }
   }
 }
