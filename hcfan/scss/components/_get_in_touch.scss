@@ -27,6 +27,14 @@
 
   .button_set {
 
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @include breakpoint(tablet) {
+      justify-content: start;
+    }
+
     margin-top: $gap-inner;
 
     button {
