@@ -21,8 +21,7 @@
     line-height: 2ex;
 
     &:hover,
-    &.active {
-      font-weight: bolder;
+    &[aria-current="page"] {
       color: $green;
     }
 

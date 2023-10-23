@@ -24,7 +24,7 @@
 
       text-transform: uppercase;
 
-      &.active,
+      &[aria-current="page"],
       &:hover {
         color: $white;
         background-color: $green;

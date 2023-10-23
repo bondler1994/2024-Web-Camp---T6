@@ -469,8 +469,7 @@ main .main_content .block_separator {
   padding-inline: 0.6rem;
   line-height: 2ex;
 }
-.bottom_nav a:hover, .bottom_nav a.active {
-  font-weight: bolder;
+.bottom_nav a:hover, .bottom_nav a[aria-current=page] {
   color: #80b701;
 }
 @media (min-width: 768px) {
@@ -577,7 +576,7 @@ footer .bottom_info .copyright a {
   color: black;
   text-transform: uppercase;
 }
-.navbar .navbar-nav .nav-link.active, .navbar .navbar-nav .nav-link:hover {
+.navbar .navbar-nav .nav-link[aria-current=page], .navbar .navbar-nav .nav-link:hover {
   color: #ffffff;
   background-color: #80b701;
 }
