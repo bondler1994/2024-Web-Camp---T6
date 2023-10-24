@@ -414,12 +414,26 @@ main .main_content .block_separator {
   resize: none;
 }
 .get_in_touch .button_set {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
   margin-top: 1.8rem;
 }
+@media (min-width: 768px) {
+  .get_in_touch .button_set {
+    justify-content: start;
+  }
+}
 .get_in_touch .button_set button {
+  flex-basis: 48%;
   padding: 8px 15px;
   color: #ffffff;
   text-transform: uppercase;
+}
+@media (min-width: 1200px) {
+  .get_in_touch .button_set button {
+    flex-basis: auto;
+  }
 }
 .get_in_touch .button_set button[type=reset] {
   background-color: #1d1d1d;
