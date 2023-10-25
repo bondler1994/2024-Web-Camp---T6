@@ -13,9 +13,9 @@ $breakpoints-up: (
 }
 
 // ex:
-// @include breakpoint(tablet) {
+// @include breakpoint-up(tablet) {
 // }
-@mixin breakpoint ($size) {
+@mixin breakpoint-up ($size) {
   @media (min-width: map-get($breakpoints-up, $size)) {
     @content;
   }

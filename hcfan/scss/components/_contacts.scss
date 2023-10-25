@@ -46,7 +46,7 @@
 
     display: none;
 
-    @include breakpoint(tablet) {
+    @include breakpoint-up(tablet) {
       display: block;
     }
 
@@ -77,7 +77,7 @@
   &.footer {
     display: block;
 
-    @include breakpoint(tablet) {
+    @include breakpoint-up(tablet) {
       display: none;
     }
 

@@ -11,7 +11,7 @@ header {
   background: $bg-notes;
   @include normalShadow;
 
-  @include breakpoint(tablet) {
+  @include breakpoint-up(tablet) {
     justify-content: space-between;
   }
 

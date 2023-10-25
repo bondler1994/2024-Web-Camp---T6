@@ -3,7 +3,7 @@
 footer {
   margin-top: 1rem;
 
-  @include breakpoint(mobile) {
+  @include breakpoint-up(mobile) {
     margin-top: 5rem;
   }
 
@@ -16,11 +16,11 @@ footer {
     @include normalShadow;
 
 
-    @include breakpoint(tablet) {
+    @include breakpoint-up(tablet) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include breakpoint(PC) {
+    @include breakpoint-up(PC) {
       grid-template-columns: repeat(4, 1fr);
     }
 
@@ -48,7 +48,7 @@ footer {
     align-items: center;
     gap: 1rem;
 
-    @include breakpoint(PC) {
+    @include breakpoint-up(PC) {
       flex-direction: row;
       gap: 0;
     }
@@ -64,7 +64,7 @@ footer {
     .bottom_nav {
       order: -1;
 
-      @include breakpoint(PC) {
+      @include breakpoint-up(PC) {
         order: 1;
       }
     }

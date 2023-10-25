@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: 0.8rem;
 
-  @include breakpoint(tablet) {
+  @include breakpoint-up(tablet) {
     flex-direction: row;
     gap: 0;
   }
@@ -26,7 +26,7 @@
     }
 
     &+a {
-      @include breakpoint(tablet) {
+      @include breakpoint-up(tablet) {
         border-left: 1px solid $gray-200;
       }
     }

@@ -25,7 +25,7 @@ main {
       margin-bottom: calc($bottom-space + $shift);
       top: $shift;
 
-      @include breakpoint(tablet) {
+      @include breakpoint-up(tablet) {
         grid-template-columns: repeat(2, 1fr);
 
         // 在小螢幕時，遠離跑馬燈
@@ -33,7 +33,7 @@ main {
         margin-bottom: calc($bottom-space - $shift);
       }
 
-      @include breakpoint(PC) {
+      @include breakpoint-up(PC) {
         grid-template-columns: repeat(4, 1fr);
       }
     }
@@ -42,7 +42,7 @@ main {
       display: grid;
       gap: $gap-inner;
 
-      @include breakpoint(PC) {
+      @include breakpoint-up(PC) {
         grid-template-columns: repeat(3, 1fr);
       }
     }

@@ -29,7 +29,7 @@ body {
     bottom: 0;
     height: px2rem(400);
 
-    @include breakpoint(tablet) {
+    @include breakpoint-up(tablet) {
       height: px2rem(270);
     }
   }

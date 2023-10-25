@@ -8,11 +8,11 @@
 
     grid-template-columns: repeat(4, 1fr);
 
-    @include breakpoint(mobile) {
+    @include breakpoint-up(mobile) {
       grid-template-columns: repeat(6, 1fr);
     }
 
-    @include breakpoint(tablet) {
+    @include breakpoint-up(tablet) {
       grid-template-columns: repeat(4, 1fr);
     }
 
