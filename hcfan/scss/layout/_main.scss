@@ -1,11 +1,5 @@
 @use '../abstracts/' as *;
 
-@use '../components/service';
-@use '../components/welcome';
-@use '../components/choose_us';
-@use '../components/news_and_events';
-@use '../components/featured';
-
 main {
   .main_content {
     position: relative;
