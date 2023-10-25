@@ -19,8 +19,10 @@
     }
 
     .img_container {
+      flex: initial;
+
       @include breakpoint(mobile) {
-        flex: 1 0 40%; 
+        flex: 1 0 40%;
       }
     }
   }

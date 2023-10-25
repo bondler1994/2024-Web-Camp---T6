@@ -1,39 +1,40 @@
 @use '../abstracts/' as *;
 
 .news_and_events {
-    article {
-      &:not(first-child) {
-        margin-top: $gap-inner;
-      }
+  article {
+    &:not(first-child) {
+      margin-top: $gap-inner;
+    }
 
-      display: flex;
-      gap: $gap-inner;
+    display: flex;
+    gap: $gap-inner;
 
-      .img_container {
-        width: 145px;
-        height: 142px;
-          img {
-            object-fit: cover;
-          }
-      }
+    .img_container {
+      width: 145px;
+      height: 142px;
 
-      .details {
-        font-size: 0.9rem;
-
-        time {
-          margin-bottom: 16px;
-
-          display: block;
-
-          width: fit-content;
-          padding: 6px 12px;
-
-          background-color: $green;
-          color: white;
-          font-weight: 600;
-        }
-
-        flex: 1 0 50%;
+      img {
+        object-fit: cover;
       }
     }
+
+    .details {
+      font-size: 0.9rem;
+
+      time {
+        margin-bottom: 16px;
+
+        display: block;
+
+        width: fit-content;
+        padding: 6px 12px;
+
+        background-color: $green;
+        color: white;
+        font-weight: 600;
+      }
+
+      flex: 1 0 50%;
+    }
+  }
 }

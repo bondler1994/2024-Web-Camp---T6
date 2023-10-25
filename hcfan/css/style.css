@@ -232,6 +232,9 @@ header h1 img {
     flex-direction: column;
   }
 }
+.welcome .content .img_container {
+  flex: initial;
+}
 @media (min-width: 576px) {
   .welcome .content .img_container {
     flex: 1 0 40%;
@@ -240,7 +243,8 @@ header h1 img {
 
 .choose_us .info {
   display: flex;
-  gap: 16px;
+  gap: 8px;
+  align-items: start;
 }
 .choose_us .info:first-child {
   margin-bottom: 12px;
@@ -249,7 +253,6 @@ header h1 img {
   margin-block: 12px;
 }
 .choose_us a {
-  align-self: center;
   flex-shrink: 0;
   margin: 0 12px 12px;
   width: 48px;
@@ -267,7 +270,8 @@ header h1 img {
   color: #ffffff;
 }
 .choose_us p {
-  align-self: center;
+  padding-top: 14px;
+  line-height: 1.2rem;
 }
 .choose_us hr {
   margin-block: 0;
@@ -410,7 +414,7 @@ main .main_content .block_separator {
   outline: 0;
   box-shadow: 0 0 0 0.1rem #80b701;
 }
-.get_in_touch form textArea {
+.get_in_touch form textarea {
   resize: none;
 }
 .get_in_touch .button_set {
