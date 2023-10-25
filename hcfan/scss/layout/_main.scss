@@ -47,27 +47,25 @@ main {
       }
     }
 
-    .component {
-      .heading {
-        margin-bottom: $gap-inner;
+    .heading {
+      margin-bottom: $gap-inner;
 
-        font-size: 2rem;
-        text-transform: uppercase;
-      }
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
 
-      p {
-        color: $gray-400;
+    .p_gray {
+      color: $gray-400;
 
-        font-weight: 500;
-      }
+      font-weight: 500;
+    }
 
-      .more_link {
-        color: $black;
+    .more_link {
+      color: $black;
 
-        &:hover {
-          color: $white;
-          background-color: $green;
-        }
+      &:hover {
+        color: $white;
+        background-color: $green;
       }
     }
 

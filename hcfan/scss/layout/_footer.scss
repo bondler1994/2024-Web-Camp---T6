@@ -26,16 +26,14 @@ footer {
 
     background-color: $white;
 
-    .component {
-      .heading {
-        margin-bottom: $gap-inner;
+    .heading {
+      margin-bottom: $gap-inner;
 
-        text-transform: uppercase;
-      }
+      text-transform: uppercase;
+    }
 
-      .bg_gray {
-        background-color: #e7e7e7;
-      }
+    .bg_gray {
+      background-color: #e7e7e7;
     }
   }
 
