@@ -1,14 +1,9 @@
 @use '../abstracts' as *;
 
-@use '../components/testimonials';
-@use '../components/get_in_touch';
-@use '../components/flickr';
-@use '../components/bottom_nav';
-
 footer {
   margin-top: 1rem;
 
-  @include breakpoint(mobile) {
+  @include breakpoint-up(mobile) {
     margin-top: 5rem;
   }
 
@@ -21,26 +16,24 @@ footer {
     @include normalShadow;
 
 
-    @include breakpoint(tablet) {
+    @include breakpoint-up(tablet) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include breakpoint(PC) {
+    @include breakpoint-up(PC) {
       grid-template-columns: repeat(4, 1fr);
     }
 
     background-color: $white;
 
-    .component {
-      .heading {
-        margin-bottom: $gap-inner;
+    .heading {
+      margin-bottom: $gap-inner;
 
-        text-transform: uppercase;
-      }
+      text-transform: uppercase;
+    }
 
-      .bg_gray {
-        background-color: #e7e7e7;
-      }
+    .bg_gray {
+      background-color: #e7e7e7;
     }
   }
 
@@ -55,7 +48,7 @@ footer {
     align-items: center;
     gap: 1rem;
 
-    @include breakpoint(PC) {
+    @include breakpoint-up(PC) {
       flex-direction: row;
       gap: 0;
     }
@@ -71,7 +64,7 @@ footer {
     .bottom_nav {
       order: -1;
 
-      @include breakpoint(PC) {
+      @include breakpoint-up(PC) {
         order: 1;
       }
     }

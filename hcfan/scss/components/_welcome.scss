@@ -9,18 +9,20 @@
 
     font-size: 0.9rem;
 
-    @include breakpoint(mobile) {
+    @include breakpoint-up(mobile) {
       flex-direction: row;
       align-items: center;
     }
 
-    @include breakpoint(PC) {
+    @include breakpoint-up(PC) {
       flex-direction: column;
     }
 
     .img_container {
-      @include breakpoint(mobile) {
-        flex: 1 0 40%; 
+      flex: initial;
+
+      @include breakpoint-up(mobile) {
+        flex: 1 0 40%;
       }
     }
   }

@@ -3,7 +3,8 @@
 .choose_us {
   .info {
     display: flex;
-    gap: 16px;
+    gap: 8px;
+    align-items: start;
 
     &:first-child {
       margin-bottom: 12px;
@@ -16,7 +17,6 @@
 
   // 圓形按鈕
   a {
-    align-self: center;
     flex-shrink: 0;
 
     margin: 0 12px 12px;
@@ -41,7 +41,9 @@
   }
 
   p {
-    align-self: center;
+    padding-top: 14px;
+
+    line-height: 1.2rem;
   }
 
   hr {

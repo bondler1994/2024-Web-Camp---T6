@@ -13,23 +13,36 @@
       padding: 4px;
 
       font-size: 0.8rem;
-
       &:focus {
         outline: 0;
         box-shadow: 0 0 0 0.1rem $green;
       }
     }
 
-    textArea {
+    textarea {
       resize: none;
     }
   }
 
   .button_set {
 
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+
+    @include breakpoint-up(tablet) {
+      justify-content: start;
+    }
+
     margin-top: $gap-inner;
 
     button {
+      flex-basis: 48%;
+
+      @include breakpoint-up(PC) {
+        flex-basis: auto;
+      }
+
       padding: 8px 15px;
       color: $white;
       text-transform: uppercase;
