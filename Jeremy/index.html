@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- font awesome -->
+        <script
+            src="https://kit.fontawesome.com/a76518b460.js"
+            crossorigin="anonymous"
+        ></script>
+        <!-- bootstrap css -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <!-- swiper -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <!-- Jeremy's css -->
+        <link rel="stylesheet" href="./css/main.css" />
+        <title>Business Planet</title>
+    </head>
+    <body class="p-2 px-md-5">
+        <header class="w-100">
+            <!-- 漢堡排 -->
+
+            <label for="burger" class="burger">
+                <i class="fa-solid fa-bars fa-fw"></i>
+            </label>
+
+            <!-- logo -->
+            <h1>
+                <a href="./index.html">
+                    <img
+                        src="./images/logo.png"
+                        alt="Business Planet Logo"
+                        class="img-fluid"
+                    />
+                </a>
+            </h1>
+
+            <!-- social icon -->
+            <input type="checkbox" id="social_media" />
+            <div class="media_icon">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <div>
+                    <a href="tel:+1 (777) 784-25-43" class="telephone">
+                        Call Us Now: +1 (777) 784-25-43
+                    </a>
+                </div>
+            </div>
+            <label for="social_media" class="social_button">
+                <i class="fa-solid fa-link fa-fw"></i>
+            </label>
+        </header>
+
+        <input type="checkbox" id="burger" />
+
+        <!-- navbar -->
+        <nav>
+            <form class="search h-100">
+                <input type="search" placeholder="Search the Site..." />
+                <img src="./images/search.png" alt="search" />
+            </form>
+            <ul>
+                <li>
+                    <a class="active" aria-current="page" href="#">HOME</a>
+                </li>
+                <li><a href="#">ABOUT</a></li>
+                <li class="dropdown">
+                    <a href="##" class="dropdown-title">FEATURES</a>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="##" class="dropdown-title">PORTFOLIO</a>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="##" class="dropdown-title">BLOG</a>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                </li>
+                <li><a href="#">CONTACTS</a></li>
+            </ul>
+        </nav>
+        <main>
+            <!-- carousel -->
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img
+                            src="./images/banner1.jpg"
+                            class="d-block dollar"
+                            alt="..."
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="./images/banner2.jpg"
+                            class="d-block stair"
+                            alt="..."
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="./images/banner3.jpg"
+                            class="d-block tug"
+                            alt="..."
+                        />
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="prev"
+                >
+                    <span
+                        class="carousel-control-left-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="next"
+                >
+                    <span
+                        class="carousel-control-right-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- service -->
+            <section class="service">
+                <div
+                    class="row g-4 gy-xl-0 row-cols-1 row-cols-sm-2 row-cols-xl-4"
+                >
+                    <div class="col">
+                        <div class="service-item">
+                            <h2 class="title">GROWTH STRATEGIES</h2>
+
+                            <img src="./images/p1.png" alt="" />
+
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quisquam dolores iusto
+                                corporis libero alias exercitationem!
+                            </p>
+                            <button class="more-button">More</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-item">
+                            <h2 class="title">PERFECT SUPPORT</h2>
+
+                            <img src="./images/p2.png" alt="" />
+
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Aspernatur hic necessitatibus
+                                voluptatum voluptate labore recusandae.
+                            </p>
+                            <button class="more-button">More</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-item">
+                            <h2 class="title">PARTNERS PROGRAMS</h2>
+
+                            <img src="./images/p3.png" alt="" />
+
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Commodi, reprehenderit nemo
+                                ducimus earum vitae dolorum.
+                            </p>
+                            <button class="more-button">More</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-item">
+                            <h2 class="title">PREMIUM SERVICES</h2>
+
+                            <img src="./images/p4.png" alt="" />
+
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Dicta, earum placeat obcaecati
+                                repellendus maxime ex!
+                            </p>
+                            <button class="more-button">More</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- introduction -->
+            <article>
+                <div class="row gx-4">
+                    <div class="col-12 col-sm-6 col-xl-4">
+                        <div class="welcome">
+                            <h2>WELCOME</h2>
+                            <img
+                                src="./images/welcome.jpg"
+                                alt=""
+                                class="w-100"
+                            />
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Odio, beatae eligendi est in
+                                culpa vel lautium. Ea excepturi nulla
+                                quibusdam...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl-4">
+                        <div class="reasons">
+                            <h2>WHY CHOOSE US?</h2>
+                            <div class="reason-item">
+                                <i class="fa-solid fa-chevron-right"></i>
+                                <p>Etiam rutrum venenatis dui, non</p>
+                            </div>
+                            <div class="reason-item">
+                                <i class="fa-solid fa-chevron-right"></i>
+                                <p>Aliquam ac diam in lorem vulputate auctor</p>
+                            </div>
+                            <div class="reason-item">
+                                <i class="fa-solid fa-chevron-right"></i>
+                                <p>Vestibulum vitae urna auis eros convallis</p>
+                            </div>
+                            <div class="reason-item">
+                                <i class="fa-solid fa-chevron-right"></i>
+                                <p>Sed maana maana. conque</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <div class="news">
+                            <h2>NEWS & EVENTS</h2>
+                            <div class="news-items">
+                                <div class="row g-3 g-lg-4">
+                                    <div class="col-12 col-md-6 col-xl-12">
+                                        <div class="news-item">
+                                            <div class="news-img">
+                                                <img
+                                                    src="./images/news1.jpg"
+                                                    alt=""
+                                                    class="img-fluid"
+                                                />
+                                            </div>
+
+                                            <div class="news-content">
+                                                <div class="date">
+                                                    <time datetime="2012.12.12"
+                                                        >12.12.12</time
+                                                    >
+                                                </div>
+
+                                                <p>
+                                                    AliQuam ac diam in lorem
+                                                    vulputate auctor. Aliquam
+                                                    rhoncus nunc et justo
+                                                    imperdie blandit...
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-xl-12">
+                                        <div class="news-item">
+                                            <div class="news-img">
+                                                <img
+                                                    src="./images/news2.jpg"
+                                                    alt=""
+                                                    class="img-fluid"
+                                                />
+                                            </div>
+
+                                            <div class="news-content">
+                                                <div class="date">
+                                                    <time datetime="2012.12.12"
+                                                        >12.12.12</time
+                                                    >
+                                                </div>
+
+                                                <p>
+                                                    Sed auctor laoreet augue, id
+                                                    pulvinar lacus mattis non.
+                                                    In hac habitasse platea
+                                                    dictimst Proint et lorem...
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+            </article>
+
+            <!-- swiper -->
+            <section class="swiper-section">
+                <!-- <hr /> -->
+
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <h2>FEATURED WORKS</h2>
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="./images/g1.jpg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/g2.jpg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/g3.jpg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/g4.jpg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/g1.jpg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/g2.jpg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/g3.jpg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/g4.jpg" alt="" />
+                        </div>
+                    </div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-info">
+                <div
+                    class="row gx-4 gy-5 gy-xl-0 row-cols-1 row-cols-sm-2 row-cols-xl-4"
+                >
+                    <div class="col">
+                        <div class="footer-item">
+                            <h3>LATEST TWEETS</h3>
+                            <p>loading tweets...</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="footer-item">
+                            <h3>TESTIMONIALS</h3>
+                            <div class="content">
+                                " Sed daniblis molestie interdum Fusce nec est
+                                ante. sit amet lacinia •orem Maeconas nec eros
+                                ur maniris pulvinar suscipit. Aliguam erat
+                            </div>
+                            <div class="guest">
+                                <img src="./images/men.jpg" alt="" />
+                                <div class="guest-info">
+                                    <p>Stephen Bingham</p>
+                                    <a href="##">demolink.org</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="footer-item">
+                            <h3>GET IN TOUCH!</h3>
+                            <form action="">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    placeholder="Name"
+                                    required
+                                />
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="Email"
+                                    required
+                                />
+                                <textarea
+                                    name="message"
+                                    id="comment"
+                                    cols="30"
+                                    rows="10"
+                                    placeholder="Message"
+                                    required
+                                ></textarea>
+
+                                <div class="form-button">
+                                    <button class="clear-button">
+                                        CLEAR FROM
+                                    </button>
+                                    <button class="send-button">SEND!</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="footer-item">
+                            <h3>FLICKR</h3>
+
+                            <div class="flickr">
+                                <img src="./images/f1.jpg" alt="" />
+                                <img src="./images/f2.jpg" alt="" />
+                                <img src="./images/f3.jpg" alt="" />
+                                <img src="./images/f4.jpg" alt="" />
+                                <img src="./images/f5.jpg" alt="" />
+                                <img src="./images/f6.jpg" alt="" />
+                                <img src="./images/f7.jpg" alt="" />
+                                <img src="./images/f8.jpg" alt="" />
+                                <img src="./images/f9.jpg" alt="" />
+                                <img src="./images/f10.jpg" alt="" />
+                                <img src="./images/f11.jpg" alt="" />
+                                <img src="./images/f12.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>BUSINESS PLANET &copy; 2020 | <span>Privacy Policy</span></p>
+                <!-- <nav> -->
+                <ul>
+                    <li>
+                        <a class="active" aria-current="page" href="#">HOME</a>
+                    </li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">FEATURES</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul>
+                <!-- </nav> -->
+            </div>
+        </footer>
+
+        <!-- bootstrap js -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <!-- swiper js -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper(".swiper", {
+                slidesPerView: 1,
+                spaceBetween: 26,
+                breakpoints: {
+                    576: {
+                        slidesPerView: 2,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                    },
+                },
+                // Optional parameters
+                direction: "horizontal",
+                loop: true,
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    // el: ".swiper-scrollbar",
+                    draggable: false,
+                },
+            });
+        </script>
+    </body>
+</html>

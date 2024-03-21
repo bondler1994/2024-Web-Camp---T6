@@ -1,0 +1,40 @@
+@use "../utilities/color" as *;
+
+$media_icon: url(../../images/social.png);
+
+// @mixin icon-sprite($x) {
+//     background-position: 25% * ($x - 1) 0;
+//     &:hover {
+//         background-position: 25% * ($x - 1) 100%;
+//     }
+// }
+
+@mixin icon-sprite($x) {
+    background-position: -($x - 1) * (27px + 10.2px) 0;
+    &:hover {
+        background-position: -($x - 1) * (27px + 10.2px) 100%;
+    }
+}
+
+.media_icon {
+    text-align: end;
+    a {
+        color: $dark;
+        &:hover {
+            color: $green;
+        }
+    }
+
+    > a:not(:last-child) {
+        display: inline-block;
+        width: 28px;
+        height: 27px;
+        background-image: $media_icon;
+        background-repeat: no-repeat;
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+                @include icon-sprite($i);
+            }
+        }
+    }
+}

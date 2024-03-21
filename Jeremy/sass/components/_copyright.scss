@@ -1,0 +1,64 @@
+@use "../utilities/background" as *;
+@use "../utilities/breakpoint" as *;
+@use "../utilities/color" as *;
+@use "../utilities/spacing" as *;
+
+footer {
+    .copyright {
+        padding: 20px 0;
+        color: $dark-gray;
+        display: flex;
+        justify-content: center;
+
+        @include desktop {
+            justify-content: start;
+        }
+        span {
+            color: $green;
+        }
+    }
+
+    ul {
+        display: none;
+        list-style: none;
+        @include desktop {
+            display: flex;
+            margin-left: auto;
+        }
+        @include desktop {
+            display: flex;
+            margin-left: auto;
+        }
+    }
+
+    li {
+        position: relative;
+
+        @include desktop {
+            &:not(:first-of-type)::before {
+                content: "";
+                display: block;
+                height: 60%;
+                width: 2px;
+                background-color: $gray;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+
+        a {
+            color: $dark-gray;
+            padding: 0 10px;
+            &.active {
+                color: $green;
+            }
+
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+}

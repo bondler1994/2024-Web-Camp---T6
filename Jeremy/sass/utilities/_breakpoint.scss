@@ -1,0 +1,28 @@
+$mobile-size: 576px;
+$ipad-size: 768px;
+$desktop-size: 992px;
+$xl-device: 1200px;
+
+@mixin mobile {
+    @media (min-width: $mobile-size) {
+        @content;
+    }
+}
+
+@mixin ipad {
+    @media (min-width: $ipad-size) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-size) {
+        @content;
+    }
+}
+
+@mixin xl-device {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}

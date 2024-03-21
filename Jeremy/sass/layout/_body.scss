@@ -1,0 +1,14 @@
+@use "../utilities/background" as *;
+@use "../utilities/breakpoint" as *;
+@use "../components/navbar";
+
+body {
+    @include background-linear-gradient(2rem, 97%);
+
+    @include mobile {
+        @include background-linear-gradient(100px, 90%);
+    }
+    max-width: 1500px;
+    min-width: 350px;
+    margin: auto;
+}

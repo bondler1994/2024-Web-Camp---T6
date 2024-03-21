@@ -1,0 +1,14 @@
+@mixin background-linear-gradient($breakpoint1, $breakpoint2) {
+    background: linear-gradient(
+            black $breakpoint1,
+            transparent $breakpoint1,
+            transparent $breakpoint2,
+            black $breakpoint2
+        ),
+        url(../../images/bg.jpg);
+    // background-attachment: fixed;
+}
+
+%white-wood {
+    background-image: url(../../images/subbg.gif);
+}

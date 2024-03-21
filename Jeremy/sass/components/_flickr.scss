@@ -1,0 +1,17 @@
+@use "../utilities/background" as *;
+@use "../utilities/breakpoint" as *;
+@use "../utilities/color" as *;
+@use "../utilities/spacing" as *;
+
+footer {
+    .flickr {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+
+        img {
+            width: 100%;
+        }
+    }
+}

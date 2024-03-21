@@ -1,0 +1,29 @@
+@use "../utilities/background" as *;
+@use "../utilities/breakpoint" as *;
+@use "../utilities/color" as *;
+@use "../utilities/spacing" as *;
+
+@use "../components/tweets";
+@use "../components/comment";
+@use "../components/contact";
+@use "../components/flickr";
+@use "../components/copyright";
+
+footer {
+    margin-top: 16px;
+
+    @include desktop {
+        margin-top: 70px;
+    }
+
+    .footer-info {
+        @extend %white-wood;
+        padding: $base-spacing;
+    }
+
+    h3 {
+        & + * {
+            margin-top: $component-spacing;
+        }
+    }
+}

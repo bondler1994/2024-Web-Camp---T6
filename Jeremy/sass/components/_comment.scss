@@ -1,0 +1,42 @@
+@use "../utilities/background" as *;
+@use "../utilities/breakpoint" as *;
+@use "../utilities/color" as *;
+@use "../utilities/spacing" as *;
+
+footer {
+    .content {
+        padding: 20px 12px 20px 25px;
+        background-color: $light-gray;
+        border-radius: 3px;
+        border-bottom-left-radius: 0;
+        border: 1px solid $gray;
+        position: relative;
+        line-height: 20px;
+
+        &::after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 8px solid $light-gray;
+            border-right: 12px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 12px solid $light-gray;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            filter: drop-shadow(-1px 2px 0px $gray);
+            margin-top: -1px;
+        }
+    }
+    .guest {
+        margin-top: 35px;
+        display: flex;
+        gap: 14px;
+
+        a {
+            color: $green;
+            font-style: italic;
+        }
+    }
+}

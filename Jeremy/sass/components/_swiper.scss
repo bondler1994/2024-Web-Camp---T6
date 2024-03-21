@@ -1,0 +1,47 @@
+@use "../utilities/spacing" as *;
+@use "../utilities/color" as *;
+@use "../utilities/breakpoint" as *;
+
+@mixin swiper-button($right-distance, $left-distance) {
+    top: 20px;
+    right: $right-distance;
+    bottom: auto;
+    left: $left-distance;
+    &::after {
+        color: $gray;
+        font-size: 18px;
+    }
+}
+
+.swiper-section {
+    margin-top: 50px;
+    padding: 0 16px 75px;
+
+    @include desktop {
+        padding: 0 $base-spacing 75px;
+    }
+
+    .swiper {
+        width: 100%;
+        position: relative;
+
+        .swiper-wrapper {
+            margin-top: $component-spacing;
+        }
+
+        .swiper-slide {
+            width: 270px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .swiper-button-prev {
+            @include swiper-button(18px, auto);
+        }
+        .swiper-button-next {
+            @include swiper-button(0, auto);
+        }
+    }
+}
