@@ -1,13 +1,6 @@
 @use "../utilities/color" as *;
 
-$media_icon: url(../../images/social.png);
-
-// @mixin icon-sprite($x) {
-//     background-position: 25% * ($x - 1) 0;
-//     &:hover {
-//         background-position: 25% * ($x - 1) 100%;
-//     }
-// }
+$media_icon: url(../images/social.png);
 
 @mixin icon-sprite($x) {
     background-position: -($x - 1) * (27px + 10.2px) 0;

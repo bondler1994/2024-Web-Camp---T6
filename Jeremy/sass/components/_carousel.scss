@@ -1,8 +1,8 @@
 @use "../utilities/breakpoint" as *;
 @use "../utilities/color";
 
-$left-icon: url(../../images/slider_prev.gif);
-$right-icon: url(../../images/slider_next.gif);
+$left-icon: url(../images/slider_prev.gif);
+$right-icon: url(../images/slider_next.gif);
 
 @mixin carousel-control($icon) {
     width: 40px;
