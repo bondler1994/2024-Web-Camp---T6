@@ -114,6 +114,25 @@ nav .dropdown {
   position: relative;
 }
 
+nav .dropdown .dropdown-title {
+  position: relative;
+}
+
+nav .dropdown .dropdown-title::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  margin: auto;
+  width: 3px;
+  height: 3px;
+  content: "";
+  display: block;
+  border: black solid;
+  border-width: 0 0 1px 1px;
+  transform: rotate(-45deg);
+}
+
 nav .dropdown .dropdown-title + ul {
   display: none;
   list-style: none;
@@ -134,12 +153,12 @@ nav .dropdown .dropdown-title:focus + ul {
     top: calc(100% - 5px);
   }
 }
-nav .dropdown .dropdown-title ~ * li {
+nav .dropdown li {
   padding: 30px;
   background-color: #e7e7e7;
 }
 
-nav .dropdown .dropdown-title ~ * li:hover {
+nav .dropdown li:hover {
   background-color: #8e8e8e;
 }
 
@@ -394,6 +413,25 @@ nav .dropdown {
   position: relative;
 }
 
+nav .dropdown .dropdown-title {
+  position: relative;
+}
+
+nav .dropdown .dropdown-title::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  margin: auto;
+  width: 3px;
+  height: 3px;
+  content: "";
+  display: block;
+  border: black solid;
+  border-width: 0 0 1px 1px;
+  transform: rotate(-45deg);
+}
+
 nav .dropdown .dropdown-title + ul {
   display: none;
   list-style: none;
@@ -414,12 +452,12 @@ nav .dropdown .dropdown-title:focus + ul {
     top: calc(100% - 5px);
   }
 }
-nav .dropdown .dropdown-title ~ * li {
+nav .dropdown li {
   padding: 30px;
   background-color: #e7e7e7;
 }
 
-nav .dropdown .dropdown-title ~ * li:hover {
+nav .dropdown li:hover {
   background-color: #8e8e8e;
 }
 
@@ -745,7 +783,7 @@ article hr {
 
 .swiper-section .swiper .swiper-slide:hover .swiper-text {
   opacity: 1;
-  transform: rotate(-40deg) translate(90px, -113px);
+  transform: rotate(-40deg) translate(107px, -113px);
 }
 
 .swiper-section .swiper .swiper-slide img {
@@ -762,13 +800,13 @@ article hr {
   border-bottom: 90px solid rgba(29, 29, 29, 0.6823529412);
   border-right: 95px solid transparent;
   opacity: 0;
-  transform: rotate(-40deg) translate(-435px, -88px);
+  transform: rotate(-40deg) translate(-435px, -65px);
   transition: 0.4s 0.2s;
 }
 
 .swiper-section .swiper .swiper-slide:hover::before {
   opacity: 1;
-  transform: rotate(-40deg) translate(-74px, -88px);
+  transform: rotate(-40deg) translate(-76px, -65px);
 }
 
 .swiper-section .swiper .swiper-slide::after {
@@ -778,16 +816,16 @@ article hr {
   width: 0;
   height: 0;
   border-top: 3px solid #80b602;
-  border-left: 260px solid rgba(29, 29, 29, 0.6823529412);
+  border-left: 700px solid rgba(29, 29, 29, 0.6823529412);
   border-bottom: 140px solid rgba(29, 29, 29, 0.6823529412);
   border-right: 150px solid transparent;
-  transform: rotate(140deg) translate(-750px, 164px);
+  transform: rotate(140deg) translate(-750px, 300px);
   transition: all 0.4s 0.2s;
 }
 
 .swiper-section .swiper .swiper-slide:hover::after {
   opacity: 1;
-  transform: rotate(140deg) translate(-20px, 164px);
+  transform: rotate(140deg) translate(-20px, 300px);
 }
 
 .swiper-section .swiper .swiper-button-prev {

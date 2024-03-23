@@ -88,7 +88,24 @@ nav {
 
     .dropdown {
         position: relative;
+
         .dropdown-title {
+            position: relative;
+            &::after {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 20px;
+                margin: auto;
+                width: 3px;
+                height: 3px;
+                content: "";
+                display: block;
+                border: black solid;
+                border-width: 0 0 1px 1px;
+                transform: rotate(-45deg);
+            }
+
             & + ul {
                 display: none;
                 list-style: none;
@@ -106,12 +123,12 @@ nav {
                     top: calc(100% - 5px);
                 }
             }
-            & ~ * li {
-                padding: $component-spacing;
-                background-color: $light-gray;
-                &:hover {
-                    background-color: $dark-gray;
-                }
+        }
+        li {
+            padding: $component-spacing;
+            background-color: $light-gray;
+            &:hover {
+                background-color: $dark-gray;
             }
         }
     }

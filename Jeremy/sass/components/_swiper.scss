@@ -77,7 +77,7 @@
 
             &:hover .swiper-text {
                 opacity: 1;
-                transform: rotate(-40deg) translate(90px, -113px);
+                transform: rotate(-40deg) translate(107px, -113px);
             }
 
             img {
@@ -94,12 +94,12 @@
                 border-bottom: 90px solid $hover-dark;
                 border-right: 95px solid transparent;
                 opacity: 0;
-                transform: rotate(-40deg) translate(-435px, -88px);
+                transform: rotate(-40deg) translate(-435px, -65px);
                 transition: 0.4s 0.2s;
             }
             &:hover::before {
                 opacity: 1;
-                transform: rotate(-40deg) translate(-74px, -88px);
+                transform: rotate(-40deg) translate(-76px, -65px);
             }
 
             &::after {
@@ -109,15 +109,15 @@
                 width: 0;
                 height: 0;
                 border-top: 3px solid $green;
-                border-left: 260px solid $hover-dark;
+                border-left: 700px solid $hover-dark;
                 border-bottom: 140px solid $hover-dark;
                 border-right: 150px solid transparent;
-                transform: rotate(140deg) translate(-750px, 164px);
+                transform: rotate(140deg) translate(-750px, 300px);
                 transition: all 0.4s 0.2s;
             }
             &:hover::after {
                 opacity: 1;
-                transform: rotate(140deg) translate(-20px, 164px);
+                transform: rotate(140deg) translate(-20px, 300px);
             }
         }
 
