@@ -48,9 +48,6 @@ header {
         display: none;
         &:checked + .media_icon {
             display: flex;
-            justify-content: center;
-            padding: $component-spacing;
-            gap: 1rem;
         }
     }
 

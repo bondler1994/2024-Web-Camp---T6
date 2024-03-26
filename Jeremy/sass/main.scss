@@ -1,6 +1,6 @@
-@import "./base/reset";
+@use "./base/reset";
 
-@import "./layout/body";
-@import "./layout/header";
-@import "./layout/main";
-@import "./layout/footer";
+@use "./layout/body";
+@use "./layout/header";
+@use "./layout/main";
+@use "./layout/footer";
