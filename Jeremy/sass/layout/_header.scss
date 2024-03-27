@@ -1,74 +1,18 @@
-@use "../utilities/background" as *;
-@use "../components/media_icon" as *;
-@use "../utilities/breakpoint" as *;
-@use "../utilities/spacing" as *;
+@use "../abstracts/mixin" as *;
+@use "../abstracts/variables" as *;
 
 header {
-    @extend %white-wood;
+    padding: $basic-spacing;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    position: relative;
-    z-index: 2;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    max-width: 1250px;
 
-    @include desktop {
-        padding: $base-spacing;
-        padding-bottom: 35px;
-        margin-bottom: $component-spacing;
-    }
+    .hamburger,
+    .social-icon {
+        font-size: 30px;
 
-    h1 {
-        width: 80%;
-        text-align: center;
-        @include desktop {
-            width: auto;
-        }
-    }
-
-    .burger,
-    .social_button {
-        cursor: pointer;
-        padding: 1rem 0;
-        font-size: 1.5rem;
-        width: 10%;
-        text-align: center;
-
-        @include mobile {
-            font-size: 2rem;
-        }
         @include desktop {
             display: none;
-        }
-    }
-
-    // checkbox處理點擊事件
-    #social_media {
-        display: none;
-        &:checked + .media_icon {
-            display: flex;
-        }
-    }
-
-    .media_icon {
-        display: none;
-        order: 1;
-        flex-basis: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: $component-spacing;
-        gap: 1rem;
-        @include desktop {
-            display: flex;
-            justify-content: end;
-            gap: 5px;
-            flex-wrap: wrap;
-            flex-basis: auto;
-            padding: 0;
-            & > div {
-                flex-basis: 100%;
-            }
         }
     }
 }

@@ -1,26 +1,19 @@
-$mobile-size: 576px;
-$ipad-size: 768px;
-$desktop-size: 992px;
-$xl-device: 1200px;
-
+//breakpoint
 @mixin mobile {
-    @media (min-width: $mobile-size) {
+    @media (min-width: 576px) {
         @content;
     }
 }
-
 @mixin ipad {
-    @media (min-width: $ipad-size) {
+    @media (min-width: 768px) {
         @content;
     }
 }
-
 @mixin desktop {
-    @media (min-width: $desktop-size) {
+    @media (min-width: 992px) {
         @content;
     }
 }
-
 @mixin xl-device {
     @media (min-width: 1200px) {
         @content;
