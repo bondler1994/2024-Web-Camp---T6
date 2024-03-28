@@ -1,0 +1,18 @@
+@use "../abstracts/mixin" as *;
+
+body {
+    @include bg-linear(70px, 90%);
+    max-width: 1250px;
+    min-width: 375px;
+    margin: auto;
+
+    padding: 0 10px;
+
+    @include ipad {
+        padding: 0 20px;
+    }
+
+    @include xl-device {
+        padding: 0;
+    }
+}

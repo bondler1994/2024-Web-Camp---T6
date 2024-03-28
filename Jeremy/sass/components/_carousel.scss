@@ -1,0 +1,52 @@
+main {
+    .carousel {
+        margin-top: -5px;
+        box-shadow: 0 0 2px black;
+        height: 70vh;
+
+        .carousel-inner {
+            height: 100%;
+            .carousel-item {
+                height: 100%;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .carousel-control-next {
+            background-image: url("../images/slider_next.gif");
+            background-repeat: no-repeat;
+            opacity: 1;
+            width: 40px;
+            height: 119px;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            left: auto;
+            margin: auto;
+
+            &:hover {
+                background-position-y: 100%;
+            }
+        }
+
+        .carousel-control-prev {
+            background-image: url("../images/slider_prev.gif");
+            background-repeat: no-repeat;
+            opacity: 1;
+            width: 40px;
+            height: 119px;
+            right: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+
+            &:hover {
+                background-position-y: 100%;
+            }
+        }
+    }
+}

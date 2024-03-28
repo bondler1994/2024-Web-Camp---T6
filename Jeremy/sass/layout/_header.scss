@@ -2,17 +2,79 @@
 @use "../abstracts/variables" as *;
 
 header {
-    padding: $basic-spacing;
+    background-image: $white-wood;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1250px;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 1px 2px $dark-gray;
+
+    @include desktop {
+        padding: $basic-spacing;
+    }
+
+    h1 {
+        flex: 1 1 0;
+        @include desktop {
+            flex: 0 0 auto;
+        }
+    }
 
     .hamburger,
-    .social-icon {
+    .social-button {
         font-size: 30px;
+        padding: $component-spacing;
 
         @include desktop {
             display: none;
+        }
+    }
+
+    .social-media {
+        flex-basis: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+
+        &::before,
+        ::after {
+            content: "";
+            display: block;
+            flex-basis: 100%;
+            margin-top: 10px;
+            @include desktop {
+                display: none;
+            }
+        }
+
+        @include desktop {
+            justify-content: end;
+            flex-basis: auto;
+            padding: 0;
+        }
+
+        a:not(:last-child) {
+            width: 28px;
+            height: 27px;
+            @for $i from 1 through 5 {
+                &:nth-child(#{$i}) {
+                    @include social-bg($i);
+                }
+            }
+        }
+    }
+    .telephone {
+        text-align: end;
+        a {
+            color: black;
+            &:hover {
+                color: $green;
+            }
+        }
+        @include desktop {
+            flex-basis: 100%;
         }
     }
 }

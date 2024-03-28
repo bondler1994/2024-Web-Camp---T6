@@ -1,0 +1,12 @@
+body,
+h1,
+h2,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}/*# sourceMappingURL=reset.css.map */

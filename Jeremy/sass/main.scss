@@ -1,2 +1,10 @@
+@use "./vendors/bootstrap";
+// @use "./vendors/swiper";
+
 @use "./base/reset.scss";
+
+@use "./layout/body";
 @use "./layout/header";
+@use "./layout/top-nav";
+@use "./layout/main";
+@use "./layout/footer";

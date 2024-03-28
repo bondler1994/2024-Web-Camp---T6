@@ -1,0 +1,181 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixin" as *;
+
+footer {
+    margin-top: 70px;
+
+    .container-fluid {
+        background-image: $white-wood;
+        box-shadow: 0 -1px 3px $dark-gray;
+    }
+
+    .tweets {
+        p {
+            margin-top: $component-spacing;
+        }
+    }
+
+    .comment {
+        .content {
+            margin-top: $component-spacing;
+            background-color: $light-gray;
+            padding: 1rem;
+            border-radius: 3px;
+            border-bottom-left-radius: 0;
+            border: 1px solid $gray;
+            position: relative;
+            &::after {
+                content: "";
+                border-top: 7px solid $light-gray;
+                border-right: 14px solid transparent;
+                border-bottom: 7px solid transparent;
+                border-left: 14px solid $light-gray;
+                position: absolute;
+                top: 99%;
+                left: 0;
+                filter: drop-shadow(-1px 2px 0px $gray);
+            }
+        }
+
+        .customer {
+            margin-top: 35px;
+            display: flex;
+            gap: 13px;
+
+            a {
+                color: $green;
+                font-style: italic;
+            }
+        }
+    }
+
+    .contact {
+        form {
+            margin-top: $component-spacing;
+
+            & > *:not(:first-child) {
+                margin-top: 5px;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 5px;
+                border: 1px solid $gray;
+                background-color: $light-gray;
+
+                &:focus-visible {
+                    outline-color: $green;
+                }
+            }
+
+            textarea {
+                resize: none;
+            }
+
+            .form-button {
+                margin-top: 18px;
+                button {
+                    color: white;
+                    border: none;
+                    padding: 8px 12px;
+                }
+
+                button[type="reset"] {
+                    background-color: black;
+                }
+
+                button[type="submit"] {
+                    background-color: $green;
+                }
+            }
+        }
+    }
+
+    .flickr-media {
+        margin-top: $component-spacing;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+
+        .flickr-item {
+            cursor: pointer;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+    }
+
+    .copyright {
+        padding: 20px 0;
+        color: $dark-gray;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include ipad {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        p {
+            order: 1;
+            margin-top: $component-spacing;
+
+            @include ipad {
+                order: 0;
+                margin-top: 0;
+            }
+
+            span {
+                color: $green;
+            }
+        }
+
+        .bottom-nav {
+            justify-content: center;
+
+            @include ipad {
+                justify-content: start;
+            }
+            .nav-item {
+                position: relative;
+
+                @include ipad {
+                    &:not(:first-child):before {
+                        content: "";
+                        display: block;
+                        height: 80%;
+                        width: 1.5px;
+                        background-color: $gray;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                    }
+                }
+            }
+
+            .nav-link {
+                color: $dark-gray;
+                padding: 10px;
+                font-size: 12px;
+
+                @include ipad {
+                    padding: 0 10px;
+                }
+
+                &:hover {
+                    color: $green;
+                }
+
+                &.active {
+                    color: $green;
+                }
+            }
+        }
+    }
+}

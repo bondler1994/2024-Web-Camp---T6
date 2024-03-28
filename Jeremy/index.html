@@ -4,10 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- bootstrap css -->
-        <link
+        <!-- <link
             rel="stylesheet"
             href="./node_modules/bootstrap/dist/css/bootstrap.css"
-        />
+        /> -->
+        <!-- swiper css -->
+        <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.css" />
         <!-- Jeremy css -->
         <link rel="stylesheet" href="./css/main.css" />
         <!-- font awesome -->
@@ -27,7 +29,7 @@
                 aria-expanded="false"
                 aria-label="Toggle navigation"
             >
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars fa-fw"></i>
             </div>
             <h1>
                 <a href="./index.html">
@@ -38,46 +40,890 @@
                     />
                 </a>
             </h1>
-            <div class="social-icon">
-                <i class="fa-solid fa-link"></i>
+            <div
+                class="social-button"
+                data-bs-toggle="collapse"
+                data-bs-target="#social"
+                aria-controls="social"
+                aria-expanded="false"
+                aria-label="Toggle social media"
+            >
+                <i class="fa-solid fa-link fa-fw"></i>
             </div>
-            <div class="social-media">
+            <div id="social" class="social-media collapse d-lg-flex">
                 <a href="#"></a>
                 <a href="#"></a>
                 <a href="#"></a>
                 <a href="#"></a>
                 <a href="#"></a>
+                <div class="telephone">
+                    <a href="tel:+1 (777) 784-25-43"
+                        >Call Us Now: +1 (777) 784-25-43</a
+                    >
+                </div>
             </div>
         </header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="TopNavbar">
+        <nav class="top-nav navbar navbar-expand-lg p-0">
+            <div class="container-fluid p-0">
+                <div class="search">
+                    <input type="search" placeholder="Search the Site..." />
+                    <button>
+                        <img
+                            src="./images/search.png"
+                            alt="search icon"
+                            class="img-fluid"
+                        />
+                    </button>
+                </div>
+
+                <div class="left-nav collapse navbar-collapse" id="TopNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a
                                 class="nav-link active"
                                 aria-current="page"
                                 href="#"
-                                >Home</a
+                                >HOME</a
                             >
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="#">ABOUT</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true"
-                                >Disabled</a
+                        <li class="nav-item dropdown">
+                            <a
+                                href="#"
+                                class="nav-link dropdown-button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
                             >
+                                FEATURES
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Features item</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Features item</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Features item</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button
+                                class="nav-link dropdown-button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                PORTFOLIO
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >PORTFOLIO item</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >PORTFOLIO item</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button
+                                class="nav-link dropdown-button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                BLOG
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">Blog 1</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Blog 2</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Blog 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACTS</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <main></main>
-        <footer></footer>
-        <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+        <main>
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img
+                            src="./images/banner1.jpg"
+                            class="d-block w-100"
+                            alt="dollar"
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="./images/banner2.jpg"
+                            class="d-block w-100"
+                            alt="stair"
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="./images/banner3.jpg"
+                            class="d-block w-100"
+                            alt="tug of war"
+                        />
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="prev"
+                >
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="next"
+                >
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <section class="service container-fluid p-4">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                    <div class="col">
+                        <div class="service-item">
+                            <h6>GROWTH STRATEGIES</h6>
+                            <div class="service-icon">
+                                <img src="./images/p1.png" alt="" />
+                            </div>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Magni ea officia rem, quasi
+                                porro alias?
+                            </p>
+                            <a href="##" class="more-button">More</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-item">
+                            <h6>PERFECT SUPPORT</h6>
+                            <div class="service-icon">
+                                <img src="./images/p2.png" alt="" />
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Ducimus suscipit sint, ipsam
+                                quia impedit quaerat.
+                            </p>
+                            <a href="##" class="more-button">More</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-item">
+                            <h6>PARTNERS PROGRAMS</h6>
+                            <div class="service-icon">
+                                <img src="./images/p3.png" alt="" />
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quia in culpa ab maiores
+                                placeat sunt!
+                            </p>
+                            <a href="##" class="more-button">More</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-item">
+                            <h6>PREMIUM SERVICES</h6>
+                            <div class="service-icon">
+                                <img src="./images/p4.png" alt="" />
+                            </div>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Quod aliquid cum quos saepe,
+                                reprehenderit ducimus.
+                            </p>
+                            <a href="##" class="more-button">More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <article class="introduction">
+                <div class="container-fluid">
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="introduction-item">
+                                <h2>WELCOME</h2>
+                                <div class="welcome">
+                                    <div class="welcome-img">
+                                        <img
+                                            src="./images/welcome.jpg"
+                                            alt=""
+                                            class="img-fluid"
+                                        />
+                                    </div>
+                                    <p>
+                                        <span class="welcome-content">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit.
+                                            Aspernatur error minus facere
+                                            similique vitae consequuntur minima
+                                            necessitatibus blanditiis quia
+                                            repellat... </span
+                                        ><a href="##" class="more-button"
+                                            >More</a
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="introduction-item">
+                                <h2>WHY CHOOSE US?</h2>
+                                <div class="reasons">
+                                    <div class="reason">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        <p>Etiam rutrum venenatis dui, non</p>
+                                    </div>
+                                    <div class="reason">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        <p>
+                                            Aliquam ac diam in lorem vulputate
+                                            auctor.
+                                        </p>
+                                    </div>
+                                    <div class="reason">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        <p>
+                                            Vestibulum vitae urna auis eros
+                                            convallis
+                                        </p>
+                                    </div>
+                                    <div class="reason">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        <p>Sed maana maana. conque</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="introduction-item">
+                                <h2>NEWS & EVENTS</h2>
+                                <div class="news">
+                                    <div class="row g-4">
+                                        <div class="col-12 col-sm-6 col-lg-12">
+                                            <div class="news-item">
+                                                <div class="news-img">
+                                                    <img
+                                                        src="./images/news1.jpg"
+                                                        alt=""
+                                                        class="img-fluid"
+                                                    />
+                                                </div>
+                                                <div class="news-content">
+                                                    <time datetime="2012.12.12"
+                                                        >12.12.12</time
+                                                    >
+                                                    <p>
+                                                        <span class="news-text">
+                                                            AliQuam ac diam in
+                                                            lorem vulputate
+                                                            auctor. Aliquam
+                                                            rhoncus nunc et
+                                                            justo imperdie </span
+                                                        ><a
+                                                            href="##"
+                                                            class="more-button"
+                                                            >More</a
+                                                        >
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-12">
+                                            <div class="news-item">
+                                                <div class="news-img">
+                                                    <img
+                                                        src="./images/news2.jpg"
+                                                        alt=""
+                                                        class="img-fluid"
+                                                    />
+                                                </div>
+                                                <div class="news-content">
+                                                    <time datetime="2012.12.12"
+                                                        >12.12.12</time
+                                                    >
+                                                    <p>
+                                                        <span class="news-text">
+                                                            Sed auctor laoreet
+                                                            augue, id pulvinar
+                                                            lacus mattis non. In
+                                                            hac habitasse platea
+                                                            dictimst Proin et
+                                                            lorem </span
+                                                        ><a
+                                                            href="##"
+                                                            class="more-button"
+                                                            >More</a
+                                                        >
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col">
+                            <div class="introduction-item">
+                                <div class="swiper">
+                                    <h2>FEATURED WORKS</h2>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide">
+                                            <div class="swiper-text">
+                                                <p>ECENAS ENIM</p>
+                                                <div class="swiper-icon">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g1"
+                                                        src="./images/icon1.png"
+                                                        alt=""
+                                                    />
+
+                                                    <img
+                                                        src="./images/icon2.png"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <img
+                                                src="./images/g1.jpg"
+                                                alt=""
+                                                class="img-fluid"
+                                            />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="swiper-text">
+                                                <p>ECENAS ENIM</p>
+                                                <div class="swiper-icon">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g2"
+                                                        src="./images/icon1.png"
+                                                        alt=""
+                                                    />
+                                                    <img
+                                                        src="./images/icon2.png"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <img
+                                                src="./images/g2.jpg"
+                                                alt=""
+                                                class="img-fluid"
+                                            />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="swiper-text">
+                                                <p>ECENAS ENIM</p>
+                                                <div class="swiper-icon">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g3"
+                                                        src="./images/icon1.png"
+                                                        alt=""
+                                                    />
+                                                    <img
+                                                        src="./images/icon2.png"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <img
+                                                src="./images/g3.jpg"
+                                                alt=""
+                                                class="img-fluid"
+                                            />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="swiper-text">
+                                                <p>ECENAS ENIM</p>
+                                                <div class="swiper-icon">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g4"
+                                                        src="./images/icon1.png"
+                                                        alt=""
+                                                    />
+                                                    <img
+                                                        src="./images/icon2.png"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <img
+                                                src="./images/g4.jpg"
+                                                alt=""
+                                                class="img-fluid"
+                                            />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="swiper-text">
+                                                <p>ECENAS ENIM</p>
+                                                <div class="swiper-icon">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g1"
+                                                        src="./images/icon1.png"
+                                                        alt=""
+                                                    />
+                                                    <img
+                                                        src="./images/icon2.png"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <img
+                                                src="./images/g1.jpg"
+                                                alt=""
+                                                class="img-fluid"
+                                            />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="swiper-text">
+                                                <p>ECENAS ENIM</p>
+                                                <div class="swiper-icon">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g2"
+                                                        src="./images/icon1.png"
+                                                        alt=""
+                                                    />
+                                                    <img
+                                                        src="./images/icon2.png"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <img
+                                                src="./images/g2.jpg"
+                                                alt=""
+                                                class="img-fluid"
+                                            />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="swiper-text">
+                                                <p>ECENAS ENIM</p>
+                                                <div class="swiper-icon">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g3"
+                                                        src="./images/icon1.png"
+                                                        alt=""
+                                                    />
+                                                    <img
+                                                        src="./images/icon2.png"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <img
+                                                src="./images/g3.jpg"
+                                                alt=""
+                                                class="img-fluid"
+                                            />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="swiper-text">
+                                                <p>ECENAS ENIM</p>
+                                                <div class="swiper-icon">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g4"
+                                                        src="./images/icon1.png"
+                                                        alt=""
+                                                    />
+                                                    <img
+                                                        src="./images/icon2.png"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <img
+                                                src="./images/g4.jpg"
+                                                alt=""
+                                                class="img-fluid"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <div class="dialog">
+            <div
+                class="modal fade"
+                id="g1"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img
+                                src="./images/g1.jpg"
+                                alt=""
+                                class="img-fluid"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="modal fade"
+                id="g2"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img
+                                src="./images/g2.jpg"
+                                alt=""
+                                class="img-fluid"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="modal fade"
+                id="g3"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img
+                                src="./images/g3.jpg"
+                                alt=""
+                                class="img-fluid"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="modal fade"
+                id="g4"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img
+                                src="./images/g4.jpg"
+                                alt=""
+                                class="img-fluid"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container-fluid p-4">
+                <div class="row g-4 gy-5 gy-lg-4">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="footer-item tweets">
+                            <h4>LATEST TWEETS</h4>
+                            <p>loading tweets...</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="footer-item comment">
+                            <h4>TESTIMONIALS</h4>
+                            <p class="content">
+                                " Sed daniblis molestie interdum Fusce nec est
+                                ante. sit amet lacinia •orem Maeconas nec eros
+                                ur maniris pulvinar suscipit. Aliguam erat
+                            </p>
+                            <div class="customer">
+                                <div class="customer-img">
+                                    <img
+                                        src="./images/men.jpg"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <div class="customer-info">
+                                    <p>Stephen Bingham</p>
+                                    <a href="##">demolink.orc</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="footer-item contact">
+                            <h4>GET IN TOUCH!</h4>
+                            <form action="">
+                                <input
+                                    id="name"
+                                    type="text"
+                                    placeholder="Name"
+                                    required
+                                />
+                                <input
+                                    id="email"
+                                    type="email"
+                                    placeholder="Email"
+                                    required
+                                />
+                                <textarea
+                                    id="comment"
+                                    rows="5"
+                                    placeholder="Message"
+                                    required
+                                ></textarea>
+
+                                <div class="form-button">
+                                    <button type="reset">CLEAR FORM</button>
+                                    <button type="submit">SEND!</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="footer-item flickr">
+                            <h4>FLICKR</h4>
+                            <div class="flickr-media">
+                                <div class="flickr-item">
+                                    <img
+                                        src="./images/f1.jpg"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <div class="flickr-item">
+                                    <img
+                                        src="./images/f2.jpg"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <div class="flickr-item">
+                                    <img
+                                        src="./images/f3.jpg"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <div class="flickr-item">
+                                    <img
+                                        src="./images/f4.jpg"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <div class="flickr-item">
+                                    <img
+                                        src="./images/f5.jpg"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <div class="flickr-item">
+                                    <img
+                                        src="./images/f6.jpg"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <div class="flickr-item">
+                                    <img
+                                        src="./images/f7.jpg"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <div class="flickr-item">
+                                    <img
+                                        src="./images/f8.jpg"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <div class="flickr-item">
+                                    <img
+                                        src="./images/f9.jpg"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <div class="flickr-item">
+                                    <img
+                                        src="./images/f10.jpg"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <div class="flickr-item">
+                                    <img
+                                        src="./images/f11.jpg"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                </div>
+                                <div class="flickr-item">
+                                    <img
+                                        src="./images/f12.jpg"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>BUSINESS PLANET @ 2020 | <span>Privacy Policy</span></p>
+                <nav class="bottom-nav navbar navbar-expand-md p-0">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="##"
+                                >HOME</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="##">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="##">FEATURES </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="##"> PORTFOLIO </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="##"> BLOG </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="##">CONTACTS</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="./node_modules/swiper/swiper-bundle.js"></script>
+        <script>
+            const swiper = new Swiper(".swiper", {
+                slidesPerView: 1,
+                breakpoints: {
+                    576: {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 24,
+                    },
+                    992: {
+                        slidesPerView: 4,
+                        spaceBetween: 24,
+                    },
+                },
+                loop: true,
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        </script>
     </body>
 </html>

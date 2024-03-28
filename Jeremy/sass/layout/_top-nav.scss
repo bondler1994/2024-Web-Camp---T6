@@ -1,0 +1,124 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixin" as *;
+
+.top-nav {
+    margin-top: 10px;
+    background: linear-gradient(
+        transparent 0%,
+        transparent 55%,
+        white 55%,
+        white 100%
+    );
+
+    @include desktop {
+        margin-top: $component-spacing;
+    }
+
+    .container-fluid {
+        @include desktop {
+            gap: 8px;
+        }
+    }
+
+    .left-nav {
+        background-color: white;
+        box-shadow: 1px -1px 2px $dark-gray;
+
+        @include desktop {
+            flex: 7 0 auto;
+        }
+
+        .nav-item {
+            &:hover {
+                background-color: $gray;
+            }
+            &:not(:first-child) {
+                border-right: 1px solid $gray;
+            }
+        }
+
+        .nav-link {
+            padding: 20px 24px;
+
+            &.active {
+                background-color: $green;
+                color: white;
+            }
+        }
+    }
+
+    .search {
+        padding: 13px 15px 13px 18px;
+        background-color: white;
+        flex: 1 0 auto;
+        position: relative;
+        box-shadow: -1px -1px 2px $dark-gray;
+
+        @include desktop {
+            order: 1;
+            flex: 3 0 auto;
+        }
+
+        input[type="search"] {
+            width: 100%;
+            // line-height: 38px;
+            padding: 6px 10px;
+            background-color: $light-gray;
+            border: 1px solid $gray;
+
+            &::-webkit-search-cancel-button {
+                display: none;
+            }
+            &:focus-visible {
+                outline-color: $green;
+            }
+        }
+
+        button {
+            border: none;
+            width: 20px;
+            height: 20px;
+            padding: 0;
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            right: 25px;
+            // 圖片上方有文字空隙
+            font-size: 0;
+        }
+    }
+
+    .dropdown-menu {
+        // 修正被carousel分開
+        margin-top: -5px;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        background-color: $light-gray;
+    }
+
+    .dropdown-item {
+        padding: 20px 24px;
+
+        &:hover {
+            background-color: $green;
+        }
+        &:active {
+            background-color: $green;
+        }
+    }
+
+    .dropdown-button {
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-right: 2px solid black;
+            border-bottom: 2px solid black;
+            transform: rotate(45deg) translate(1px, -6px);
+        }
+    }
+}

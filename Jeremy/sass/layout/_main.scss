@@ -1,0 +1,274 @@
+@use "../components/carousel";
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixin" as *;
+
+main {
+    background-image: $white-wood;
+    box-shadow: 0 1px 3px $dark-gray;
+}
+.service {
+    .col {
+        @include desktop {
+            margin-top: -$component-spacing;
+            position: relative;
+        }
+    }
+    .service-item {
+        padding: 40px 30px 30px;
+        height: 100%;
+        background-color: $light-gray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: $component-spacing;
+
+        &:hover {
+            background-color: $hover-dark;
+            color: white;
+        }
+    }
+
+    h6 {
+        text-wrap: nowrap;
+    }
+
+    .more-button {
+        background-color: $gray;
+        color: black;
+        width: 64px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: auto;
+    }
+}
+
+.introduction {
+    color: $dark-gray;
+
+    .container-fluid {
+        padding: 24px 24px 70px;
+    }
+
+    h2 {
+        color: black;
+    }
+
+    .welcome {
+        .welcome-img {
+            margin-top: $component-spacing;
+        }
+
+        .welcome-content {
+            margin-top: $component-spacing;
+        }
+
+        .more-button {
+            color: black;
+
+            &:hover {
+                font-weight: 500;
+                color: $green;
+            }
+        }
+    }
+
+    .reasons {
+        display: flex;
+        flex-direction: column;
+        margin-top: $component-spacing;
+
+        .reason {
+            display: flex;
+            gap: 14px;
+            padding: 18px;
+            align-items: baseline;
+            border-bottom: 1px solid $gray;
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            i {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background-color: $gray;
+                color: white;
+                text-align: center;
+                line-height: 48px;
+                flex: 0 0 auto;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .news {
+        margin-top: $component-spacing;
+        .news-item {
+            display: flex;
+            gap: 24px;
+
+            .news-img {
+                flex: 0 0 auto;
+            }
+
+            .news-content {
+                time {
+                    display: block;
+                    padding: 5px 12px;
+                    width: fit-content;
+                    background-color: $green;
+                    color: white;
+                }
+                .news-text {
+                    margin-top: 24px;
+                    line-height: 1.3;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .more-button {
+                    color: black;
+
+                    &:hover {
+                        font-weight: 500;
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    hr {
+        margin: 80px 0 50px;
+    }
+
+    .swiper {
+        .swiper-wrapper {
+            margin-top: $component-spacing;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: $gray;
+
+            &::after {
+                font-size: 20px;
+            }
+        }
+
+        .swiper-button-next {
+            top: 30px;
+            right: 0;
+            bottom: auto;
+            left: auto;
+        }
+
+        .swiper-button-prev {
+            top: 30px;
+            right: 30px;
+            bottom: auto;
+            left: auto;
+        }
+    }
+
+    .swiper-slide {
+        overflow: hidden;
+        position: relative;
+
+        .swiper-text {
+            color: white;
+            position: absolute;
+            width: fit-content;
+            height: fit-content;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            transform: rotate(-40deg) translateX(-300px);
+            z-index: 1;
+            opacity: 0;
+            transition: all 0.4s 0.3s;
+
+            p {
+                position: relative;
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    width: 1px;
+                    height: 700%;
+                    background-color: white;
+                    transform: rotate(90deg) translateX(16px);
+                }
+            }
+            .swiper-icon {
+                text-align: center;
+                margin-top: 12px;
+                img {
+                    width: 37px;
+                    height: 37px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &:hover .swiper-text {
+            opacity: 1;
+            transform: rotate(-40deg);
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 260px solid $hover-dark;
+            border-bottom: 90px solid $hover-dark;
+            border-right: 95px solid transparent;
+            opacity: 0;
+            transform: rotate(-40deg) translate(-300px, -110px);
+            transition: 0.4s 0.2s;
+        }
+        &:hover::before {
+            opacity: 1;
+            transform: rotate(-40deg) translate(0, -110px);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            border-top: 3px solid $green;
+            border-left: 700px solid $hover-dark;
+            border-bottom: 150px solid $hover-dark;
+            border-right: 150px solid transparent;
+            transform: rotate(140deg) translate(-400px, 180px);
+            transition: all 0.4s 0.2s;
+        }
+        &:hover::after {
+            opacity: 1;
+            transform: rotate(140deg) translate(200px, 180px);
+        }
+    }
+}

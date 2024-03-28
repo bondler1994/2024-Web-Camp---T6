@@ -19,3 +19,25 @@
         @content;
     }
 }
+
+//background linear-gradient
+@mixin bg-linear($top-breakpoint, $bottom-breakpoint) {
+    background: linear-gradient(
+            black 0%,
+            black $top-breakpoint,
+            transparent $top-breakpoint,
+            transparent $bottom-breakpoint,
+            black $bottom-breakpoint,
+            black 100%
+        ),
+        url("../images/bg.jpg");
+}
+
+// social-icon
+@mixin social-bg($nth) {
+    background-image: url("../../images/social.png");
+    background-position: -($nth - 1) * 37.2px 0;
+    &:hover {
+        background-position: -($nth - 1) * 37.2px 100%;
+    }
+}
