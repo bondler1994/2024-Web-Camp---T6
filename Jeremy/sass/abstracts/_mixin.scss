@@ -35,7 +35,7 @@
 
 // social-icon
 @mixin social-bg($nth) {
-    background-image: url("../../images/social.png");
+    background-image: url("../images/social.png");
     background-position: -($nth - 1) * 37.2px 0;
     &:hover {
         background-position: -($nth - 1) * 37.2px 100%;

@@ -91,35 +91,35 @@ header .social-media > a {
   height: 27px;
 }
 header .social-media > a:nth-child(1) {
-  background-image: url("../../images/social.png");
+  background-image: url("../images/social.png");
   background-position: 0px 0;
 }
 header .social-media > a:nth-child(1):hover {
   background-position: 0px 100%;
 }
 header .social-media > a:nth-child(2) {
-  background-image: url("../../images/social.png");
+  background-image: url("../images/social.png");
   background-position: -37.2px 0;
 }
 header .social-media > a:nth-child(2):hover {
   background-position: -37.2px 100%;
 }
 header .social-media > a:nth-child(3) {
-  background-image: url("../../images/social.png");
+  background-image: url("../images/social.png");
   background-position: -74.4px 0;
 }
 header .social-media > a:nth-child(3):hover {
   background-position: -74.4px 100%;
 }
 header .social-media > a:nth-child(4) {
-  background-image: url("../../images/social.png");
+  background-image: url("../images/social.png");
   background-position: -111.6px 0;
 }
 header .social-media > a:nth-child(4):hover {
   background-position: -111.6px 100%;
 }
 header .social-media > a:nth-child(5) {
-  background-image: url("../../images/social.png");
+  background-image: url("../images/social.png");
   background-position: -148.8px 0;
 }
 header .social-media > a:nth-child(5):hover {
