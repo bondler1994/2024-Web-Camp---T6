@@ -41,3 +41,12 @@
         background-position: -($nth - 1) * 37.2px 100%;
     }
 }
+
+// position absolute
+@mixin absolute($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}

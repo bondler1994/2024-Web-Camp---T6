@@ -61,7 +61,6 @@
 
         input[type="search"] {
             width: 100%;
-            // line-height: 38px;
             padding: 6px 10px;
             background-color: $light-gray;
             border: 1px solid $gray;
@@ -80,18 +79,15 @@
             height: 20px;
             padding: 0;
             background-color: transparent;
-            position: absolute;
-            top: 0;
-            bottom: 0;
+            @include absolute(0, 25px, 0, auto);
             margin: auto;
-            right: 25px;
             // 圖片上方有文字空隙
             font-size: 0;
         }
     }
 
     .dropdown-menu {
-        // 修正被carousel分開
+        // 修正被carousel的負margin分開
         margin-top: -5px;
         padding: 0;
         border: none;
@@ -102,9 +98,7 @@
     .dropdown-item {
         padding: 20px 24px;
 
-        &:hover {
-            background-color: $green;
-        }
+        &:hover,
         &:active {
             background-color: $green;
         }
@@ -112,6 +106,7 @@
 
     .dropdown-button {
         &::after {
+            // 利用border做下箭頭
             content: "";
             display: inline-block;
             width: 6px;
