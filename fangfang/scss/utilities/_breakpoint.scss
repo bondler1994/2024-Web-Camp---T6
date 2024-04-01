@@ -1,0 +1,22 @@
+$smSize: 576px;
+$mdSize: 768px;
+$lgSize: 992px;
+
+
+@mixin mobile {
+    @media (min-width:$smSize) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width:$mdSize) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width:$lgSize) {
+        @content;
+    }
+}
