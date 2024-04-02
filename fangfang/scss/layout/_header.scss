@@ -1,6 +1,15 @@
 @use "../utilities/background" as *;
+@use "../utilities/breakpoint" as *;
+@use "../utilities/flex" as *;
 
 header {
     background: $sub-bg ;
+    padding: 1rem;
+    @include flexBox (column);
+    @include flexAlign (flex-start, center);
 
+    @include tablet {
+        @include flexBox (row);
+        @include flexAlign (space-between, center);
+    }
 }

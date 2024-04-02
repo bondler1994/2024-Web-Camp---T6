@@ -1,0 +1,72 @@
+@use "../utilities/breakpoint" as *;
+@use "../utilities/flex" as *;
+@use "../utilities/color";
+
+@mixin sprite ($x, $y) {
+    width: 27px;
+    height: 27px;
+    background: url("../images/social.png");
+    background-repeat: no-repeat;
+    background-position: $x $y;
+
+    &:hover {
+        background-position: $x 100%;
+    }
+
+}
+
+.contact {
+    margin-top: 20px;
+
+    @include tablet {
+        margin-top: 0;
+    }
+
+    .social_media {
+        margin-bottom: 8px;
+        @include flexBox (row);
+        @include flexAlign (center, center);
+
+        @include tablet {
+            @include flexAlign (flex-end, center);
+        }
+
+        a {
+            display: inline-block;
+
+            &:first-child {
+                @include sprite(0, 0);
+            }
+
+            &:nth-child(2) {
+                @include sprite(-37px, 0);
+            }
+
+            &:nth-child(3) {
+                @include sprite(-74px, 0);
+            }
+
+            &:nth-child(4) {
+                @include sprite(-111px, 0);
+            }
+
+            &:last-child {
+                @include sprite(-150px, 0);
+            }
+
+            &+a {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .telephone {
+        >a {
+            color: color.$dark;
+
+            &:hover {
+                color: color.$green;
+            }
+        }
+    }
+}
