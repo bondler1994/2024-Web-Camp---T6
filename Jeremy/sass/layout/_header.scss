@@ -25,6 +25,8 @@ header {
     .social-button {
         font-size: 30px;
         padding: $component-spacing;
+        border: none;
+        background-color: transparent;
 
         @include desktop {
             display: none;
@@ -69,7 +71,7 @@ header {
 
         .telephone {
             a {
-                color: black;
+                color: $black;
                 &:hover {
                     color: $green;
                 }

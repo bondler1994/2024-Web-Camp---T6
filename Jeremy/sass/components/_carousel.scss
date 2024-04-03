@@ -1,8 +1,15 @@
+@use "../abstracts/mixin" as *;
+@use "../abstracts/variables" as *;
+
 main {
     .carousel {
         margin-top: -5px;
-        box-shadow: 0 0 2px black;
+        box-shadow: 0 0 2px $black;
         height: 70vh;
+
+        @include desktop {
+            height: auto;
+        }
 
         .carousel-inner {
             height: 100%;
@@ -11,6 +18,18 @@ main {
                 img {
                     height: 100%;
                     object-fit: cover;
+                    &.dollar {
+                        object-position: 40%;
+                    }
+                    &.stair {
+                        object-position: 60%;
+                    }
+                    &.tug {
+                        object-position: 0;
+                    }
+
+                    @include desktop {
+                    }
                 }
             }
         }

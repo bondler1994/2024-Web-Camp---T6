@@ -1,5 +1,6 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixin" as *;
+@use "../components/button" as *;
 
 footer {
     margin-top: 70px;
@@ -77,17 +78,25 @@ footer {
             .form-button {
                 margin-top: 18px;
                 button {
-                    color: white;
+                    color: $white;
                     border: none;
                     padding: 8px 12px;
                 }
 
                 button[type="reset"] {
-                    background-color: black;
+                    background-color: $black;
+
+                    &:hover {
+                        background-color: lighten($black, 30%);
+                    }
                 }
 
                 button[type="submit"] {
-                    background-color: $green;
+                    @extend %green-button;
+
+                    &:hover {
+                        background-color: darken($green, 5%);
+                    }
                 }
             }
         }
