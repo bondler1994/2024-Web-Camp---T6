@@ -111,8 +111,8 @@
             display: inline-block;
             width: 6px;
             height: 6px;
-            border-right: 2px solid black;
-            border-bottom: 2px solid black;
+            border-right: 2px solid $black;
+            border-bottom: 2px solid $black;
             transform: rotate(45deg) translate(1px, -6px);
         }
     }

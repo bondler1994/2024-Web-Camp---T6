@@ -40,7 +40,7 @@ main {
 
     .more-button {
         background-color: $gray;
-        color: black;
+        color: $black;
         width: 64px;
         height: 30px;
         line-height: 30px;
@@ -57,7 +57,7 @@ main {
     padding: 60px $component-spacing 70px;
 
     h2 {
-        color: black;
+        color: $black;
     }
 
     .welcome {
@@ -73,7 +73,7 @@ main {
         }
 
         .more-button {
-            color: black;
+            color: $black;
 
             &:hover {
                 font-weight: 500;
@@ -137,7 +137,7 @@ main {
                     @include line-clamp(3);
                 }
                 .more-button {
-                    color: black;
+                    color: $black;
 
                     &:hover {
                         font-weight: 500;
