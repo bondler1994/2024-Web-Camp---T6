@@ -1,0 +1,122 @@
+@use "../utilities/color" as *;
+@use "../utilities/breakpoint" as *;
+@use "../utilities/flex" as *;
+
+//navbar
+.navbar {
+    background-color: transparent;
+    padding: 0;
+    margin-top: 30px;
+    @include flexAlign (flex-start, stretch);
+
+    @include desktop {
+        @include flexBox (row-reverse);
+        gap: 0.8rem;
+        //navbar-collapse和search後面的白色
+        background: linear-gradient(transparent 60%, $light-gray 60%);
+    }
+
+    .navbar-toggler {
+        border: none;
+        border-radius: 0;
+        background-color: $white;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .navbar-collapse {
+        background-color: $white;
+
+        @include desktop {
+            flex-grow: 2;
+            box-shadow: 1px -1px 3px $gray;
+        }
+
+        .nav-item{
+            @include desktop {
+                border-right: 2px solid $light-gray;
+            }
+        }
+
+        .nav-link {
+            color: $dark;
+            padding: 16px 12px;
+
+            @include desktop {
+                padding: 21px 22px;
+
+            }
+
+            text-transform: uppercase;
+
+            &:hover,
+            &:focus {
+                background-color: $green;
+                color: $white;
+            }
+        }
+
+        .dropdown-menu {
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            margin-top: 0;
+
+            .dropdown-item {
+                padding: 16px 12px;
+
+                &:hover {
+                    background-color: $light-gray;
+                    color: $dark;
+                }
+            }
+        }
+    }
+}
+
+//search bar
+.search {
+    position: relative;
+    padding: 0.5rem 1.1rem;
+    background-color: $white;
+    flex-grow: 1;
+
+    @include desktop {
+        box-shadow: -1px -1px 3px $gray;
+    }
+
+    .form-control {
+        background-color: $light-gray;
+        border-radius: 0;
+        padding: 0.75rem;
+
+
+
+        &:focus {
+            box-shadow: none;
+            border: 1px solid $light-gray;
+            outline: 3px solid $green;
+        }
+    }
+
+    .search-icon {
+        width: 35px;
+        height: 35px;
+        border: none;
+
+        background: {
+            image: url("../images/search.png");
+            repeat: no-repeat;
+            position: center center;
+            color: $light-gray;
+        }
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 20px;
+        margin: auto;
+    }
+}

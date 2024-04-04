@@ -1,6 +1,6 @@
 @use "../utilities/breakpoint" as *;
 @use "../utilities/flex" as *;
-@use "../utilities/color";
+@use "../utilities/color" as *;
 
 @mixin sprite ($x, $y) {
     width: 27px;
@@ -22,7 +22,7 @@
         margin-top: 0;
     }
 
-    .social_media {
+    .social-media {
         margin-bottom: 8px;
         @include flexBox (row);
         @include flexAlign (center, center);
@@ -62,10 +62,10 @@
 
     .telephone {
         >a {
-            color: color.$dark;
+            color: $dark;
 
             &:hover {
-                color: color.$green;
+                color: $green;
             }
         }
     }

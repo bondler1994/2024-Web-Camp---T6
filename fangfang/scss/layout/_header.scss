@@ -1,10 +1,12 @@
 @use "../utilities/background" as *;
 @use "../utilities/breakpoint" as *;
 @use "../utilities/flex" as *;
+@use "../utilities/color" as *;
 
 header {
     background: $sub-bg ;
     padding: 1rem;
+    box-shadow: 0 1px 2px $gray;
     @include flexBox (column);
     @include flexAlign (flex-start, center);
 

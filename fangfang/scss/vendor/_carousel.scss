@@ -1,0 +1,76 @@
+@use "../utilities/breakpoint" as *;
+
+@mixin imageSet ($top, $right) {
+    height: 100%;
+    object-fit: cover;
+    object-position: top $top right $right;
+}
+
+.carousel {
+    height: 60vh;
+
+    @include desktop {
+        height: auto;
+    }
+
+    .carousel-inner {
+        height: 100%;
+
+        .carousel-item {
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    height: 100%;
+
+                    img {
+                        &.contest {
+                            @include imageSet(50%, 10%);
+                        }
+
+                        &.far-away {
+                            @include imageSet(50%, 30%);
+                        }
+
+                        &.money {
+                            @include imageSet(50%, 70%)
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+//輪播prev和next按鈕
+$carousel-prev: url("../images/slider_prev.gif");
+$carousel-next: url("../images/slider_next.gif");
+
+@mixin carousel-control($image) {
+    background: {
+        image: $image;
+        repeat: no-repeat;
+        position: 0 0;
+    }
+
+    opacity: 1;
+    width: 40px;
+    height: 119px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    &:hover {
+        background-position: 0 100%;
+        opacity: 1;
+    }
+}
+
+.carousel-control-prev {
+    @include carousel-control($carousel-prev);
+}
+
+.carousel-control-next {
+    @include carousel-control($carousel-next);
+}

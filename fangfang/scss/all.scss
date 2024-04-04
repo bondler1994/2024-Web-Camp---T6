@@ -1,11 +1,18 @@
 @use "./base/reset";
+
 @use "./layout/body";
 @use "./layout/header";
+@use "./layout/main";
 
 @use "./utilities/background";
 @use "./utilities/breakpoint";
-@use "./utilities/flex";
 @use "./utilities/color";
+@use "./utilities/flex";
+
 
 @use "./components/logo";
 @use "./components/social-media";
+@use "./components/card";
+
+@use "./vendor/navbar";
+@use "./vendor/carousel";
