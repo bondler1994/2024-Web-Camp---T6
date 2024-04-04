@@ -1,0 +1,25 @@
+* {
+    outline: 1px red solid;
+}
+
+@font-face {
+    font-family: all;
+    src: url("Open Sans, sans-serif");
+}
+
+@font-face {
+    font-family: few;
+    src: url("Arimo, sans-serif");
+}
+
+.box {
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+}
+
+.swiper-container {
+    /* 設定幻燈片寬度跟高度 */
+    width: 320px;
+    height: 200px;
+}
