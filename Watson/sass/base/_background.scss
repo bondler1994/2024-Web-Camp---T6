@@ -1,12 +1,5 @@
 @use "../base/color" as b;
 
-
-body {
-    background:url(../../images/bg.jpg);
-    @include nigger-line(100px,230px);
-}
-
-
 @mixin nigger-line($bh,$ah){
     &::before,
     &::after{
@@ -28,3 +21,10 @@ body {
 
 
 }
+
+body {
+    background:url(../images/bg.jpg);
+    @include nigger-line(100px,230px);
+}
+
+
