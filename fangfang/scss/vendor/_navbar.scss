@@ -13,7 +13,7 @@
         @include flexBox (row-reverse);
         gap: 0.8rem;
         //navbar-collapse和search後面的白色
-        background: linear-gradient(transparent 60%, $light-gray 60%);
+        background: linear-gradient(transparent 60%, $lightGray 60%);
     }
 
     .navbar-toggler {
@@ -34,9 +34,9 @@
             box-shadow: 1px -1px 3px $gray;
         }
 
-        .nav-item{
+        .nav-item {
             @include desktop {
-                border-right: 2px solid $light-gray;
+                border-right: 2px solid $lightGray;
             }
         }
 
@@ -68,7 +68,7 @@
                 padding: 16px 12px;
 
                 &:hover {
-                    background-color: $light-gray;
+                    background-color: $lightGray;
                     color: $dark;
                 }
             }
@@ -88,7 +88,7 @@
     }
 
     .form-control {
-        background-color: $light-gray;
+        background-color: $lightGray;
         border-radius: 0;
         padding: 0.75rem;
 
@@ -96,7 +96,7 @@
 
         &:focus {
             box-shadow: none;
-            border: 1px solid $light-gray;
+            border: 1px solid $lightGray;
             outline: 3px solid $green;
         }
     }
@@ -110,7 +110,7 @@
             image: url("../images/search.png");
             repeat: no-repeat;
             position: center center;
-            color: $light-gray;
+            color: $lightGray;
         }
 
         position: absolute;

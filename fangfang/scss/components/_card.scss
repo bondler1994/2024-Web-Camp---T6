@@ -1,0 +1,91 @@
+@use "../utilities/color" as *;
+@use "../utilities/flex" as *;
+@use "../utilities/breakpoint" as *;
+
+%headingSet {
+    font: {
+        size: 1.25rem;
+        weight: 500;
+    }
+
+    @include desktop {
+        font-size: 1rem;
+    }
+
+    text: {
+        transform: uppercase;
+        align: center;
+    }
+
+    height: 38px;
+}
+
+@mixin cardSet {
+    background: $silver;
+    @include flexBox(column);
+    @include flexAlign(space-between, center);
+    gap: 1rem;
+    padding: 1.5rem;
+
+    h5 {
+        @extend %headingSet;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    a {
+        text-transform: capitalize;
+        padding: 0.25rem 1rem;
+        color: $dark ;
+        background-color: $gray;
+
+        &:hover {
+            background-color: $green;
+            color: $white;
+        }
+
+    }
+
+    .card-content {
+        @include flexBox(column);
+        @include flexAlign(flex-start, center);
+        flex: 1 1 auto;
+        gap: 1rem;
+    }
+
+    &:hover {
+        background-color: $darkGary;
+        color: $white;
+
+        @include desktop {
+            opacity: .9;
+        }
+    }
+}
+
+.strategies {
+    @include cardSet();
+}
+
+.support {
+    @include cardSet();
+}
+
+.programs {
+    @include cardSet();
+}
+
+.services {
+    @include cardSet();
+}
+
+//desktop斷點要移動card位置
+.introduce {
+    @include desktop {
+        position: relative;
+        top: -15px;
+    }
+
+}
