@@ -1,4 +1,20 @@
-body,
+@use "../abstracts/breakpoint" as *;
+@use "../abstracts/url" as *;
+@use "../abstracts/toolkit" as *;
+
+body {
+    @include bg-linear(70px, 90%, $bg-img);
+    max-width: 1250px;
+    min-width: 375px;
+    margin: auto;
+
+    padding: 0 10px;
+
+    @include ipad {
+        padding: 0 20px;
+    }
+}
+
 h1,
 h2,
 h6,

@@ -1,12 +1,14 @@
-@use "../abstracts/mixin" as *;
-@use "../abstracts/variables" as *;
+@use "../abstracts/breakpoint" as *;
+@use "../abstracts/color" as *;
+@use "../abstracts/url" as *;
+@use "../abstracts/toolkit" as *;
 
 main {
     .carousel {
         margin-top: -5px;
         box-shadow: 0 0 2px $black;
-        height: 70vh;
 
+        height: 70vh;
         @include desktop {
             height: auto;
         }
@@ -34,38 +36,26 @@ main {
             }
         }
 
+        .carousel-control-prev,
         .carousel-control-next {
-            background-image: url("../images/slider_next.gif");
             background-repeat: no-repeat;
             opacity: 1;
             width: 40px;
             height: 119px;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            left: auto;
             margin: auto;
-
             &:hover {
                 background-position-y: 100%;
             }
         }
 
-        .carousel-control-prev {
-            background-image: url("../images/slider_prev.gif");
-            background-repeat: no-repeat;
-            opacity: 1;
-            width: 40px;
-            height: 119px;
-            right: auto;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            margin: auto;
+        .carousel-control-next {
+            background-image: $carousel-button-next;
+            @include absolute(0, 0, 0, auto);
+        }
 
-            &:hover {
-                background-position-y: 100%;
-            }
+        .carousel-control-prev {
+            background-image: $carousel-button-prev;
+            @include absolute(0, auto, 0, 0);
         }
     }
 }

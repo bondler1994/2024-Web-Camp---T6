@@ -1,10 +1,8 @@
 @use "./vendors/bootstrap";
 
 @use "./base/reset.scss";
-// @use "./base/typography.scss";
 
-@use "./layout/body";
 @use "./layout/header";
-@use "./layout/top-nav";
+@use "./layout/navbar";
 @use "./layout/main";
 @use "./layout/footer";

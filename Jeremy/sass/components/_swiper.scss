@@ -1,5 +1,6 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixin" as *;
+@use "../abstracts/color" as *;
+@use "../abstracts/spacing" as *;
+@use "../abstracts/toolkit" as *;
 
 .swiper {
     .swiper-wrapper {
@@ -52,6 +53,7 @@
                     transform: rotate(90deg) translateX(16px);
                 }
             }
+
             .swiper-link {
                 text-align: center;
                 margin-top: 12px;
@@ -79,6 +81,7 @@
             border-left: 260px solid $hover-dark;
             border-bottom: 90px solid $hover-dark;
             border-right: 95px solid transparent;
+            // 滑入動畫
             opacity: 0;
             transform: rotate(-40deg) translate(-300px, -150px);
             transition: 0.4s 0.2s;
@@ -94,12 +97,13 @@
             width: 0;
             height: 0;
             @include absolute(0, 0, 0, 0);
-            opacity: 0;
             margin: auto;
             border-top: 3px solid $green;
             border-left: 700px solid $hover-dark;
             border-bottom: 150px solid $hover-dark;
             border-right: 150px solid transparent;
+            // 滑入動畫
+            opacity: 0;
             transform: rotate(140deg) translate(-400px, 180px);
             transition: all 0.4s 0.2s;
         }

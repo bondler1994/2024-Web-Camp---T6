@@ -1,14 +1,19 @@
-@use "../abstracts/mixin" as *;
-@use "../abstracts/variables" as *;
+@use "../abstracts/url" as *;
+@use "../abstracts/color" as *;
+@use "../abstracts/spacing" as *;
+@use "../abstracts/breakpoint" as *;
+@use "../abstracts/toolkit" as *;
 
 header {
-    background-image: $white-wood;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    background-image: $white-bg-img;
     text-align: center;
     box-shadow: 0 1px 2px $dark-gray;
 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+    justify-content: center;
     @include desktop {
         padding: $basic-spacing;
         justify-content: space-between;
@@ -28,34 +33,36 @@ header {
         border: none;
         background-color: transparent;
 
+        display: block;
         @include desktop {
             display: none;
         }
     }
 
     .social-media {
-        flex-basis: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         gap: 10px;
+
+        justify-content: center;
+        flex-basis: 100%;
+        @include desktop {
+            // display: flex用bootstrap class避免被collapse蓋過
+            justify-content: end;
+            flex-basis: auto;
+        }
 
         // 避免collapse動畫有頓點
         &::before,
         &::after {
             content: "";
-            display: block;
             flex-basis: 100%;
             margin-top: 10px;
+
+            display: block;
             @include desktop {
                 display: none;
             }
-        }
-
-        @include desktop {
-            // display: flex用bootstrap class避免被collapse蓋過
-            justify-content: end;
-            flex-basis: auto;
         }
 
         & > a {
@@ -64,21 +71,24 @@ header {
             // bg sprite
             @for $i from 1 through 5 {
                 &:nth-child(#{$i}) {
-                    @include social-bg($i);
+                    @include social-bg($i, $social-icon);
                 }
             }
         }
 
         .telephone {
+            flex-basis: auto;
+            text-align: center;
+            @include desktop {
+                flex-basis: 100%;
+                text-align: end;
+            }
+
             a {
                 color: $black;
                 &:hover {
                     color: $green;
                 }
-            }
-            @include desktop {
-                flex-basis: 100%;
-                text-align: end;
             }
         }
     }

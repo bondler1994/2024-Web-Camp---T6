@@ -1,6 +1,143 @@
-@use "../abstracts/variables" as *;
+@use "../abstracts/color" as *;
+@use "../abstracts/toolkit" as *;
 
 %green-button {
     background-color: $green;
     color: $white;
+}
+
+.top-nav {
+    .left-nav {
+        .nav-item {
+            &:hover {
+                background-color: $gray;
+            }
+            &:not(:first-child) {
+                border-right: 1px solid $gray;
+            }
+        }
+
+        .nav-link {
+            padding: 20px 24px;
+
+            &.active {
+                @extend %green-button;
+            }
+        }
+    }
+
+    .search {
+        button {
+            border: none;
+            width: 20px;
+            height: 20px;
+            padding: 0;
+            background-color: transparent;
+            @include absolute(0, 25px, 0, auto);
+            margin: auto;
+            // 圖片上方有文字空隙
+            font-size: 0;
+        }
+    }
+
+    .dropdown-item {
+        padding: 20px 24px;
+
+        &:hover,
+        &:active {
+            @extend %green-button;
+        }
+    }
+
+    .dropdown-button {
+        &::after {
+            // 利用border做下箭頭
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-right: 2px solid $black;
+            border-bottom: 2px solid $black;
+            transform: rotate(45deg) translate(1px, -6px);
+        }
+    }
+}
+
+main {
+    .service {
+        .more-button {
+            background-color: $gray;
+            color: $black;
+            width: 64px;
+            height: 30px;
+            line-height: 30px;
+            margin-top: auto;
+
+            &:hover {
+                @extend %green-button;
+            }
+        }
+    }
+
+    .introduction {
+        .welcome {
+            .more-button {
+                color: $black;
+
+                &:hover {
+                    font-weight: 500;
+                    color: $green;
+                }
+            }
+        }
+    }
+
+    .news-content {
+        time {
+            @extend %green-button;
+            display: block;
+            padding: 5px 12px;
+            width: fit-content;
+        }
+
+        .more-button {
+            color: $black;
+
+            &:hover {
+                font-weight: 500;
+                color: $green;
+            }
+        }
+    }
+}
+
+footer {
+    .contact {
+        form {
+            .form-button {
+                margin-top: 18px;
+                button {
+                    color: $white;
+                    border: none;
+                    padding: 8px 12px;
+                }
+
+                button[type="reset"] {
+                    background-color: $black;
+
+                    &:hover {
+                        background-color: lighten($black, 30%);
+                    }
+                }
+
+                button[type="submit"] {
+                    @extend %green-button;
+
+                    &:hover {
+                        background-color: darken($green, 5%);
+                    }
+                }
+            }
+        }
+    }
 }
