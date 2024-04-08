@@ -1,0 +1,13 @@
+@use "../utilities/breakpoint" as *;
+
+%title {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature {
+    h2 {
+        @extend %title;
+    }
+}

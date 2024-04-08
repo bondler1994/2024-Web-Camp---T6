@@ -57,11 +57,8 @@
 
     &:hover {
         background-color: $darkGary;
+        opacity: .9;
         color: $white;
-
-        @include desktop {
-            opacity: .9;
-        }
     }
 }
 
@@ -82,10 +79,9 @@
 }
 
 //desktop斷點要移動card位置
-.introduce {
+.service_introduce {
     @include desktop {
         position: relative;
-        top: -15px;
+        top: -20px;
     }
-
 }
