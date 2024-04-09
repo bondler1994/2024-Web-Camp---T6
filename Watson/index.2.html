@@ -15,12 +15,7 @@
             rel="stylesheet"
         />
         <!-- fontawesome -->
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-            crossorigin="anonymous"
-        />
+        <script src="https://kit.fontawesome.com/40f48d316d.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="container">
@@ -36,13 +31,20 @@
                             <img src="./images/logo.png" alt="logo" />
                         </a>
                     </div>
-                    <div class="header__right">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href="tel:+1 (777) 784-25-43">Call Us Now: +1 (777) 784-25-43</a>
+                    <div class="icon">
+                        <div class="icon__alpha">
+                            <a href="##"></a>
+                            <a href="##"></a>
+                            <a href="##"></a>
+                            <a href="##"></a>
+                            <a href="##"></a>
+                        </div>
+                        <a class="tel" href="tel:+1 (777) 784-25-43">Call Us Now: +1 (777) 784-25-43</a>
+                    </div>
+                    <div class="phone">
+                        <a href="##">
+                            <i class="fa-solid fa-phone-flip"></i>
+                        </a>
                     </div>
                 </h1>
                 <nav>
@@ -86,6 +88,7 @@
                     </div>
                 </nav>
             </header>
+            <!-- main -->
             <main>
                 <!-- carouesl -->
                 <section>
@@ -153,6 +156,7 @@
                     </div>
                     <!-- main__body -->
                     <div class="main__body">
+                        <!-- welcome -->
                         <figure>
                             <div class="figure__header">
                                 <h2>welcome</h2>
@@ -160,19 +164,139 @@
                             <div class="figure__body">
                                 <img src="./images/welcome.jpg" alt="welcome" />
                             </div>
-                            <div class="figure__footer">
+                            <figcaption>
                                 <p>
                                     Curabitur velit nisl, porttitor viverra molestie quis, lacinia eget purus. Suspendisse ipsum massa, rutrum in
                                     hendrerit malesuada, fermentum id erat...<a class="more-link" href="##">More</a>
                                 </p>
-                            </div>
+                            </figcaption>
                         </figure>
+                        <!-- WHY CHOOSE US? -->
+                        <hgroup>
+                            <h2>WHY CHOOSE US?</h2>
+                            <div class="hgroup__alpha">
+                                <div class="symbol"><i class="fas fa-chevron-right"></i></div>
+                                <p>Etiam ruturm venenatis dui, non</p>
+                            </div>
+                            <div class="hgroup__beta">
+                                <div class="symbol"><i class="fas fa-chevron-right"></i></div>
+                                <p>Etiam ruturm venenatis dui, non</p>
+                            </div>
+                            <div class="hgroup__gamma">
+                                <div class="symbol"><i class="fas fa-chevron-right"></i></div>
+                                <p>Etiam ruturm venenatis dui, non</p>
+                            </div>
+                            <div class="hgroup__delta">
+                                <div class="symbol"><i class="fas fa-chevron-right"></i></div>
+                                <p>Etiam ruturm venenatis dui, non</p>
+                            </div>
+                        </hgroup>
+                        <!-- NEWS & EVENTS -->
+                        <div>
+                            <h2>NEWS & EVENTS</h2>
+                            <div class="news__top">
+                                <img src="" alt="" />
+                                <div>
+                                    <p class="ellipsis">
+                                        Aliquam ac diam in lorem vulputate auctor. Aliquam rhoncus nunc et justo imperdiet blandit ..
+                                    </p>
+                                    <a class="more-link" href="##">More</a>
+                                </div>
+                            </div>
+                            <div class="news__bottom">
+                                <img src="" alt="" />
+                                <div>
+                                    <p class="ellipsis">
+                                        Sed auctor laoreet augue, id pulvinar lacus mattis non. In hac habitasse platea dictumst. Proin et lorem
+                                    </p>
+                                    <a class="more-link" href="##">More</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- main__footer -->
-                    <div class="main__footer"></div>
+                    <hr />
+                    <div class="main__footer">
+                        <div class="footer__header">
+                            <h2>FEATURED WORKS</h2>
+                        </div>
+                        <div class="footer__body"></div>
+                    </div>
                 </section>
             </main>
-            <footer></footer>
+            <!-- footer -->
+            <footer>
+                <div class="footer__header">
+                    <!-- footer__alpha -->
+                    <div class="footer__alpha">
+                        <h3>latest tweets</h3>
+                        <p>loading tweets...</p>
+                    </div>
+                    <!-- footer__beta -->
+                    <div class="footer__beta">
+                        <h3>TESTIMONIALS</h3>
+                        <div>
+                            <p></p>
+                            <div class="chatbox"></div>
+                        </div>
+                        <div class="reviewer">
+                            <img src="./images/Stephen.jpg" alt="Stephen" />
+                            <div class="reviewer_info">
+                                <p>Stephen Bingham</p>
+                                <a href="##"><i>demolink.org</i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- footer__gamma -->
+                    <div class="footer__gamma">
+                        <h3>GET IN TOUCH!</h3>
+                        <form>
+                            <div class="form__header">
+                                <input type="text" placeholder="Name" />
+                                <input type="email" placeholder="email" />
+                                <textarea name="" id="" cols="30" rows="10" type="text" placeholder="Massage"> </textarea>
+                            </div>
+                            <div class="form__body">
+                                <button type="reset" class="clear px-2 py-1">CLEAR FORM</button>
+                                <button type="submit" class="send px-2 py-1">SEND!</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- footer__delta -->
+                    <div class="footer__delta">
+                        <h3>FLIKR</h3>
+                        <div class="grid">
+                            <img src="./images/f1.jpg" alt="flickr" />
+                            <img src="./images/f2.jpg" alt="flickr" />
+                            <img src="./images/f3.jpg" alt="flickr" />
+                            <img src="./images/f4.jpg" alt="flickr" />
+                            <img src="./images/f5.jpg" alt="flickr" />
+                            <img src="./images/f6.jpg" alt="flickr" />
+                            <img src="./images/f7.jpg" alt="flickr" />
+                            <img src="./images/f8.jpg" alt="flickr" />
+                            <img src="./images/f9.jpg" alt="flickr" />
+                            <img src="./images/f10.jpg" alt="flickr" />
+                            <img src="./images/f11.jpg" alt="flickr" />
+                            <img src="./images/f12.jpg" alt="flickr" />
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__footer">
+                    <div class="infor">
+                        <div class="infor__left">
+                            <p class="copyright">BUSINESS PLANET &copy 2020 | <a href="##">Private Policy</a></p>
+                        </div>
+                        <div class="infor__right">
+                            <a href="##">HOME</a>
+                            <a href="##">ABOUT</a>
+                            <a href="##">FEATURES</a>
+                            <a href="##">PORTFOLIO</a>
+                            <a href="##">BLOG</a>
+                            <a href="##">CONTACTS</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </body>
 </html>

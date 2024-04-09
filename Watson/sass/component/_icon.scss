@@ -1,0 +1,54 @@
+// spirit sitting
+@use "../base/breakpoint" as *;
+@use "../base/font" as *;
+
+$icon-img: url(../images/social.png);
+
+@mixin icon($x, $y){
+    background: {
+        position: $x $y;
+    }
+    &:hover {
+        background-position: $x 100%;
+    }
+}
+
+// nav icon
+.icon {
+
+    >a{
+        font-size: $font16;
+    }
+    display: none;
+    text-align: end;
+
+    @include md {
+        display: inline-block;
+    }
+
+    &__alpha > a{
+        display: inline-block;
+        background-image: $icon-img;
+        width: 27px;
+        height: 27px;
+        &:nth-child(1){
+            @include icon (0 ,0)
+        }
+        &:nth-child(2){
+            @include icon (25% ,0)
+        }
+        &:nth-child(3){
+            @include icon (50% ,0)
+        }
+        &:nth-child(4){
+            @include icon (75% ,0)
+        }
+        &:nth-child(5){
+            @include icon (100% ,0)
+        }
+
+        
+    }
+}
+
+

@@ -1,34 +1,131 @@
-nav a, nav button {
-  padding: 20px;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: url(../images/bg.jpg);
+}
+body {
+  margin: 0;
+  min-width: 1000px;
 }
 
 * {
   outline: 1px red solid;
+  font-family: "Open Sans", sans-serif;
 }
 
-body {
-  background: url(../images/bg.jpg);
+section,
+p,
+ol,
+ul,
+li,
+a,
+h1,
+button,
+input,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  list-style: none;
 }
-body::before, body::after {
-  background-color: #1C1C1C;
-  width: 100%;
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-}
-body::before {
-  height: 100px;
-  top: 0;
-}
-body::after {
-  bottom: 0;
-  height: 230px;
+
+a {
+  color: black;
+  display: flex;
 }
 
 .container {
   margin: 0 auto;
   width: 1250px;
+}
+
+header {
+  margin-top: 10px;
+}
+header h1 {
+  padding: 33.7px;
+  background: url(../images/subbg.gif);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 .hamberger,
+header h1 .phone {
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  header h1 .hamberger,
+  header h1 .phone {
+    display: none;
+  }
+}
+header nav {
+  display: flex;
+  margin-top: 30px;
+  text-transform: uppercase;
+  justify-content: space-between;
+}
+header nav ul, header nav a {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+header nav a {
+  padding: 20px;
+}
+header nav a > i {
+  margin-left: 10px;
+}
+
+.icon {
+  display: none;
+  text-align: end;
+}
+.icon > a {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .icon {
+    display: inline-block;
+  }
+}
+.icon__alpha > a {
+  display: inline-block;
+  background-image: url(../images/social.png);
+  width: 27px;
+  height: 27px;
+}
+.icon__alpha > a:nth-child(1) {
+  background-position: 0 0;
+}
+.icon__alpha > a:nth-child(1):hover {
+  background-position: 0 100%;
+}
+.icon__alpha > a:nth-child(2) {
+  background-position: 25% 0;
+}
+.icon__alpha > a:nth-child(2):hover {
+  background-position: 25% 100%;
+}
+.icon__alpha > a:nth-child(3) {
+  background-position: 50% 0;
+}
+.icon__alpha > a:nth-child(3):hover {
+  background-position: 50% 100%;
+}
+.icon__alpha > a:nth-child(4) {
+  background-position: 75% 0;
+}
+.icon__alpha > a:nth-child(4):hover {
+  background-position: 75% 100%;
+}
+.icon__alpha > a:nth-child(5) {
+  background-position: 100% 0;
+}
+.icon__alpha > a:nth-child(5):hover {
+  background-position: 100% 100%;
 }
 
 /*# sourceMappingURL=sass.css.map */

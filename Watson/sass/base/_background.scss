@@ -1,0 +1,36 @@
+@use "../base/color" as b;
+
+@mixin nigger-line($bh,$ah){
+    &::before,
+    &::after{
+        background-color: b.$black;
+        width: 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -1;
+    }    
+    &::before{
+        height: $bh;
+        top: 0;
+    }
+    &::after{
+        bottom: 0;
+        height: $ah;
+    }
+
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background:url(../images/bg.jpg);
+    // @include nigger-line(100px,230px);
+
+    & {
+        margin: 0;
+        min-width: 1000px;
+    }
+}

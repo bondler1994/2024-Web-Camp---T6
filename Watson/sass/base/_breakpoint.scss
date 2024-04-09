@@ -1,0 +1,27 @@
+$media-mobile: 576px;
+$media-ipad: 768px;
+$mddia-desktop: 992px;
+
+@mixin sm {
+    @media (min-width: $media-mobile) {
+        @content
+    }
+};
+
+@mixin md {
+    @media (min-width: $media-ipad) {
+        @content
+    }
+};
+
+@mixin lg {
+    @media (min-width: $media-desktop) {
+        @content
+    }
+};
+
+@mixin xl {
+    @media (min-width: $media-extra){
+        @content
+    }
+}

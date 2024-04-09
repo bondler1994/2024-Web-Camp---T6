@@ -1,36 +1,30 @@
-@use "../base/color" as b;
+@use "../base/font" as *;
 
 * {
     outline: 1px red solid;
+    font-family: $fontOpen;
 }
 
+section,
+p,
+ol,
+ul,
+li,
+a,
+h1,
+button,
+input,
+li {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    list-style: none;
+};
 
-
-@mixin nigger-line($bh,$ah){
-    &::before,
-    &::after{
-        background-color: b.$black;
-        width: 100%;
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: -1;
-    }    
-    &::before{
-        height: $bh;
-        top: 0;
-    }
-    &::after{
-        bottom: 0;
-        height: $ah;
-    }
-
-
-}
-
-body {
-    background:url(../images/bg.jpg);
-    @include nigger-line(100px,230px);
+a{
+    color: black;
+    display: flex;
 }
 
 
