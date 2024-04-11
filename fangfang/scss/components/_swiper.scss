@@ -1,4 +1,6 @@
 @use "../utilities/breakpoint" as *;
+@use "../utilities/color" as *;
+@use "../utilities/flex" as *;
 
 %title {
     text-transform: uppercase;
@@ -6,8 +8,154 @@
     margin-bottom: 1rem;
 }
 
+%swiperArrow {
+    color: $darkGary;
+
+    font: {
+        size: 1.25rem;
+        weight: 700;
+    }
+
+    &:hover {
+        color: $green;
+    }
+}
+
+//swiper prev&next按鈕
+@mixin swiper_button ($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    left: auto;
+    bottom: auto;
+    margin-top: 0;
+    width: auto;
+    height: auto;
+}
+
 .feature {
+    padding: 2rem 1.5rem 3rem;
+    margin-bottom: 5rem;
+
     h2 {
         @extend %title;
+    }
+
+    .swiper-button-prev {
+        @include swiper_button(5px, 30px);
+
+        &::after {
+            @extend %swiperArrow;
+        }
+    }
+
+    .swiper-button-next {
+        @include swiper_button(5px, 0px);
+
+        &::after {
+            @extend %swiperArrow;
+        }
+    }
+
+    .swiper-slide {
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            .swiper-content {
+                opacity: 1;
+                transform: rotate(-40deg) translate(-10%, -45%);
+                transition: all 0.2s 0.3s;
+                z-index: 2;
+            }
+
+            // .swiper-slide::before {
+            //     opacity: .5;
+            // }
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 200%;
+            // opacity: 0;
+            background: $dark;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(50deg) translate(-300%, -30%);
+            z-index: 1;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 60%;
+            height: 200%;
+            opacity: 0;
+            background: $dark;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-right: 3px solid $green;
+            transform: rotate(50deg) translate(120%, -30%);
+            z-index: 1;
+        }
+
+        &:hover::before {
+            opacity: .7;
+            transform: rotate(50deg) translate(-150%, -30%);
+            transition: all 0.3s 0.3s;
+        }
+
+        &:hover::after {
+            opacity: .7;
+            transform: rotate(50deg) translate(-5%, -30%);
+            transition: all 0.3s 0.3s;
+        }
+
+
+
+        .swiper-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: rotate(0deg) translate(-50%, -50%);
+            opacity: 0;
+
+            p {
+                color: $white;
+                margin-bottom: 1rem;
+                white-space: nowrap;
+
+                //裝飾線
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 1px;
+                    height: 200%;
+                    background-color: $white;
+                    top: -15px;
+                    bottom: 0px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    transform: rotate(-90deg);
+                }
+            }
+
+            .swiper-icon {
+                @include flexBox(row);
+                @include flexAlign(space-between, center);
+
+                a {
+                    &:hover {
+                        scale: 1.05;
+                    }
+                }
+            }
+        }
     }
 }

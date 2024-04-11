@@ -8,7 +8,7 @@ body {
     background: linear-gradient($dark 0 75px, transparent 75px 91%, $dark 91% 100%), $body-bg;
 
     @include tablet {
-        background: linear-gradient($dark 0 4%, transparent 4% 91%, $dark 91% 100%), $body-bg;
+        background: linear-gradient($dark 0 4%, transparent 4% 95%, $dark 95% 100%), $body-bg;
         padding: 0 6%;
     }
 }

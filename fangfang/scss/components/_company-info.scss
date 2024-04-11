@@ -100,7 +100,7 @@
 
 //news&events
 .events {
-    padding: 1rem 0;
+    // padding: 1rem 0;
 
     @include desktop {
         padding: 0;
@@ -109,6 +109,14 @@
     .news-list {
         >div:first-child {
             margin-bottom: 1rem;
+
+            @include mobile {
+                margin-bottom: 0;
+            }
+
+            @include desktop {
+                margin-bottom: 1rem;
+            }
         }
     }
 

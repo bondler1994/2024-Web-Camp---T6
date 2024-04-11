@@ -30,7 +30,7 @@ body {
 }
 @media (min-width: 768px) {
   body {
-    background: linear-gradient(#1D1D1D 0 4%, transparent 4% 91%, #1D1D1D 91% 100%), url(../images/bg.jpg);
+    background: linear-gradient(#1D1D1D 0 4%, transparent 4% 95%, #1D1D1D 95% 100%), url(../images/bg.jpg);
     padding: 0 6%;
   }
 }
@@ -55,6 +55,10 @@ header {
 
 main {
   background: url("../images/subbg.gif");
+}
+
+footer {
+  background-image: url(../images/subbg.gif);
 }
 
 h1 a {
@@ -381,9 +385,6 @@ h1 img {
   margin-bottom: 1rem;
 }
 
-.events {
-  padding: 1rem 0;
-}
 @media (min-width: 992px) {
   .events {
     padding: 0;
@@ -391,6 +392,16 @@ h1 img {
 }
 .events .news-list > div:first-child {
   margin-bottom: 1rem;
+}
+@media (min-width: 576px) {
+  .events .news-list > div:first-child {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 992px) {
+  .events .news-list > div:first-child {
+    margin-bottom: 1rem;
+  }
 }
 .events .news-item {
   display: flex;
@@ -412,6 +423,121 @@ h1 img {
   text-transform: uppercase;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.feature .swiper-button-next::after, .feature .swiper-button-prev::after {
+  color: #666666;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.feature .swiper-button-next:hover::after, .feature .swiper-button-prev:hover::after {
+  color: #80B600;
+}
+
+.feature {
+  padding: 2rem 1.5rem 3rem;
+  margin-bottom: 5rem;
+}
+.feature .swiper-button-prev {
+  position: absolute;
+  top: 5px;
+  right: 30px;
+  left: auto;
+  bottom: auto;
+  margin-top: 0;
+  width: auto;
+  height: auto;
+}
+.feature .swiper-button-next {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  left: auto;
+  bottom: auto;
+  margin-top: 0;
+  width: auto;
+  height: auto;
+}
+.feature .swiper-slide {
+  position: relative;
+  overflow: hidden;
+}
+.feature .swiper-slide:hover .swiper-content {
+  opacity: 1;
+  transform: rotate(-40deg) translate(-10%, -45%);
+  transition: all 0.2s 0.3s;
+  z-index: 2;
+}
+.feature .swiper-slide::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 200%;
+  background: #1D1D1D;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(50deg) translate(-300%, -30%);
+  z-index: 1;
+}
+.feature .swiper-slide::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 200%;
+  opacity: 0;
+  background: #1D1D1D;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-right: 3px solid #80B600;
+  transform: rotate(50deg) translate(120%, -30%);
+  z-index: 1;
+}
+.feature .swiper-slide:hover::before {
+  opacity: 0.7;
+  transform: rotate(50deg) translate(-150%, -30%);
+  transition: all 0.3s 0.3s;
+}
+.feature .swiper-slide:hover::after {
+  opacity: 0.7;
+  transform: rotate(50deg) translate(-5%, -30%);
+  transition: all 0.3s 0.3s;
+}
+.feature .swiper-slide .swiper-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(0deg) translate(-50%, -50%);
+  opacity: 0;
+}
+.feature .swiper-slide .swiper-content p {
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+}
+.feature .swiper-slide .swiper-content p::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 200%;
+  background-color: #FFFFFF;
+  top: -15px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: rotate(-90deg);
+}
+.feature .swiper-slide .swiper-content .swiper-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.feature .swiper-slide .swiper-content .swiper-icon a:hover {
+  scale: 1.05;
 }
 
 .navbar {
