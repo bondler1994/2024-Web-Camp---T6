@@ -1,5 +1,108 @@
 @use "../utilities/background" as *;
+@use "../utilities/color" as *;
+@use "../utilities/flex" as *;
+
+%formSet {
+    border: 1px solid $gray;
+    border-radius: 3px;
+    background-color: $lightGray;
+    width: 100%;
+    padding: 0.5rem 0.25rem;
+
+    &:focus {
+        outline: 2px solid $green;
+    }
+}
+
+%formButton {
+    border: none;
+    text-transform: uppercase;
+    color: $white;
+    padding: 0.5rem 1rem;
+}
 
 footer {
     background-image: $sub-bg;
+
+    h3 {
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+
+        font: {
+            size: 1.25rem;
+            weight: 500;
+        }
+    }
+
+    //對話框＆man
+    .testimonials {
+        .dialog {
+            padding: 1.25rem 1rem 1.5rem 1.75rem;
+            background-color: $silver;
+            border: 1px solid $gray;
+            border-radius: 3px;
+            line-height: 1.2;
+            color: $dark;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-width: 10px 15px 10px 15px;
+                border-style: solid;
+                border-color: $silver transparent transparent $silver;
+                top: 99%;
+                left: 0;
+                filter: drop-shadow(-1px 2px 0px $gray);
+            }
+        }
+
+        .men-info {
+            @include flexBox(row);
+            @include flexAlign(flex-start, center);
+            margin-top: 40px;
+            gap: 1rem;
+
+            .men-text {
+                >p {
+                    text-transform: capitalize;
+                }
+
+                >a {
+                    color: $green;
+                    font-weight: 500;
+
+                    &:hover {
+                        font-weight: 600
+                    }
+                }
+            }
+        }
+    }
+
+    //表單
+    .contact {
+        form {
+            input {
+                @extend %formSet;
+                margin-bottom: 10px;
+            }
+
+            textarea {
+                @extend %formSet;
+            }
+
+            .form-button {
+                button {
+                    @extend %formButton;
+
+                }
+
+            }
+        }
+
+    }
 }

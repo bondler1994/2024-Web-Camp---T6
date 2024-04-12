@@ -17,6 +17,7 @@
         align: center;
     }
 
+    //h5文字內容長度不同會換行
     height: 38px;
 }
 
@@ -56,9 +57,15 @@
     }
 
     &:hover {
-        background-color: $darkGary;
+        background-color: $darkGray;
         opacity: .9;
         color: $white;
+        transition: all 0.7s;
+
+        //在desktop上移
+        @include desktop {
+            transform: translateY(-3%);
+        }
     }
 }
 

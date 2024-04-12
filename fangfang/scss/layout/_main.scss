@@ -1,5 +1,7 @@
-$main-bg: url("../images/subbg.gif");
+@use "../utilities/color" as *;
+@use "../utilities/background" as *;
 
 main {
-    background: $main-bg;
+    background: $sub-bg;
+    box-shadow: 0 0px 2px $darkGray;
 }
