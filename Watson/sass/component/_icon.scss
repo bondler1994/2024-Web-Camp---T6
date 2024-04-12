@@ -1,6 +1,11 @@
 // spirit sitting
 @use "../base/breakpoint" as *;
 @use "../base/font" as *;
+@use "../base/color" as *;
+
+
+
+// social
 
 $icon-img: url(../images/social.png);
 
@@ -13,7 +18,7 @@ $icon-img: url(../images/social.png);
     }
 }
 
-// nav icon
+
 .icon {
 
     >a{
@@ -22,7 +27,7 @@ $icon-img: url(../images/social.png);
     display: none;
     text-align: end;
 
-    @include md {
+    @include lg {
         display: inline-block;
     }
 
@@ -49,6 +54,20 @@ $icon-img: url(../images/social.png);
 
         
     }
+
+    .tel {
+        &:hover {
+            color: $green;
+            font-size: $font18;
+        }
+    }
+}
+
+
+// hambergur
+
+.hamberger:hover nav ul {
+    display: flex;
 }
 
 

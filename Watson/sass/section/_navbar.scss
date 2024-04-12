@@ -1,5 +1,6 @@
 @use "../base/breakpoint" as *;
 @use "../base/font" as *;
+@use "../base/color" as *;
 
 @mixin object-fit {
     width: 100%;
@@ -21,33 +22,124 @@ header {
 
         .hamberger ,
         .phone{
-            @include md {
+            @include lg {
                 display: none;
             }
             display: inline-block;
 
         }
 
+        img {
+            display: none;
+            @include sm {
+                display: inline-block;
+            }
+        }
+
+        .header__left a {
+
+            background:url(../images/logo.png) no-repeat;
+            width: 56px;
+            height: 52px;
+
+            @include sm {
+                width: auto;
+                height: auto;
+            }
+
+        }
+
     }
 
     nav {
+
+        @include xl {
+            flex-direction: row;
+        }
+        
         display: flex;
+
+
+        flex-direction: column;
+        // display: none;
         margin-top: 30px;
         text-transform: $upper;
         justify-content: space-between;
 
-        ul,a {
-            justify-content: center;
-            align-items: center;
-            display: flex;
+
+        ul {
+            @include lg {
+                display: flex;
+            }
+            display: none;
+            background-color: white;
+            width: 100%;
+
+            .active, li:hover {
+                color: white;
+                background-color: $green;
+                a:hover{
+                    color: white;
+                }
+
+                
+            }
+
+            li {
+                min-width: 0;
+                flex: 1 1 auto;
+                @include xl {
+                    flex: 0 0 auto;
+                }
+
+            
+            }
+
         }
 
+        ul,a {
+            align-items: center;
+            // display: flex;
+        }
+
+
         a{
+            border-right: 1px solid $lightgray;
+            justify-content: center;
+            font-size: $font16;
+            padding: 15px 25px;
             >i {
                 margin-left: 10px;
             }
-            padding: 20px;
+
+
         }
+
+        .dropdown {
+            z-index: 2;
+            position: relative;
+            display: inline-block;
+        }
+        .item{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+
+            a:hover{
+                background-color: $green;
+            }
+        }
+
+
+        .dropdown:hover .item {
+            display: block;
+          }
+
+
+
     }
 
 

@@ -4,6 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
         <!-- css link -->
         <link rel="stylesheet" href="./sass/sass.css" />
         <link rel="stylesheet" href="./css/Style1.css" />
@@ -16,11 +19,34 @@
         />
         <!-- fontawesome -->
         <script src="https://kit.fontawesome.com/40f48d316d.js" crossorigin="anonymous"></script>
+
+        <style>
+            .swiper {
+                width: 100%;
+                height: 100%;
+            }
+
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .swiper-slide img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
-            <header>
-                <h1>
+            <header class="grid__top">
+                <h1 class="">
                     <div class="hamberger">
                         <a href="##">
                             <i class="fas fa-bars"></i>
@@ -47,33 +73,33 @@
                         </a>
                     </div>
                 </h1>
-                <nav>
+                <nav class="">
                     <ul>
                         <li>
-                            <a href="##">home</a>
+                            <a href="##" class="active">home</a>
                         </li>
                         <li>
                             <a href="##">about</a>
                         </li>
-                        <li>
-                            <a href="##" class="nav__features">features<i class="fas fa-chevron-down"></i></a>
-                            <div class="features__item">
+                        <li class="dropdown">
+                            <a href="##" class="drop nav__features">features<i class="fas fa-chevron-down"></i></a>
+                            <div class="item">
                                 <a href="##">you</a>
                                 <a href="##">are</a>
                                 <a href="##">loser</a>
                             </div>
                         </li>
-                        <li>
-                            <a href="##" class="nav__portfolio">portfolio<i class="fas fa-chevron-down"></i></a>
-                            <div class="portfolio__item">
+                        <li class="dropdown">
+                            <a href="##" class="drop nav__portfolio">portfolio<i class="fas fa-chevron-down"></i></a>
+                            <div class="item">
                                 <a href="##">you</a>
                                 <a href="##">are</a>
                                 <a href="##">loser</a>
                             </div>
                         </li>
-                        <li>
-                            <a href="##" class="nav__blog">blog<i class="fas fa-chevron-down"></i></a>
-                            <div class="blog__item">
+                        <li class="dropdown">
+                            <a href="##" class="drop nav__blog">blog<i class="fas fa-chevron-down"></i></a>
+                            <div class="item">
                                 <a href="##">you</a>
                                 <a href="##">are</a>
                                 <a href="##">loser</a>
@@ -83,8 +109,8 @@
                             <a href="##">contacts</a>
                         </li>
                     </ul>
-                    <div class="seaech">
-                        <input type="search" placeholder="Search the Site..." />
+                    <div class="search">
+                        <input type="search" placeholder="  Search the Site..." />
                     </div>
                 </nav>
             </header>
@@ -92,16 +118,34 @@
             <main>
                 <!-- carouesl -->
                 <section>
-                    <div class="carousel"></div>
+                    <div class="carousel">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./images/banner1.jpg" alt="" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/banner2.jpg" alt="" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/banner3.jpg" alt="" />
+                                </div>
+                                <!-- <div class="swiper-slide">Slide 4</div> -->
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
                 </section>
                 <!-- main__header -->
                 <section>
-                    <div class="main__header">
-                        <div class="card">
+                    <div class="main__header card">
+                        <div class="card__alpha">
                             <!-- alpha -->
                             <div class="card__header">GROWTH STRATEGY</div>
                             <div class="card__body">
-                                <img src="./images/growth strategies.png" alt="strategies" />
+                                <img src="./images/p1.png" alt="strategies" />
                                 <p class="">
                                     Vestibulum dignissim, dui ac hendrerit blandit, sapien orci dictum nibh, vel suscipit augue nibh in enim. Nullam
                                     dignissim euismodnunc at
@@ -112,10 +156,10 @@
                             </div>
                         </div>
                         <!-- beta -->
-                        <div class="card">
+                        <div class="card__beta">
                             <div class="card__header">PERFECT SUPPORT</div>
                             <div class="card__body">
-                                <img src="./images/growth strategies.png" alt="strategies" />
+                                <img src="./images/p2.png" alt="strategies" />
                                 <p class="content_text">
                                     Donec semper, dolor eu iaculis laoreet, erat diam interdum nisi, vel consequat leo meque in ante. Curabitur
                                     fringilla tristique nisl ut
@@ -126,10 +170,10 @@
                             </div>
                         </div>
                         <!-- gamma -->
-                        <div class="card">
+                        <div class="card__gamma">
                             <div class="card__header">PARTNERS PROGRAMS</div>
                             <div class="card__body">
-                                <img src="./images/growth strategies.png" alt="strategies" />
+                                <img src="./images/p3.png" alt="strategies" />
                                 <p class="content_text">
                                     Nunc pellentesque malesuada enim utdignissim. Etiam aliquam malesuada magna, vel scelerisque lectus pharetra quis.
                                     Cras
@@ -140,13 +184,12 @@
                             </div>
                         </div>
                         <!-- delta -->
-                        <div class="card">
+                        <div class="card__delta">
                             <div class="card__header">PREMIUM SERVICES</div>
                             <div class="card__body">
-                                <img src="./images/growth strategies.png" alt="strategies" />
+                                <img src="./images/p4.png" alt="strategies" />
                                 <p class="content_text">
                                     Duis molestie commodo sapien, non mollis diam consequat in. Nulla blandit viverra sodales. Donec sit amet diam
-                                    neque
                                 </p>
                             </div>
                             <div class="card__footer">
@@ -155,9 +198,9 @@
                         </div>
                     </div>
                     <!-- main__body -->
-                    <div class="main__body">
+                    <div class="news">
                         <!-- welcome -->
-                        <figure>
+                        <figure class="figure">
                             <div class="figure__header">
                                 <h2>welcome</h2>
                             </div>
@@ -167,60 +210,94 @@
                             <figcaption>
                                 <p>
                                     Curabitur velit nisl, porttitor viverra molestie quis, lacinia eget purus. Suspendisse ipsum massa, rutrum in
-                                    hendrerit malesuada, fermentum id erat...<a class="more-link" href="##">More</a>
+                                    hendrerit malesuada, fermentum id erat.
+                                    <span class="more-link" href="##">
+                                        &nbsp;...
+                                        <a href=""> More </a>
+                                    </span>
                                 </p>
                             </figcaption>
                         </figure>
                         <!-- WHY CHOOSE US? -->
-                        <hgroup>
+                        <hgroup class="hgroup">
                             <h2>WHY CHOOSE US?</h2>
-                            <div class="hgroup__alpha">
-                                <div class="symbol"><i class="fas fa-chevron-right"></i></div>
-                                <p>Etiam ruturm venenatis dui, non</p>
-                            </div>
-                            <div class="hgroup__beta">
-                                <div class="symbol"><i class="fas fa-chevron-right"></i></div>
-                                <p>Etiam ruturm venenatis dui, non</p>
-                            </div>
-                            <div class="hgroup__gamma">
-                                <div class="symbol"><i class="fas fa-chevron-right"></i></div>
-                                <p>Etiam ruturm venenatis dui, non</p>
-                            </div>
-                            <div class="hgroup__delta">
-                                <div class="symbol"><i class="fas fa-chevron-right"></i></div>
-                                <p>Etiam ruturm venenatis dui, non</p>
+                            <div class="hypergroup">
+                                <div class="hgroup__alpha group">
+                                    <div class="symbol"><i class="fas fa-chevron-right"></i></div>
+                                    <p>Etiam ruturm venenatis dui, non</p>
+                                </div>
+                                <div class="hgroup__beta group">
+                                    <div class="symbol"><i class="fas fa-chevron-right"></i></div>
+                                    <p>Aliquam ac diam in lorem vulputate auctor.</p>
+                                </div>
+                                <div class="hgroup__gamma group">
+                                    <div class="symbol"><i class="fas fa-chevron-right"></i></div>
+                                    <p>Vestibulum vitae urna quis eros convallis</p>
+                                </div>
+                                <div class="hgroup__delta group">
+                                    <div class="symbol"><i class="fas fa-chevron-right"></i></div>
+                                    <p>Sed magna magna, congue</p>
+                                </div>
                             </div>
                         </hgroup>
                         <!-- NEWS & EVENTS -->
-                        <div>
+                        <div class="event">
                             <h2>NEWS & EVENTS</h2>
-                            <div class="news__top">
-                                <img src="" alt="" />
-                                <div>
-                                    <p class="ellipsis">
-                                        Aliquam ac diam in lorem vulputate auctor. Aliquam rhoncus nunc et justo imperdiet blandit ..
-                                    </p>
-                                    <a class="more-link" href="##">More</a>
+                            <div class="event__both">
+                                <div class="event__top">
+                                    <img src="./images/news1.jpg" alt="news" />
+                                    <div>
+                                        <p class="ellipsis">
+                                            Aliquam ac diam in lorem vulputate auctor. Aliquam rhoncus nunc et justo imperdiet blandit
+                                            <span class="more-link" href="##">
+                                                &nbsp;...
+                                                <a href="##">More</a>
+                                            </span>
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="news__bottom">
-                                <img src="" alt="" />
-                                <div>
-                                    <p class="ellipsis">
-                                        Sed auctor laoreet augue, id pulvinar lacus mattis non. In hac habitasse platea dictumst. Proin et lorem
-                                    </p>
-                                    <a class="more-link" href="##">More</a>
+                                <div class="event__bottom">
+                                    <img src="./images/news2.jpg" alt="news" />
+                                    <div>
+                                        <p class="ellipsis">
+                                            Sed auctor laoreet augue, id pulvinar lacus mattis non. In hac habitasse platea dictumst. Proin et lorem
+                                            <span class="more-link" href="##">
+                                                &nbsp;...
+                                                <a href="##">More</a>
+                                            </span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- main__footer -->
-                    <hr />
-                    <div class="main__footer">
-                        <div class="footer__header">
+                    <hr style="margin: 0" />
+                    <div class="Manipulation">
+                        <div class="swiper__header">
                             <h2>FEATURED WORKS</h2>
                         </div>
-                        <div class="footer__body"></div>
+                        <div class="swiper__body">
+                            <div #swiperRef="" class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./images/g1.jpg" alt="" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./images/g2.jpg" alt="" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./images/g3.jpg" alt="" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./images/g4.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
@@ -298,5 +375,18 @@
                 </div>
             </footer>
         </div>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                loop: true,
+            });
+        </script>
     </body>
 </html>

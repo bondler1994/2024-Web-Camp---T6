@@ -1,6 +1,7 @@
 $media-mobile: 576px;
 $media-ipad: 768px;
-$mddia-desktop: 992px;
+$media-desktop: 992px;
+$media-extra: 1250px;
 
 @mixin sm {
     @media (min-width: $media-mobile) {

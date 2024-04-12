@@ -1,0 +1,313 @@
+@use "../base/breakpoint" as *;
+@use "../component/grid" as *;
+@use "../base/color" as *;
+@use "../base/font" as *;
+
+
+%image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+%flex {
+    display: flex;
+}
+
+
+
+
+@mixin ellipsis ($clamp) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $clamp;
+    overflow: hidden;
+}
+
+@mixin span-dot {
+    background: url(../images/subbg.gif);
+    background-attachment: scroll;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    
+    a{
+        font-weight: bold;
+        &:hover {
+            color: $green;
+        }
+    }
+
+    @include xl{
+        display: none;
+    }
+}
+
+
+
+main {
+    .news {
+
+
+
+        @include md {
+            @include grid (2, 1fr, none, none, 30px, 30px);
+        }
+
+        @include xl {
+            @include grid (3, 1fr, none, none, 0, 30px);
+
+        }
+        // grid-template-areas: 
+        // "top middle"
+        // "below below";
+        
+        @include grid (1, 1fr, none, none, 30px, 30px);
+        padding: 40px;
+
+
+
+
+// .figure
+        .figure {
+
+            grid-column: 1 / 1;
+
+            @include md {
+                grid-column: 1 / 2;
+            }
+
+
+
+            // @include xl {
+            //     grid-area: auto;
+            // }
+            
+            // grid-area: top;
+
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            
+            &__body {
+                img{
+                    @extend %flex;
+                    @extend %image;
+                }
+            }
+
+            
+
+
+            figcaption {
+                min-width: 0;
+
+                position: relative;
+
+                p {
+                    @include ellipsis(1);
+                    font-size: $font16;
+    
+                    @include md {
+                        @include ellipsis(2)
+                    }
+    
+                    @include lg {
+                        @include ellipsis(3)
+                    }
+    
+                    @include xl {
+                        @include ellipsis(4)
+                    }
+    
+                    span{
+
+                        @include span-dot
+
+                    }
+
+                }
+            }
+            
+
+
+
+
+
+
+        }
+
+        h2 {
+            white-space: nowrap;
+            text-transform: $upper;
+        }
+
+// .hgroup
+
+        .hgroup {
+            min-width: 0;
+
+            grid-column: 1 / 1;
+
+            @include md {
+                grid-column: 2 / 3;
+
+            }
+
+
+
+            // @include xl {
+            //     grid-area: auto;
+            // }
+            
+            // grid-area: middle;
+
+
+            @extend %flex;
+            flex-direction: column;
+            gap: 30px 0;
+
+            .hypergroup {
+                @extend %flex;
+                flex-direction: column;
+                gap: 30px;
+
+                .group {
+                    @extend %flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+                
+                .symbol {
+                    flex: 0 0 auto;
+                    @extend %flex;
+                    position: relative;
+                    vertical-align: middle;
+                    width: 47px;
+                    height: 47px;
+                    background-color: $lightgray;
+                    color: white;
+                    border-radius: 50%;
+                }
+
+                i {
+                    position: absolute;
+                    right: 36%;
+                    bottom: 30%;
+                }
+
+                p {
+
+                    display: inline-block;
+                    font-size: $font16;
+                }
+            }
+        }
+    // .event
+        .event {
+
+
+            grid-column: 1 / 1;
+
+            @include md {
+                grid-column: 1 / 3;
+
+            }
+
+            @include xl {
+                grid-column: 3 / 4;
+            }
+
+
+            // @include xl {
+            //     grid-area: auto;
+            // }
+            
+            // grid-area: below;
+
+            min-width: 0;   
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            img {
+                flex: 0;
+                @extend %image
+            }
+
+            p {
+                font-size: $font16;
+
+                &::before{
+                    margin: 0 0 30px 0;
+                    text-align: center;
+                    color: white;
+                    content: "12.12.12";
+                    font-size: $font18;
+                    width: 90px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $green;
+                }
+            }
+
+            
+
+            
+            .ellipsis {
+
+
+
+                min-width: 0;
+                position: relative;
+                @include ellipsis(1);
+                font-size: $font16;
+
+                @include md {
+                    @include ellipsis(2);
+                }
+
+                @include lg {
+                    @include ellipsis(3);
+                }
+
+                @include xl {
+                    @include ellipsis(4);
+                }
+
+            }
+
+            span{
+                @include span-dot
+            }
+
+            &__top,
+            &__bottom {
+                gap: 30px;
+                @extend %flex;
+            }
+
+            a {
+                @extend %flex
+            }
+
+            &__both {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                @include lg {
+                    flex-direction: row;
+                }
+
+                @include xl {
+                    flex-direction: column;
+                }
+            }
+
+        }
+    }
+}

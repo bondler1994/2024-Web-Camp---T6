@@ -1,0 +1,23 @@
+
+
+@mixin grid ($cl, $cr, $rl, $rr, $gl, $gr){
+    display: grid;
+    grid-template-columns: repeat($cl, $cr);
+    grid-template-rows: repeat($rl, $rr);
+    gap: $gl $gr;
+
+}
+
+
+.grid {
+    @include grid (4, 1fr, 4, 1fr, 6px, 6px);
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: repeat(4, 1fr);
+    // gap: 6px 6px;
+
+
+    &__header{}
+    &__footer{}
+}
+

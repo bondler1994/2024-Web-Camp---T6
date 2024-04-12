@@ -1,0 +1,31 @@
+@use "../base/breakpoint" as *;
+
+nav {
+    .search {
+        background-color: white;
+        // display: flex;
+        padding: 10px 15px;
+        margin-left: 0;
+        // width: 100%;
+
+        @include xl {
+            margin-left: 10px;
+            width: 33%;
+    
+        }
+    }
+
+    input{
+        position: relative;
+        width: 100%;
+        min-width: 0;
+
+        background: url(../images/search.png) no-repeat;
+        background-position: 98% 50%;
+
+        @include xl {
+            background-position: 99% 50%;
+            
+        }
+    }
+}
