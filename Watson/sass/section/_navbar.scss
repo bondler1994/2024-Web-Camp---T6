@@ -1,6 +1,7 @@
 @use "../base/breakpoint" as *;
 @use "../base/font" as *;
 @use "../base/color" as *;
+@use "../component/swiper" as *;
 
 @mixin object-fit {
     width: 100%;
@@ -20,14 +21,6 @@ header {
         align-items: center;
         
 
-        .hamberger ,
-        .phone{
-            @include lg {
-                display: none;
-            }
-            display: inline-block;
-
-        }
 
         img {
             display: none;
@@ -51,7 +44,75 @@ header {
 
     }
 
+  
+
+
+    .hamburger {
+
+        #burger:checked + .ham {
+            display: block;
+        }
+    
+        .ham {
+            li a{
+                justify-content: center;
+                color: white;
+                padding: 10px;
+            }
+            text-transform: $upper;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 150px;
+            font-size: $font16;
+            display: none;
+            position: absolute;
+            z-index: 3;
+            // @include absolute(100px, 0, 0, 1px);
+            // transform:translateX(1px);
+            // transition: all 0.4s 0.3s;
+
+
+        }
+    }
+
+    .phone {
+        #phone:checked + .phone__icon {
+            display: block;
+        }
+        &__icon {
+
+            text-align: end;
+            padding: 10px;
+            position: absolute;
+            display: none;
+            font-size: $font16;
+            z-index: 3;
+            width: 250px;
+            background-color: rgba(0, 0, 0, 0.3);
+            transform: translateX(-220px);
+
+
+        }
+    }
+
+
+    .hamburger ,
+    .phone{
+        input {
+            display: none;
+        }
+        &:hover {
+            color: $green;
+        }
+        @include lg {
+            display: none;
+        }
+        display: inline-block;
+
+    }
+
+
     nav {
+
 
         @include xl {
             flex-direction: row;
@@ -59,12 +120,13 @@ header {
         
         display: flex;
 
-
         flex-direction: column;
         // display: none;
         margin-top: 30px;
         text-transform: $upper;
         justify-content: space-between;
+
+
 
 
         ul {
@@ -141,6 +203,8 @@ header {
 
 
     }
+
+  
 
 
 }

@@ -26,8 +26,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background:url(../images/bg.jpg);
-    // @include nigger-line(100px,230px);
+    background: linear-gradient(black 3%, transparent 3%, transparent 90%, black 90%), url(../images/bg.jpg);
+
 
     & {
         margin: 0;

@@ -19,6 +19,7 @@ $icon-img: url(../images/social.png);
 }
 
 
+
 .icon {
 
     >a{
@@ -40,16 +41,16 @@ $icon-img: url(../images/social.png);
             @include icon (0 ,0)
         }
         &:nth-child(2){
-            @include icon (25% ,0)
+            @include icon (-37.2px ,0)
         }
         &:nth-child(3){
-            @include icon (50% ,0)
+            @include icon (-37.2px * 2  ,0)
         }
         &:nth-child(4){
-            @include icon (75% ,0)
+            @include icon (-37.2px * 3 ,0)
         }
         &:nth-child(5){
-            @include icon (100% ,0)
+            @include icon (-37.5px * 4  ,0)
         }
 
         

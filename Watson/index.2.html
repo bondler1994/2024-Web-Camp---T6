@@ -47,10 +47,30 @@
         <div class="container">
             <header class="grid__top">
                 <h1 class="">
-                    <div class="hamberger">
-                        <a href="##">
-                            <i class="fas fa-bars"></i>
-                        </a>
+                    <div class="hamburger">
+                        <div class="hamburger__logo"></div>
+                        <label for="burger"><i class="fas fa-bars"></i></label>
+                        <input type="checkbox" id="burger" />
+                        <ul class="ham">
+                            <li>
+                                <a href="##" class="active">home</a>
+                            </li>
+                            <li>
+                                <a href="##">about</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="##" class="drop nav__features">features<i class="fas fa-chevron-down"></i></a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="##" class="drop nav__portfolio">portfolio<i class="fas fa-chevron-down"></i></a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="##" class="drop nav__blog">blog<i class="fas fa-chevron-down"></i></a>
+                            </li>
+                            <li>
+                                <a href="##">contacts</a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="header__left">
                         <a href="##">
@@ -68,13 +88,23 @@
                         <a class="tel" href="tel:+1 (777) 784-25-43">Call Us Now: +1 (777) 784-25-43</a>
                     </div>
                     <div class="phone">
-                        <a href="##">
-                            <i class="fa-solid fa-phone-flip"></i>
-                        </a>
+                        <div class="phone__logo"></div>
+                        <label for="phone"><i class="fa-solid fa-phone-flip"></i></label>
+                        <input type="checkbox" id="phone" />
+                        <div class="phone__icon">
+                            <div class="icon__alpha">
+                                <a href="##"></a>
+                                <a href="##"></a>
+                                <a href="##"></a>
+                                <a href="##"></a>
+                                <a href="##"></a>
+                            </div>
+                            <a class="tel" href="tel:+1 (777) 784-25-43">Call Us Now: +1 (777) 784-25-43</a>
+                        </div>
                     </div>
                 </h1>
                 <nav class="">
-                    <ul>
+                    <ul class="">
                         <li>
                             <a href="##" class="active">home</a>
                         </li>
@@ -120,7 +150,7 @@
                 <section>
                     <div class="carousel">
                         <!-- Swiper -->
-                        <div class="swiper mySwiper">
+                        <div class="swiper mycarousel">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <img src="./images/banner1.jpg" alt="" />
@@ -133,8 +163,10 @@
                                 </div>
                                 <!-- <div class="swiper-slide">Slide 4</div> -->
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                            <div class="carousel__button">
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -272,30 +304,186 @@
                         </div>
                     </div>
                     <!-- main__footer -->
-                    <hr style="margin: 0" />
+                    <div>
+                        <hr style="margin: 0 30px" />
+                    </div>
                     <div class="Manipulation">
                         <div class="swiper__header">
-                            <h2>FEATURED WORKS</h2>
+                            <h2>
+                                FEATURED WORKS
+                                <div class="swiper__button">
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </h2>
                         </div>
                         <div class="swiper__body">
                             <div #swiperRef="" class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
+                                        <div class="swiper-text">
+                                            <p>ECENAS ENIM</p>
+                                            <div class="swiper-link">
+                                                <div class="swiper-link-button lin">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g1"
+                                                        src="./images/icon1.png"
+                                                        alt="magnifier"
+                                                        class="w-100"
+                                                    />
+                                                </div>
+                                                <div class="swiper-link-button">
+                                                    <img src="./images/icon2.png" alt="swiper link" class="w-100" />
+                                                </div>
+                                            </div>
+                                        </div>
                                         <img src="./images/g1.jpg" alt="" />
                                     </div>
                                     <div class="swiper-slide">
+                                        <div class="swiper-text">
+                                            <p>ECENAS ENIM</p>
+                                            <div class="swiper-link">
+                                                <div class="swiper-link-button">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g1"
+                                                        src="./images/icon1.png"
+                                                        alt="magnifier"
+                                                        class="w-100"
+                                                    />
+                                                </div>
+                                                <div class="swiper-link-button">
+                                                    <img src="./images/icon2.png" alt="swiper link" class="w-100" />
+                                                </div>
+                                            </div>
+                                        </div>
                                         <img src="./images/g2.jpg" alt="" />
                                     </div>
                                     <div class="swiper-slide">
+                                        <div class="swiper-text">
+                                            <p>ECENAS ENIM</p>
+                                            <div class="swiper-link">
+                                                <div class="swiper-link-button">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g1"
+                                                        src="./images/icon1.png"
+                                                        alt="magnifier"
+                                                        class="w-100"
+                                                    />
+                                                </div>
+                                                <div class="swiper-link-button">
+                                                    <img src="./images/icon2.png" alt="swiper link" class="w-100" />
+                                                </div>
+                                            </div>
+                                        </div>
                                         <img src="./images/g3.jpg" alt="" />
                                     </div>
                                     <div class="swiper-slide">
+                                        <div class="swiper-text">
+                                            <p>ECENAS ENIM</p>
+                                            <div class="swiper-link">
+                                                <div class="swiper-link-button">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g1"
+                                                        src="./images/icon1.png"
+                                                        alt="magnifier"
+                                                        class="w-100"
+                                                    />
+                                                </div>
+                                                <div class="swiper-link-button">
+                                                    <img src="./images/icon2.png" alt="swiper link" class="w-100" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="./images/g4.jpg" alt="" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper-text">
+                                            <p>ECENAS ENIM</p>
+                                            <div class="swiper-link">
+                                                <div class="swiper-link-button">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g1"
+                                                        src="./images/icon1.png"
+                                                        alt="magnifier"
+                                                        class="w-100"
+                                                    />
+                                                </div>
+                                                <div class="swiper-link-button">
+                                                    <img src="./images/icon2.png" alt="swiper link" class="w-100" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="./images/g1.jpg" alt="" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper-text">
+                                            <p>ECENAS ENIM</p>
+                                            <div class="swiper-link">
+                                                <div class="swiper-link-button">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g1"
+                                                        src="./images/icon1.png"
+                                                        alt="magnifier"
+                                                        class="w-100"
+                                                    />
+                                                </div>
+                                                <div class="swiper-link-button">
+                                                    <img src="./images/icon2.png" alt="swiper link" class="w-100" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="./images/g2.jpg" alt="" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper-text">
+                                            <p>ECENAS ENIM</p>
+                                            <div class="swiper-link">
+                                                <div class="swiper-link-button">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g1"
+                                                        src="./images/icon1.png"
+                                                        alt="magnifier"
+                                                        class="w-100"
+                                                    />
+                                                </div>
+                                                <div class="swiper-link-button">
+                                                    <img src="./images/icon2.png" alt="swiper link" class="w-100" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="./images/g3.jpg" alt="" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper-text">
+                                            <p>ECENAS ENIM</p>
+                                            <div class="swiper-link">
+                                                <div class="swiper-link-button">
+                                                    <img
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#g1"
+                                                        src="./images/icon1.png"
+                                                        alt="magnifier"
+                                                        class="w-100"
+                                                    />
+                                                </div>
+                                                <div class="swiper-link-button">
+                                                    <img src="./images/icon2.png" alt="swiper link" class="w-100" />
+                                                </div>
+                                            </div>
+                                        </div>
                                         <img src="./images/g4.jpg" alt="" />
                                     </div>
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-pagination"></div>
+                                <!-- <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div> -->
+                                <!-- <div class="swiper-pagination"></div> -->
                             </div>
                         </div>
                     </div>
@@ -303,35 +491,46 @@
             </main>
             <!-- footer -->
             <footer>
-                <div class="footer__header">
+                <div class="community">
                     <!-- footer__alpha -->
-                    <div class="footer__alpha">
-                        <h3>latest tweets</h3>
-                        <p>loading tweets...</p>
+                    <div class="community__alpha">
+                        <div>
+                            <h3>latest tweets</h3>
+                        </div>
+                        <div>
+                            <p>loading tweets...</p>
+                        </div>
                     </div>
                     <!-- footer__beta -->
-                    <div class="footer__beta">
-                        <h3>TESTIMONIALS</h3>
-                        <div>
-                            <p></p>
-                            <div class="chatbox"></div>
-                        </div>
-                        <div class="reviewer">
-                            <img src="./images/Stephen.jpg" alt="Stephen" />
-                            <div class="reviewer_info">
-                                <p>Stephen Bingham</p>
-                                <a href="##"><i>demolink.org</i></a>
+                    <div class="community__beta">
+                        <div class="TESTIMONIALS">
+                            <h3>TESTIMONIALS</h3>
+                            <div class="TESTIMONIALS__body">
+                                <p>
+                                    "Sed dapibus molestie interdum. Fusce nec est ante, sit amet lacinia lorem. Maecenas nex eros ut mauris pulvinar
+                                    suscipit. Aliquam erat
+                                </p>
+                                <div class="chatbox"></div>
+                            </div>
+                            <div class="TESTIMONIALS__footer">
+                                <img src="./images/men.jpg" alt="Stephen" />
+                                <div class="reviewer_info">
+                                    <p>Stephen Bingham</p>
+                                    <a href="##"><i>demolink.org</i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- footer__gamma -->
-                    <div class="footer__gamma">
-                        <h3>GET IN TOUCH!</h3>
-                        <form>
+                    <div class="community__gamma">
+                        <form class="form">
+                            <div>
+                                <h3>GET IN TOUCH!</h3>
+                            </div>
                             <div class="form__header">
                                 <input type="text" placeholder="Name" />
                                 <input type="email" placeholder="email" />
-                                <textarea name="" id="" cols="30" rows="10" type="text" placeholder="Massage"> </textarea>
+                                <textarea name="Massage" id="" cols="30" rows="10" type="text" placeholder="Massage"></textarea>
                             </div>
                             <div class="form__body">
                                 <button type="reset" class="clear px-2 py-1">CLEAR FORM</button>
@@ -340,9 +539,9 @@
                         </form>
                     </div>
                     <!-- footer__delta -->
-                    <div class="footer__delta">
+                    <div class="community__delta">
                         <h3>FLIKR</h3>
-                        <div class="grid">
+                        <div class="FLIKR">
                             <img src="./images/f1.jpg" alt="flickr" />
                             <img src="./images/f2.jpg" alt="flickr" />
                             <img src="./images/f3.jpg" alt="flickr" />
@@ -358,7 +557,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer__footer">
+                <div class="below">
                     <div class="infor">
                         <div class="infor__left">
                             <p class="copyright">BUSINESS PLANET &copy 2020 | <a href="##">Private Policy</a></p>
@@ -380,12 +579,85 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <!-- swiper -->
         <script>
-            var swiper = new Swiper(".mySwiper", {
+            var swiper = new Swiper(".mycarousel", {
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
                 loop: true,
+            });
+
+            // ??
+            // var swiper = new Swiper(".mySwiper", {
+            //     slidesPerView: 4,
+            //     centeredSlides: true,
+            //     spaceBetween: 30,
+            //     pagination: {
+            //         el: ".swiper-pagination",
+            //         type: "fraction",
+            //     },
+            //     navigation: {
+            //         nextEl: ".swiper-button-next",
+            //         prevEl: ".swiper-button-prev",
+            //     },
+            //     loop: true,
+            // });
+
+            // var appendNumber = 4;
+            // var prependNumber = 1;
+            // document.querySelector(".prepend-2-slides").addEventListener("click", function (e) {
+            //     e.preventDefault();
+            //     swiper.prependSlide([
+            //         '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+            //         '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+            //     ]);
+            // });
+            // document.querySelector(".prepend-slide").addEventListener("click", function (e) {
+            //     e.preventDefault();
+            //     swiper.prependSlide('<div class="swiper-slide">Slide ' + --prependNumber + "</div>");
+            // });
+            // document.querySelector(".append-slide").addEventListener("click", function (e) {
+            //     e.preventDefault();
+            //     swiper.appendSlide('<div class="swiper-slide">Slide ' + ++appendNumber + "</div>");
+            // });
+            // document.querySelector(".append-2-slides").addEventListener("click", function (e) {
+            //     e.preventDefault();
+            //     swiper.appendSlide([
+            //         '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+            //         '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+            //     ]);
+            // });
+
+            //
+            var swiper = new Swiper(".mySwiper", {
+                effect: "coverflow",
+                slidesPerView: 1,
+                loop: true,
+                centeredSlides: true,
+                coverflowEffect: {
+                    // scale: 0.8, 調整左右鄰居得大小
+                    // modifier: 0,效果增益，將所有effect得參數 依據設定得數值去加成
+                    depth: 200, //左右鄰居深度
+                    rotate: 30, //左右鄰居請斜角度
+                    stretch: 0,
+                    slideShadows: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2.5,
+                    },
+                    992: {
+                        slidesPerView: 3.5,
+                    },
+                },
             });
         </script>
     </body>

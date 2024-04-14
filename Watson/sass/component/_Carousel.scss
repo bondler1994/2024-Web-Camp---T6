@@ -1,0 +1,58 @@
+@use "../component/icon" as *;
+
+
+$carousel-next :url(../images/slider_next.gif);
+$carousel-prev:url(../images/slider_prev.gif);
+
+@mixin arrow($x,$bg) {
+    position: absolute;
+    content: "";
+    font-size: 0;
+    background: $bg;
+    background-position: $x 0;
+    width: 40px;
+    height: 119px;
+
+    &::after{
+        content: "";
+    }
+
+    &:hover {
+        background-position: $x -100%;
+    }
+}
+
+
+
+
+
+
+.carousel {
+    position: relative;
+
+
+
+
+    .swiper-button-next {
+        @include arrow (-5px,$carousel-next);
+
+        top: 40%;
+        right: -10px;
+    }
+
+
+    .swiper-button-prev{
+        @include arrow(5px,$carousel-prev);
+        top: 40%;
+        left: -10px;
+ 
+    
+    }
+
+
+
+
+
+        
+}
+

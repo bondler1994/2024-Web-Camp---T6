@@ -1,0 +1,232 @@
+@use "../component/grid" as *;
+@use "../base/font" as *;
+@use "../base/color" as *;
+@use "../base/breakpoint" as *;
+@use "../section/news" as *;
+
+%min {
+    min-width: 0;
+}
+
+@mixin flex($turn, $left, $right){
+    display: flex;
+    flex-direction: $turn;
+    gap: $left $right;
+}
+
+footer {
+    margin: 70px 0 0 0 ;
+    .community {
+        >div {
+            @extend %min
+        }
+        background: url(../images/subbg.gif);
+        padding: 40px;
+
+        @include grid (1, 1fr , none, none, 30px, 30px);
+
+
+        @include md{
+            @include grid (2, 1fr , 1, 1fr, 30px, 30px);
+        }
+
+        @include xl{
+            @include grid (4, 1fr ,none ,none, 0, 30px);
+        }
+        // community__alpha
+        &__alpha {
+            @include flex(column, 30px, 0);
+
+            p{
+                font-size: $font16;
+            }
+        }
+
+        // community__beta
+        &__beta{
+            .TESTIMONIALS{
+            @include flex(column, 30px, 0);
+
+            &__body{
+                position: relative;
+                border: 1px solid $darkgray;
+                background-color: $lightgray;
+                border-radius: 3px;
+
+                .chatbox {
+                    position: absolute;
+                    bottom: -15px;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                    border-radius: 3px;
+                    filter: drop-shadow(-0.5px 1.5px 0px $darkgray);
+                    border-top: 7px solid $lightgray;
+                    border-left: 12px solid $lightgray;
+                    border-right: 7px solid transparent;
+                    border-bottom: 12px solid transparent;
+                }
+
+                p{
+                    padding: 30px;
+                    font-size: $font16
+                }
+            }
+
+            &__footer {
+                @include flex(row, 0, 30px);
+
+                img {
+                    flex: 0 0 auto;
+                }
+                a {
+                    font-size: $font16;
+                    &:hover {
+                        color: $green;
+                    }
+                }
+            }
+
+            }
+        }
+
+        // community__gamma
+        &__gamma {
+            .form{
+                @include flex(column, 30px, 0);
+
+
+                &__header {
+
+                    @include flex(column, 5px, 0);
+                    input,
+                    textarea{
+                        background-color: $lightgray;
+                        border: 1px solid $darkgray;
+                    }
+
+                }
+
+                &__body {
+
+
+                    @include flex(row, 0, 5px);
+                    button {
+                        padding: 10px;
+                        color: white;
+                        background-color: $black;
+
+                        &:not(:first-child) {
+                            background-color: $green
+                        }
+                        
+
+                    }
+
+
+                }
+
+            }
+        }
+
+        &__delta {
+            @include flex(column, 30px, 0)
+        }
+
+        
+    }
+
+
+    .below {
+        .infor {
+            font-size: $font16;
+            padding: 30px 0;
+
+            @include flex(column, 30px, 0);
+            justify-content: center;
+
+
+
+            @include xl{
+                @include flex(row, 0, 0);
+                justify-content: space-between;
+
+            }
+
+            &__left,
+            p{
+                color: $darkgray;
+                @include flex(row, 0, 0);
+                justify-content:center;
+
+                @include xl {
+                    justify-content:space-between;
+                }
+            }
+
+            &__left {
+                order: 2;
+
+                font-size: $font16;
+
+
+                @include md {
+                    font-size: 26px;
+                }
+                @include xl {
+                    font-size: $font16;
+                     order: 1;
+                }
+                a {
+                    color: $green;
+                }
+            }
+
+            &__right {
+                justify-content: center;
+                @include flex(column, 10px, 0);
+                @include sm {
+                    @include flex(row, 0, 20px);
+                }
+
+                @include xl {
+                    order: 2;
+               }
+                color: $darkgray;
+                gap: 15px;
+
+                a{
+                    @extend %min;
+                    justify-content: center;
+
+                    @include sm {
+                        justify-content: none;
+                    }
+                    color: $darkgray;
+                    &:hover {
+                        color: $green;
+                    }
+
+                }
+
+                a+a {
+                    position: relative;
+
+                    &::before {
+                        position: absolute;
+                        left: -9px;
+                        top: 0;
+                        content: "";
+                        width: 2px;
+                        height: 100%;
+                        display: block;
+                        background-color: $darkgray; 
+                        
+                        
+                    }
+                }
+
+            }
+        }
+    }
+}
