@@ -2,6 +2,7 @@
 @use "../base/font" as *;
 @use "../base/color" as *;
 @use "../component/swiper" as *;
+@use "../component/swiper" as *;
 
 @mixin object-fit {
     width: 100%;
@@ -45,61 +46,40 @@ header {
     }
 
   
-
-
-    .hamburger {
-
-        #burger:checked + .ham {
-            display: block;
-        }
     
-        .ham {
-            li a{
-                justify-content: center;
-                color: white;
-                padding: 10px;
-            }
-            text-transform: $upper;
-            background-color: rgba(0, 0, 0, 0.5);
-            width: 150px;
-            font-size: $font16;
-            display: none;
-            position: absolute;
-            z-index: 3;
-            // @include absolute(100px, 0, 0, 1px);
-            // transform:translateX(1px);
-            // transition: all 0.4s 0.3s;
-
-
-        }
+    #burger:checked + ul {
+        display: block;
     }
-
-    .phone {
-        #phone:checked + .phone__icon {
-            display: block;
-        }
-        &__icon {
-
-            text-align: end;
-            padding: 10px;
-            position: absolute;
-            display: none;
-            font-size: $font16;
-            z-index: 3;
-            width: 250px;
-            background-color: rgba(0, 0, 0, 0.3);
-            transform: translateX(-220px);
-
-
-        }
+    input[id=burger] {
+        display: none;
     }
 
 
+    // .hamburger {
+    //     .ham {
+    //         li a{
+    //             justify-content: center;
+    //             color: white;
+    //             padding: 10px;
+    //         }
+    //         text-transform: $upper;
+    //         background-color: rgba(0, 0, 0, 0.5);
+    //         width: 150px;
+    //         font-size: $font16;
+    //         display: none;
+    //         position: absolute;
+    //         z-index: 3;
+
+
+
+    //     }
+    // }
+
+
+ 
     .hamburger ,
     .phone{
-        input {
-            display: none;
-        }
+
         &:hover {
             color: $green;
         }
@@ -112,7 +92,7 @@ header {
 
 
     nav {
-
+        background:linear-gradient(rgb(255, 255, 255,0) 50%, white 50%);
 
         @include xl {
             flex-direction: row;
@@ -125,8 +105,6 @@ header {
         margin-top: 30px;
         text-transform: $upper;
         justify-content: space-between;
-
-
 
 
         ul {
@@ -144,10 +122,26 @@ header {
                     color: white;
                 }
 
-                
+    
+            }
+
+            .first {
+                background-color: $green;
             }
 
             li {
+
+                &:hover a:not(.item a){
+                    color: white;
+                }
+
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                @include lg {
+                    flex-direction: row;
+                    width: auto;
+                }
                 min-width: 0;
                 flex: 1 1 auto;
                 @include xl {
@@ -166,7 +160,21 @@ header {
 
 
         a{
-            border-right: 1px solid $lightgray;
+            
+            flex-direction: column;
+            display: flex;
+
+
+            @include lg {
+                width: auto;
+                display: inline-block;
+            }
+            border-right: none;
+            @include xl {
+                a:not(.item a){
+                    border-right: 1px solid $lightgray;                
+                }
+            }
             justify-content: center;
             font-size: $font16;
             padding: 15px 25px;
@@ -178,17 +186,33 @@ header {
         }
 
         .dropdown {
-            z-index: 2;
             position: relative;
             display: inline-block;
         }
         .item{
+            z-index: 1;
             display: none;
             position: absolute;
+            top: 30px;
+            right: 10px;
+            flex-direction: column;
+            min-width: 100px;
+
+
+            @include sm {
+                right: 10px;
+            }
+
+            @include md {
+                right: 155px;
+            }
+            @include lg {
+                right: 0;
+                min-width: 160px;
+            }
+
             background-color: #f9f9f9;
-            min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
 
             a:hover{
                 background-color: $green;

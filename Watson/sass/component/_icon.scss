@@ -18,15 +18,35 @@ $icon-img: url(../images/social.png);
     }
 }
 
+#phone:checked + .icon {
+    background-color: white;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 3px;
+    z-index: 2;
+    position: absolute;
+    top: 95px;
+    right: 95px;
+    display: block;
+}
 
+input[id=phone]{
+    display: none;
+}
 
 .icon {
+
+    input {
+        display: none;
+    }
 
     >a{
         font-size: $font16;
     }
     display: none;
     text-align: end;
+
+
+
 
     @include lg {
         display: inline-block;
@@ -65,10 +85,6 @@ $icon-img: url(../images/social.png);
 }
 
 
-// hambergur
 
-.hamberger:hover nav ul {
-    display: flex;
-}
 
 
