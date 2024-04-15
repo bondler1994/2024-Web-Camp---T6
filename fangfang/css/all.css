@@ -55,34 +55,47 @@ header {
 
 main {
   background: url(../images/subbg.gif);
-  box-shadow: 0 0px 2px #666666;
+  box-shadow: 0 0px 3px #666666;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  main {
+    margin-bottom: 3.5rem;
+  }
 }
 
-footer .contact form textarea, footer .contact form input {
+footer .input-data form textarea, footer .input-data form input {
   border: 1px solid #cdcdcd;
   border-radius: 3px;
-  background-color: #f3f3f3;
+  background-color: #e7e7e7;
   width: 100%;
-  padding: 0.5rem 0.25rem;
+  padding: 0.25rem 0.5rem;
 }
-footer .contact form textarea:focus, footer .contact form input:focus {
+footer .input-data form textarea:focus, footer .input-data form input:focus {
   outline: 2px solid #80B600;
 }
 
-footer .contact form .form-button button {
+footer .input-data form .form-button button {
   border: none;
   text-transform: uppercase;
+  font-weight: 500;
   color: #FFFFFF;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.7rem;
+}
+footer .input-data form .form-button button:hover {
+  opacity: 0.9;
 }
 
 footer {
   background-image: url(../images/subbg.gif);
 }
+footer .footer-container {
+  box-shadow: 0 0 3px #666666;
+}
 footer h3 {
   text-transform: uppercase;
   margin-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 footer .testimonials .dialog {
@@ -125,9 +138,100 @@ footer .testimonials .men-info .men-text > a {
 footer .testimonials .men-info .men-text > a:hover {
   font-weight: 600;
 }
-footer .contact form input {
+footer .input-data form input {
   margin-bottom: 10px;
 }
+footer .input-data form textarea {
+  margin-bottom: 24px;
+}
+footer .input-data form .form-button button[type=reset] {
+  background-color: #1D1D1D;
+}
+footer .input-data form .form-button button[type=submit] {
+  background-color: #80B600;
+}
+footer .photo-album {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+footer .photo-album a:hover {
+  transform: scale(0.93);
+}
+footer .photo-album img {
+  width: 100%;
+}
+footer .footer-copyright {
+  background-color: #1D1D1D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  footer .footer-copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+footer .footer-copyright .footer-navbar {
+  margin-bottom: 1rem;
+}
+@media (min-width: 992px) {
+  footer .footer-copyright .footer-navbar {
+    margin-bottom: 0;
+    order: 2;
+  }
+}
+@media (min-width: 768px) {
+  footer .footer-copyright .footer-navbar ul {
+    display: flex;
+    flex-direction: row;
+  }
+}
+footer .footer-copyright .footer-navbar li {
+  position: relative;
+}
+@media (min-width: 768px) {
+  footer .footer-copyright .footer-navbar li + li::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 60%;
+    background-color: #666666;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    margin: auto;
+  }
+}
+footer .footer-copyright .footer-navbar a {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  color: #666666;
+  text-align: center;
+  text-transform: uppercase;
+}
+footer .footer-copyright .footer-navbar a:hover {
+  color: #80B600;
+}
+footer .footer-copyright .footer-navbar a:focus {
+  color: #80B600;
+}
+footer .footer-copyright .copyright p {
+  color: #666666;
+  text-transform: uppercase;
+}
+footer .footer-copyright .copyright p a {
+  text-transform: capitalize;
+  color: #80B600;
+}
+
 h1 a {
   display: inline-block;
 }
@@ -527,7 +631,6 @@ h1 img {
 
 .feature {
   padding: 2rem 1.5rem 3rem;
-  margin-bottom: 5rem;
 }
 .feature .swiper-button-prev {
   position: absolute;

@@ -1,13 +1,14 @@
 @use "../utilities/background" as *;
 @use "../utilities/color" as *;
 @use "../utilities/flex" as *;
+@use "../utilities/breakpoint" as *;
 
 %formSet {
     border: 1px solid $gray;
     border-radius: 3px;
-    background-color: $lightGray;
+    background-color: $silver;
     width: 100%;
-    padding: 0.5rem 0.25rem;
+    padding: 0.25rem 0.5rem;
 
     &:focus {
         outline: 2px solid $green;
@@ -17,19 +18,28 @@
 %formButton {
     border: none;
     text-transform: uppercase;
+    font-weight: 500;
     color: $white;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.7rem;
+
+    &:hover {
+        opacity: .9;
+    }
 }
 
 footer {
     background-image: $sub-bg;
+
+    .footer-container {
+        box-shadow: 0 0 3px $darkGray;
+    }
 
     h3 {
         text-transform: uppercase;
         margin-bottom: 1rem;
 
         font: {
-            size: 1.25rem;
+            size: 1.5rem;
             weight: 500;
         }
     }
@@ -84,7 +94,7 @@ footer {
     }
 
     //表單
-    .contact {
+    .input-data {
         form {
             input {
                 @extend %formSet;
@@ -93,16 +103,126 @@ footer {
 
             textarea {
                 @extend %formSet;
+                margin-bottom: 24px;
             }
 
             .form-button {
                 button {
                     @extend %formButton;
 
+                    &[type="reset"] {
+                        background-color: $dark;
+                    }
+
+                    &[type="submit"] {
+                        background-color: $green;
+                    }
                 }
 
             }
         }
 
     }
+
+    //photo-album
+    .photo-album {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+
+        a {
+            &:hover {
+                transform: scale(0.93);
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    //footer最下方nabar和copyright
+    .footer-copyright {
+        background-color: $dark;
+        @include flexBox(column);
+        @include flexAlign (center, center);
+
+        @include desktop {
+            @include flexBox (row);
+            @include flexAlign (space-between, center);
+        }
+
+        .footer-navbar {
+            margin-bottom: 1rem;
+
+            @include desktop {
+                margin-bottom: 0;
+                order: 2
+            }
+
+            ul {
+                @include tablet {
+                    @include flexBox (row);
+                }
+            }
+
+            li {
+                position: relative;
+
+                @include tablet {
+                    &+li::after {
+                        content: "";
+                        display: block;
+                        width: 2px;
+                        height: 60%;
+                        background-color: $darkGray;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: auto;
+                        margin: auto;
+                    }
+                }
+
+            }
+
+
+            a {
+                display: block;
+                padding: 0.25rem 0.5rem;
+                color: $darkGray;
+
+                text: {
+                    align: center;
+                    transform: uppercase;
+                }
+
+                &:hover {
+                    color: $green;
+                }
+
+                &:focus {
+                    color: $green;
+                }
+            }
+        }
+
+        .copyright {
+            p {
+                color: $darkGray;
+                text-transform: uppercase;
+
+                a {
+                    text-transform: capitalize;
+                    color: $green;
+                }
+            }
+
+        }
+
+    }
+
+
 }
