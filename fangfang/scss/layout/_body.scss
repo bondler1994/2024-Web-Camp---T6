@@ -1,14 +1,18 @@
-@use "../utilities/background" as *;
-@use "../utilities/breakpoint" as *;
-@use "../utilities/color" as *;
+@use "../utilities/background";
+@use "../utilities/breakpoint";
+@use "../utilities/color";
 
 body {
     min-width: 375px;
     padding: 0 1rem;
-    background: linear-gradient($dark 0 75px, transparent 75px 91%, $dark 91% 100%), $body-bg;
+    background: linear-gradient(color.$dark 0 75px, transparent 75px 91%, color.$dark 91% 100%), background.$body-bg;
 
-    @include tablet {
-        background: linear-gradient($dark 0 4%, transparent 4% 95%, $dark 95% 100%), $body-bg;
-        padding: 0 6%;
+    @include breakpoint.md {
+        background: linear-gradient(color.$dark 0 2%, transparent 2% 95%, color.$dark 95% 100%), background.$body-bg;
+        padding: 1% 6%;
+    }
+
+    @include breakpoint.lg {
+        background: linear-gradient(color.$dark 0 3%, transparent 3% 95%, color.$dark 95% 100%), background.$body-bg;
     }
 }

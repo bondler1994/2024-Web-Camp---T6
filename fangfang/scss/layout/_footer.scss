@@ -1,17 +1,16 @@
-@use "../utilities/background" as *;
-@use "../utilities/color" as *;
-@use "../utilities/flex" as *;
-@use "../utilities/breakpoint" as *;
+@use "../utilities/background";
+@use "../utilities/color";
+@use "../utilities/breakpoint";
 
 %formSet {
-    border: 1px solid $gray;
+    border: 1px solid color.$gray;
     border-radius: 3px;
-    background-color: $silver;
+    background-color: color.$silver;
     width: 100%;
     padding: 0.25rem 0.5rem;
 
     &:focus {
-        outline: 2px solid $green;
+        outline: 2px solid color.$green;
     }
 }
 
@@ -19,7 +18,7 @@
     border: none;
     text-transform: uppercase;
     font-weight: 500;
-    color: $white;
+    color: color.$white;
     padding: 0.5rem 0.7rem;
 
     &:hover {
@@ -28,10 +27,10 @@
 }
 
 footer {
-    background-image: $sub-bg;
+    background-image: background.$sub-bg;
 
     .footer-container {
-        box-shadow: 0 0 3px $darkGray;
+        box-shadow: 0 0 3px color.$darkGray;
     }
 
     h3 {
@@ -45,49 +44,47 @@ footer {
     }
 
     //對話框＆man
-    .testimonials {
-        .dialog {
-            padding: 1.25rem 1rem 1.5rem 1.75rem;
-            background-color: $silver;
-            border: 1px solid $gray;
-            border-radius: 3px;
-            line-height: 1.2;
-            color: $dark;
-            position: relative;
+    .dialog {
+        padding: 1.25rem 1rem 1.5rem 1.75rem;
+        background-color: color.$silver;
+        border: 1px solid color.$gray;
+        border-radius: 3px;
+        line-height: 1.2;
+        color: color.$dark;
+        position: relative;
 
-            &::after {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 0;
-                height: 0;
-                border-width: 10px 15px 10px 15px;
-                border-style: solid;
-                border-color: $silver transparent transparent $silver;
-                top: 99%;
-                left: 0;
-                filter: drop-shadow(-1px 2px 0px $gray);
-            }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-width: 10px 15px 10px 15px;
+            border-style: solid;
+            border-color: color.$silver transparent transparent color.$silver;
+            top: 99%;
+            left: 0;
+            filter: drop-shadow(-1px 2px 0px color.$gray);
         }
+    }
 
-        .men-info {
-            @include flexBox(row);
-            @include flexAlign(flex-start, center);
-            margin-top: 40px;
-            gap: 1rem;
+    .men-info {
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+        gap: 1rem;
 
-            .men-text {
-                >p {
-                    text-transform: capitalize;
-                }
+        .men-text {
+            >p {
+                text-transform: capitalize;
+            }
 
-                >a {
-                    color: $green;
-                    font-weight: 500;
+            >a {
+                color: color.$green;
+                font-weight: 500;
 
-                    &:hover {
-                        font-weight: 600
-                    }
+                &:hover {
+                    font-weight: 600
                 }
             }
         }
@@ -111,11 +108,11 @@ footer {
                     @extend %formButton;
 
                     &[type="reset"] {
-                        background-color: $dark;
+                        background-color: color.$dark;
                     }
 
                     &[type="submit"] {
-                        background-color: $green;
+                        background-color: color.$green;
                     }
                 }
 
@@ -144,39 +141,41 @@ footer {
 
     //footer最下方nabar和copyright
     .footer-copyright {
-        background-color: $dark;
-        @include flexBox(column);
-        @include flexAlign (center, center);
+        background-color: color.$dark;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        @include desktop {
-            @include flexBox (row);
-            @include flexAlign (space-between, center);
+        @include breakpoint.lg {
+            display: flex;
+            justify-content: space-between;
         }
 
         .footer-navbar {
             margin-bottom: 1rem;
 
-            @include desktop {
+            @include breakpoint.lg {
                 margin-bottom: 0;
                 order: 2
             }
 
             ul {
-                @include tablet {
-                    @include flexBox (row);
+                @include breakpoint.md {
+                    flex-direction: row;
                 }
             }
 
             li {
                 position: relative;
 
-                @include tablet {
+                @include breakpoint.md {
                     &+li::after {
                         content: "";
                         display: block;
                         width: 2px;
                         height: 60%;
-                        background-color: $darkGray;
+                        background-color: color.$darkGray;
                         position: absolute;
                         top: 0;
                         left: 0;
@@ -185,14 +184,13 @@ footer {
                         margin: auto;
                     }
                 }
-
             }
 
 
             a {
                 display: block;
                 padding: 0.25rem 0.5rem;
-                color: $darkGray;
+                color: color.$darkGray;
 
                 text: {
                     align: center;
@@ -200,29 +198,25 @@ footer {
                 }
 
                 &:hover {
-                    color: $green;
+                    color: color.$green;
                 }
 
                 &:focus {
-                    color: $green;
+                    color: color.$green;
                 }
             }
         }
 
         .copyright {
             p {
-                color: $darkGray;
+                color: color.$darkGray;
                 text-transform: uppercase;
 
                 a {
                     text-transform: capitalize;
-                    color: $green;
+                    color: color.$green;
                 }
             }
-
         }
-
     }
-
-
 }

@@ -1,17 +1,27 @@
-@use "../utilities/background" as *;
-@use "../utilities/breakpoint" as *;
-@use "../utilities/flex" as *;
-@use "../utilities/color" as *;
+@use "../utilities/background";
+@use "../utilities/breakpoint";
+@use "../utilities/color";
 
 header {
-    background: $sub-bg ;
+    background: background.$sub-bg ;
     padding: 1rem;
-    box-shadow: 0 1px 2px $gray;
-    @include flexBox (column);
-    @include flexAlign (flex-start, center);
+    box-shadow: 0 1px 2px color.$gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    @include tablet {
-        @include flexBox (row);
-        @include flexAlign (space-between, center);
+    @include breakpoint.md {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    h1 {
+        a {
+            display: inline-block;
+        }
+
+        img {
+            width: 100%;
+        }
     }
 }

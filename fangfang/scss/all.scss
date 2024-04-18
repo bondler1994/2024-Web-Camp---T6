@@ -3,14 +3,12 @@
 @use "./utilities/background";
 @use "./utilities/breakpoint";
 @use "./utilities/color";
-@use "./utilities/flex";
 
 @use "./layout/body";
 @use "./layout/header";
 @use "./layout/main";
 @use "./layout/footer";
 
-@use "./components/logo";
 @use "./components/socialMedia";
 @use "./components/card";
 @use "./components/companyInfo";

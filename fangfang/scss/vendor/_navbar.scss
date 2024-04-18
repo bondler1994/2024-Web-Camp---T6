@@ -1,25 +1,26 @@
-@use "../utilities/color" as *;
-@use "../utilities/breakpoint" as *;
-@use "../utilities/flex" as *;
+@use "../utilities/color";
+@use "../utilities/breakpoint";
 
 //navbar
 .navbar {
     background-color: transparent;
     padding: 0;
     margin-top: 30px;
-    @include flexAlign (flex-start, stretch);
+    align-items: stretch;
 
-    @include desktop {
-        @include flexBox (row-reverse);
-        gap: 0.8rem;
+    @include breakpoint.lg {
+        flex-direction: row-reverse;
+        // gap: 0.8rem;
         //navbar-collapse和search後面的白色
-        background: linear-gradient(transparent 60%, $lightGray 60%);
+        background: linear-gradient(transparent 60%, color.$lightGray 60%);
     }
 
+    //漢堡選單
     .navbar-toggler {
         border: none;
         border-radius: 0;
-        background-color: $white;
+        background-color: color.$white;
+        flex: 0 1 auto;
 
         &:focus {
             box-shadow: none;
@@ -27,24 +28,24 @@
     }
 
     .navbar-collapse {
-        background-color: $white;
+        background-color: color.$white;
 
-        @include desktop {
+        @include breakpoint.lg {
             flex-grow: 2;
-            box-shadow: 1px -1px 3px $gray;
+            box-shadow: 1px -1px 3px color.$gray;
         }
 
         .nav-item {
-            @include desktop {
-                border-right: 2px solid $lightGray;
+            @include breakpoint.lg {
+                border-right: 2px solid color.$lightGray;
             }
         }
 
         .nav-link {
-            color: $dark;
+            color: color.$dark;
             padding: 16px 12px;
 
-            @include desktop {
+            @include breakpoint.lg {
                 padding: 21px 22px;
 
             }
@@ -53,8 +54,8 @@
 
             &:hover,
             &:focus {
-                background-color: $green;
-                color: $white;
+                background-color: color.$green;
+                color: color.$white;
             }
         }
 
@@ -68,8 +69,8 @@
                 padding: 16px 12px;
 
                 &:hover {
-                    background-color: $lightGray;
-                    color: $dark;
+                    background-color: color.$lightGray;
+                    color: color.$dark;
                 }
             }
         }
@@ -80,24 +81,26 @@
 .search {
     position: relative;
     padding: 0.5rem 1.1rem;
-    background-color: $white;
-    flex-grow: 1;
+    background-color: color.$white;
+    flex: 1 1 0;
 
-    @include desktop {
-        box-shadow: -1px -1px 3px $gray;
+    @include breakpoint.lg {
+        flex: 1 1 auto;
+        box-shadow: -1px -1px 3px color.$gray;
     }
 
     .form-control {
-        background-color: $lightGray;
+        background-color: color.$lightGray;
         border-radius: 0;
-        padding: 0.75rem;
+        //讓輸入的字不會被search-icon擋住
+        padding: 0.75rem 2.5rem 0.75rem 0.75rem;
 
 
 
         &:focus {
             box-shadow: none;
-            border: 1px solid $lightGray;
-            outline: 3px solid $green;
+            border: 1px solid color.$lightGray;
+            outline: 3px solid color.$green;
         }
     }
 
@@ -110,7 +113,7 @@
             image: url("../images/search.png");
             repeat: no-repeat;
             position: center center;
-            color: $lightGray;
+            color: color.$lightGray;
         }
 
         position: absolute;

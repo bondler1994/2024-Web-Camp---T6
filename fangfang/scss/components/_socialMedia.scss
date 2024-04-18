@@ -1,6 +1,5 @@
-@use "../utilities/breakpoint" as *;
-@use "../utilities/flex" as *;
-@use "../utilities/color" as *;
+@use "../utilities/breakpoint";
+@use "../utilities/color";
 
 @mixin sprite ($x, $y) {
     width: 27px;
@@ -18,17 +17,19 @@
 .contact {
     margin-top: 20px;
 
-    @include tablet {
+    @include breakpoint.md {
         margin-top: 0;
     }
 
     .social-media {
         margin-bottom: 8px;
-        @include flexBox (row);
-        @include flexAlign (center, center);
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        @include tablet {
-            @include flexAlign (flex-end, center);
+        @include breakpoint.md {
+            justify-content: flex-end;
+
         }
 
         a {
@@ -62,10 +63,10 @@
 
     .telephone {
         >a {
-            color: $dark;
+            color: color.$dark;
 
             &:hover {
-                color: $green;
+                color: color.$green;
             }
         }
     }

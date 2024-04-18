@@ -1,13 +1,13 @@
-@use "../utilities/color" as *;
-@use "../utilities/background" as *;
-@use "../utilities/breakpoint" as *;
+@use "../utilities/color";
+@use "../utilities/background";
+@use "../utilities/breakpoint";
 
 main {
-    background: $sub-bg;
-    box-shadow: 0 0px 3px $darkGray;
+    background: background.$sub-bg;
+    box-shadow: 0 0px 3px color.$darkGray;
     margin-bottom: 1rem;
 
-    @include tablet {
+    @include breakpoint.md {
         margin-bottom: 3.5rem;
     }
 }

@@ -1,15 +1,8 @@
-@use "../utilities/breakpoint" as *;
-@use "../utilities/color" as *;
-@use "../utilities/flex" as *;
+@use "../utilities/color";
 
-%title {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
 
 %swiperArrow {
-    color: $darkGray;
+    color: color.$darkGray;
 
     font: {
         size: 1.25rem;
@@ -17,7 +10,7 @@
     }
 
     &:hover {
-        color: $green;
+        color: color.$green;
     }
 }
 
@@ -37,12 +30,15 @@
     padding: 2rem 1.5rem 3rem;
 
     h2 {
-        @extend %title;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     .swiper-button-prev {
         @include swiper_button(5px, 30px);
 
+        //修改套件after樣式
         &::after {
             @extend %swiperArrow;
         }
@@ -55,102 +51,103 @@
             @extend %swiperArrow;
         }
     }
+}
 
-    .swiper-slide {
-        position: relative;
-        overflow: hidden;
+.swiper-slide {
+    position: relative;
+    overflow: hidden;
 
-        &:hover {
-            .swiper-content {
-                opacity: 1;
-                transform: rotate(-40deg) translate(-10%, -45%);
-                transition: all 0.8s 0.3s;
-                z-index: 2;
-            }
+    &:hover {
+        .swiper-content {
+            opacity: 1;
+            transform: rotate(-40deg) translate(-10%, -45%);
+            transition: all 0.8s 0.3s;
+            z-index: 2;
         }
+    }
 
-        &::before {
-            content: "";
-            display: block;
-            width: 50%;
-            height: 200%;
-            opacity: 0;
-            background: $dark;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: rotate(50deg) translate(-300%, -30%);
-            z-index: 1;
-        }
+    //左邊黑色塊
+    &::before {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 200%;
+        opacity: 0;
+        background: color.$dark;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(50deg) translate(-300%, -30%);
+        z-index: 1;
+    }
 
+    //右邊黑色塊
+    &::after {
+        content: "";
+        display: block;
+        width: 60%;
+        height: 200%;
+        opacity: 0;
+        background: color.$dark;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-right: 3px solid color.$green;
+        transform: rotate(50deg) translate(120%, -30%);
+        z-index: 1;
+    }
+
+    &:hover::before {
+        opacity: .7;
+        transform: rotate(50deg) translate(-150%, -30%);
+        transition: all 0.5s;
+    }
+
+    &:hover::after {
+        opacity: .7;
+        transform: rotate(50deg) translate(-5%, -30%);
+        transition: all 0.5s;
+    }
+}
+
+.swiper-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(0deg) translate(-50%, -50%);
+    opacity: 0;
+
+    p {
+        color: color.$white;
+        margin-bottom: 1rem;
+        white-space: nowrap;
+
+        //裝飾線
         &::after {
             content: "";
             display: block;
-            width: 60%;
+            position: absolute;
+            width: 1px;
             height: 200%;
-            opacity: 0;
-            background: $dark;
-            position: absolute;
-            top: 0;
+            background-color: color.$white;
+            top: -15px;
+            bottom: 0px;
             left: 0;
-            border-right: 3px solid $green;
-            transform: rotate(50deg) translate(120%, -30%);
-            z-index: 1;
+            right: 0;
+            margin: auto;
+            transform: rotate(-90deg);
         }
+    }
+}
 
-        &:hover::before {
-            opacity: .7;
-            transform: rotate(50deg) translate(-150%, -30%);
-            transition: all 0.5s;
-        }
+.swiper-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        &:hover::after {
-            opacity: .7;
-            transform: rotate(50deg) translate(-5%, -30%);
-            transition: all 0.5s;
-        }
-
-
-
-        .swiper-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: rotate(0deg) translate(-50%, -50%);
-            opacity: 0;
-
-            p {
-                color: $white;
-                margin-bottom: 1rem;
-                white-space: nowrap;
-
-                //裝飾線
-                &::after {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    width: 1px;
-                    height: 200%;
-                    background-color: $white;
-                    top: -15px;
-                    bottom: 0px;
-                    left: 0;
-                    right: 0;
-                    margin: auto;
-                    transform: rotate(-90deg);
-                }
-            }
-
-            .swiper-icon {
-                @include flexBox(row);
-                @include flexAlign(space-between, center);
-
-                a {
-                    &:hover {
-                        transform: scale(1.05);
-                    }
-                }
-            }
+    a {
+        &:hover {
+            transform: scale(1.05);
         }
     }
 }

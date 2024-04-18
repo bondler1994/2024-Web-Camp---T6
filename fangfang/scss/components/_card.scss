@@ -1,35 +1,34 @@
-@use "../utilities/color" as *;
-@use "../utilities/flex" as *;
-@use "../utilities/breakpoint" as *;
+@use "../utilities/color";
+@use "../utilities/breakpoint";
 
-%headingSet {
-    font: {
-        size: 1.25rem;
-        weight: 500;
-    }
 
-    @include desktop {
-        font-size: 1rem;
-    }
-
-    text: {
-        transform: uppercase;
-        align: center;
-    }
-
-    //h5文字內容長度不同會換行
-    height: 38px;
-}
-
-@mixin cardSet {
-    background: $silver;
-    @include flexBox(column);
-    @include flexAlign(space-between, center);
+@mixin productSet {
+    background: color.$silver;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     gap: 1rem;
     padding: 1.5rem;
+    transition: all 0.7s;
 
-    h5 {
-        @extend %headingSet;
+    h4 {
+        font: {
+            size: 1.25rem;
+            weight: 500;
+        }
+
+        @include breakpoint.lg {
+            font-size: 1rem;
+        }
+
+        text: {
+            transform: uppercase;
+            align: center;
+        }
+
+        //h4文字內容長度不同會換行
+        height: 38px;
     }
 
     p {
@@ -39,55 +38,43 @@
     a {
         text-transform: capitalize;
         padding: 0.25rem 1rem;
-        color: $dark ;
-        background-color: $gray;
+        color: color.$dark ;
+        background-color: color.$gray;
 
         &:hover {
-            background-color: $green;
-            color: $white;
+            background-color: color.$green;
+            color: color.$white;
         }
 
     }
 
-    .card-content {
-        @include flexBox(column);
-        @include flexAlign(flex-start, center);
-        flex: 1 1 auto;
+    .product-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 1rem;
     }
 
     &:hover {
-        background-color: $darkGray;
+        background-color: color.$darkGray;
         opacity: .9;
-        color: $white;
+        color: color.$white;
         transition: all 0.7s;
 
         //在desktop上移
-        @include desktop {
+        @include breakpoint.lg {
             transform: translateY(-3%);
         }
     }
 }
 
-.strategies {
-    @include cardSet();
+.product-item {
+    @include productSet();
 }
 
-.support {
-    @include cardSet();
-}
-
-.programs {
-    @include cardSet();
-}
-
-.services {
-    @include cardSet();
-}
-
-//desktop斷點要移動card位置
-.service_introduce {
-    @include desktop {
+//lg斷點要移動product位置
+.product {
+    @include breakpoint.lg {
         position: relative;
         top: -20px;
     }

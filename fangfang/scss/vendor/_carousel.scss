@@ -1,5 +1,6 @@
-@use "../utilities/breakpoint" as *;
+@use "../utilities/breakpoint";
 
+//裝置不同 圖片要呈現的內容位置設定
 @mixin imageSet ($top, $right) {
     height: 100%;
     object-fit: cover;
@@ -9,7 +10,7 @@
 .carousel {
     height: 60vh;
 
-    @include desktop {
+    @include breakpoint.lg {
         height: auto;
     }
 
