@@ -16,20 +16,17 @@
 
 .contact {
     margin-top: 20px;
-
-    @include breakpoint.md {
+    @include breakpoint.deviceSize (breakpoint.$mdSize){
         margin-top: 0;
     }
 
     .social-media {
         margin-bottom: 8px;
         display: flex;
-        justify-content: center;
         align-items: center;
-
-        @include breakpoint.md {
+        justify-content: center;
+        @include breakpoint.deviceSize (breakpoint.$mdSize){
             justify-content: flex-end;
-
         }
 
         a {

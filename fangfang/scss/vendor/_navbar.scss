@@ -7,13 +7,21 @@
     padding: 0;
     margin-top: 30px;
     align-items: stretch;
+    flex-direction: row;
 
-    @include breakpoint.lg {
+    @include breakpoint.deviceSize(breakpoint.$lgSize) {
         flex-direction: row-reverse;
-        // gap: 0.8rem;
+        gap: 0.8rem;
         //navbar-collapse和search後面的白色
         background: linear-gradient(transparent 60%, color.$lightGray 60%);
     }
+
+    // @include breakpoint.lg {
+    //     flex-direction: row-reverse;
+    //     gap: 0.8rem;
+    //     //navbar-collapse和search後面的白色
+    //     background: linear-gradient(transparent 60%, color.$lightGray 60%);
+    // }
 
     //漢堡選單
     .navbar-toggler {
@@ -30,25 +38,38 @@
     .navbar-collapse {
         background-color: color.$white;
 
-        @include breakpoint.lg {
+        @include breakpoint.deviceSize(breakpoint.$lgSize) {
             flex-grow: 2;
             box-shadow: 1px -1px 3px color.$gray;
         }
 
+        // @include breakpoint.lg {
+        //     flex-grow: 2;
+        //     box-shadow: 1px -1px 3px color.$gray;
+        // }
+
         .nav-item {
-            @include breakpoint.lg {
+            @include breakpoint.deviceSize(breakpoint.$lgSize) {
                 border-right: 2px solid color.$lightGray;
             }
+
+            // @include breakpoint.lg {
+            //     border-right: 2px solid color.$lightGray;
+            // }
         }
 
         .nav-link {
             color: color.$dark;
             padding: 16px 12px;
 
-            @include breakpoint.lg {
+            @include breakpoint.deviceSize(breakpoint.$lgSize) {
                 padding: 21px 22px;
-
             }
+
+            // @include breakpoint.lg {
+            //     padding: 21px 22px;
+
+            // }
 
             text-transform: uppercase;
 
@@ -84,10 +105,15 @@
     background-color: color.$white;
     flex: 1 1 0;
 
-    @include breakpoint.lg {
+    @include breakpoint.deviceSize(breakpoint.$lgSize) {
         flex: 1 1 auto;
         box-shadow: -1px -1px 3px color.$gray;
     }
+
+    // @include breakpoint.lg {
+    //     flex: 1 1 auto;
+    //     box-shadow: -1px -1px 3px color.$gray;
+    // }
 
     .form-control {
         background-color: color.$lightGray;

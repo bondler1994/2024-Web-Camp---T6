@@ -4,15 +4,19 @@
 
 body {
     min-width: 375px;
-    padding: 0 1rem;
+    max-width: 1440px;
+    margin: 0 auto;
     background: linear-gradient(color.$dark 0 75px, transparent 75px 91%, color.$dark 91% 100%), background.$body-bg;
+    padding: 0 1rem;
 
-    @include breakpoint.md {
+    @include breakpoint.deviceSize (breakpoint.$mdSize) {
         background: linear-gradient(color.$dark 0 2%, transparent 2% 95%, color.$dark 95% 100%), background.$body-bg;
         padding: 1% 6%;
     }
 
-    @include breakpoint.lg {
+
+    @include breakpoint.deviceSize (breakpoint.$lgSize) {
         background: linear-gradient(color.$dark 0 3%, transparent 3% 95%, color.$dark 95% 100%), background.$body-bg;
+        padding: 1% 6%;
     }
 }

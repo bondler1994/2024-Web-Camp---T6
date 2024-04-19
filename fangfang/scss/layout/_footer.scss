@@ -1,6 +1,7 @@
 @use "../utilities/background";
 @use "../utilities/color";
 @use "../utilities/breakpoint";
+@use "../components/social-media";
 
 %formSet {
     border: 1px solid color.$gray;
@@ -20,10 +21,6 @@
     font-weight: 500;
     color: color.$white;
     padding: 0.5rem 0.7rem;
-
-    &:hover {
-        opacity: .9;
-    }
 }
 
 footer {
@@ -44,28 +41,38 @@ footer {
     }
 
     //對話框＆man
-    .dialog {
-        padding: 1.25rem 1rem 1.5rem 1.75rem;
-        background-color: color.$silver;
-        border: 1px solid color.$gray;
-        border-radius: 3px;
-        line-height: 1.2;
-        color: color.$dark;
-        position: relative;
+    .dialog-container {
+        filter: drop-shadow(0px 0px 1px color.$darkGray);
 
-        &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-width: 10px 15px 10px 15px;
-            border-style: solid;
-            border-color: color.$silver transparent transparent color.$silver;
-            top: 99%;
-            left: 0;
-            filter: drop-shadow(-1px 2px 0px color.$gray);
+        .dialog {
+            background-color: color.$silver;
+            border-radius: 3px;
+            padding: 1.25rem 1rem 2rem 1.75rem;
+            //多邊形
+            clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 10% 90%, 0% 100%);
+
+            >p {
+                line-height: 1.2;
+                color: color.$dark;
+            }
+
         }
+
+        //原先用偽元素做三角型
+        // &::after {
+        //     content: "";
+        //     display: block;
+        //     position: absolute;
+        //     width: 0;
+        //     height: 0;
+        //     border-width: 10px 15px 10px 15px;
+        //     border-style: solid;
+        //     border-color: color.$silver transparent transparent color.$silver;
+        //     top: 99%;
+        //     left: 0;
+        //     //濾鏡
+        //     filter: drop-shadow(-1px 2px 0px color.$gray);
+        // }
     }
 
     .men-info {
@@ -101,6 +108,7 @@ footer {
             textarea {
                 @extend %formSet;
                 margin-bottom: 24px;
+                resize: none;
             }
 
             .form-button {
@@ -109,10 +117,18 @@ footer {
 
                     &[type="reset"] {
                         background-color: color.$dark;
+
+                        &:hover {
+                            background-color: lighten(color.$dark, 15%);
+                        }
                     }
 
                     &[type="submit"] {
                         background-color: color.$green;
+
+                        &:hover {
+                            background-color: darken(color.$green, 5%);
+                        }
                     }
                 }
 
@@ -139,7 +155,7 @@ footer {
         }
     }
 
-    //footer最下方nabar和copyright
+    //footer最下方navbar和copyright
     .footer-copyright {
         background-color: color.$dark;
         display: flex;
@@ -147,29 +163,44 @@ footer {
         justify-content: center;
         align-items: center;
 
-        @include breakpoint.lg {
+        //Chris建議寫法
+        @include breakpoint.deviceSize(breakpoint.$lgSize) {
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
         }
+
+        // @include breakpoint.lg {
+        //     display: flex;
+        //     flex-direction: row;
+        //     justify-content: space-between;
+        // }
 
         .footer-navbar {
             margin-bottom: 1rem;
 
-            @include breakpoint.lg {
+            @include breakpoint.deviceSize(breakpoint.$lgSize) {
                 margin-bottom: 0;
                 order: 2
             }
 
+            // @include breakpoint.lg {
+            //     margin-bottom: 0;
+            //     order: 2
+            // }
+
             ul {
-                @include breakpoint.md {
+                @include breakpoint.deviceSize(breakpoint.$mdSize) {
+                    display: flex;
                     flex-direction: row;
                 }
+
             }
 
             li {
                 position: relative;
 
-                @include breakpoint.md {
+                @include breakpoint.deviceSize(breakpoint.$mdSize) {
                     &+li::after {
                         content: "";
                         display: block;
@@ -184,6 +215,22 @@ footer {
                         margin: auto;
                     }
                 }
+
+                // @include breakpoint.md {
+                //     &+li::after {
+                //         content: "";
+                //         display: block;
+                //         width: 2px;
+                //         height: 60%;
+                //         background-color: color.$darkGray;
+                //         position: absolute;
+                //         top: 0;
+                //         left: 0;
+                //         bottom: 0;
+                //         right: auto;
+                //         margin: auto;
+                //     }
+                // }
             }
 
 

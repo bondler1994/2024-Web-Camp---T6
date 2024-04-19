@@ -38,7 +38,7 @@
     .swiper-button-prev {
         @include swiper_button(5px, 30px);
 
-        //修改套件after樣式
+        //修改套件按鈕after樣式
         &::after {
             @extend %swiperArrow;
         }

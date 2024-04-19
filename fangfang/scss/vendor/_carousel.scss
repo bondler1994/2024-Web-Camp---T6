@@ -8,11 +8,16 @@
 }
 
 .carousel {
-    height: 60vh;
+    height: 50vh;
 
-    @include breakpoint.lg {
+    @include breakpoint.deviceSize (breakpoint.$smSize) {
+        height: 80vh;
+    }
+
+    @include breakpoint.deviceSize (breakpoint.$lgSize) {
         height: auto;
     }
+
 
     .carousel-inner {
         height: 100%;
