@@ -75,6 +75,11 @@
     border-radius: 0;
     border-bottom: 1px solid color.$gray;
 
+    p {
+        margin-left: 1rem;
+        text-align: start;
+    }
+
     &:hover {
         i {
             background-color: color.$green;
@@ -84,23 +89,12 @@
             color: color.$green;
         }
     }
-
-    p {
-        margin-left: 1rem;
-        text-align: start;
-    }
 }
 
 
 .welcome-image {
     margin-bottom: 1rem;
 }
-
-//news&events
-// .events {
-// @include breakpoint.deviceSize (breakpoint.$lgSize) {
-//     padding: 0;
-// }
 
 .news-list {
     >div:first-child {
@@ -138,5 +132,3 @@
         @extend %dateTime;
     }
 }
-
-// }

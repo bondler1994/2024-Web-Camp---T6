@@ -2,14 +2,16 @@
 @use "../utilities/breakpoint";
 
 
-@mixin productSet {
-    background: color.$silver;
+.product-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+
+    background: color.$silver;
     padding: 1.5rem;
+
     transition: all 0.7s;
 
     h4 {
@@ -69,10 +71,6 @@
         }
 
     }
-}
-
-.product-item {
-    @include productSet();
 }
 
 //lg斷點要移動product位置

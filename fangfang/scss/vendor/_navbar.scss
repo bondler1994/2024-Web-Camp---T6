@@ -16,13 +16,6 @@
         background: linear-gradient(transparent 60%, color.$lightGray 60%);
     }
 
-    // @include breakpoint.lg {
-    //     flex-direction: row-reverse;
-    //     gap: 0.8rem;
-    //     //navbar-collapse和search後面的白色
-    //     background: linear-gradient(transparent 60%, color.$lightGray 60%);
-    // }
-
     //漢堡選單
     .navbar-toggler {
         border: none;
@@ -40,22 +33,13 @@
 
         @include breakpoint.deviceSize(breakpoint.$lgSize) {
             flex-grow: 2;
-            box-shadow: 1px -1px 3px color.$gray;
+            box-shadow: 1px -1px 3px color.$darkGray;
         }
-
-        // @include breakpoint.lg {
-        //     flex-grow: 2;
-        //     box-shadow: 1px -1px 3px color.$gray;
-        // }
 
         .nav-item {
             @include breakpoint.deviceSize(breakpoint.$lgSize) {
                 border-right: 2px solid color.$lightGray;
             }
-
-            // @include breakpoint.lg {
-            //     border-right: 2px solid color.$lightGray;
-            // }
         }
 
         .nav-link {
@@ -65,11 +49,6 @@
             @include breakpoint.deviceSize(breakpoint.$lgSize) {
                 padding: 21px 22px;
             }
-
-            // @include breakpoint.lg {
-            //     padding: 21px 22px;
-
-            // }
 
             text-transform: uppercase;
 
@@ -107,21 +86,14 @@
 
     @include breakpoint.deviceSize(breakpoint.$lgSize) {
         flex: 1 1 auto;
-        box-shadow: -1px -1px 3px color.$gray;
+        box-shadow: -1px -1px 3px color.$darkGray;
     }
-
-    // @include breakpoint.lg {
-    //     flex: 1 1 auto;
-    //     box-shadow: -1px -1px 3px color.$gray;
-    // }
 
     .form-control {
         background-color: color.$lightGray;
         border-radius: 0;
         //讓輸入的字不會被search-icon擋住
         padding: 0.75rem 2.5rem 0.75rem 0.75rem;
-
-
 
         &:focus {
             box-shadow: none;

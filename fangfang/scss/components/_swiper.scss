@@ -61,7 +61,7 @@
         .swiper-content {
             opacity: 1;
             transform: rotate(-40deg) translate(-10%, -45%);
-            transition: all 0.8s 0.3s;
+            transition: opacity 0.8s 0.3s, transform 0.8s 0.3s;
             z-index: 2;
         }
     }
@@ -79,6 +79,7 @@
         left: 0;
         transform: rotate(50deg) translate(-300%, -30%);
         z-index: 1;
+        transition: all 0.5s;
     }
 
     //右邊黑色塊
@@ -95,6 +96,7 @@
         border-right: 3px solid color.$green;
         transform: rotate(50deg) translate(120%, -30%);
         z-index: 1;
+        transition: all 0.5s;
     }
 
     &:hover::before {
@@ -128,7 +130,7 @@
             display: block;
             position: absolute;
             width: 1px;
-            height: 200%;
+            height: 200%;//用高度設定
             background-color: color.$white;
             top: -15px;
             bottom: 0px;

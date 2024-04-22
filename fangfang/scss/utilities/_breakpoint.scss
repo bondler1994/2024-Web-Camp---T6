@@ -7,7 +7,6 @@ $lgSize: 992px;
     @media (min-width:$size){
         @content;
     }
-
 }
 //原先寫法
 // @mixin sm {
