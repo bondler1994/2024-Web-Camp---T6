@@ -11852,6 +11852,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.gx-4 {
+  --bs-gutter-x: 25px;
+}
+
 .navbar {
   background-color: rgb(251, 251, 251);
   box-shadow: 0 0 5px -1px rgb(29, 29, 29);
@@ -11913,6 +11917,41 @@ textarea.form-control-lg {
   color: rgb(159, 159, 159);
 }
 
+.carousel-item img {
+  height: 50vh;
+  object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .carousel-item img {
+    height: auto;
+  }
+}
+
+.carousel-control-next, .carousel-control-prev {
+  height: 119px;
+  margin: auto;
+  opacity: 1;
+  width: 40px;
+}
+
+.carousel-control-next .carousel-control-next-icon, .carousel-control-prev .carousel-control-prev-icon {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto;
+  height: 100%;
+  width: 40px;
+}
+
+.carousel-control-next:hover .carousel-control-next-icon, .carousel-control-prev:hover .carousel-control-prev-icon {
+  background-position: 0 -119px;
+}
+
+.carousel-control-prev .carousel-control-prev-icon {
+  background-image: url("../../images/slider_prev.gif");
+}
+.carousel-control-next .carousel-control-next-icon {
+  background-image: url("../../images/slider_next.gif");
+}
 a {
   color: rgb(40, 40, 40);
   display: inline-block;
@@ -11921,6 +11960,13 @@ a {
 
 span {
   color: rgb(40, 40, 40);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
 }
 
 body {
@@ -11953,78 +11999,82 @@ header > :first-child {
   margin-bottom: 28px;
   padding: 34px 36px;
 }
-header .logo {
+
+.logo {
   width: 200px;
 }
 @media screen and (min-width: 768px) {
-  header .logo {
+  .logo {
     width: 280px;
   }
 }
-header .logo img {
+.logo img {
   width: 100%;
 }
-header .contact > :first-child {
+
+.contact > :first-child {
   margin-bottom: 6px;
 }
-header .contact__social {
+.contact__social {
   width: 139px;
 }
-header .contact .contact__rss, header .contact .contact__dribbble, header .contact .contact__flickr, header .contact .contact__twitter, header .contact .contact__facebook {
+.contact .contact__rss, .contact .contact__dribbble, .contact .contact__flickr, .contact .contact__twitter, .contact .contact__facebook {
   background-size: 650%;
   display: inline-block;
   height: 24px;
   width: 24px;
 }
-header .contact__facebook {
+.contact__facebook {
   background: url("../../images/social.png") 0 0 no-repeat;
 }
-header .contact__facebook:hover {
+.contact__facebook:hover {
   background-position: 0 -24px;
 }
-header .contact__twitter {
+.contact__twitter {
   background: url("../../images/social.png") -33px 0 no-repeat;
 }
-header .contact__twitter:hover {
+.contact__twitter:hover {
   background-position: -33px -24px;
 }
-header .contact__flickr {
+.contact__flickr {
   background: url("../../images/social.png") -65.5px 0 no-repeat;
 }
-header .contact__flickr:hover {
+.contact__flickr:hover {
   background-position: -65.5px -24px;
 }
-header .contact__dribbble {
+.contact__dribbble {
   background: url("../../images/social.png") -98px 0 no-repeat;
 }
-header .contact__dribbble:hover {
+.contact__dribbble:hover {
   background-position: -98px -24px;
 }
-header .contact__rss {
+.contact__rss {
   background: url("../../images/social.png") -132px 0 no-repeat;
 }
-header .contact__rss:hover {
+.contact__rss:hover {
   background-position: -132px -24px;
 }
-header .contact__phonenumber {
+.contact__phonenumber {
   font-size: 12px;
   text-align: center;
 }
-header .navbar__container {
+
+.navbar__container {
   background-color: rgb(251, 251, 251);
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  header .navbar__container {
+  .navbar__container {
     box-shadow: 1px -2px 4px -3px rgb(29, 29, 29);
   }
 }
 @media screen and (min-width: 992px) {
-  header .navbar__container {
+  .navbar__container {
     margin-right: 7px;
   }
 }
-header .search {
+
+.search {
   background-color: rgb(251, 251, 251);
   border-radius: 50%;
   box-shadow: -1px -2px 4px -3px rgb(29, 29, 29);
@@ -12034,21 +12084,22 @@ header .search {
   position: fixed;
   top: 100px;
   right: 0;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
-  header .search {
+  .search {
     height: auto;
     width: auto;
     top: auto;
   }
 }
 @media screen and (min-width: 992px) {
-  header .search {
+  .search {
     border-radius: 0;
     position: relative;
   }
 }
-header .search__icon {
+.search__icon {
   background-image: url("../../images/search.png");
   background-size: contain;
   cursor: pointer;
@@ -12058,20 +12109,89 @@ header .search__icon {
   right: 22px;
   width: 17px;
 }
-header .search__bar {
+.search__bar {
   display: none;
   width: 200px;
 }
 @media screen and (min-width: 768px) {
-  header .search__bar {
+  .search__bar {
     width: 100%;
   }
 }
-header #search:checked + .search .search__bar {
+
+#search:checked + .search .search__bar {
   display: block;
 }
-header #search:checked + .search {
+
+#search:checked + .search {
   border-radius: 0;
+}
+
+.background__navbar {
+  background-color: rgb(251, 251, 251);
+  margin-top: -18px;
+  height: 18px;
+}
+
+main {
+  background-color: rgb(251, 251, 251);
+  box-shadow: 0 0 5px -1px rgb(29, 29, 29);
+  padding-bottom: 64px;
+}
+
+.section {
+  padding: 0 22px;
+}
+.section__features {
+  position: relative;
+  top: -24px;
+  text-align: center;
+  z-index: 1;
+  transition: all 0.2s;
+}
+.section__features > :nth-child(1) .section__icon {
+  background-image: url(../../images/p1.png);
+}
+.section__features > :nth-child(2) .section__icon {
+  background-image: url(../../images/p2.png);
+}
+.section__features > :nth-child(3) .section__icon {
+  background-image: url(../../images/p3.png);
+}
+.section__features > :nth-child(4) .section__icon {
+  background-image: url(../../images/p4.png);
+}
+.section__feature {
+  background-color: rgb(231, 231, 231);
+  padding: 35px 27px 24px;
+}
+.section__feature:hover {
+  background-color: rgba(29, 29, 29, 0.7);
+  color: rgb(255, 255, 255);
+}
+.section__feature h4 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.section__feature p {
+  font-size: 12px;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+.section__feature a {
+  background-color: rgb(205, 205, 205);
+  font-size: 12px;
+  height: 25px;
+  line-height: 25px;
+  width: 55px;
+}
+.section__icon {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 50px;
+  margin: 0 auto 24px;
+  width: 50px;
 }
 
 /*# sourceMappingURL=main.css.map */

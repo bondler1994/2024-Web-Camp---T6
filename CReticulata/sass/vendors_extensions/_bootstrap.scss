@@ -3,6 +3,10 @@
 
 @use "../vendors/bootstrap";
 
+.gx-4 {
+  --bs-gutter-x: 25px;
+}
+
 .navbar {
   background-color: v.$layout-white;
   box-shadow: 0 0 5px -1px v.$layout-black;
@@ -68,5 +72,65 @@
 
   &::placeholder {
     color: v.$primary-gray-black;
+  }
+}
+
+.carousel-item {
+  img {
+    height: 50vh;
+    object-fit: cover;
+
+    @include m.respond-to(768px) {
+      height: auto;
+    }
+  }
+}
+
+%carousel__control {
+  height: 119px;
+  margin: auto;
+  opacity: 1;
+  width: 40px;
+}
+
+%carousel-control-icon {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto;
+  height: 100%;
+  width: 40px;
+}
+
+%carousel-control-icon-hover {
+  background-position: 0 -119px;
+}
+
+.carousel-control-prev {
+  @extend %carousel__control;
+
+  .carousel-control-prev-icon {
+    background-image: url("../../images/slider_prev.gif");
+    @extend %carousel-control-icon;
+  }
+
+  &:hover {
+    .carousel-control-prev-icon {
+      @extend %carousel-control-icon-hover;
+    }
+  }
+}
+
+.carousel-control-next {
+  @extend %carousel__control;
+
+  .carousel-control-next-icon {
+    background-image: url("../../images/slider_next.gif");
+    @extend %carousel-control-icon;
+  }
+
+  &:hover {
+    .carousel-control-next-icon {
+      @extend %carousel-control-icon-hover;
+    }
   }
 }
