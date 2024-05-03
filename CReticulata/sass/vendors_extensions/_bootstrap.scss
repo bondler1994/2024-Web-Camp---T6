@@ -1,0 +1,72 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+@use "../vendors/bootstrap";
+
+.navbar {
+  background-color: v.$layout-white;
+  box-shadow: 0 0 5px -1px v.$layout-black;
+
+  @include m.respond-to(768px) {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .navbar-brand {
+    padding: 10px 0;
+  }
+
+  .navbar-nav {
+    @include m.respond-to(768px) {
+      width: 575px;
+    }
+
+    .nav-item {
+      flex: 1 0 auto;
+
+      @include m.respond-to(768px) {
+        border-right: 1px solid v.$primary-gray;
+      }
+    }
+
+    .nav-link {
+      color: v.$primary-black;
+      font-size: 12px;
+      padding: 18px 0;
+      text-align: center;
+      text-transform: uppercase;
+
+      &.active {
+        color: v.$primary-black;
+      }
+
+      &:hover {
+        @include m.navhover;
+      }
+    }
+
+    .dropdown-menu {
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .dropdown-item {
+      @extend .nav-link;
+
+      &:hover {
+        @include m.navhover;
+      }
+    }
+  }
+}
+
+.form-control {
+  background-color: v.$primary-gray-white;
+  border-radius: 0;
+
+  &::placeholder {
+    color: v.$primary-gray-black;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "creticulata",
+  "version": "1.0.0",
+  "description": "t6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch sass/main.scss css/main.css"
+  },
+  "author": "CReticulata",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.76.0"
+  }
+}

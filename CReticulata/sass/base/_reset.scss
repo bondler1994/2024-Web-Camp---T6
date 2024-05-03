@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as v;
+
+a {
+  color: v.$primary-black;
+  display: inline-block;
+  text-decoration: none;
+}
+
+span {
+  color: v.$primary-black;
+}

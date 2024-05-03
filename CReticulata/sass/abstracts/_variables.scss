@@ -1,0 +1,14 @@
+$layout-black: rgba(29, 29, 29, 1);
+$layout-black-transparent: fade-out($layout-black, 0.8);
+$layout-white: rgba(251, 251, 251, 1);
+$primary-black: rgba(40, 40, 40, 1);
+$primary-black-transparent: fade-out($primary-black, 0.8);
+$primary-gray-black: rgba(159, 159, 159, 1);
+$primary-gray-dark: rgba(205, 205, 205, 1);
+$primary-gray-medium: rgba(217, 217, 217, 1);
+$primary-gray: rgba(231, 231, 231, 1);
+$primary-gray-white: rgba(243, 243, 243, 1);
+$primary-white: rgba(255, 255, 255, 1);
+$primary-green: rgba(128, 182, 0, 1);
+
+$font-weight-medium: 600;
