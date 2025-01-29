@@ -1,9 +1,0 @@
-@use "../utilities/breakpoint";
-@use "../utilities/color";
-
-$img-subbg: url("../images/subbg.gif");
-
-main {
-  background-image: $img-subbg;
-  box-shadow: 0 0 5px;
-}

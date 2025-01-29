@@ -1,9 +1,0 @@
-@use 'colors';
-
-@mixin box-shadow {
-  box-shadow: 0 0 3px 2px colors.$gray-500;
-}
-
-@mixin box-shadow--not-bottom {
-  box-shadow: 2px -1px 3px 0 colors.$gray-500, -2px -1px 3px 0 colors.$gray-500;
-}

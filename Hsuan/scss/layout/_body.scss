@@ -1,8 +1,0 @@
-@use "../base/color";
-
-body {
-  min-width: 375px;
-  font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(color.$black 120px, transparent 120px 90%, color.$black 90%), url(../images/bg.jpg);
-  background-position: top center;
-}

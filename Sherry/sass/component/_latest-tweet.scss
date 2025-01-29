@@ -1,6 +1,0 @@
-@use "./animation/loading-dots" as *;
-
-/*loading animation*/
-.tweet::after {
-    @extend %loading-dots;
-}

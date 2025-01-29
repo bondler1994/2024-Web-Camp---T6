@@ -16,15 +16,25 @@
 }
 
 
+.ellipsis {
+    overflow:hidden;
+    white-space: normal;
 
+    height: 8.4rem;
+    width: 100px;
+    line-height: -0.8rem;
+    overflow: hidden;
+    white-space: normal;
+}
 
 
 
 @mixin ellipsis ($clamp) {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: $clamp;
-    overflow: hidden;
+    // display: -webkit-box;
+    // -webkit-box-orient: vertical;
+    // -webkit-line-clamp: $clamp;
+    
+    // overflow: hidden;
 }
 
 @mixin span-dot {

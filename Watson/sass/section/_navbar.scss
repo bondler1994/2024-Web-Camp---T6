@@ -188,22 +188,28 @@ header {
         .dropdown {
             position: relative;
             display: inline-block;
+            & .item{
+                display: none;
+            }
+            &:hover .item {
+                display: flex;
+                flex-direction: column;
+            }
         }
         .item{
-            z-index: 1;
-            display: none;
+            // display by dropdown on hover
+            z-index: 2;
             position: absolute;
-            top: 30px;
+            top: 50px;
+
             right: 10px;
-            flex-direction: column;
             min-width: 100px;
-
-
             @include sm {
                 right: 10px;
+                min-width: 100px;
             }
-
             @include md {
+                min-width: 100px;
                 right: 155px;
             }
             @include lg {
@@ -211,18 +217,15 @@ header {
                 min-width: 160px;
             }
 
-            background-color: #f9f9f9;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-
+            
+            background-color: #f9f9f9;
             a:hover{
                 background-color: $green;
             }
         }
 
 
-        .dropdown:hover .item {
-            display: block;
-          }
 
 
 

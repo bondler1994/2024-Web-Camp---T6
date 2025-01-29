@@ -1,7 +1,0 @@
-// 文字省略
-@mixin ellipsis($rows) { 
-  display: -webkit-inline-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: $rows;
-  overflow: hidden;
-}

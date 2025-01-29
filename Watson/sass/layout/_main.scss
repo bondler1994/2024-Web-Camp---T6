@@ -1,4 +1,10 @@
 @forward "../section/card";
+@forward "../base/background";
+@forward "../base/reset";
+@forward "../component/grid";
+@forward "../section/news";
+@forward "../component/swiper";
+@forward "../component/carousel";
 
 main {
     background: url(../images/subbg.gif);

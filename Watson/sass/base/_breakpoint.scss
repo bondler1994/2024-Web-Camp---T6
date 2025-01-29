@@ -9,6 +9,12 @@ $media-extra: 1250px;
     }
 };
 
+@mixin device ($scale){
+    @media (min-width: $scale) {
+        @content
+    }
+};
+
 @mixin md {
     @media (min-width: $media-ipad) {
         @content

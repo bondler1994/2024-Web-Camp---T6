@@ -1,7 +1,0 @@
-$bg-wood: url('../image/bg.jpg');
-$bg-notes: url('../image/subbg.gif');
-
-// 顯示周圍陰影
-@mixin normalShadow {
-    box-shadow: 0 0 3px;
-}
